@@ -1,4 +1,4 @@
-//   Qué has cambiado, tio?
+//   Qué
 //  Cultivo1.swift saasasa
 //  Dosacítricj sasaasa
 //
