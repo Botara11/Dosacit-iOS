@@ -7,13 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B2557D991AAF821E008A24D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557D981AAF821E008A24D9 /* AppDelegate.swift */; };
-		B2557D9C1AAF821E008A24D9 /* DosApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2557D9A1AAF821E008A24D9 /* DosApp.xcdatamodeld */; };
-		B2557D9E1AAF821E008A24D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557D9D1AAF821E008A24D9 /* ViewController.swift */; };
-		B2557DA11AAF821E008A24D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2557D9F1AAF821E008A24D9 /* Main.storyboard */; };
-		B2557DA31AAF821E008A24D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2557DA21AAF821E008A24D9 /* Images.xcassets */; };
-		B2557DA61AAF821E008A24D9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2557DA41AAF821E008A24D9 /* LaunchScreen.xib */; };
 		B2557DB21AAF821E008A24D9 /* DosAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DB11AAF821E008A24D9 /* DosAppTests.swift */; };
+		B2557DDC1AAF83FD008A24D9 /* A1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DDB1AAF83FD008A24D9 /* A1.swift */; };
+		B2557DED1AAF841C008A24D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DDD1AAF841B008A24D9 /* AppDelegate.swift */; };
+		B2557DEE1AAF841C008A24D9 /* Cultivo1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DDE1AAF841B008A24D9 /* Cultivo1.swift */; };
+		B2557DEF1AAF841C008A24D9 /* Cultivo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DDF1AAF841B008A24D9 /* Cultivo2.swift */; };
+		B2557DF01AAF841C008A24D9 /* Cultivo3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DE01AAF841C008A24D9 /* Cultivo3.swift */; };
+		B2557DF11AAF841C008A24D9 /* Cultivo4.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DE11AAF841C008A24D9 /* Cultivo4.swift */; };
+		B2557DF21AAF841C008A24D9 /* DosApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2557DE31AAF841C008A24D9 /* DosApp.xcdatamodeld */; };
+		B2557DF31AAF841C008A24D9 /* EntityBoquillas.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DE51AAF841C008A24D9 /* EntityBoquillas.swift */; };
+		B2557DF41AAF841C008A24D9 /* Indice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DE61AAF841C008A24D9 /* Indice.swift */; };
+		B2557DF51AAF841C008A24D9 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2557DE71AAF841C008A24D9 /* Info.plist */; };
+		B2557DF61AAF841C008A24D9 /* ParteA.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DE81AAF841C008A24D9 /* ParteA.swift */; };
+		B2557DF71AAF841C008A24D9 /* ParteB.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DE91AAF841C008A24D9 /* ParteB.swift */; };
+		B2557DF81AAF841C008A24D9 /* Result1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DEA1AAF841C008A24D9 /* Result1.swift */; };
+		B2557DF91AAF841C008A24D9 /* Result12.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DEB1AAF841C008A24D9 /* Result12.swift */; };
+		B2557DFA1AAF841C008A24D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DEC1AAF841C008A24D9 /* ViewController.swift */; };
+		B2557E001AAF8430008A24D9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2557DFC1AAF8430008A24D9 /* LaunchScreen.xib */; };
+		B2557E011AAF8430008A24D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2557DFE1AAF8430008A24D9 /* Main.storyboard */; };
+		B2557E031AAF844E008A24D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2557E021AAF844E008A24D9 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,16 +40,28 @@
 
 /* Begin PBXFileReference section */
 		B2557D931AAF821E008A24D9 /* DosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2557D971AAF821E008A24D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2557D981AAF821E008A24D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B2557D9B1AAF821E008A24D9 /* DosApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DosApp.xcdatamodel; sourceTree = "<group>"; };
-		B2557D9D1AAF821E008A24D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B2557DA01AAF821E008A24D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B2557DA21AAF821E008A24D9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B2557DA51AAF821E008A24D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B2557DAB1AAF821E008A24D9 /* DosAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DosAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2557DB01AAF821E008A24D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2557DB11AAF821E008A24D9 /* DosAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DosAppTests.swift; sourceTree = "<group>"; };
+		B2557DDB1AAF83FD008A24D9 /* A1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = A1.swift; sourceTree = "<group>"; };
+		B2557DDD1AAF841B008A24D9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B2557DDE1AAF841B008A24D9 /* Cultivo1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cultivo1.swift; sourceTree = "<group>"; };
+		B2557DDF1AAF841B008A24D9 /* Cultivo2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cultivo2.swift; sourceTree = "<group>"; };
+		B2557DE01AAF841C008A24D9 /* Cultivo3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cultivo3.swift; sourceTree = "<group>"; };
+		B2557DE11AAF841C008A24D9 /* Cultivo4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cultivo4.swift; sourceTree = "<group>"; };
+		B2557DE21AAF841C008A24D9 /* DosApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DosApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		B2557DE41AAF841C008A24D9 /* DosApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DosApp.xcdatamodel; sourceTree = "<group>"; };
+		B2557DE51AAF841C008A24D9 /* EntityBoquillas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityBoquillas.swift; sourceTree = "<group>"; };
+		B2557DE61AAF841C008A24D9 /* Indice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Indice.swift; sourceTree = "<group>"; };
+		B2557DE71AAF841C008A24D9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2557DE81AAF841C008A24D9 /* ParteA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParteA.swift; sourceTree = "<group>"; };
+		B2557DE91AAF841C008A24D9 /* ParteB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParteB.swift; sourceTree = "<group>"; };
+		B2557DEA1AAF841C008A24D9 /* Result1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result1.swift; sourceTree = "<group>"; };
+		B2557DEB1AAF841C008A24D9 /* Result12.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result12.swift; sourceTree = "<group>"; };
+		B2557DEC1AAF841C008A24D9 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B2557DFD1AAF8430008A24D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		B2557DFF1AAF8430008A24D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		B2557E021AAF844E008A24D9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,23 +103,26 @@
 		B2557D951AAF821E008A24D9 /* DosApp */ = {
 			isa = PBXGroup;
 			children = (
-				B2557D981AAF821E008A24D9 /* AppDelegate.swift */,
-				B2557D9D1AAF821E008A24D9 /* ViewController.swift */,
-				B2557D9F1AAF821E008A24D9 /* Main.storyboard */,
-				B2557DA21AAF821E008A24D9 /* Images.xcassets */,
-				B2557DA41AAF821E008A24D9 /* LaunchScreen.xib */,
-				B2557D9A1AAF821E008A24D9 /* DosApp.xcdatamodeld */,
-				B2557D961AAF821E008A24D9 /* Supporting Files */,
+				B2557DDD1AAF841B008A24D9 /* AppDelegate.swift */,
+				B2557DDE1AAF841B008A24D9 /* Cultivo1.swift */,
+				B2557DDF1AAF841B008A24D9 /* Cultivo2.swift */,
+				B2557DE01AAF841C008A24D9 /* Cultivo3.swift */,
+				B2557DE11AAF841C008A24D9 /* Cultivo4.swift */,
+				B2557DE21AAF841C008A24D9 /* DosApp-Bridging-Header.h */,
+				B2557DE31AAF841C008A24D9 /* DosApp.xcdatamodeld */,
+				B2557DE51AAF841C008A24D9 /* EntityBoquillas.swift */,
+				B2557DE61AAF841C008A24D9 /* Indice.swift */,
+				B2557DE71AAF841C008A24D9 /* Info.plist */,
+				B2557DE81AAF841C008A24D9 /* ParteA.swift */,
+				B2557DE91AAF841C008A24D9 /* ParteB.swift */,
+				B2557DEA1AAF841C008A24D9 /* Result1.swift */,
+				B2557DEB1AAF841C008A24D9 /* Result12.swift */,
+				B2557DEC1AAF841C008A24D9 /* ViewController.swift */,
+				B2557E021AAF844E008A24D9 /* Images.xcassets */,
+				B2557DFB1AAF8430008A24D9 /* Base.lproj */,
+				B2557DDB1AAF83FD008A24D9 /* A1.swift */,
 			);
 			path = DosApp;
-			sourceTree = "<group>";
-		};
-		B2557D961AAF821E008A24D9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B2557D971AAF821E008A24D9 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		B2557DAE1AAF821E008A24D9 /* DosAppTests */ = {
@@ -113,6 +140,15 @@
 				B2557DB01AAF821E008A24D9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2557DFB1AAF8430008A24D9 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				B2557DFC1AAF8430008A24D9 /* LaunchScreen.xib */,
+				B2557DFE1AAF8430008A24D9 /* Main.storyboard */,
+			);
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,9 +231,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2557DA11AAF821E008A24D9 /* Main.storyboard in Resources */,
-				B2557DA61AAF821E008A24D9 /* LaunchScreen.xib in Resources */,
-				B2557DA31AAF821E008A24D9 /* Images.xcassets in Resources */,
+				B2557E011AAF8430008A24D9 /* Main.storyboard in Resources */,
+				B2557E031AAF844E008A24D9 /* Images.xcassets in Resources */,
+				B2557E001AAF8430008A24D9 /* LaunchScreen.xib in Resources */,
+				B2557DF51AAF841C008A24D9 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,9 +252,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2557D9E1AAF821E008A24D9 /* ViewController.swift in Sources */,
-				B2557D9C1AAF821E008A24D9 /* DosApp.xcdatamodeld in Sources */,
-				B2557D991AAF821E008A24D9 /* AppDelegate.swift in Sources */,
+				B2557DF81AAF841C008A24D9 /* Result1.swift in Sources */,
+				B2557DEE1AAF841C008A24D9 /* Cultivo1.swift in Sources */,
+				B2557DF31AAF841C008A24D9 /* EntityBoquillas.swift in Sources */,
+				B2557DF71AAF841C008A24D9 /* ParteB.swift in Sources */,
+				B2557DFA1AAF841C008A24D9 /* ViewController.swift in Sources */,
+				B2557DF41AAF841C008A24D9 /* Indice.swift in Sources */,
+				B2557DF91AAF841C008A24D9 /* Result12.swift in Sources */,
+				B2557DEF1AAF841C008A24D9 /* Cultivo2.swift in Sources */,
+				B2557DF21AAF841C008A24D9 /* DosApp.xcdatamodeld in Sources */,
+				B2557DED1AAF841C008A24D9 /* AppDelegate.swift in Sources */,
+				B2557DF61AAF841C008A24D9 /* ParteA.swift in Sources */,
+				B2557DF11AAF841C008A24D9 /* Cultivo4.swift in Sources */,
+				B2557DF01AAF841C008A24D9 /* Cultivo3.swift in Sources */,
+				B2557DDC1AAF83FD008A24D9 /* A1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,20 +288,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B2557D9F1AAF821E008A24D9 /* Main.storyboard */ = {
+		B2557DFC1AAF8430008A24D9 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B2557DA01AAF821E008A24D9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		B2557DA41AAF821E008A24D9 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B2557DA51AAF821E008A24D9 /* Base */,
+				B2557DFD1AAF8430008A24D9 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		B2557DFE1AAF8430008A24D9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B2557DFF1AAF8430008A24D9 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -342,9 +390,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DosApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DosApp/DosApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -352,9 +403,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = DosApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DosApp/DosApp-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -411,6 +464,7 @@
 				B2557DB71AAF821E008A24D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B2557DB81AAF821E008A24D9 /* Build configuration list for PBXNativeTarget "DosAppTests" */ = {
 			isa = XCConfigurationList;
@@ -419,16 +473,17 @@
 				B2557DBA1AAF821E008A24D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		B2557D9A1AAF821E008A24D9 /* DosApp.xcdatamodeld */ = {
+		B2557DE31AAF841C008A24D9 /* DosApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				B2557D9B1AAF821E008A24D9 /* DosApp.xcdatamodel */,
+				B2557DE41AAF841C008A24D9 /* DosApp.xcdatamodel */,
 			);
-			currentVersion = B2557D9B1AAF821E008A24D9 /* DosApp.xcdatamodel */;
+			currentVersion = B2557DE41AAF841C008A24D9 /* DosApp.xcdatamodel */;
 			path = DosApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

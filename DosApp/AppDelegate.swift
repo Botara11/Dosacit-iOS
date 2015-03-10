@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  DosApp
 //
-//  Created by Alvaro Serneguet on 10/03/15.
-//  Copyright (c) 2015 UPV. All rights reserved.
+//  Created by Borja Tarazona Raga on 2/2/15.
+//  Copyright (c) 2015 Borja Tarazona Raga. All rights reserved.
 //
 
 import UIKit
@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Core Data stack
 
     lazy var applicationDocumentsDirectory: NSURL = {
-        // The directory the application uses to store the Core Data store file. This code uses a directory named "secuest.DosApp" in the application's documents Application Support directory.
+        // The directory the application uses to store the Core Data store file. This code uses a directory named "Borja-Tarazona-Raga.DosApp" in the application's documents Application Support directory.
         let urls = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)
         return urls[urls.count-1] as NSURL
     }()
