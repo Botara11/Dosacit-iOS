@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="soH-Zw-udU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="soH-Zw-udU">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -10,28 +10,28 @@
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="soH-Zw-udU" customClass="ViewController" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mBN-BN-Tmu"/>
-                        <viewControllerLayoutGuide type="bottom" id="JGL-iA-dfp"/>
+                        <viewControllerLayoutGuide type="top" id="dw7-PZ-5u4"/>
+                        <viewControllerLayoutGuide type="bottom" id="uOx-D1-0qh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="A4v-JJ-C74">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" text="Dosacítric 2015" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jhu-0V-6iu">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Dosacítric 2015" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Jhu-0V-6iu">
                                 <rect key="frame" x="40" y="28" width="240" height="128"/>
                                 <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="UNIVERSIDAD POLITÉCNICA DE VALENCIA" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EbF-tJ-XfS">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="UNIVERSIDAD POLITÉCNICA DE VALENCIA" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EbF-tJ-XfS">
                                 <rect key="frame" x="68" y="255" width="185" height="57"/>
                                 <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PYK-YQ-8xL">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PYK-YQ-8xL">
                                 <rect key="frame" x="39" y="320" width="240" height="49"/>
                                 <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Departamento de Mecanización y Tecnología Agraria
@@ -40,7 +40,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1h7-nm-WVL">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1h7-nm-WVL">
                                 <rect key="frame" x="67" y="377" width="185" height="49"/>
                                 <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text" base64-UTF8="YES">
@@ -50,7 +50,7 @@ Q2FtaW5vIGRlIFZlcmEsIHMvbg0KNDYwMjIgLSBWYWxlbmNpYQ0KAA
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="54" placeholderIntrinsicHeight="44" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zi4-gb-RSr">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="54" placeholderIntrinsicHeight="44" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zi4-gb-RSr">
                                 <rect key="frame" x="78" y="173" width="163" height="60"/>
                                 <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
@@ -59,10 +59,10 @@ Q2FtaW5vIGRlIFZlcmEsIHMvbg0KNDYwMjIgLSBWYWxlbmNpYQ0KAA
                                     <color key="titleShadowColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="K34-3y-P8g" kind="show" id="Cej-Ic-mg9"/>
+                                    <segue destination="K34-3y-P8g" kind="modal" id="eWd-hl-Tjg"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ter-Yj-pa8">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ter-Yj-pa8">
                                 <rect key="frame" x="67" y="434" width="185" height="52"/>
                                 <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text" base64-UTF8="YES">
@@ -74,198 +74,183 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="1h7-nm-WVL" firstAttribute="leading" secondItem="A4v-JJ-C74" secondAttribute="leadingMargin" constant="51" id="1Hp-YG-aY0"/>
-                            <constraint firstItem="Ter-Yj-pa8" firstAttribute="leading" secondItem="A4v-JJ-C74" secondAttribute="leadingMargin" constant="51" id="FyD-uP-OXD"/>
-                            <constraint firstItem="EbF-tJ-XfS" firstAttribute="leading" secondItem="A4v-JJ-C74" secondAttribute="leadingMargin" constant="20" id="KEp-UZ-hUc"/>
-                            <constraint firstItem="PYK-YQ-8xL" firstAttribute="leading" secondItem="A4v-JJ-C74" secondAttribute="leadingMargin" constant="40" id="Kyu-v2-cxc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Jhu-0V-6iu" secondAttribute="trailing" constant="10" id="T6q-IZ-aLV"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PYK-YQ-8xL" secondAttribute="trailing" constant="40" id="TUM-8K-3KI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1h7-nm-WVL" secondAttribute="trailing" constant="52" id="WfH-ri-qE0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ter-Yj-pa8" secondAttribute="trailing" constant="52" id="ZqU-AF-b7D"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Zi4-gb-RSr" secondAttribute="trailing" constant="63" id="dd8-up-Khq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="EbF-tJ-XfS" secondAttribute="trailing" constant="20" id="gaf-FG-jOL"/>
-                            <constraint firstItem="Jhu-0V-6iu" firstAttribute="top" secondItem="mBN-BN-Tmu" secondAttribute="bottom" constant="30" id="jIw-Cd-ZiS"/>
-                            <constraint firstItem="Jhu-0V-6iu" firstAttribute="leading" secondItem="A4v-JJ-C74" secondAttribute="leadingMargin" constant="10" id="lt8-04-AuT"/>
-                            <constraint firstItem="Zi4-gb-RSr" firstAttribute="leading" secondItem="A4v-JJ-C74" secondAttribute="leadingMargin" constant="62" id="rdH-4c-omC"/>
-                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vNw-ad-OhT" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439.5" y="400.5"/>
+            <point key="canvasLocation" x="234.40000000000001" y="379.13999999999999"/>
         </scene>
         <!--Indice-->
         <scene sceneID="Khp-lf-brI">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="K34-3y-P8g" customClass="Indice" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" id="K34-3y-P8g" customClass="Indice" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zB1-Ap-hhC"/>
-                        <viewControllerLayoutGuide type="bottom" id="E6k-oR-NLW"/>
+                        <viewControllerLayoutGuide type="top" id="qeD-GL-TsB"/>
+                        <viewControllerLayoutGuide type="bottom" id="SdY-8g-oum"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pza-1S-dkh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZIy-Er-gtL">
-                                <rect key="frame" x="-20" y="-14" width="413" height="694"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wj-Nn-3X7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" minimumZoomScale="4" maximumZoomScale="9" translatesAutoresizingMaskIntoConstraints="NO" id="oD4-r1-acp">
-                                        <rect key="frame" x="14" y="8" width="379" height="666"/>
-                                        <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="C.1. Introducción de datos" translatesAutoresizingMaskIntoConstraints="NO" id="6ld-Cf-NyD">
-                                                <rect key="frame" x="12" y="489" width="359" height="34"/>
-                                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Tabla de resultados III" translatesAutoresizingMaskIntoConstraints="NO" id="PvR-KE-MhD">
-                                                <rect key="frame" x="12" y="531" width="359" height="34"/>
-                                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wj-Nn-3X7">
-                                                <rect key="frame" x="0.0" y="8" width="403" height="496"/>
-                                                <subviews>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Índice" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="07Y-gK-lsB">
-                                                        <rect key="frame" x="116" y="20" width="101" height="44"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJr-jd-yEW">
-                                                        <rect key="frame" x="-47" y="20" width="375" height="44"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <textAttributes key="titleTextAttributes">
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                            <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <color key="textShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
-                                                        </textAttributes>
-                                                        <items>
-                                                            <navigationItem title="Índice" id="QBl-43-Tge">
-                                                                <barButtonItem key="rightBarButtonItem" title="&gt;" id="4Ki-pF-oRW">
-                                                                    <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                                    <connections>
-                                                                        <segue destination="7qp-2U-E7z" kind="show" id="Bm7-xH-oCR"/>
-                                                                    </connections>
-                                                                </barButtonItem>
-                                                            </navigationItem>
-                                                        </items>
-                                                    </navigationBar>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="A. VOLUMEN DE APLICACIÓN" translatesAutoresizingMaskIntoConstraints="NO" id="F3x-n4-S1W">
-                                                        <rect key="frame" x="5" y="79" width="375" height="34"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="A.1. Datos del cultivo" translatesAutoresizingMaskIntoConstraints="NO" id="89h-qS-e0U">
-                                                        <rect key="frame" x="13" y="121" width="359" height="34"/>
-                                                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="A.2. Datos del tratamiento" translatesAutoresizingMaskIntoConstraints="NO" id="iJ9-N4-6cZ">
-                                                        <rect key="frame" x="13" y="156" width="359" height="34"/>
-                                                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="A.3. Datos meteorológicos" translatesAutoresizingMaskIntoConstraints="NO" id="YI3-gZ-BnO">
-                                                        <rect key="frame" x="13" y="198" width="359" height="34"/>
-                                                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="A.4. Elección del equipo" translatesAutoresizingMaskIntoConstraints="NO" id="0UY-G6-Wl0">
-                                                        <rect key="frame" x="13" y="240" width="364" height="34"/>
-                                                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Tabla de resultados I" translatesAutoresizingMaskIntoConstraints="NO" id="0RM-FM-Wce">
-                                                        <rect key="frame" x="13" y="282" width="359" height="34"/>
-                                                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="B. ELECCIÓN DE BOQUILLAS" translatesAutoresizingMaskIntoConstraints="NO" id="bNd-Mi-Mbr">
-                                                        <rect key="frame" x="5" y="324" width="375" height="34"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="B.1. Introducción de datos" translatesAutoresizingMaskIntoConstraints="NO" id="ygF-g9-T3y">
-                                                        <rect key="frame" x="13" y="366" width="359" height="34"/>
-                                                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Tabla de resultados II" translatesAutoresizingMaskIntoConstraints="NO" id="95x-04-f8E">
-                                                        <rect key="frame" x="13" y="400" width="359" height="34"/>
-                                                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="C. VOLUMEN DE CALDO APLICADO" translatesAutoresizingMaskIntoConstraints="NO" id="GRt-8S-G6f">
-                                                        <rect key="frame" x="2" y="442" width="375" height="34"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    </textView>
-                                                </subviews>
-                                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            </scrollView>
-                                        </subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="A. VOLUMEN DE APLICACIÓN" translatesAutoresizingMaskIntoConstraints="NO" id="F3x-n4-S1W">
+                                        <rect key="frame" x="1" y="88" width="320" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="B. ELECCIÓN DE BOQUILLAS" translatesAutoresizingMaskIntoConstraints="NO" id="bNd-Mi-Mbr">
+                                        <rect key="frame" x="1" y="333" width="320" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="C. VOLUMEN DE CALDO APLICADO" translatesAutoresizingMaskIntoConstraints="NO" id="GRt-8S-G6f">
+                                        <rect key="frame" x="0.0" y="451" width="320" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJr-jd-yEW">
+                                        <rect key="frame" x="1" y="29" width="320" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <textAttributes key="titleTextAttributes">
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                        </textAttributes>
+                                        <items>
+                                            <navigationItem title="Índice" id="QBl-43-Tge">
+                                                <barButtonItem key="rightBarButtonItem" title="&gt;" id="4Ki-pF-oRW">
+                                                    <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <connections>
+                                                        <segue destination="7qp-2U-E7z" kind="modal" id="Bm7-xH-oCR"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Índice" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="07Y-gK-lsB">
+                                        <rect key="frame" x="114" y="29" width="92" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="A.1. Datos del cultivo" translatesAutoresizingMaskIntoConstraints="NO" id="89h-qS-e0U">
+                                        <rect key="frame" x="1" y="121" width="320" height="34"/>
                                         <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </scrollView>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="A.2. Datos del tratamiento" translatesAutoresizingMaskIntoConstraints="NO" id="iJ9-N4-6cZ">
+                                        <rect key="frame" x="1" y="156" width="320" height="34"/>
+                                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="A.3. Datos meteorológicos" translatesAutoresizingMaskIntoConstraints="NO" id="YI3-gZ-BnO">
+                                        <rect key="frame" x="1" y="198" width="320" height="34"/>
+                                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="A.4. Elección del equipo" translatesAutoresizingMaskIntoConstraints="NO" id="0UY-G6-Wl0">
+                                        <rect key="frame" x="1" y="240" width="320" height="34"/>
+                                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Tabla de resultados I" translatesAutoresizingMaskIntoConstraints="NO" id="0RM-FM-Wce">
+                                        <rect key="frame" x="1" y="282" width="320" height="34"/>
+                                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="B.1. Introducción de datos" translatesAutoresizingMaskIntoConstraints="NO" id="ygF-g9-T3y">
+                                        <rect key="frame" x="1" y="366" width="320" height="34"/>
+                                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Tabla de resultados II" translatesAutoresizingMaskIntoConstraints="NO" id="95x-04-f8E">
+                                        <rect key="frame" x="1" y="400" width="320" height="34"/>
+                                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="C.1. Introducción de datos" translatesAutoresizingMaskIntoConstraints="NO" id="6ld-Cf-NyD">
+                                        <rect key="frame" x="1" y="484" width="320" height="34"/>
+                                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Tabla de resultados III" translatesAutoresizingMaskIntoConstraints="NO" id="PvR-KE-MhD">
+                                        <rect key="frame" x="1" y="513" width="320" height="34"/>
+                                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
+                                <constraints>
+                                    <constraint firstItem="sJr-jd-yEW" firstAttribute="top" secondItem="2Wj-Nn-3X7" secondAttribute="top" constant="29" id="1rb-dk-6aF"/>
+                                    <constraint firstItem="sJr-jd-yEW" firstAttribute="leading" secondItem="2Wj-Nn-3X7" secondAttribute="leading" constant="1" id="aXe-Uy-rWz"/>
+                                    <constraint firstAttribute="trailing" secondItem="sJr-jd-yEW" secondAttribute="trailing" constant="-1" id="fTQ-Il-Gbs"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2Wj-Nn-3X7" firstAttribute="leading" secondItem="pza-1S-dkh" secondAttribute="leadingMargin" constant="-16" id="BfY-b0-oab"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Wj-Nn-3X7" secondAttribute="trailing" id="CgS-3U-V0r"/>
+                            <constraint firstItem="2Wj-Nn-3X7" firstAttribute="top" secondItem="pza-1S-dkh" secondAttribute="topMargin" id="otr-H6-EDH"/>
+                            <constraint firstAttribute="centerX" secondItem="2Wj-Nn-3X7" secondAttribute="centerX" id="rAS-FE-ayT"/>
+                        </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="700"/>
                     <connections>
-                        <outlet property="scroller" destination="oD4-r1-acp" id="rYK-kQ-kI6"/>
+                        <outlet property="scroller" destination="2Wj-Nn-3X7" id="uAa-m3-MjF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="glY-lK-o6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="835" y="409"/>
+            <point key="canvasLocation" x="600" y="422"/>
         </scene>
         <!--Cultivo1-->
         <scene sceneID="nGl-5h-I8d">
             <objects>
                 <viewController id="7qp-2U-E7z" customClass="Cultivo1" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GXm-Tw-CUP"/>
-                        <viewControllerLayoutGuide type="bottom" id="y9k-ad-4rl"/>
+                        <viewControllerLayoutGuide type="top" id="nwG-Np-Tg8"/>
+                        <viewControllerLayoutGuide type="bottom" id="asI-Qa-hZ9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="W1q-fw-DrO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nw0-FU-Na2">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -280,14 +265,14 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                         <barButtonItem key="leftBarButtonItem" title="&lt;" id="K9A-WD-2gR">
                                             <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="K34-3y-P8g" kind="show" id="TQy-fi-1Ts"/>
+                                                <segue destination="K34-3y-P8g" kind="modal" id="TQy-fi-1Ts"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="&gt;" id="Wvb-WI-UYX">
                                             <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="accion:" destination="7qp-2U-E7z" id="f40-bI-6Hj"/>
-                                                <segue destination="EE1-VW-Gf0" kind="show" identifier="Cultivo" id="T8A-I6-nr6"/>
+                                                <segue destination="EE1-VW-Gf0" kind="modal" identifier="Cultivo" id="T8A-I6-nr6"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -322,7 +307,7 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Sna-Bd-a6p">
-                                <rect key="frame" x="16" y="157" width="348" height="29"/>
+                                <rect key="frame" x="16" y="157" width="293" height="29"/>
                                 <segments>
                                     <segment title="Alta"/>
                                     <segment title="Media"/>
@@ -448,7 +433,7 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGN-XI-x8K">
-                                <rect key="frame" x="316" y="103" width="43" height="30"/>
+                                <rect key="frame" x="261" y="103" width="43" height="30"/>
                                 <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
@@ -459,13 +444,13 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4Au-95-4rH" kind="show" id="G7C-ud-4bF"/>
+                                    <segue destination="4Au-95-4rH" kind="modal" id="G7C-ud-4bF"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="AlturaArboles" destination="Smy-Fw-k4V" id="sGq-L7-4g1"/>
                         <outlet property="AlturaMeseta" destination="qdW-3G-eFW" id="VMK-AU-yAG"/>
@@ -479,15 +464,15 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XfY-bg-eIL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1457.5" y="400.5"/>
+            <point key="canvasLocation" x="777.33333333333337" y="379.13999999999999"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="gZe-B4-OsH">
             <objects>
                 <viewController id="4Au-95-4rH" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dkV-QQ-r33"/>
-                        <viewControllerLayoutGuide type="bottom" id="UBU-kO-pc7"/>
+                        <viewControllerLayoutGuide type="top" id="Mzy-0L-8cO"/>
+                        <viewControllerLayoutGuide type="bottom" id="qPq-Cl-GvG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QDf-3x-9nM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -508,7 +493,7 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                             <color key="titleShadowColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="7qp-2U-E7z" kind="show" id="gHK-OI-fri"/>
+                                            <segue destination="7qp-2U-E7z" kind="modal" id="gHK-OI-fri"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -521,15 +506,15 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AcS-Bg-E3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1457.5" y="1253.5"/>
+            <point key="canvasLocation" x="777.33333333333337" y="1186.6466666666668"/>
         </scene>
         <!--Cultivo2-->
         <scene sceneID="1mZ-BK-Tnn">
             <objects>
                 <viewController storyboardIdentifier="Cultivo2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EE1-VW-Gf0" customClass="Cultivo2" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gHa-dH-H3O"/>
-                        <viewControllerLayoutGuide type="bottom" id="Zs5-SY-Kjy"/>
+                        <viewControllerLayoutGuide type="top" id="sfG-VP-WOr"/>
+                        <viewControllerLayoutGuide type="bottom" id="OCk-n3-xnH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ilM-uM-xeg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -551,13 +536,13 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                         <barButtonItem key="leftBarButtonItem" title="&lt;" id="9Fo-mh-iCW">
                                             <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="7qp-2U-E7z" kind="show" id="uWn-Dm-tf4"/>
+                                                <segue destination="7qp-2U-E7z" kind="modal" id="uWn-Dm-tf4"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="&gt;" id="pvg-VA-7zV">
                                             <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="YxF-R9-rco" kind="show" identifier="Cultivo2" id="jRg-3v-K1I"/>
+                                                <segue destination="YxF-R9-rco" kind="modal" identifier="Cultivo2" id="jRg-3v-K1I"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -646,15 +631,15 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NnL-6t-kzy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1960.5" y="400.5"/>
+            <point key="canvasLocation" x="1045.5999999999999" y="379.13999999999999"/>
         </scene>
         <!--Cultivo3-->
         <scene sceneID="dRe-64-uIp">
             <objects>
                 <viewController id="YxF-R9-rco" customClass="Cultivo3" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="K3r-Kr-4lI"/>
-                        <viewControllerLayoutGuide type="bottom" id="X3A-li-EZb"/>
+                        <viewControllerLayoutGuide type="top" id="zC9-JJ-nDy"/>
+                        <viewControllerLayoutGuide type="bottom" id="vYb-t7-Xig"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sWC-Kf-pg0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -676,13 +661,13 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                         <barButtonItem key="leftBarButtonItem" title="&lt;" id="DZi-PI-Zbl">
                                             <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="EE1-VW-Gf0" kind="show" id="g7L-38-bRg"/>
+                                                <segue destination="EE1-VW-Gf0" kind="modal" id="g7L-38-bRg"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="&gt;" id="FeF-Xc-IHv">
                                             <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="yVO-TH-V6a" kind="show" identifier="Cultivo3" id="ERp-3Z-C22"/>
+                                                <segue destination="yVO-TH-V6a" kind="modal" identifier="Cultivo3" id="ERp-3Z-C22"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -869,15 +854,15 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckz-T9-r9j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2478.5" y="400.5"/>
+            <point key="canvasLocation" x="1321.8666666666666" y="379.13999999999999"/>
         </scene>
         <!--Cultivo4-->
         <scene sceneID="y5r-1w-4ZJ">
             <objects>
                 <viewController id="yVO-TH-V6a" customClass="Cultivo4" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Hgf-rD-mWr"/>
-                        <viewControllerLayoutGuide type="bottom" id="CJy-IV-Ugm"/>
+                        <viewControllerLayoutGuide type="top" id="SBY-d9-YHQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="frz-vi-bqU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Pbz-EC-qak">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -899,13 +884,13 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                         <barButtonItem key="leftBarButtonItem" title="&lt;" id="R6l-w3-imW">
                                             <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="YxF-R9-rco" kind="show" id="Rbs-9g-VVo"/>
+                                                <segue destination="YxF-R9-rco" kind="modal" id="Rbs-9g-VVo"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="&gt;" id="vR4-cd-rGT">
                                             <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="sLH-CZ-4CI" kind="show" identifier="SegueResult1" id="nnS-aD-7BB"/>
+                                                <segue destination="sLH-CZ-4CI" kind="modal" identifier="SegueResult1" id="nnS-aD-7BB"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1034,15 +1019,15 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Biu-au-YZ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2987.5" y="400.5"/>
+            <point key="canvasLocation" x="1593.3333333333333" y="379.13999999999999"/>
         </scene>
         <!--Result1-->
         <scene sceneID="7YK-Fo-K6v">
             <objects>
                 <viewController storyboardIdentifier="TablaResultados1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sLH-CZ-4CI" customClass="Result1" customModule="DosApp" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qeg-db-5GP"/>
-                        <viewControllerLayoutGuide type="bottom" id="iYX-Th-03k"/>
+                        <viewControllerLayoutGuide type="top" id="LaC-Pc-DUl"/>
+                        <viewControllerLayoutGuide type="bottom" id="mCr-Nh-t7T"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Oas-Fr-ON5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1064,13 +1049,13 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                         <barButtonItem key="leftBarButtonItem" title="&lt;" id="shB-Cl-OZr">
                                             <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="yVO-TH-V6a" kind="show" id="oyd-TT-afh"/>
+                                                <segue destination="yVO-TH-V6a" kind="modal" id="oyd-TT-afh"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="&gt;" id="BaL-gJ-Kn4">
                                             <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="6i0-hf-4Vc" kind="show" identifier="SegueResult12" id="pkZ-g8-IIm"/>
+                                                <segue destination="6i0-hf-4Vc" kind="modal" identifier="SegueResult12" id="pkZ-g8-IIm"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1349,15 +1334,15 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJl-oB-H49" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3467.5" y="400.5"/>
+            <point key="canvasLocation" x="1849.3333333333333" y="379.13999999999999"/>
         </scene>
         <!--Result12-->
         <scene sceneID="O7U-HV-lUt">
             <objects>
                 <viewController id="6i0-hf-4Vc" customClass="Result12" customModule="DosApp" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Xtq-4c-JoS"/>
-                        <viewControllerLayoutGuide type="bottom" id="p9e-gy-4qK"/>
+                        <viewControllerLayoutGuide type="top" id="nOm-86-YDw"/>
+                        <viewControllerLayoutGuide type="bottom" id="iZo-gk-h1N"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FDB-gy-6R4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1379,13 +1364,13 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                         <barButtonItem key="leftBarButtonItem" title="&lt;" id="dcP-xb-juW">
                                             <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="sLH-CZ-4CI" kind="show" id="Rm0-nj-NqW"/>
+                                                <segue destination="sLH-CZ-4CI" kind="modal" id="Rm0-nj-NqW"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="&gt;" id="4fk-0x-mcn">
                                             <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="VMu-TN-R8z" kind="show" id="vPS-f5-3Oj"/>
+                                                <segue destination="VMu-TN-R8z" kind="modal" id="vPS-f5-3Oj"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1540,18 +1525,18 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SaZ-Db-Akd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3959.5" y="400.5"/>
+            <point key="canvasLocation" x="2111.7333333333331" y="379.13999999999999"/>
         </scene>
         <!--Selec Boquillas1-->
         <scene sceneID="hUH-IA-x9I">
             <objects>
                 <viewController id="VMu-TN-R8z" customClass="SelecBoquillas1" customModule="DosApp" colorLabel="IBBuiltInLabel-Red" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PNl-vn-Us8"/>
-                        <viewControllerLayoutGuide type="bottom" id="M9z-9K-r5J"/>
+                        <viewControllerLayoutGuide type="top" id="oIr-9K-z0w"/>
+                        <viewControllerLayoutGuide type="bottom" id="DJo-dh-CWP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ymn-Ag-hHQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Nz-Ut-O0Q">
@@ -1573,7 +1558,7 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                         <barButtonItem key="rightBarButtonItem" title="&gt;" id="9dw-Cl-Ro4">
                                             <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="1GO-3R-ypa" kind="show" id="FkG-Pe-dN1"/>
+                                                <segue destination="1GO-3R-ypa" kind="modal" id="FkG-Pe-dN1"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -1613,7 +1598,7 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Volumen de Aplicacion siguiente" translatesAutoresizingMaskIntoConstraints="NO" id="RLc-be-x9j">
-                                <rect key="frame" x="92" y="141" width="190" height="46"/>
+                                <rect key="frame" x="92" y="141" width="157" height="46"/>
                                 <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
@@ -1660,7 +1645,7 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Ancho de trabajo siguiente" translatesAutoresizingMaskIntoConstraints="NO" id="4KO-p4-rj4">
-                                <rect key="frame" x="92" y="265" width="173" height="46"/>
+                                <rect key="frame" x="92" y="265" width="157" height="46"/>
                                 <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
@@ -1764,20 +1749,6 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yLh-QB-T2o">
-                                <rect key="frame" x="257" y="150" width="58" height="36"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oRW-Q0-f9J">
-                                <rect key="frame" x="257" y="274" width="58" height="36"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="3" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qvV-dW-Mbh">
                                 <rect key="frame" x="236" y="446" width="79" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1791,13 +1762,29 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                     <action selector="SliderChange:" destination="VMu-TN-R8z" eventType="valueChanged" id="0p5-4r-Nys"/>
                                 </connections>
                             </slider>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffC-e8-wep">
+                                <rect key="frame" x="257" y="149" width="58" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="chngeVolSig:" destination="VMu-TN-R8z" eventType="editingChanged" id="wf9-PW-0lc"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1wp-1F-qHG">
+                                <rect key="frame" x="257" y="277" width="58" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="chngeAnchSig:" destination="VMu-TN-R8z" eventType="editingChanged" id="SVi-0S-F43"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="AnchoCalculadoText" destination="ggj-7W-fux" id="QoZ-fD-jdq"/>
-                        <outlet property="AnchoSiguienteText" destination="oRW-Q0-f9J" id="tRN-M0-YLH"/>
+                        <outlet property="AnchoSiguienteText" destination="1wp-1F-qHG" id="V7M-dg-c9H"/>
                         <outlet property="CaudalLiquidoSectorText" destination="eg9-S3-C9d" id="pmg-ZU-Y3d"/>
                         <outlet property="CaudalLiquidoTotalText" destination="Kcw-vq-emF" id="fDv-lk-n4D"/>
                         <outlet property="SliderVA" destination="1dw-ZX-4E4" id="gkL-jp-HqW"/>
@@ -1807,20 +1794,20 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                         <outlet property="SwitchVC" destination="BJI-ia-V3g" id="DSY-gQ-M86"/>
                         <outlet property="VelocidadAvanceText" destination="qvV-dW-Mbh" id="9gv-Ln-8EV"/>
                         <outlet property="VolumenCalculadoText" destination="h8m-1M-NtA" id="oTd-w8-nWT"/>
-                        <outlet property="VolumenSiguienteText" destination="yLh-QB-T2o" id="ixa-Q3-EVC"/>
+                        <outlet property="VolumenSiguienteText" destination="ffC-e8-wep" id="KiF-3G-A2N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q2L-AG-C8R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4419.5" y="400.5"/>
+            <point key="canvasLocation" x="2357.0666666666666" y="379.13999999999999"/>
         </scene>
         <!--Selec Boquillas2-->
         <scene sceneID="b1C-Sq-ndA">
             <objects>
                 <viewController id="1GO-3R-ypa" customClass="SelecBoquillas2" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="K4a-vb-xcI"/>
-                        <viewControllerLayoutGuide type="bottom" id="cHb-jQ-97o"/>
+                        <viewControllerLayoutGuide type="top" id="1X3-wW-yY3"/>
+                        <viewControllerLayoutGuide type="bottom" id="9lC-kV-agl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Dja-84-Ji8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -1854,12 +1841,7 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HWN-lT-GsA">
-                                <rect key="frame" x="262" y="115" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hkW-aK-EDP">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hkW-aK-EDP">
                                 <rect key="frame" x="262" y="153" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -2053,20 +2035,36 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                         <barButtonItem key="rightBarButtonItem" title="&gt;" id="Tih-Mh-M2V">
                                             <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
-                                                <segue destination="ohz-mh-LeC" kind="show" id="uyI-T8-HfW"/>
+                                                <segue destination="ohz-mh-LeC" kind="modal" id="uyI-T8-HfW"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="B.2. Detalles del pulv. hidroneumático" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7cu-RX-R7b">
+                                <rect key="frame" x="44" y="26" width="288" height="31"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HWN-lT-GsA">
+                                <rect key="frame" x="262" y="113" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="hkW-aK-EDP" firstAttribute="trailing" secondItem="Dja-84-Ji8" secondAttribute="trailingMargin" id="QfE-ds-aAw"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="NumBoqAbAlta" destination="Fis-3r-r9U" id="f0F-Uk-Tbr"/>
                         <outlet property="NumBoqAbBaja" destination="Y4U-SF-Qyp" id="xld-as-nq8"/>
                         <outlet property="NumBoqAbMedia" destination="tx5-Wr-WUs" id="0ps-RE-hbO"/>
+                        <outlet property="NumBoqCerrAlta" destination="HWN-lT-GsA" id="Gt8-0Z-gdQ"/>
                         <outlet property="PorcentajeVegAlta" destination="J7H-Qr-uvs" id="580-7h-v5H"/>
                         <outlet property="PorcentajeVegBaja" destination="ygl-1U-z8E" id="8UR-IH-BsE"/>
                         <outlet property="PorcentajeVegMedia" destination="TGJ-0I-tRO" id="F3P-1N-6is"/>
@@ -2074,15 +2072,15 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cg2-IQ-8yw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4862.5" y="400.5"/>
+            <point key="canvasLocation" x="2593.3333333333335" y="379.13999999999999"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ENY-Uh-ziF">
             <objects>
                 <viewController id="ohz-mh-LeC" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aut-t0-y2Y"/>
-                        <viewControllerLayoutGuide type="bottom" id="RM0-75-Gad"/>
+                        <viewControllerLayoutGuide type="top" id="xlU-gv-vUq"/>
+                        <viewControllerLayoutGuide type="bottom" id="qVk-eQ-GJq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mMg-D1-A49">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -2216,15 +2214,15 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7s-8J-lXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5320.5" y="394.5"/>
+            <point key="canvasLocation" x="2837.5999999999999" y="373.45999999999998"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="50H-U4-Bwp">
             <objects>
                 <viewController id="IGT-RK-OE8" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="USl-gN-yJk"/>
-                        <viewControllerLayoutGuide type="bottom" id="zyC-PP-oNv"/>
+                        <viewControllerLayoutGuide type="top" id="X5l-p9-gse"/>
+                        <viewControllerLayoutGuide type="bottom" id="7UF-BW-vFq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7md-eh-ptL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -2370,15 +2368,15 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bku-vn-GXn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5807.5" y="394.5"/>
+            <point key="canvasLocation" x="3097.3333333333335" y="373.45999999999998"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="D5Q-5d-9Q5">
             <objects>
                 <viewController id="4JK-qA-P5x" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="uhk-GW-vVC"/>
-                        <viewControllerLayoutGuide type="bottom" id="cvu-bm-7kg"/>
+                        <viewControllerLayoutGuide type="top" id="igt-cd-a6o"/>
+                        <viewControllerLayoutGuide type="bottom" id="QTM-7A-8HG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FoT-9M-NMF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -2508,15 +2506,15 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bt-xE-gns" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6259.5" y="394.5"/>
+            <point key="canvasLocation" x="3338.4000000000001" y="373.45999999999998"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Nwk-bS-Qph">
             <objects>
                 <viewController id="Xe0-RN-ORD" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wPX-hL-YS6"/>
-                        <viewControllerLayoutGuide type="bottom" id="8Le-cs-aT6"/>
+                        <viewControllerLayoutGuide type="top" id="JUS-6r-e0W"/>
+                        <viewControllerLayoutGuide type="bottom" id="my9-Ko-8d6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eYT-Tm-d7W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -2694,15 +2692,15 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V98-K9-z54" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6709.5" y="394.5"/>
+            <point key="canvasLocation" x="3578.4000000000001" y="373.45999999999998"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ZwE-QG-JfD">
             <objects>
                 <viewController id="Xnh-7z-6sv" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="frc-XZ-yWX"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ceg-s9-sXh"/>
+                        <viewControllerLayoutGuide type="top" id="1Sm-7l-mCX"/>
+                        <viewControllerLayoutGuide type="bottom" id="xXR-KR-4tU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JSt-ju-Rig">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -2918,15 +2916,15 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rHG-zA-0sf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7165.5" y="400.5"/>
+            <point key="canvasLocation" x="3821.5999999999999" y="379.13999999999999"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="sVz-aa-Qbg">
             <objects>
                 <viewController id="gjh-My-eMD" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1tb-F8-AZk"/>
-                        <viewControllerLayoutGuide type="bottom" id="2pW-lb-8qy"/>
+                        <viewControllerLayoutGuide type="top" id="Rjy-nM-iWp"/>
+                        <viewControllerLayoutGuide type="bottom" id="zjD-qD-0iu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="s25-eB-F9w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -3056,15 +3054,15 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZn-WE-5W8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7562.5" y="400.5"/>
+            <point key="canvasLocation" x="4033.3333333333335" y="379.13999999999999"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="SVz-4w-UB7">
             <objects>
                 <viewController id="k70-QJ-d5d" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ruD-u6-j7d"/>
-                        <viewControllerLayoutGuide type="bottom" id="7Re-Gj-Ki7"/>
+                        <viewControllerLayoutGuide type="top" id="iuz-fM-5AQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="eGU-hm-X5k"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zBy-xa-gY4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -3210,15 +3208,15 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sh1-0q-aQg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8356.5" y="400.5"/>
+            <point key="canvasLocation" x="4456.8000000000002" y="379.13999999999999"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="HlR-xu-Em6">
             <objects>
                 <viewController id="c33-DM-RHA" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="LGP-dc-I78"/>
-                        <viewControllerLayoutGuide type="bottom" id="oNY-td-kNx"/>
+                        <viewControllerLayoutGuide type="top" id="Mhp-LF-W4r"/>
+                        <viewControllerLayoutGuide type="bottom" id="CwZ-Uk-Cyd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gkq-89-8X6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -3396,15 +3394,15 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwo-0A-uxV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8757.5" y="400.5"/>
+            <point key="canvasLocation" x="4670.666666666667" y="379.13999999999999"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Lhk-i9-b2L">
             <objects>
                 <viewController id="gND-wc-YMc" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7qC-92-ETC"/>
-                        <viewControllerLayoutGuide type="bottom" id="NKN-VN-2U4"/>
+                        <viewControllerLayoutGuide type="top" id="4Hy-7W-08C"/>
+                        <viewControllerLayoutGuide type="bottom" id="cWd-go-A4E"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gjN-oV-YIm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -3502,15 +3500,15 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Gy-NO-oUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7966.5" y="400.5"/>
+            <point key="canvasLocation" x="4248.8000000000002" y="379.13999999999999"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="WJP-8k-vCI">
             <objects>
                 <viewController id="9ho-HP-3lm" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bNn-MP-EA2"/>
-                        <viewControllerLayoutGuide type="bottom" id="tTb-5X-AGY"/>
+                        <viewControllerLayoutGuide type="top" id="HxE-Q5-BSx"/>
+                        <viewControllerLayoutGuide type="bottom" id="LHR-9c-Nh4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="clW-Tt-Rue">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -3559,18 +3557,23 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pfC-4j-hft" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9183.5" y="400.5"/>
+            <point key="canvasLocation" x="4897.8666666666668" y="379.13999999999999"/>
         </scene>
     </scenes>
     <resources>
         <image name="Captura de pantalla 2015-01-19 a las 23.49.41" width="505" height="602"/>
     </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="oyd-TT-afh"/>
+        <segue reference="nnS-aD-7BB"/>
         <segue reference="Bm7-xH-oCR"/>
         <segue reference="TQy-fi-1Ts"/>
         <segue reference="T8A-I6-nr6"/>
         <segue reference="jRg-3v-K1I"/>
-        <segue reference="Rm0-nj-NqW"/>
-        <segue reference="oyd-TT-afh"/>
     </inferredMetricsTieBreakers>
 </document>

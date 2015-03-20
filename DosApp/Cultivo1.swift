@@ -16,7 +16,7 @@ let newItem = NSEntityDescription.insertNewObjectForEntityForName("A1", inManage
 
 class Cultivo1: UIViewController {
     
-
+    
     let caract = ParteA()
     
     
@@ -35,9 +35,10 @@ class Cultivo1: UIViewController {
     @IBOutlet var anchuraArboles: UITextField!
     @IBOutlet var alturaArboles: UITextField!
     @IBOutlet var alturaMeseta: UITextField!
-
+    
     @IBOutlet var densidadFoliar: UISegmentedControl!
     
+   
     @IBAction func elegirDensidadFoliar(sender: AnyObject) {
         
         
@@ -49,8 +50,8 @@ class Cultivo1: UIViewController {
             println("densidad foliar : alta")
         }
         else if (densidadFoliar.selectedSegmentIndex == 1){
-            newItem.densidadFoliar = 1
-            caract.densidadFoliar = 1;
+            newItem.densidadFoliar = 1.0;
+            caract.densidadFoliar = 1.0;
             newItem.densidadFoliarIndice = 1
             println("densidad foliar : media")
         }
@@ -71,7 +72,7 @@ class Cultivo1: UIViewController {
         else {
             return nil
         }
-        }() 
+        }()
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
@@ -91,7 +92,7 @@ class Cultivo1: UIViewController {
         caract.anchuraArboles = (anchuraArboles.text as NSString).doubleValue
         caract.alturaArboles = (alturaArboles.text as NSString).doubleValue
         caract.alturaMeseta = (alturaMeseta.text as NSString).doubleValue */
-//        var densidad = densidadFoliar.
+        //        var densidad = densidadFoliar.
         
         let comprobacion = caract.anchoCalle * caract.longitudArboles * caract.distanciaArboles * caract.anchuraArboles * caract.alturaArboles * caract.alturaMeseta
         
@@ -113,7 +114,7 @@ class Cultivo1: UIViewController {
                     println(fetchResults[0].densidadFoliar)
                     
                 }
-
+                
                 
                 var DestViewController = segue.destinationViewController as Cultivo2
                 DestViewController.caract2 = caract
@@ -122,7 +123,7 @@ class Cultivo1: UIViewController {
         }
         
     }
-  
+    
     
     
     override func viewDidLoad() {
@@ -171,7 +172,7 @@ class Cultivo1: UIViewController {
                 alturaMeseta.text = "\(fetchResults[0].alturaMeseta)"
             }
         }
-
+        
         
         
         
@@ -197,43 +198,43 @@ class Cultivo1: UIViewController {
                 if boq.count == 5 {
                     let dbBoquillas = NSEntityDescription.insertNewObjectForEntityForName("EntityBoquillas", inManagedObjectContext: self.managedObjectContext!) as EntityBoquillas
                     
-                let k = Double((boq[4] as NSString).doubleValue / pow(10,0.5))
-                let dia = (boq[2] as NSString).doubleValue
-
-                dbBoquillas.marca = boq[0]
-                dbBoquillas.modelo = boq[1]
-                dbBoquillas.diametro = dia
-                dbBoquillas.caudal = (boq[4] as NSString).doubleValue
-                dbBoquillas.p6 = k * pow(6,0.5)
-                dbBoquillas.p7 = k * pow(7,0.5)
-                dbBoquillas.p8 = k * pow(8,0.5)
-                dbBoquillas.p9 = k * pow(9,0.5)
-                dbBoquillas.p10 = k * pow(10,0.5)
-                dbBoquillas.p11 = k * pow(11,0.5)
-                dbBoquillas.p12 = k * pow(12,0.5)
-                dbBoquillas.p13 = k * pow(13,0.5)
-                dbBoquillas.p14 = k * pow(14,0.5)
-                dbBoquillas.p15 = k * pow(15,0.5)
-                dbBoquillas.p16 = k * pow(16,0.5)
-                
-                
-
+                    let k = Double((boq[4] as NSString).doubleValue / pow(10,0.5))
+                    let dia = (boq[2] as NSString).doubleValue
+                    
+                    dbBoquillas.marca = boq[0]
+                    dbBoquillas.modelo = boq[1]
+                    dbBoquillas.diametro = dia
+                    dbBoquillas.caudal = (boq[4] as NSString).doubleValue
+                    dbBoquillas.p6 = k * pow(6,0.5)
+                    dbBoquillas.p7 = k * pow(7,0.5)
+                    dbBoquillas.p8 = k * pow(8,0.5)
+                    dbBoquillas.p9 = k * pow(9,0.5)
+                    dbBoquillas.p10 = k * pow(10,0.5)
+                    dbBoquillas.p11 = k * pow(11,0.5)
+                    dbBoquillas.p12 = k * pow(12,0.5)
+                    dbBoquillas.p13 = k * pow(13,0.5)
+                    dbBoquillas.p14 = k * pow(14,0.5)
+                    dbBoquillas.p15 = k * pow(15,0.5)
+                    dbBoquillas.p16 = k * pow(16,0.5)
+                    
+                    
+                    
                 }
-
+                
             }
             println(boquillas[0])
-/*
+            /*
             let fetchRequest = NSFetchRequest(entityName: "EntityBoquillas")
             let fetchResults1 = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]
             *//*
             for var ue=0; ue<fetchResults1?.count; ue++ {
-                println(fetchResults1?[ue].marca)
-                println(fetchResults1?[ue].modelo)
-                println(fetchResults1?[ue].caudal)
-                println(fetchResults1?[ue].p6)
-                println(fetchResults1?[ue].p7)
-                println(fetchResults1?[ue].p16)
-                
+            println(fetchResults1?[ue].marca)
+            println(fetchResults1?[ue].modelo)
+            println(fetchResults1?[ue].caudal)
+            println(fetchResults1?[ue].p6)
+            println(fetchResults1?[ue].p7)
+            println(fetchResults1?[ue].p16)
+            
             }
             */
             
@@ -242,56 +243,64 @@ class Cultivo1: UIViewController {
             
             // Mirar: http://www.codingexplorer.com/getting-started-uitableview-swift/
             
-            var marcasList: [String] = ["Teejet","Hardi","Albuz","Lechler","Discos","Otros"]
             
-            var presionList: [String] = ["p6","p7","p8","p9","p10","p11","p12","p13","p14","p15","p16"]
-            
-           let fetchRequest = NSFetchRequest(entityName: "EntityBoquillas")
-            
-            let sortDescriptor = NSSortDescriptor(key: "marca", ascending: true)
-            
-            fetchRequest.sortDescriptors = [sortDescriptor]
-            
-            let intervaloCaudalAdmisible = [0.3,1.2,0.3,1.2,0.3,1.2] as [Double]
-            
-            for marca in marcasList {
-                for presion in presionList {
-                    //let predicate1 = NSPredicate(format: "(%@ >= %f) AND (%@<= %f) AND (Marca == %@)",   presion, intervaloCaudalAdmisible[0], presion, intervaloCaudalAdmisible[1], i)
-                    
+            if boquillas.count > 5 {
                 
-                    let str = (presion + " > %f AND " + presion + "< %f AND marca == %@"  ) as String
-                    let predicate1 = NSPredicate(format: str , intervaloCaudalAdmisible[0], intervaloCaudalAdmisible[1], marca)
-                    fetchRequest.predicate = predicate1
-                    if let fetchResults1 = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]{
-                        println(fetchResults1[0].marca)
-                        println(fetchResults1[0].modelo)
-                        println(fetchResults1[0].p6)
-                        let predicate2 = NSPredicate(format: "(%@ >= %f) AND (%@<= %f) AND (Marca == %@)","p6", intervaloCaudalAdmisible[2], "p6", intervaloCaudalAdmisible[3], marca)
-                        fetchRequest.predicate = predicate2
-                        let fetchResults2 = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]
-                        if (fetchResults2 != nil){
-                            let predicate3 = NSPredicate(format: "(%@ >= %f) AND (%@<= %f) AND (Marca == %@)",presion, intervaloCaudalAdmisible[4], presion, intervaloCaudalAdmisible[5], marca)
-                            fetchRequest.predicate = predicate3
-                            let fetchResults3 = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]
-                            if (fetchResults3 != nil){
-                                /** Si hay resultados en las 3 zonas... **/
+                
+                var marcasList: [String] = ["Teejet","Hardi","Albuz","Lechler","Discos","Otros"]
+                
+                var presionList: [String] = ["p6","p7","p8","p9","p10","p11","p12","p13","p14","p15","p16"]
+                
+                let fetchRequest = NSFetchRequest(entityName: "EntityBoquillas")
+                let fetchRequest2 = NSFetchRequest(entityName: "EntityBoquillas")
+                let sortDescriptor = NSSortDescriptor(key: "marca", ascending: true)
+                
+                fetchRequest.sortDescriptors = [sortDescriptor]
+                
+                let intervaloCaudalAdmisible = [0.3,1.2,0.3,1.2,0.3,1.2] as [Double]
+                
+                for marca in marcasList {
+                    for presion in presionList {
+                        //let predicate1 = NSPredicate(format: "(%@ >= %f) AND (%@<= %f) AND (Marca == %@)",   presion, intervaloCaudalAdmisible[0], presion, intervaloCaudalAdmisible[1], i)
+                        
+                        var str = (presion + " > %f AND " + presion + "< %f AND marca == %@"  ) as String
+                        let predicate1 = NSPredicate(format: str , intervaloCaudalAdmisible[0], intervaloCaudalAdmisible[1], marca)
+                        fetchRequest.predicate = predicate1
+                        if let fetchResults1 = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]{
+                            
+                            str = (presion + " > %f AND " + presion + "< %f AND marca == %@") as String
+                            let predicate2 = NSPredicate(format: str , intervaloCaudalAdmisible[2], intervaloCaudalAdmisible[3], marca)
+                            fetchRequest.predicate = predicate2
+                            if let fetchResults2 = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]{
                                 
-                                println(marca)
+                                /*for i in fetchResults2 {
+                                    println(i.marca)
+                                    println(i.modelo)
+                                    println(i.p6)
+                                }*/
+                                str = (presion + " > %f AND " + presion + "< %f AND marca == %@") as String
+                                let predicate3 = NSPredicate(format: str , intervaloCaudalAdmisible[4], intervaloCaudalAdmisible[5], marca)
+                                fetchRequest.predicate = predicate3
+                                if let fetchResults2 = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]{
+                                    
+                                    println("Todo perfectisimo")
+                                    
+                                
+                                }
                             }
                         }
                     }
                 }
+                
             }
             
-            
-           /* if  {
-                logItems = fetchResults
+            /* if  {
+            logItems = fetchResults
             }
             */
             /*********  AQUI TERMINA  **********/
             
         }
-        
         task.resume()
         /*
         pagina = (new http()).connect("http://secuest.comuf.com/dosacitric/BBDD.html");
@@ -310,9 +319,9 @@ class Cultivo1: UIViewController {
         //MARCA - MODELO - DIAMETRO(puede no haber) - CAUDAL
         double dia;
         if(boq[2].compareTo("")!=0){
-            dia = Double.parseDouble(boq[2]);
+        dia = Double.parseDouble(boq[2]);
         }else
-            dia = 0.0;
+        dia = 0.0;
         
         //System.out.println(boq[1] + " "+boq[4]+"/("+boq[4]+"^0,5) = " +k);
         db.addBoquilla(boq[0],boq[1],dia,Double.parseDouble(boq[4]),k*java.lang.Math.pow(6.0,0.5),

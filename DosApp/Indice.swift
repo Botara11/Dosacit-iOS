@@ -11,13 +11,14 @@ import UIKit
 
 class Indice: UIViewController, UIScrollViewDelegate {
     
-    
     @IBOutlet var scroller: UIScrollView!
+    
+//    @IBOutlet var scroller: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         scroller.userInteractionEnabled = true
-        scroller.contentSize = CGSizeMake(375, 588)
+       scroller.contentSize = CGSizeMake(320, 800)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
