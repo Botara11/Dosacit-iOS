@@ -335,11 +335,13 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                             </segmentedControl>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Xf-89-di4">
                                 <rect key="frame" x="227" y="267" width="97" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iXH-1c-3fi">
                                 <rect key="frame" x="227" y="319" width="97" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -380,6 +382,7 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NZb-kS-WZa">
                                 <rect key="frame" x="227" y="408" width="97" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -392,16 +395,19 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cGD-BB-uwx">
                                 <rect key="frame" x="227" y="456" width="97" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Smy-Fw-k4V">
                                 <rect key="frame" x="227" y="504" width="97" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qdW-3G-eFW">
                                 <rect key="frame" x="227" y="562" width="97" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -1634,6 +1640,7 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ggj-7W-fux">
                                 <rect key="frame" x="257" y="232" width="58" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1690,6 +1697,7 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Kcw-vq-emF">
                                 <rect key="frame" x="236" y="501" width="79" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1704,6 +1712,7 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eg9-S3-C9d">
                                 <rect key="frame" x="236" y="557" width="79" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1725,7 +1734,7 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="h8m-1M-NtA">
                                 <rect key="frame" x="257" y="105" width="58" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -1767,13 +1776,14 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yLh-QB-T2o">
                                 <rect key="frame" x="257" y="150" width="58" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oRW-Q0-f9J">
                                 <rect key="frame" x="257" y="274" width="58" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1781,6 +1791,7 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="3" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qvV-dW-Mbh">
                                 <rect key="frame" x="236" y="446" width="79" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1833,21 +1844,21 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Numero de boquillas que deben cerrarse por zona:" translatesAutoresizingMaskIntoConstraints="NO" id="hhn-0k-RRY">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Numero de boquillas que deben cerrarse por zona:" translatesAutoresizingMaskIntoConstraints="NO" id="hhn-0k-RRY">
                                 <rect key="frame" x="16" y="64" width="273" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Zona alta" translatesAutoresizingMaskIntoConstraints="NO" id="PZw-UV-uxQ">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Zona alta" translatesAutoresizingMaskIntoConstraints="NO" id="PZw-UV-uxQ">
                                 <rect key="frame" x="108" y="113" width="120" height="34"/>
                                 <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Zona baja" translatesAutoresizingMaskIntoConstraints="NO" id="lFB-LX-IGj">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Zona baja" translatesAutoresizingMaskIntoConstraints="NO" id="lFB-LX-IGj">
                                 <rect key="frame" x="108" y="151" width="161" height="34"/>
                                 <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1856,11 +1867,13 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HWN-lT-GsA">
                                 <rect key="frame" x="262" y="115" width="97" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hkW-aK-EDP">
                                 <rect key="frame" x="262" y="153" width="97" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -1885,21 +1898,21 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Numero de boquillas abiertas por zona:" translatesAutoresizingMaskIntoConstraints="NO" id="G1k-9X-Cvi">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Numero de boquillas abiertas por zona:" translatesAutoresizingMaskIntoConstraints="NO" id="G1k-9X-Cvi">
                                 <rect key="frame" x="16" y="215" width="273" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Zona alta (nA)" translatesAutoresizingMaskIntoConstraints="NO" id="hnl-vV-ajc">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Zona alta (nA)" translatesAutoresizingMaskIntoConstraints="NO" id="hnl-vV-ajc">
                                 <rect key="frame" x="108" y="249" width="120" height="34"/>
                                 <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Zona media (nM)" translatesAutoresizingMaskIntoConstraints="NO" id="X48-Do-XZV">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Zona media (nM)" translatesAutoresizingMaskIntoConstraints="NO" id="X48-Do-XZV">
                                 <rect key="frame" x="108" y="287" width="161" height="34"/>
                                 <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1908,11 +1921,13 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fis-3r-r9U">
                                 <rect key="frame" x="262" y="251" width="97" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tx5-Wr-WUs">
                                 <rect key="frame" x="262" y="289" width="97" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -1930,7 +1945,7 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Zona baja (nB)" translatesAutoresizingMaskIntoConstraints="NO" id="dEa-bM-Em4">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Zona baja (nB)" translatesAutoresizingMaskIntoConstraints="NO" id="dEa-bM-Em4">
                                 <rect key="frame" x="108" y="327" width="161" height="34"/>
                                 <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1939,6 +1954,7 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y4U-SF-Qyp">
                                 <rect key="frame" x="262" y="329" width="97" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -1993,11 +2009,13 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J7H-Qr-uvs">
                                 <rect key="frame" x="262" y="420" width="77" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TGJ-0I-tRO">
                                 <rect key="frame" x="262" y="458" width="77" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -2024,6 +2042,7 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ygl-1U-z8E">
                                 <rect key="frame" x="262" y="498" width="77" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -2067,6 +2086,8 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                         <outlet property="NumBoqAbAlta" destination="Fis-3r-r9U" id="f0F-Uk-Tbr"/>
                         <outlet property="NumBoqAbBaja" destination="Y4U-SF-Qyp" id="xld-as-nq8"/>
                         <outlet property="NumBoqAbMedia" destination="tx5-Wr-WUs" id="0ps-RE-hbO"/>
+                        <outlet property="NumBoqCerrAlta" destination="HWN-lT-GsA" id="w4T-x0-2uj"/>
+                        <outlet property="NumBoqCerrBaja" destination="hkW-aK-EDP" id="LS6-ao-reu"/>
                         <outlet property="PorcentajeVegAlta" destination="J7H-Qr-uvs" id="580-7h-v5H"/>
                         <outlet property="PorcentajeVegBaja" destination="ygl-1U-z8E" id="8UR-IH-BsE"/>
                         <outlet property="PorcentajeVegMedia" destination="TGJ-0I-tRO" id="F3P-1N-6is"/>
@@ -2076,10 +2097,10 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
             </objects>
             <point key="canvasLocation" x="4862.5" y="400.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Selec Boquillas3-->
         <scene sceneID="ENY-Uh-ziF">
             <objects>
-                <viewController id="ohz-mh-LeC" sceneMemberID="viewController">
+                <viewController id="ohz-mh-LeC" customClass="SelecBoquillas3" customModule="DosApp" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aut-t0-y2Y"/>
                         <viewControllerLayoutGuide type="bottom" id="RM0-75-Gad"/>
@@ -2166,24 +2187,23 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="22,34 L/min" translatesAutoresizingMaskIntoConstraints="NO" id="QSj-p3-i09">
-                                <rect key="frame" x="257" y="99" width="98" height="36"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="22,34 L/min" translatesAutoresizingMaskIntoConstraints="NO" id="QSj-p3-i09">
+                                <rect key="frame" x="257" y="99" width="63" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="22,34 L/min" translatesAutoresizingMaskIntoConstraints="NO" id="8Ew-oY-cBx">
-                                <rect key="frame" x="257" y="137" width="98" height="36"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="22,34 L/min" translatesAutoresizingMaskIntoConstraints="NO" id="8Ew-oY-cBx">
+                                <rect key="frame" x="257" y="137" width="63" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="22,34 L/min" translatesAutoresizingMaskIntoConstraints="NO" id="b3q-eC-tkh">
-                                <rect key="frame" x="257" y="178" width="98" height="36"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="22,34 L/min" translatesAutoresizingMaskIntoConstraints="NO" id="b3q-eC-tkh">
+                                <rect key="frame" x="257" y="178" width="63" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -2203,20 +2223,52 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XrA-Ut-TUm">
                                 <rect key="frame" x="251" y="279" width="77" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="23a-jA-Utz">
                                 <rect key="frame" x="35" y="279" width="186" height="31"/>
+                                <connections>
+                                    <action selector="SliderVariacionCaudal:" destination="ohz-mh-LeC" eventType="valueChanged" id="yuF-bB-DeP"/>
+                                </connections>
                             </slider>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="L/min" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7q4-7l-CHe">
+                                <rect key="frame" x="317" y="101" width="49" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="L/min" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jjo-MC-KTV">
+                                <rect key="frame" x="317" y="139" width="49" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="L/min" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4TX-Os-K6c">
+                                <rect key="frame" x="317" y="180" width="49" height="32"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="IntervaloCaudalAdmisibleAlta" destination="QSj-p3-i09" id="CC8-zn-1va"/>
+                        <outlet property="IntervaloCaudalAdmisibleBaja" destination="b3q-eC-tkh" id="Ltn-Lk-KsF"/>
+                        <outlet property="IntervaloCaudalAdmisibleMedia" destination="8Ew-oY-cBx" id="Svc-xr-w4K"/>
+                        <outlet property="VariacionCaudal" destination="23a-jA-Utz" id="qv2-3L-bww"/>
+                        <outlet property="VariacionText" destination="XrA-Ut-TUm" id="1V1-gT-jKj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7s-8J-lXJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5320.5" y="394.5"/>
+            <point key="canvasLocation" x="5320.5" y="399.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="50H-U4-Bwp">

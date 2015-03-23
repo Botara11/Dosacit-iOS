@@ -7,6 +7,9 @@
 //
 
 import Foundation
+import Darwin
+import CoreData
+import UIKit
 
 
 public class ParteB {
@@ -29,28 +32,48 @@ public class ParteB {
     var caudalLiquidoZona = [Double]();
     var caudalLiquidoBoquilla = [Double]();
     
+    func calcularCaudalesB(){
+        
+        let fetchRequest = NSFetchRequest(entityName: "B1")
+        if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+            
+        newItemB.caudalLiquidoTotal = fetchResults[0].volumenApp * fetchResults[0].anchoCalle * fetchResults[0].velocidadAvance / 600;
+        newItemB.caudalLiquidoSector = fetchResults[0].caudalLiquidoTotal / 2; // SectorIzquierdo y Sector Derecho
+            
+        }
+
+    }
+    
     
     func calcularParteB() {
+        
+        
+    let fetchRequest = NSFetchRequest(entityName: "B1")
+    if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+                
+
     
-    caudalLiquidoTotal = volumenApp*anchoTrabajo*velocidadAvance / 600;  //600 HARCODEADO---------
-    caudalLiquidoSector = caudalLiquidoTotal / 2; // SectorIzquierdo y Sector Derecho
-    numeroBoquillasSector = numeroTotalBoquillas/2;
-    numeroTotalBoquillasAbiertas = numeroTotalBoquillas - numeroBoquillasCerradas[0] - numeroBoquillasCerradas[1];
-    caudalLiquidoZona[0] = caudalLiquidoTotal * Double(porcentajeVegetacion[0]) / 100;
-    caudalLiquidoZona[1] = caudalLiquidoTotal * Double(porcentajeVegetacion[1]) / 100;
-    caudalLiquidoZona[2] = caudalLiquidoTotal * Double(porcentajeVegetacion[2]) / 100;
-    caudalLiquidoBoquilla[0] = caudalLiquidoZona[0] / Double(numeroBoquillasAbiertas[0]);
-    caudalLiquidoBoquilla[1] = caudalLiquidoZona[1] / Double(numeroBoquillasAbiertas[1]);
-    caudalLiquidoBoquilla[2] = caudalLiquidoZona[2] / Double(numeroBoquillasAbiertas[2]);
-    variacionCaudalAdmisible = variacionCaudalAdmisible / 100;
-    intervaloCaudalAdmisible[0] = caudalLiquidoBoquilla[0] * (1-variacionCaudalAdmisible);
-    intervaloCaudalAdmisible[1] = caudalLiquidoBoquilla[0] * (1+variacionCaudalAdmisible);
-    intervaloCaudalAdmisible[2] = caudalLiquidoBoquilla[1] * (1-variacionCaudalAdmisible);
-    intervaloCaudalAdmisible[3] = caudalLiquidoBoquilla[1] * (1+variacionCaudalAdmisible);
-    intervaloCaudalAdmisible[4] = caudalLiquidoBoquilla[2] * (1-variacionCaudalAdmisible);
-    intervaloCaudalAdmisible[5] = caudalLiquidoBoquilla[2] * (1+variacionCaudalAdmisible);
+    newItemB.caudalLiquidoTotal = fetchResults[0].volumenApp * fetchResults[0].anchoCalle * fetchResults[0].velocidadAvance / 600;
+        
+        //600 HARCODEADO---------
+    newItemB.caudalLiquidoSector = fetchResults[0].caudalLiquidoTotal / 2; // SectorIzquierdo y Sector Derecho
+    newItemB.numeroBoquillasSector = fetchResults[0].numeroTotalBoquillas/2;
+    newItemB.numeroTotalBoquillasAbiertas = fetchResults[0].numeroTotalBoquillas - fetchResults[0].numeroBoquillasCerradas[0] - fetchResults[1].numeroBoquillasCerradas[1];
+    newItemB.caudalLiquidoZona[0] = Int(fetchResults[0].caudalLiquidoTotal) * fetchResults[0].porcentajeVegetacion[0] / 100;
+    newItemB.caudalLiquidoZona[1] = Int(fetchResults[0].caudalLiquidoTotal) * fetchResults[0].porcentajeVegetacion[1] / 100;
+    newItemB.caudalLiquidoZona[2] = Int(fetchResults[0].caudalLiquidoTotal) * fetchResults[0].porcentajeVegetacion[2] / 100;
+    newItemB.caudalLiquidoBoquilla[0] = Int(fetchResults[0].caudalLiquidoZona[0]) / fetchResults[0].numeroBoquillasAbiertas[0];
+    newItemB.caudalLiquidoBoquilla[1] = Int(fetchResults[0].caudalLiquidoZona[1]) / fetchResults[0].numeroBoquillasAbiertas[1];
+    newItemB.caudalLiquidoBoquilla[2] = Int(fetchResults[0].caudalLiquidoZona[2]) / fetchResults[0].numeroBoquillasAbiertas[2];
+    newItemB.variacionCaudalAdmisible = fetchResults[0].variacionCaudalAdmisible / 100;
+    newItemB.intervaloCaudalAdmisible[0] = Int(fetchResults[0].caudalLiquidoBoquilla[0]) * (1-Int(fetchResults[0].variacionCaudalAdmisible));
+    newItemB.intervaloCaudalAdmisible[1] = Int(fetchResults[0].caudalLiquidoBoquilla[0]) * (1+Int(fetchResults[0].variacionCaudalAdmisible));
+    newItemB.intervaloCaudalAdmisible[2] = Int(fetchResults[0].caudalLiquidoBoquilla[1]) * (1-Int(fetchResults[0].variacionCaudalAdmisible));
+    newItemB.intervaloCaudalAdmisible[3] = Int(fetchResults[0].caudalLiquidoBoquilla[1]) * (1+Int(fetchResults[0].variacionCaudalAdmisible));
+    newItemB.intervaloCaudalAdmisible[4] = Int(fetchResults[0].caudalLiquidoBoquilla[2]) * (1-Int(fetchResults[0].variacionCaudalAdmisible));
+    newItemB.intervaloCaudalAdmisible[5] = Int(fetchResults[0].caudalLiquidoBoquilla[2]) * (1+Int(fetchResults[0].variacionCaudalAdmisible));
     
-    
+        }
     
     }
     

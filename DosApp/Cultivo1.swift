@@ -80,6 +80,7 @@ class Cultivo1: UIViewController {
         
         
         newItem.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
+        newItemB.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
         newItem.distanciaArboles = (distanciaArboles.text as NSString).doubleValue
         newItem.longitudArboles = (longitudArboles.text as NSString).doubleValue
         newItem.anchuraArboles = (anchuraArboles.text as NSString).doubleValue

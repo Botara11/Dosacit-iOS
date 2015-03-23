@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14A389" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6751" systemVersion="14A389" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="A1" representedClassName="DosApp.A1" syncable="YES">
         <attribute name="alturaArboles" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="alturaMeseta" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -28,6 +28,23 @@
         <attribute name="zonaCritica" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="zonaCriticaIndice" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
     </entity>
+    <entity name="B1" representedClassName="DosApp.B1" syncable="YES">
+        <attribute name="anchoCalle" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="caudalLiquidoBoquilla" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="caudalLiquidoSector" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="caudalLiquidoTotal" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="caudalLiquidoZona" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="intervaloCaudalAdmisible" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="numeroBoquillasAbiertas" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="numeroBoquillasCerradas" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="numeroBoquillasSector" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="numeroTotalBoquillas" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="numeroTotalBoquillasAbiertas" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="porcentajeVegetacion" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="variacionCaudalAdmisible" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="velocidadAvance" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="volumenApp" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+    </entity>
     <entity name="EntityBoquillas" representedClassName="DosApp.EntityBoquillas" syncable="YES">
         <attribute name="activo" optional="YES" attributeType="Integer 16" syncable="YES"/>
         <attribute name="caudal" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -48,6 +65,7 @@
     </entity>
     <elements>
         <element name="A1" positionX="-63" positionY="-18" width="128" height="435"/>
+        <element name="B1" positionX="-63" positionY="135" width="128" height="270"/>
         <element name="EntityBoquillas" positionX="-63" positionY="0" width="128" height="285"/>
     </elements>
 </model>
