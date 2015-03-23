@@ -27,26 +27,27 @@ class SelecBoquillas1: UIViewController {
     
     
     @IBOutlet var VolumenCalculadoText: UITextView!
-    @IBOutlet var VolumenSiguienteText: UITextView!
+    @IBOutlet var VolumenSiguienteText: UITextField!
+    @IBOutlet var AnchoSiguienteText: UITextField!
     @IBOutlet var AnchoCalculadoText: UITextView!
-    @IBOutlet var AnchoSiguienteText: UITextView!
     @IBOutlet var VelocidadAvanceText: UITextView!
     @IBOutlet var CaudalLiquidoTotalText: UITextView!
     @IBOutlet var CaudalLiquidoSectorText: UITextView!
     
+        
     
     
     @IBAction func SwitchPressedVC(sender: AnyObject) {
         if SwitchVC.on{
             SwitchV.setOn(false, animated: true)
-            VolumenSiguienteText.editable = false
+            //VolumenSiguienteText.editable = false
             newItem.volumenAplicacionLHA = (VolumenCalculadoText.text as NSString).integerValue
             
             
         }
         else {
             SwitchV.setOn(true, animated: true)
-            VolumenSiguienteText.editable = true
+            //VolumenSiguienteText.editable = true
             newItem.volumenAplicacionLHA = (VolumenSiguienteText.text as NSString).integerValue
             
         }
@@ -55,13 +56,13 @@ class SelecBoquillas1: UIViewController {
     @IBAction func SwitchPressedV(sender: AnyObject) {
         if SwitchV.on{
             SwitchVC.setOn(false, animated: true)
-            VolumenSiguienteText.editable = true
+            //VolumenSiguienteText.editable = true
             newItem.volumenAplicacionLHA = (VolumenSiguienteText.text as NSString).integerValue
             
         }
         else {
             SwitchVC.setOn(true, animated: true)
-            VolumenSiguienteText.editable = false
+            //VolumenSiguienteText.editable = false
             newItem.volumenAplicacionLHA = (VolumenCalculadoText.text as NSString).integerValue
         }
     }
@@ -70,13 +71,13 @@ class SelecBoquillas1: UIViewController {
         
         if SwitchAC.on{
             SwitchAS.setOn(false, animated: true)
-            AnchoSiguienteText.editable = false
+            //AnchoSiguienteText.editable = false
             newItem.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
             
         }
         else {
             SwitchAS.setOn(true, animated: true)
-            AnchoSiguienteText.editable = true
+           // AnchoSiguienteText.editable = true
             newItem.anchoCalle = (AnchoSiguienteText.text as NSString).doubleValue
         }
         
@@ -86,13 +87,13 @@ class SelecBoquillas1: UIViewController {
         
         if SwitchAS.on{
             SwitchAC.setOn(false, animated: true)
-            AnchoSiguienteText.editable = true
+           // AnchoSiguienteText.editable = true
             newItem.anchoCalle = (AnchoSiguienteText.text as NSString).doubleValue
             
         }
         else {
             SwitchAC.setOn(true, animated: true)
-            AnchoSiguienteText.editable = false
+           // AnchoSiguienteText.editable = false
             newItem.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
         }
     }
@@ -145,9 +146,9 @@ class SelecBoquillas1: UIViewController {
         
         
         
-        VolumenSiguienteText.editable = false
+        //VolumenSiguienteText.editable = false
         VolumenSiguienteText.keyboardType = UIKeyboardType.NumbersAndPunctuation
-        AnchoSiguienteText.editable = false
+        //AnchoSiguienteText.editable = false
         AnchoSiguienteText.keyboardType = UIKeyboardType.NumbersAndPunctuation
         SliderVA.value = (VelocidadAvanceText.text as NSString).floatValue
         
