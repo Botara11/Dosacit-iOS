@@ -17,12 +17,13 @@ class SelecBoquillas3: UIViewController {
     @IBOutlet var IntervaloCaudalAdmisibleMedia: UITextView!
     @IBOutlet var IntervaloCaudalAdmisibleBaja: UITextView!
     
-    @IBOutlet var VariacionText: UITextField!
+    
+    @IBOutlet var VariacionText: UITextView!
     @IBOutlet var VariacionCaudal: UISlider!
     
     @IBAction func SliderVariacionCaudal(sender: AnyObject) {
         
-        var CurrentValue:float_t = VariacionCaudal.value
+        var CurrentValue = Int(VariacionCaudal.value)
         VariacionText.text = "\(CurrentValue)"
         newItemB.variacionCaudalAdmisible = Double(CurrentValue)
         caract2.calcularParteB()
@@ -30,9 +31,9 @@ class SelecBoquillas3: UIViewController {
         let fetchRequest = NSFetchRequest(entityName: "B1")
         if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
             
-            IntervaloCaudalAdmisibleAlta.text = "\(fetchResults[0].intervaloCaudalAdmisible[0])"
-            IntervaloCaudalAdmisibleMedia.text = "\(fetchResults[0].intervaloCaudalAdmisible[1])"
-            IntervaloCaudalAdmisibleBaja.text = "\(fetchResults[0].intervaloCaudalAdmisible[2])"
+            IntervaloCaudalAdmisibleAlta.text = "\(fetchResults[0].intervaloCaudalAdmisible0)"
+            IntervaloCaudalAdmisibleMedia.text = "\(fetchResults[0].intervaloCaudalAdmisible2)"
+            IntervaloCaudalAdmisibleBaja.text = "\(fetchResults[0].intervaloCaudalAdmisible4)"
             
             
         }
@@ -51,16 +52,18 @@ class SelecBoquillas3: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        newItemB.variacionCaudalAdmisible = 5;
+        caract2.calcularParteB()
         // Do any additional setup after loading the view, typically from a nib.
-        /*let fetchRequest = NSFetchRequest(entityName: "B1")
+        let fetchRequest = NSFetchRequest(entityName: "B1")
         if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+            VariacionText.text = "\(fetchResults[0].variacionCaudalAdmisible)"
+            IntervaloCaudalAdmisibleAlta.text = "\(fetchResults[0].intervaloCaudalAdmisible0)"
+            IntervaloCaudalAdmisibleMedia.text = "\(fetchResults[0].intervaloCaudalAdmisible1)"
+            IntervaloCaudalAdmisibleBaja.text = "\(fetchResults[0].intervaloCaudalAdmisible2)"
             
-            IntervaloCaudalAdmisibleAlta.text = "\(fetchResults[0].intervaloCaudalAdmisible[0])"
-            IntervaloCaudalAdmisibleMedia.text = "\(fetchResults[0].intervaloCaudalAdmisible[1])"
-            IntervaloCaudalAdmisibleBaja.text = "\(fetchResults[0].intervaloCaudalAdmisible[2])"
             
-            
-        }*/
+        }
     }
     
     

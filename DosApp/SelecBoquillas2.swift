@@ -26,16 +26,29 @@ class SelecBoquillas2: UIViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        
+        if NumBoqCerrAlta.text == "" || NumBoqCerrBaja.text == "" || NumBoqAbAlta.text == "" || NumBoqAbBaja.text == "" || NumBoqAbMedia.text == "" || PorcentajeVegAlta.text == "" || PorcentajeVegBaja == "" || PorcentajeVegMedia.text == "" {
+            
+            alert("ERROR",mensaje: "No puede haber campos vacíos y deben ser valores numéricos")
+            
+        }else{
        
-        /*newItemB.numeroBoquillasCerradas[0] = (NumBoqCerrAlta.text as NSString).integerValue
-        newItemB.numeroBoquillasCerradas[1] = (NumBoqCerrBaja.text as NSString).integerValue
-        newItemB.numeroBoquillasAbiertas[0] = (NumBoqAbAlta.text as NSString).integerValue
-        newItemB.numeroBoquillasAbiertas[1] = (NumBoqAbMedia.text as NSString).integerValue
-        newItemB.numeroBoquillasAbiertas[2] = (NumBoqAbBaja.text as NSString).integerValue
-        newItemB.porcentajeVegetacion[0] = (PorcentajeVegAlta.text as NSString).integerValue
-        newItemB.porcentajeVegetacion[1] = (PorcentajeVegMedia.text as NSString).integerValue
-        newItemB.porcentajeVegetacion[2] = (PorcentajeVegBaja.text as NSString).integerValue*/
-
+        newItemB.numeroBoquillasCerradasAlta = (NumBoqCerrAlta.text as NSString).integerValue
+        
+        newItemB.numeroBoquillasCerradasBaja = (NumBoqCerrBaja.text as NSString).integerValue
+        
+        newItemB.numeroBoquillasAbiertasAlta = (NumBoqAbAlta.text as NSString).integerValue
+        
+        newItemB.numeroBoquillasAbiertasBaja = (NumBoqAbMedia.text as NSString).integerValue
+        
+        newItemB.numeroBoquillasAbiertasMedia = (NumBoqAbBaja.text as NSString).integerValue
+        
+        newItemB.porcentajeVegetacionAlta = (PorcentajeVegAlta.text as NSString).integerValue
+        
+        newItemB.porcentajeVegetacionBaja = (PorcentajeVegMedia.text as NSString).integerValue
+        
+        newItemB.porcentajeVegetacionMedia = (PorcentajeVegBaja.text as NSString).integerValue
+        }
         
     }
     
@@ -56,10 +69,47 @@ class SelecBoquillas2: UIViewController {
         let fetchRequest = NSFetchRequest(entityName: "B1")
         if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
             
+                
+                if (fetchResults[0].numeroBoquillasCerradasAlta != 0){
+                    NumBoqCerrAlta.text = "\(fetchResults[0].numeroBoquillasCerradasAlta)"
+                }
+                
+                if (fetchResults[0].numeroBoquillasCerradasBaja != 0){
+                    NumBoqCerrBaja.text = "\(fetchResults[0].numeroBoquillasCerradasBaja)"
+                }
+                
+                if (fetchResults[0].numeroBoquillasAbiertasAlta != 0){
+                    NumBoqAbAlta.text = "\(fetchResults[0].numeroBoquillasAbiertasAlta)"
+                }
+                
+                if (fetchResults[0].numeroBoquillasAbiertasBaja != 0){
+                    NumBoqAbBaja.text = "\(fetchResults[0].numeroBoquillasAbiertasBaja)"
+                }
+                
+                if (fetchResults[0].numeroBoquillasAbiertasMedia != 0){
+                    NumBoqAbMedia.text = "\(fetchResults[0].numeroBoquillasAbiertasMedia)"
+                }
+                if (fetchResults[0].porcentajeVegetacionAlta != 0){
+                    PorcentajeVegAlta.text = "\(fetchResults[0].porcentajeVegetacionAlta)"
+                }
+                if (fetchResults[0].porcentajeVegetacionBaja != 0){
+                    PorcentajeVegBaja.text = "\(fetchResults[0].porcentajeVegetacionBaja)"
+                }
+                if (fetchResults[0].porcentajeVegetacionMedia != 0){
+                    PorcentajeVegMedia.text = "\(fetchResults[0].porcentajeVegetacionMedia)"
+                }
             
         }
     }
     
+    
+    func alert(title :String,mensaje: String){
+        let alertController = UIAlertController(title: title, message:
+            mensaje, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
     
     
     override func didReceiveMemoryWarning() {

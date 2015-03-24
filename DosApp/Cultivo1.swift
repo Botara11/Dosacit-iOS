@@ -97,8 +97,8 @@ class Cultivo1: UIViewController {
         
         let comprobacion = caract.anchoCalle * caract.longitudArboles * caract.distanciaArboles * caract.anchuraArboles * caract.alturaArboles * caract.alturaMeseta
         
-        if comprobacion == 0.0  {
-            alert("ERROR",mensaje: "No pueden haber campos vacios y deben ser numeros")
+        if anchoCalleTextField.text == "" || distanciaArboles.text == "" || longitudArboles.text == "" || anchuraArboles.text == "" || alturaArboles.text == "" || alturaMeseta.text == "" {
+            alert("ERROR",mensaje: "No puede haber campos vacíos y deben ser valores numéricos")
         }
             
         else{

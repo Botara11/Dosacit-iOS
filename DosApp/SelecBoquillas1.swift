@@ -34,7 +34,38 @@ class SelecBoquillas1: UIViewController {
     @IBOutlet var CaudalLiquidoTotalText: UITextView!
     @IBOutlet var CaudalLiquidoSectorText: UITextView!
     
+    
+    
+    func textFieldDidChange(VolumenSiguienteText: UITextField) {
+        newItemB.volumenApp = (VolumenSiguienteText.text as NSString).doubleValue
+        caract2.calcularCaudalesB()
+        let fetchRequest = NSFetchRequest(entityName: "B1")
+        if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+            
+            CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
+            
+            CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+            
+        }
+
+        //your code
+    }
+    
+    
+    
+    func textFieldDidChangeAncho(AnchoSiguienteText: UITextField) {
+        newItemB.anchoCalle = (AnchoSiguienteText.text as NSString).doubleValue
+        caract2.calcularCaudalesB()
+        let fetchRequest = NSFetchRequest(entityName: "B1")
+        if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+            
+            CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
+            
+            CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+        }
         
+        //your code
+    }
     
     
     @IBAction func SwitchPressedVC(sender: AnyObject) {
@@ -104,14 +135,14 @@ class SelecBoquillas1: UIViewController {
     @IBAction func SliderChange(sender: AnyObject) {
         
         var CurrentValue:float_t = SliderVA.value
-        VelocidadAvanceText.text = "\(CurrentValue)"
+        VelocidadAvanceText.text = String(format:"%.2f",CurrentValue)
         newItemB.velocidadAvance = (CurrentValue as NSNumber).doubleValue
         caract2.calcularCaudalesB()
         let fetchRequest = NSFetchRequest(entityName: "B1")
         if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
             
-        CaudalLiquidoTotalText.text = "\(fetchResults[0].caudalLiquidoTotal)"
-        CaudalLiquidoSectorText.text = "\(fetchResults[0].caudalLiquidoTotal/2)"
+            CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
+        CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
             
         }
     }
@@ -143,18 +174,27 @@ class SelecBoquillas1: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
+        newItemB.velocidadAvance = 3;
+        AnchoSiguienteText.addTarget(self, action: "textFieldDidChangeAncho:", forControlEvents: UIControlEvents.EditingChanged)
+        VolumenSiguienteText.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+        //VolumenSiguienteText!.delegate = self
         //VolumenSiguienteText.editable = false
         VolumenSiguienteText.keyboardType = UIKeyboardType.NumbersAndPunctuation
         //AnchoSiguienteText.editable = false
         AnchoSiguienteText.keyboardType = UIKeyboardType.NumbersAndPunctuation
         SliderVA.value = (VelocidadAvanceText.text as NSString).floatValue
         
+        caract2.calcularCaudalesB()
+        let fetchRequest = NSFetchRequest(entityName: "B1")
+        if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+            
+            CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
+            
+            CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+        }
         
-        let fetchRequest = NSFetchRequest(entityName: "A1")
-        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [A1] {
+        let fetchRequestA = NSFetchRequest(entityName: "A1")
+        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequestA, error: nil) as? [A1] {
             
             VolumenCalculadoText.text = "\(fetchResults[0].volumenAplicacionLHA)"
             AnchoCalculadoText.text = "\(fetchResults[0].anchoCalle)"
