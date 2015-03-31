@@ -17,7 +17,7 @@ let newItem = NSEntityDescription.insertNewObjectForEntityForName("A1", inManage
 
 class Cultivo1: UIViewController {
     
-
+    
     let caract = ParteA()
     
     
@@ -36,7 +36,7 @@ class Cultivo1: UIViewController {
     @IBOutlet var anchuraArboles: UITextField!
     @IBOutlet var alturaArboles: UITextField!
     @IBOutlet var alturaMeseta: UITextField!
-
+    
     @IBOutlet var densidadFoliar: UISegmentedControl!
     
     @IBAction func elegirDensidadFoliar(sender: AnyObject) {
@@ -93,7 +93,7 @@ class Cultivo1: UIViewController {
         caract.anchuraArboles = (anchuraArboles.text as NSString).doubleValue
         caract.alturaArboles = (alturaArboles.text as NSString).doubleValue
         caract.alturaMeseta = (alturaMeseta.text as NSString).doubleValue */
-//        var densidad = densidadFoliar.
+        //        var densidad = densidadFoliar.
         
         let comprobacion = caract.anchoCalle * caract.longitudArboles * caract.distanciaArboles * caract.anchuraArboles * caract.alturaArboles * caract.alturaMeseta
         
@@ -104,27 +104,16 @@ class Cultivo1: UIViewController {
         else{
             
             if (segue.identifier == "Cultivo"){
-                
-                
-                
-                
                 let fetchRequest = NSFetchRequest(entityName: "A1")
                 if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [A1] {
-                    
-                    
                     println(fetchResults[0].densidadFoliar)
-                    
                 }
-
-                
                 var DestViewController = segue.destinationViewController as Cultivo2
                 DestViewController.caract2 = caract
             }
-            
         }
-        
     }
-  
+    
     
     
     override func viewDidLoad() {
@@ -173,9 +162,6 @@ class Cultivo1: UIViewController {
                 alturaMeseta.text = "\(fetchResults[0].alturaMeseta)"
             }
         }
-
-        
-        
         
         
         
@@ -194,18 +180,114 @@ class Cultivo1: UIViewController {
             let count = boquillas.count
             
             for item in boquillas{
+                
                 boq = item.componentsSeparatedByString("%%%")
-                var k = Double()
-                k = (boq[0] as NSString).doubleValue
+                if boq.count == 5 {
+                    let dbBoquillas = NSEntityDescription.insertNewObjectForEntityForName("EntityBoquillas", inManagedObjectContext: self.managedObjectContext!) as EntityBoquillas
+                    
+                    let k = Double((boq[4] as NSString).doubleValue / pow(10,0.5))
+                    let dia = (boq[2] as NSString).doubleValue
+                    
+                    dbBoquillas.marca = boq[0]
+                    dbBoquillas.modelo = boq[1]
+                    dbBoquillas.diametro = dia
+                    dbBoquillas.caudal = (boq[4] as NSString).doubleValue
+                    dbBoquillas.p6 = k * pow(6,0.5)
+                    dbBoquillas.p7 = k * pow(7,0.5)
+                    dbBoquillas.p8 = k * pow(8,0.5)
+                    dbBoquillas.p9 = k * pow(9,0.5)
+                    dbBoquillas.p10 = k * pow(10,0.5)
+                    dbBoquillas.p11 = k * pow(11,0.5)
+                    dbBoquillas.p12 = k * pow(12,0.5)
+                    dbBoquillas.p13 = k * pow(13,0.5)
+                    dbBoquillas.p14 = k * pow(14,0.5)
+                    dbBoquillas.p15 = k * pow(15,0.5)
+                    dbBoquillas.p16 = k * pow(16,0.5)
+                    
+                    
+                    
+                }
                 
             }
-            println(boquillas)
+            println(boquillas[0])
+            /*
+            let fetchRequest = NSFetchRequest(entityName: "EntityBoquillas")
+            let fetchResults1 = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]
+            *//*
+            for var ue=0; ue<fetchResults1?.count; ue++ {
+            println(fetchResults1?[ue].marca)
+            println(fetchResults1?[ue].modelo)
+            println(fetchResults1?[ue].caudal)
+            println(fetchResults1?[ue].p6)
+            println(fetchResults1?[ue].p7)
+            println(fetchResults1?[ue].p16)
+            
+            }
+            */
             
             
+            /*********  AQUI EMPIEZA  **********/
             
+            // Mirar: http://www.codingexplorer.com/getting-started-uitableview-swift/
+            
+            
+            if boquillas.count > 5 {
+                
+                
+                var marcasList: [String] = ["Teejet","Hardi","Albuz","Lechler","Discos","Otros"]
+                
+                var presionList: [String] = ["p6","p7","p8","p9","p10","p11","p12","p13","p14","p15","p16"]
+                
+                let fetchRequest = NSFetchRequest(entityName: "EntityBoquillas")
+                let fetchRequest2 = NSFetchRequest(entityName: "EntityBoquillas")
+                let sortDescriptor = NSSortDescriptor(key: "marca", ascending: true)
+                
+                fetchRequest.sortDescriptors = [sortDescriptor]
+                
+                let intervaloCaudalAdmisible = [0.3,1.2,0.3,1.2,0.3,1.2] as [Double]
+                
+                for marca in marcasList {
+                    for presion in presionList {
+                        //let predicate1 = NSPredicate(format: "(%@ >= %f) AND (%@<= %f) AND (Marca == %@)",   presion, intervaloCaudalAdmisible[0], presion, intervaloCaudalAdmisible[1], i)
+                        
+                        var str = (presion + " > %f AND " + presion + "< %f AND marca == %@"  ) as String
+                        let predicate1 = NSPredicate(format: str , intervaloCaudalAdmisible[0], intervaloCaudalAdmisible[1], marca)
+                        fetchRequest.predicate = predicate1
+                        if let fetchResults1 = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]{
+                            
+                            str = (presion + " > %f AND " + presion + "< %f AND marca == %@") as String
+                            let predicate2 = NSPredicate(format: str , intervaloCaudalAdmisible[2], intervaloCaudalAdmisible[3], marca)
+                            fetchRequest.predicate = predicate2
+                            if let fetchResults2 = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]{
+                                
+                                /*for i in fetchResults2 {
+                                println(i.marca)
+                                println(i.modelo)
+                                println(i.p6)
+                                }*/
+                                str = (presion + " > %f AND " + presion + "< %f AND marca == %@") as String
+                                let predicate3 = NSPredicate(format: str , intervaloCaudalAdmisible[4], intervaloCaudalAdmisible[5], marca)
+                                fetchRequest.predicate = predicate3
+                                if let fetchResults2 = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]{
+                                    
+                                    println("Todo perfectisimo")
+                                    
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+            
+            /* if  {
+            logItems = fetchResults
+            }
+            */
+            /*********  AQUI TERMINA  **********/
             
         }
-        
         task.resume()
         /*
         pagina = (new http()).connect("http://secuest.comuf.com/dosacitric/BBDD.html");
@@ -268,16 +350,9 @@ class Cultivo1: UIViewController {
             
         }
         else{
-            
-            
-            
             println("ALGO")
-            
             let vc : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("Cultivo2")
-            
-            
             self.showViewController(vc as UIViewController, sender: vc)
-            
         }
         //presentItemInfo()
         

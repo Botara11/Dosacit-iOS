@@ -1,0 +1,104 @@
+//
+//  Result21.swift
+//  DosApp
+//
+//  Created by Alvaro Serneguet on 30/03/15.
+//  Copyright (c) 2015 UPV. All rights reserved.
+//
+
+
+
+import UIKit
+import CoreData
+
+
+class Result21: UIViewController, UITableViewDataSource, UITableViewDelegate{
+    
+    let cellIdentifier = "cellIdentifier"
+    var tableData = [String]()
+    
+    var IntervaloCaudalAdmisible0 = Double()
+    var IntervaloCaudalAdmisible1 = Double()
+    var IntervaloCaudalAdmisible2 = Double()
+    var IntervaloCaudalAdmisible3 = Double()
+    var IntervaloCaudalAdmisible4 = Double()
+    var IntervaloCaudalAdmisible5 = Double()
+    
+    @IBOutlet var tableView: UITableView!
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+
+        
+        
+        let fetchRequest = NSFetchRequest(entityName: "B1")
+        if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+            
+             IntervaloCaudalAdmisible0 = fetchResults[0].intervaloCaudalAdmisible0
+             IntervaloCaudalAdmisible1 = fetchResults[0].intervaloCaudalAdmisible1
+             IntervaloCaudalAdmisible2 = fetchResults[0].intervaloCaudalAdmisible2
+             IntervaloCaudalAdmisible3 = fetchResults[0].intervaloCaudalAdmisible3
+             IntervaloCaudalAdmisible4 = fetchResults[0].intervaloCaudalAdmisible4
+             IntervaloCaudalAdmisible5 = fetchResults[0].intervaloCaudalAdmisible5
+
+            
+            
+            
+        }
+        
+        
+        // Setup table data
+        for index in 0...100 {
+            self.tableData.append("Item \(index)")
+        }
+        
+        tableView?.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
+        tableView.reloadData()
+        //tableView.removeFromSuperview()
+        
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // UITableViewDataSource methods
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableData.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier) as UITableViewCell
+        
+        cell.textLabel?.text = self.tableData[indexPath.row]
+        
+        return cell
+    }
+    
+    // UITableViewDelegate methods
+    
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        
+        let alert = UIAlertController(title: "Item selected", message: "You selected item \(indexPath.row)", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        alert.addAction(UIAlertAction(title: "OK",
+            style: UIAlertActionStyle.Default,
+            handler: {
+                (alert: UIAlertAction!) in println("An alert of type \(alert.style.hashValue) was tapped!")
+        }))
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+    }
+}
+
+

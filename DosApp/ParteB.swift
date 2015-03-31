@@ -59,19 +59,19 @@ public class ParteB {
     newItemB.caudalLiquidoSector = fetchResults[0].caudalLiquidoTotal / 2; // SectorIzquierdo y Sector Derecho
     newItemB.numeroBoquillasSector = fetchResults[0].numeroTotalBoquillas/2;
         newItemB.numeroTotalBoquillasAbiertas = fetchResults[0].numeroTotalBoquillas - fetchResults[0].numeroBoquillasCerradasAlta - fetchResults[0].numeroBoquillasCerradasBaja;
-    newItemB.caudalLiquidoZonaAlta = Int(fetchResults[0].caudalLiquidoTotal) * fetchResults[0].porcentajeVegetacionAlta / 100;
-        newItemB.caudalLiquidoZonaMedia = Int(fetchResults[0].caudalLiquidoTotal) * fetchResults[0].porcentajeVegetacionMedia / 100;
-    newItemB.caudalLiquidoZonaBaja = Int(fetchResults[0].caudalLiquidoTotal) * fetchResults[0].porcentajeVegetacionAlta / 100;
-    newItemB.caudalLiquidoBoquillaAlta = Int(fetchResults[0].caudalLiquidoZonaAlta) / fetchResults[0].numeroBoquillasAbiertasAlta;
-    newItemB.caudalLiquidoBoquillaMedia = Int(fetchResults[0].caudalLiquidoZonaMedia) / fetchResults[0].numeroBoquillasAbiertasMedia;
-    newItemB.caudalLiquidoBoquillaBaja = Int(fetchResults[0].caudalLiquidoZonaBaja) / fetchResults[0].numeroBoquillasAbiertasBaja;
+    newItemB.caudalLiquidoZonaAlta = fetchResults[0].caudalLiquidoTotal * Double(fetchResults[0].porcentajeVegetacionAlta / 100);
+        newItemB.caudalLiquidoZonaMedia = fetchResults[0].caudalLiquidoTotal * Double(fetchResults[0].porcentajeVegetacionMedia / 100)
+    newItemB.caudalLiquidoZonaBaja = fetchResults[0].caudalLiquidoTotal * Double(fetchResults[0].porcentajeVegetacionAlta / 100)
+    newItemB.caudalLiquidoBoquillaAlta = (fetchResults[0].caudalLiquidoZonaAlta) / Double(fetchResults[0].numeroBoquillasAbiertasAlta)
+    newItemB.caudalLiquidoBoquillaMedia = (fetchResults[0].caudalLiquidoZonaMedia) / Double(fetchResults[0].numeroBoquillasAbiertasMedia)
+    newItemB.caudalLiquidoBoquillaBaja = (fetchResults[0].caudalLiquidoZonaBaja) / Double(fetchResults[0].numeroBoquillasAbiertasBaja)
     newItemB.variacionCaudalAdmisible = fetchResults[0].variacionCaudalAdmisible / 100;
-    newItemB.intervaloCaudalAdmisible0 = Int(fetchResults[0].caudalLiquidoBoquillaAlta) * (1-Int(fetchResults[0].variacionCaudalAdmisible)/100);
-    newItemB.intervaloCaudalAdmisible1 = Int(fetchResults[0].caudalLiquidoBoquillaAlta) * (1+Int(fetchResults[0].variacionCaudalAdmisible)/100);
-    newItemB.intervaloCaudalAdmisible2 = Int(fetchResults[0].caudalLiquidoBoquillaMedia) * (1-Int(fetchResults[0].variacionCaudalAdmisible)/100);
-    newItemB.intervaloCaudalAdmisible3 = Int(fetchResults[0].caudalLiquidoBoquillaMedia) * (1+Int(fetchResults[0].variacionCaudalAdmisible)/100);
-    newItemB.intervaloCaudalAdmisible4 = Int(fetchResults[0].caudalLiquidoBoquillaBaja) * (1-Int(fetchResults[0].variacionCaudalAdmisible)/100);
-    newItemB.intervaloCaudalAdmisible5 = Int(fetchResults[0].caudalLiquidoBoquillaBaja) * (1+Int(fetchResults[0].variacionCaudalAdmisible)/100);
+    newItemB.intervaloCaudalAdmisible0 = (fetchResults[0].caudalLiquidoBoquillaAlta) * (1-(fetchResults[0].variacionCaudalAdmisible)/100);
+    newItemB.intervaloCaudalAdmisible1 = (fetchResults[0].caudalLiquidoBoquillaAlta) * (1+(fetchResults[0].variacionCaudalAdmisible)/100);
+    newItemB.intervaloCaudalAdmisible2 = (fetchResults[0].caudalLiquidoBoquillaMedia) * (1-(fetchResults[0].variacionCaudalAdmisible)/100);
+    newItemB.intervaloCaudalAdmisible3 = (fetchResults[0].caudalLiquidoBoquillaMedia) * (1+(fetchResults[0].variacionCaudalAdmisible)/100);
+    newItemB.intervaloCaudalAdmisible4 = (fetchResults[0].caudalLiquidoBoquillaBaja) * (1-(fetchResults[0].variacionCaudalAdmisible)/100);
+    newItemB.intervaloCaudalAdmisible5 = (fetchResults[0].caudalLiquidoBoquillaBaja) * (1+(fetchResults[0].variacionCaudalAdmisible)/100);
     
         }
     

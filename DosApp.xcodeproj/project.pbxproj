@@ -30,6 +30,7 @@
 		B2557E001AAF8430008A24D9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2557DFC1AAF8430008A24D9 /* LaunchScreen.xib */; };
 		B2557E011AAF8430008A24D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2557DFE1AAF8430008A24D9 /* Main.storyboard */; };
 		B2557E031AAF844E008A24D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2557E021AAF844E008A24D9 /* Images.xcassets */; };
+		B2DDEC901AC9C34F0008008F /* Result21.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DDEC8F1AC9C34F0008008F /* Result21.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		B2557DFD1AAF8430008A24D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		B2557DFF1AAF8430008A24D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		B2557E021AAF844E008A24D9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B2DDEC8F1AC9C34F0008008F /* Result21.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result21.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				B2557DDD1AAF841B008A24D9 /* AppDelegate.swift */,
+				B2DDEC8F1AC9C34F0008008F /* Result21.swift */,
 				21AB1AFB1AB0994D009275CD /* SelecBoquillas1.swift */,
 				2155E7421AB49119009D57E7 /* SelecBoquillas2.swift */,
 				218A54491ABC86FF009DD0EA /* SelecBoquillas3.swift */,
@@ -270,6 +273,7 @@
 				21AB1AFC1AB0994D009275CD /* SelecBoquillas1.swift in Sources */,
 				B2557DF71AAF841C008A24D9 /* ParteB.swift in Sources */,
 				218A544A1ABC86FF009DD0EA /* SelecBoquillas3.swift in Sources */,
+				B2DDEC901AC9C34F0008008F /* Result21.swift in Sources */,
 				B2557DFA1AAF841C008A24D9 /* ViewController.swift in Sources */,
 				B2557DF41AAF841C008A24D9 /* Indice.swift in Sources */,
 				B2557DF91AAF841C008A24D9 /* Result12.swift in Sources */,

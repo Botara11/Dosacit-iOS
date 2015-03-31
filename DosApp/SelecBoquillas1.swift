@@ -11,7 +11,7 @@ import CoreData
 
 let managedObjectContextB = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
 
-let newItemB = NSEntityDescription.insertNewObjectForEntityForName("B1", inManagedObjectContext: managedObjectContextB!) as B1
+let newItemB = NSEntityDescription.insertNewObjectForEntityForName("B1", inManagedObjectContext: managedObjectContext!) as B1
 
 
 class SelecBoquillas1: UIViewController {
@@ -33,10 +33,14 @@ class SelecBoquillas1: UIViewController {
     @IBOutlet var VelocidadAvanceText: UITextView!
     @IBOutlet var CaudalLiquidoTotalText: UITextView!
     @IBOutlet var CaudalLiquidoSectorText: UITextView!
-    
+    @IBOutlet var NumTotalBoquillasText: UITextField!
     
     
     func textFieldDidChange(VolumenSiguienteText: UITextField) {
+        
+        if SwitchV.on{
+            
+        
         newItemB.volumenApp = (VolumenSiguienteText.text as NSString).doubleValue
         caract2.calcularCaudalesB()
         let fetchRequest = NSFetchRequest(entityName: "B1")
@@ -47,6 +51,8 @@ class SelecBoquillas1: UIViewController {
             CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
             
         }
+            
+        }
 
         //your code
     }
@@ -54,6 +60,8 @@ class SelecBoquillas1: UIViewController {
     
     
     func textFieldDidChangeAncho(AnchoSiguienteText: UITextField) {
+        
+        if SwitchAS.on{
         newItemB.anchoCalle = (AnchoSiguienteText.text as NSString).doubleValue
         caract2.calcularCaudalesB()
         let fetchRequest = NSFetchRequest(entityName: "B1")
@@ -63,7 +71,7 @@ class SelecBoquillas1: UIViewController {
             
             CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
         }
-        
+        }
         //your code
     }
     
@@ -71,15 +79,48 @@ class SelecBoquillas1: UIViewController {
     @IBAction func SwitchPressedVC(sender: AnyObject) {
         if SwitchVC.on{
             SwitchV.setOn(false, animated: true)
+            
+            if (VolumenSiguienteText.text == ""){
+                
+            }else{
+                newItemB.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
+                caract2.calcularCaudalesB()
+                let fetchRequest = NSFetchRequest(entityName: "B1")
+                if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+                    
+                    CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
+                    
+                    CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+                }
+                newItem.volumenAplicacionLHA = (VolumenCalculadoText.text as NSString).integerValue
+                newItemB.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
+            }
             //VolumenSiguienteText.editable = false
-            newItem.volumenAplicacionLHA = (VolumenCalculadoText.text as NSString).integerValue
+            
             
             
         }
         else {
             SwitchV.setOn(true, animated: true)
-            //VolumenSiguienteText.editable = true
-            newItem.volumenAplicacionLHA = (VolumenSiguienteText.text as NSString).integerValue
+            if (VolumenSiguienteText.text == ""){
+                
+            }else{
+                newItemB.volumenApp = (VolumenSiguienteText.text as NSString).doubleValue
+                caract2.calcularCaudalesB()
+                let fetchRequest = NSFetchRequest(entityName: "B1")
+                if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+                    
+                    CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
+                    
+                    CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+                }
+                newItem.volumenAplicacionLHA = (VolumenSiguienteText.text as NSString).integerValue
+                newItemB.volumenApp = (VolumenSiguienteText.text as NSString).doubleValue
+                
+            }
+            
+            
+            
             
         }
     }
@@ -88,13 +129,50 @@ class SelecBoquillas1: UIViewController {
         if SwitchV.on{
             SwitchVC.setOn(false, animated: true)
             //VolumenSiguienteText.editable = true
-            newItem.volumenAplicacionLHA = (VolumenSiguienteText.text as NSString).integerValue
+            
+            if (VolumenSiguienteText.text == ""){
+                
+            }else{
+            newItemB.volumenApp = (VolumenSiguienteText.text as NSString).doubleValue
+            caract2.calcularCaudalesB()
+            let fetchRequest = NSFetchRequest(entityName: "B1")
+            if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+                
+                CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
+                
+                CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+                }
+                newItem.volumenAplicacionLHA = (VolumenSiguienteText.text as NSString).integerValue
+                newItemB.volumenApp = (VolumenSiguienteText.text as NSString).doubleValue
+                
+            }
+
+            
+            
             
         }
         else {
             SwitchVC.setOn(true, animated: true)
+            
+            if (VolumenSiguienteText.text == ""){
+                
+            }else{
+                newItemB.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
+                caract2.calcularCaudalesB()
+                let fetchRequest = NSFetchRequest(entityName: "B1")
+                if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+                    
+                    CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
+                    
+                    CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+                }
+                newItem.volumenAplicacionLHA = (VolumenCalculadoText.text as NSString).integerValue
+                newItemB.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
+            }
             //VolumenSiguienteText.editable = false
-            newItem.volumenAplicacionLHA = (VolumenCalculadoText.text as NSString).integerValue
+            
+            
+
         }
     }
     
@@ -102,14 +180,48 @@ class SelecBoquillas1: UIViewController {
         
         if SwitchAC.on{
             SwitchAS.setOn(false, animated: true)
-            //AnchoSiguienteText.editable = false
+            
+            if(AnchoCalculadoText.text == ""){
+                
+            }else{
+                newItemB.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
+                caract2.calcularCaudalesB()
+                let fetchRequest = NSFetchRequest(entityName: "B1")
+                if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+                    
+                    CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
+                    
+                    CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+                }
+            }
+            
+            
             newItem.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
+            newItemB.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
+        
+
             
         }
         else {
             SwitchAS.setOn(true, animated: true)
-           // AnchoSiguienteText.editable = true
+            
+            if(AnchoSiguienteText.text == ""){
+                
+            }else{
+                newItemB.anchoCalle = (AnchoSiguienteText.text as NSString).doubleValue
+                caract2.calcularCaudalesB()
+                let fetchRequest = NSFetchRequest(entityName: "B1")
+                if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+                    
+                    CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
+                    
+                    CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+                }
+            }
+            
+            
             newItem.anchoCalle = (AnchoSiguienteText.text as NSString).doubleValue
+            newItemB.anchoCalle = (AnchoSiguienteText.text as NSString).doubleValue
         }
         
     }
@@ -119,13 +231,47 @@ class SelecBoquillas1: UIViewController {
         if SwitchAS.on{
             SwitchAC.setOn(false, animated: true)
            // AnchoSiguienteText.editable = true
+            if(AnchoSiguienteText.text == ""){
+                
+            }else{
+            newItemB.anchoCalle = (AnchoSiguienteText.text as NSString).doubleValue
+            caract2.calcularCaudalesB()
+            let fetchRequest = NSFetchRequest(entityName: "B1")
+            if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+                
+                CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
+                
+                CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+            }
+            }
+
+            
             newItem.anchoCalle = (AnchoSiguienteText.text as NSString).doubleValue
+            newItemB.anchoCalle = (AnchoSiguienteText.text as NSString).doubleValue
             
         }
         else {
             SwitchAC.setOn(true, animated: true)
            // AnchoSiguienteText.editable = false
+            if(AnchoCalculadoText.text == ""){
+                
+            }else{
+                newItemB.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
+                caract2.calcularCaudalesB()
+                let fetchRequest = NSFetchRequest(entityName: "B1")
+                if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+                    
+                    CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
+                    
+                    CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+                }
+            }
+            
+            
             newItem.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
+            newItemB.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
+            
+
         }
     }
     
@@ -149,22 +295,35 @@ class SelecBoquillas1: UIViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-     
+        
+        if NumTotalBoquillasText.text == ""{
+             alert("ERROR",mensaje: "No puede haber campos vacíos y deben ser valores numéricos")
+            
+            
+        }else{
+        
+        newItemB.numeroTotalBoquillas = (NumTotalBoquillasText.text as NSString).integerValue
         
         
         if SwitchVC.on{
             newItem.volumenAplicacionLHA = (VolumenCalculadoText.text as NSString).integerValue
+            newItemB.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
         }
         else {
             newItem.volumenAplicacionLHA = (VolumenSiguienteText.text as NSString).integerValue
+            newItemB.volumenApp = (VolumenSiguienteText.text as NSString).doubleValue
+            
         }
         
         if SwitchAC.on{
             newItem.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
+            newItemB.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
             
         }
         else {
             newItem.anchoCalle = (AnchoSiguienteText.text as NSString).doubleValue
+            newItemB.anchoCalle = (AnchoSiguienteText.text as NSString).doubleValue
+        }
         }
     }
     
@@ -179,6 +338,8 @@ class SelecBoquillas1: UIViewController {
         VolumenSiguienteText.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
         //VolumenSiguienteText!.delegate = self
         //VolumenSiguienteText.editable = false
+        VolumenSiguienteText.keyboardType = UIKeyboardType.NumberPad
+        NumTotalBoquillasText.keyboardType = UIKeyboardType.NumberPad
         VolumenSiguienteText.keyboardType = UIKeyboardType.NumbersAndPunctuation
         //AnchoSiguienteText.editable = false
         AnchoSiguienteText.keyboardType = UIKeyboardType.NumbersAndPunctuation
@@ -207,6 +368,15 @@ class SelecBoquillas1: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    func alert(title :String,mensaje: String){
+        let alertController = UIAlertController(title: title, message:
+            mensaje, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
     }
     
     

@@ -27,6 +27,8 @@ class SelecBoquillas2: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
+        
+        
         if NumBoqCerrAlta.text == "" || NumBoqCerrBaja.text == "" || NumBoqAbAlta.text == "" || NumBoqAbBaja.text == "" || NumBoqAbMedia.text == "" || PorcentajeVegAlta.text == "" || PorcentajeVegBaja == "" || PorcentajeVegMedia.text == "" {
             
             alert("ERROR",mensaje: "No puede haber campos vacíos y deben ser valores numéricos")
@@ -49,6 +51,8 @@ class SelecBoquillas2: UIViewController {
         
         newItemB.porcentajeVegetacionMedia = (PorcentajeVegBaja.text as NSString).integerValue
         }
+            
+        
         
     }
     
@@ -58,13 +62,13 @@ class SelecBoquillas2: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         NumBoqCerrAlta.keyboardType = UIKeyboardType.NumberPad
-        NumBoqCerrBaja.keyboardType = UIKeyboardType.NumbersAndPunctuation
-        NumBoqAbAlta.keyboardType = UIKeyboardType.NumbersAndPunctuation
-        NumBoqAbMedia.keyboardType = UIKeyboardType.NumbersAndPunctuation
-        NumBoqAbBaja.keyboardType = UIKeyboardType.NumbersAndPunctuation
-        PorcentajeVegAlta.keyboardType = UIKeyboardType.NumbersAndPunctuation
-        PorcentajeVegMedia.keyboardType = UIKeyboardType.NumbersAndPunctuation
-        PorcentajeVegBaja.keyboardType = UIKeyboardType.NumbersAndPunctuation
+        NumBoqCerrBaja.keyboardType = UIKeyboardType.NumberPad
+        NumBoqAbAlta.keyboardType = UIKeyboardType.NumberPad
+        NumBoqAbMedia.keyboardType = UIKeyboardType.NumberPad
+        NumBoqAbBaja.keyboardType = UIKeyboardType.NumberPad
+        PorcentajeVegAlta.keyboardType = UIKeyboardType.NumberPad
+        PorcentajeVegMedia.keyboardType = UIKeyboardType.NumberPad
+        PorcentajeVegBaja.keyboardType = UIKeyboardType.NumberPad
         
         let fetchRequest = NSFetchRequest(entityName: "B1")
         if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {

@@ -15,20 +15,20 @@ import CoreData
 class B1: NSManagedObject {
     
     @NSManaged var anchoCalle: Double
-    @NSManaged var caudalLiquidoBoquillaAlta: Int
-    @NSManaged var caudalLiquidoBoquillaBaja: Int
-    @NSManaged var caudalLiquidoBoquillaMedia: Int
+    @NSManaged var caudalLiquidoBoquillaAlta: Double
+    @NSManaged var caudalLiquidoBoquillaBaja: Double
+    @NSManaged var caudalLiquidoBoquillaMedia: Double
     @NSManaged var caudalLiquidoSector: Double
     @NSManaged var caudalLiquidoTotal: Double
-    @NSManaged var caudalLiquidoZonaAlta: Int
-    @NSManaged var caudalLiquidoZonaBaja: Int
-    @NSManaged var caudalLiquidoZonaMedia: Int
-    @NSManaged var intervaloCaudalAdmisible0: Int
-    @NSManaged var intervaloCaudalAdmisible1: Int
-    @NSManaged var intervaloCaudalAdmisible2: Int
-    @NSManaged var intervaloCaudalAdmisible3: Int
-    @NSManaged var intervaloCaudalAdmisible4: Int
-    @NSManaged var intervaloCaudalAdmisible5: Int
+    @NSManaged var caudalLiquidoZonaAlta: Double
+    @NSManaged var caudalLiquidoZonaBaja: Double
+    @NSManaged var caudalLiquidoZonaMedia: Double
+    @NSManaged var intervaloCaudalAdmisible0: Double
+    @NSManaged var intervaloCaudalAdmisible1: Double
+    @NSManaged var intervaloCaudalAdmisible2: Double
+    @NSManaged var intervaloCaudalAdmisible3: Double
+    @NSManaged var intervaloCaudalAdmisible4: Double
+    @NSManaged var intervaloCaudalAdmisible5: Double
     @NSManaged var numeroBoquillasAbiertasAlta: Int
     @NSManaged var numeroBoquillasAbiertasBaja: Int
     @NSManaged var numeroBoquillasAbiertasMedia: Int
