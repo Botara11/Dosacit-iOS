@@ -14,6 +14,10 @@ let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDel
 
 let newItem = NSEntityDescription.insertNewObjectForEntityForName("A1", inManagedObjectContext: managedObjectContext!) as A1
 
+let managedObjectContextC = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
+
+let newItemC = NSEntityDescription.insertNewObjectForEntityForName("C1", inManagedObjectContext: managedObjectContextC!) as C1
+
 
 class Cultivo1: UIViewController {
     
@@ -77,10 +81,9 @@ class Cultivo1: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
         
-        
-        
         newItem.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
         newItemB.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
+        //newItemC.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
         newItem.distanciaArboles = (distanciaArboles.text as NSString).doubleValue
         newItem.longitudArboles = (longitudArboles.text as NSString).doubleValue
         newItem.anchuraArboles = (anchuraArboles.text as NSString).doubleValue
@@ -268,10 +271,18 @@ class Cultivo1: UIViewController {
                                 str = (presion + " > %f AND " + presion + "< %f AND marca == %@") as String
                                 let predicate3 = NSPredicate(format: str , intervaloCaudalAdmisible[4], intervaloCaudalAdmisible[5], marca)
                                 fetchRequest.predicate = predicate3
-                                if let fetchResults2 = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]{
+                                if let fetchResults3 = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]{
                                     
                                     println("Todo perfectisimo")
+
+                                    //Todo de la presion "presion" y de la marca "marca"
+                                    //fetchResults1 son boquillas adecuadas para zona Alta
+                                    //fetchResults2 son boquillas adecuadas para zona Media
+                                    //fetchResults3 son boquillas adecuadas para zona Baja
                                     
+                                    //comprueba q hay una boq almenos en cada zona, si no hay una para cada zona no es buena
+                                    
+                                    //
                                     
                                 }
                             }

@@ -33,6 +33,9 @@ class SelecBoquillas2: UIViewController {
             
             alert("ERROR",mensaje: "No puede haber campos vacíos y deben ser valores numéricos")
             
+        }else if (((PorcentajeVegAlta.text as NSString).integerValue) + (PorcentajeVegMedia.text as NSString).integerValue + (PorcentajeVegBaja.text as NSString).integerValue != 100 ){
+            
+            alert("ERROR",mensaje: "La suma del porcentaje de vegetación a pulverizar no es igual al 100%")
         }else{
        
         newItemB.numeroBoquillasCerradasAlta = (NumBoqCerrAlta.text as NSString).integerValue
