@@ -116,7 +116,7 @@ class Cultivo3: UIViewController {
             newItem.zonaCriticaIndice = copaArbol.selectedSegmentIndex
             
             
-            var DestViewController : Cultivo4 = segue.destinationViewController as Cultivo4
+            var DestViewController : Cultivo4 = segue.destinationViewController as! Cultivo4
             DestViewController.caract2 =  caract2
             
             DestViewController.productosAplicarIndice =  productosAplicarIndice

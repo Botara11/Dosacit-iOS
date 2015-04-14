@@ -40,9 +40,7 @@ class Result1 : UIViewController {
         
         if (segue.identifier == "SegueResult12"){
             println(caract2.anchoCalle)
-            var DestViewController : Result12 = segue.destinationViewController as Result12
-            
-            
+            var DestViewController : Result12 = segue.destinationViewController as! Result12
             
             DestViewController.caract2 =  caract2
             

@@ -44,15 +44,15 @@ class SelecBoquillas2: UIViewController {
         
         newItemB.numeroBoquillasAbiertasAlta = (NumBoqAbAlta.text as NSString).integerValue
         
-        newItemB.numeroBoquillasAbiertasBaja = (NumBoqAbMedia.text as NSString).integerValue
+        newItemB.numeroBoquillasAbiertasMedia = (NumBoqAbMedia.text as NSString).integerValue
         
-        newItemB.numeroBoquillasAbiertasMedia = (NumBoqAbBaja.text as NSString).integerValue
+        newItemB.numeroBoquillasAbiertasBaja = (NumBoqAbBaja.text as NSString).integerValue
         
         newItemB.porcentajeVegetacionAlta = (PorcentajeVegAlta.text as NSString).integerValue
         
-        newItemB.porcentajeVegetacionBaja = (PorcentajeVegMedia.text as NSString).integerValue
+        newItemB.porcentajeVegetacionMedia = (PorcentajeVegMedia.text as NSString).integerValue
         
-        newItemB.porcentajeVegetacionMedia = (PorcentajeVegBaja.text as NSString).integerValue
+        newItemB.porcentajeVegetacionBaja = (PorcentajeVegBaja.text as NSString).integerValue
         }
             
         

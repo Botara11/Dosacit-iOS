@@ -57,22 +57,29 @@ public class ParteB {
         
         //600 HARCODEADO---------
     newItemB.caudalLiquidoSector = fetchResults[0].caudalLiquidoTotal / 2; // SectorIzquierdo y Sector Derecho
+
     newItemB.numeroBoquillasSector = fetchResults[0].numeroTotalBoquillas/2;
-        newItemB.numeroTotalBoquillasAbiertas = fetchResults[0].numeroTotalBoquillas - fetchResults[0].numeroBoquillasCerradasAlta - fetchResults[0].numeroBoquillasCerradasBaja;
-    newItemB.caudalLiquidoZonaAlta = fetchResults[0].caudalLiquidoTotal * Double(fetchResults[0].porcentajeVegetacionAlta / 100);
-        newItemB.caudalLiquidoZonaMedia = fetchResults[0].caudalLiquidoTotal * Double(fetchResults[0].porcentajeVegetacionMedia / 100)
-    newItemB.caudalLiquidoZonaBaja = fetchResults[0].caudalLiquidoTotal * Double(fetchResults[0].porcentajeVegetacionAlta / 100)
-    newItemB.caudalLiquidoBoquillaAlta = (fetchResults[0].caudalLiquidoZonaAlta) / Double(fetchResults[0].numeroBoquillasAbiertasAlta)
+    newItemB.numeroTotalBoquillasAbiertas = fetchResults[0].numeroTotalBoquillas - fetchResults[0].numeroBoquillasCerradasAlta - fetchResults[0].numeroBoquillasCerradasBaja;
+    newItemB.caudalLiquidoZonaAlta = fetchResults[0].caudalLiquidoTotal * Double(fetchResults[0].porcentajeVegetacionAlta) / 100.0;
+    newItemB.caudalLiquidoZonaMedia = fetchResults[0].caudalLiquidoTotal * Double(fetchResults[0].porcentajeVegetacionMedia) / 100.0
+    newItemB.caudalLiquidoZonaBaja = fetchResults[0].caudalLiquidoTotal * Double(fetchResults[0].porcentajeVegetacionBaja) / 100.0
+        
+    newItemB.caudalLiquidoBoquillaAlta  = (fetchResults[0].caudalLiquidoZonaAlta)  / Double(fetchResults[0].numeroBoquillasAbiertasAlta)
     newItemB.caudalLiquidoBoquillaMedia = (fetchResults[0].caudalLiquidoZonaMedia) / Double(fetchResults[0].numeroBoquillasAbiertasMedia)
-    newItemB.caudalLiquidoBoquillaBaja = (fetchResults[0].caudalLiquidoZonaBaja) / Double(fetchResults[0].numeroBoquillasAbiertasBaja)
-    newItemB.variacionCaudalAdmisible = fetchResults[0].variacionCaudalAdmisible / 100;
-    newItemB.intervaloCaudalAdmisible0 = (fetchResults[0].caudalLiquidoBoquillaAlta) * (1-(fetchResults[0].variacionCaudalAdmisible)/100);
-    newItemB.intervaloCaudalAdmisible1 = (fetchResults[0].caudalLiquidoBoquillaAlta) * (1+(fetchResults[0].variacionCaudalAdmisible)/100);
-    newItemB.intervaloCaudalAdmisible2 = (fetchResults[0].caudalLiquidoBoquillaMedia) * (1-(fetchResults[0].variacionCaudalAdmisible)/100);
-    newItemB.intervaloCaudalAdmisible3 = (fetchResults[0].caudalLiquidoBoquillaMedia) * (1+(fetchResults[0].variacionCaudalAdmisible)/100);
-    newItemB.intervaloCaudalAdmisible4 = (fetchResults[0].caudalLiquidoBoquillaBaja) * (1-(fetchResults[0].variacionCaudalAdmisible)/100);
-    newItemB.intervaloCaudalAdmisible5 = (fetchResults[0].caudalLiquidoBoquillaBaja) * (1+(fetchResults[0].variacionCaudalAdmisible)/100);
-    
+    newItemB.caudalLiquidoBoquillaBaja  = (fetchResults[0].caudalLiquidoZonaBaja)  / Double(fetchResults[0].numeroBoquillasAbiertasBaja)
+    newItemB.variacionCaudalAdmisible  =  fetchResults[0].variacionCaudalAdmisible / 100;
+    newItemB.intervaloCaudalAdmisible0 = (fetchResults[0].caudalLiquidoBoquillaAlta) * (1-fetchResults[0].variacionCaudalAdmisible);
+    newItemB.intervaloCaudalAdmisible1 = (fetchResults[0].caudalLiquidoBoquillaAlta) * (1+fetchResults[0].variacionCaudalAdmisible);
+    newItemB.intervaloCaudalAdmisible2 = (fetchResults[0].caudalLiquidoBoquillaMedia) * (1-fetchResults[0].variacionCaudalAdmisible);
+    newItemB.intervaloCaudalAdmisible3 = (fetchResults[0].caudalLiquidoBoquillaMedia) * (1+fetchResults[0].variacionCaudalAdmisible);
+    newItemB.intervaloCaudalAdmisible4 = (fetchResults[0].caudalLiquidoBoquillaBaja) * (1-fetchResults[0].variacionCaudalAdmisible);
+    newItemB.intervaloCaudalAdmisible5 = (fetchResults[0].caudalLiquidoBoquillaBaja) * (1+fetchResults[0].variacionCaudalAdmisible);
+        
+    println("caudalLiquidoBoquillaAlta \(fetchResults[0].caudalLiquidoBoquillaMedia)")
+    println("CaudalLiquido total \(fetchResults[0].caudalLiquidoTotal)")
+        println("porcentajeVegetacionMedia \(fetchResults[0].porcentajeVegetacionMedia)")
+        println("numeroBoquillasAbiertasMedia \(fetchResults[0].numeroBoquillasAbiertasMedia)")
+        
         }
     
     }

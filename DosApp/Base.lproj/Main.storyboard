@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="soH-Zw-udU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="soH-Zw-udU">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -2333,6 +2333,9 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                     <navigationItem id="gvZ-YR-ZJ0">
                                         <barButtonItem key="leftBarButtonItem" title="&lt;" id="VY4-Sb-YYp">
                                             <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="ohz-mh-LeC" kind="show" id="sq9-1q-Io4"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="&gt;" id="rZe-Up-GL1">
                                             <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -2344,6 +2347,26 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                 <rect key="frame" x="0.0" y="67" width="375" height="505"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" editingAccessoryType="disclosureIndicator" id="q1Q-TR-6l5">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q1Q-TR-6l5" id="JXH-DK-WLz">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="jq1-YV-Ugz">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jq1-YV-Ugz" id="1QP-i4-cKf">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="mFy-3W-2mI">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mFy-3W-2mI" id="nT7-lH-hs3">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="IGT-RK-OE8" id="ajc-cc-Y0Y"/>
@@ -2363,16 +2386,17 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="tableView" destination="jj8-kR-fPQ" id="7hh-cs-pw3"/>
+                        <segue destination="4JK-qA-P5x" kind="show" identifier="Result22" id="ygu-dF-mYa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bku-vn-GXn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5807.5" y="394.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Result22-->
         <scene sceneID="D5Q-5d-9Q5">
             <objects>
-                <viewController id="4JK-qA-P5x" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="res2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4JK-qA-P5x" customClass="Result22" customModule="DosApp" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uhk-GW-vVC"/>
                         <viewControllerLayoutGuide type="bottom" id="cvu-bm-7kg"/>
@@ -2396,6 +2420,9 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                     <navigationItem id="3YW-oh-U0A">
                                         <barButtonItem key="leftBarButtonItem" title="&lt;" id="Shh-jg-KTo">
                                             <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="IGT-RK-OE8" kind="show" id="OxX-fX-KmE"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="&gt;" id="zjL-Ls-dyZ">
                                             <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -2479,38 +2506,30 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" editingAccessoryType="disclosureIndicator" id="8Wm-JC-KBS">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Wm-JC-KBS" id="kyq-D0-cgW">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="14 bares" translatesAutoresizingMaskIntoConstraints="NO" id="VSk-4n-xlh">
-                                                    <rect key="frame" x="34" y="4" width="98" height="37"/>
-                                                    <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4JK-qA-P5x" id="AxL-l1-StV"/>
+                                    <outlet property="delegate" destination="4JK-qA-P5x" id="B8F-c7-bw4"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="cHn-SX-258" id="dWA-oI-nYs"/>
+                        <segue destination="Xe0-RN-ORD" kind="show" identifier="Result23" id="U7m-GX-FEX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2bt-xE-gns" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6259.5" y="394.5"/>
+            <point key="canvasLocation" x="6239.5" y="394.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Result23-->
         <scene sceneID="Nwk-bS-Qph">
             <objects>
-                <viewController id="Xe0-RN-ORD" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="res3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xe0-RN-ORD" customClass="Result23" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wPX-hL-YS6"/>
                         <viewControllerLayoutGuide type="bottom" id="8Le-cs-aT6"/>
@@ -2534,6 +2553,9 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                     <navigationItem id="Cxg-XZ-kRa">
                                         <barButtonItem key="leftBarButtonItem" title="&lt;" id="a0E-BM-7T5">
                                             <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="4JK-qA-P5x" kind="show" id="9nc-0V-s09"/>
+                                            </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="&gt;" id="4Dc-OL-Yav">
                                             <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -2683,15 +2705,22 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Xe0-RN-ORD" id="zyK-Ow-LRS"/>
+                                    <outlet property="delegate" destination="Xe0-RN-ORD" id="8UC-oY-b8H"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="TRl-dS-ipU" id="BTl-aC-26V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V98-K9-z54" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6709.5" y="394.5"/>
+            <point key="canvasLocation" x="6678.5" y="399.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="sVz-aa-Qbg">
@@ -5292,13 +5321,15 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
         <image name="Captura de pantalla 2015-01-19 a las 23.49.41" width="505" height="602"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ERp-3Z-C22"/>
-        <segue reference="Rbs-9g-VVo"/>
         <segue reference="g7L-38-bRg"/>
-        <segue reference="uWn-Dm-tf4"/>
+        <segue reference="Rbs-9g-VVo"/>
+        <segue reference="ERp-3Z-C22"/>
         <segue reference="nnS-aD-7BB"/>
+        <segue reference="uWn-Dm-tf4"/>
+        <segue reference="9nc-0V-s09"/>
+        <segue reference="OxX-fX-KmE"/>
+        <segue reference="sq9-1q-Io4"/>
         <segue reference="ISg-dM-oWA"/>
-        <segue reference="JmV-ZP-VPU"/>
         <segue reference="tWf-0p-byZ"/>
         <segue reference="7kC-hD-GqA"/>
         <segue reference="Cej-Ic-mg9"/>

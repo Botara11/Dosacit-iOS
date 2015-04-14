@@ -9,9 +9,9 @@
 import UIKit
 import CoreData
 
-let managedObjectContextB = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
+let managedObjectContextB = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
-let newItemB = NSEntityDescription.insertNewObjectForEntityForName("B1", inManagedObjectContext: managedObjectContext!) as B1
+let newItemB = NSEntityDescription.insertNewObjectForEntityForName("B1", inManagedObjectContext: managedObjectContext!) as! B1
 
 
 class SelecBoquillas1: UIViewController {
@@ -281,7 +281,7 @@ class SelecBoquillas1: UIViewController {
     @IBAction func SliderChange(sender: AnyObject) {
         
         var CurrentValue:float_t = SliderVA.value
-        VelocidadAvanceText.text = String(format:"%.2f",CurrentValue)
+        VelocidadAvanceText.text = String(format:"%.1f",CurrentValue)
         newItemB.velocidadAvance = (CurrentValue as NSNumber).doubleValue
         caract2.calcularCaudalesB()
         let fetchRequest = NSFetchRequest(entityName: "B1")

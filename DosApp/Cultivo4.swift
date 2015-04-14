@@ -121,7 +121,7 @@ class Cultivo4: UIViewController {
         
         if (segue.identifier == "SegueResult1"){
             println(caract2.anchoCalle)
-            var DestViewController : Result1 = segue.destinationViewController as Result1
+            var DestViewController : Result1 = segue.destinationViewController as! Result1
             
             var stringValue = "\(caract2.anchoCalle)"
             

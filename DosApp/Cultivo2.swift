@@ -95,7 +95,7 @@ class Cultivo2: UIViewController {
                 
         if (segue.identifier == "Cultivo2"){
             
-            var DestViewController : Cultivo3 = segue.destinationViewController as Cultivo3
+            var DestViewController : Cultivo3 = segue.destinationViewController as! Cultivo3
             
             DestViewController.caract2 = caract2
         }

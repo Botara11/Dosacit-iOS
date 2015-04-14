@@ -10,13 +10,13 @@ import CoreData
 
 
 
-let managedObjectContext = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
+let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
-let newItem = NSEntityDescription.insertNewObjectForEntityForName("A1", inManagedObjectContext: managedObjectContext!) as A1
+let newItem = NSEntityDescription.insertNewObjectForEntityForName("A1", inManagedObjectContext: managedObjectContext!) as! A1
 
-let managedObjectContextC = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext
+let managedObjectContextC = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
-let newItemC = NSEntityDescription.insertNewObjectForEntityForName("C1", inManagedObjectContext: managedObjectContextC!) as C1
+let newItemC = NSEntityDescription.insertNewObjectForEntityForName("C1", inManagedObjectContext: managedObjectContextC!) as! C1
 
 
 class Cultivo1: UIViewController {
@@ -69,7 +69,7 @@ class Cultivo1: UIViewController {
     
     
     lazy var managedObjectContext : NSManagedObjectContext? = {
-        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         if let managedObjectContext = appDelegate.managedObjectContext {
             return managedObjectContext
         }
@@ -111,7 +111,7 @@ class Cultivo1: UIViewController {
                 if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [A1] {
                     println(fetchResults[0].densidadFoliar)
                 }
-                var DestViewController = segue.destinationViewController as Cultivo2
+                var DestViewController = segue.destinationViewController as! Cultivo2
                 DestViewController.caract2 = caract
             }
         }
@@ -173,7 +173,7 @@ class Cultivo1: UIViewController {
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
             var result : NSString = NSString(data: data, encoding: NSUTF8StringEncoding)!
             //            println(result)
-            result.stringByReplacingOccurrencesOfString(",", withString: ".")
+            result = result.stringByReplacingOccurrencesOfString(",", withString: ".")
             var array1 = [String]()
             var boquillas = [String]()
             var boq = [String]()
@@ -186,7 +186,7 @@ class Cultivo1: UIViewController {
                 
                 boq = item.componentsSeparatedByString("%%%")
                 if boq.count == 5 {
-                    let dbBoquillas = NSEntityDescription.insertNewObjectForEntityForName("EntityBoquillas", inManagedObjectContext: self.managedObjectContext!) as EntityBoquillas
+                    let dbBoquillas = NSEntityDescription.insertNewObjectForEntityForName("EntityBoquillas", inManagedObjectContext: self.managedObjectContext!) as! EntityBoquillas
                     
                     let k = Double((boq[4] as NSString).doubleValue / pow(10,0.5))
                     let dia = (boq[2] as NSString).doubleValue
@@ -207,6 +207,11 @@ class Cultivo1: UIViewController {
                     dbBoquillas.p15 = k * pow(15,0.5)
                     dbBoquillas.p16 = k * pow(16,0.5)
                     
+                    if(dbBoquillas.modelo=="ATR/blanca"){
+                        println(" TESTE\n")
+                        println("k=\(k) str=0-\(boq[0]) 1-\(boq[1]) 2-\(boq[2]) 3-\(boq[3]) 4-\(boq[4]) ")
+                        println(" p6=\(dbBoquillas.p6) p7=\(dbBoquillas.p7) p8=\(dbBoquillas.p8)")
+                    }
                     
                     
                 }
@@ -234,8 +239,36 @@ class Cultivo1: UIViewController {
             // Mirar: http://www.codingexplorer.com/getting-started-uitableview-swift/
             
             
-            if boquillas.count > 5 {
-                
+            
+            var marcasList: [String] = ["Teejet","Hardi","Albuz","Lechler","Discos","Otros"]
+            
+            //var presionList: [String] = ["p6","p7","p8","p9","p10","p11","p12","p13","p14","p15","p16"]
+            var presionList: [String] = ["p6"]
+            let fetchRequestTest = NSFetchRequest(entityName: "EntityBoquillas")
+
+            
+//            for marca in marcasList {
+//                for presion in presionList {
+                    //var str2 = (presion + " > %f AND " + presion + "< %f AND marca == %@"  ) as String
+                    //let predicateTest = NSPredicate(format: str2 , 0, 99999, marca)
+                    //fetchRequestTest.predicate = predicateTest
+                    if let fetchResultsTest = self.managedObjectContext!.executeFetchRequest(fetchRequestTest, error: nil) as? [EntityBoquillas]{
+                        println("AQUI EMPIEZA TEST \(fetchResultsTest.count)")
+                        for (var jj=0  ;jj<fetchResultsTest.count;jj++){
+                            if(fetchResultsTest[jj].marca=="Albuz"){
+                                println("\(fetchResultsTest[jj].marca)  \(fetchResultsTest[jj].modelo) p6=\(fetchResultsTest[jj].p6) p7=\(fetchResultsTest[jj].p7) p8=\(fetchResultsTest[jj].p8) p9=\(fetchResultsTest[jj].p9) ")
+                        
+                            }
+                        }
+                        
+                    }
+//                }
+//            }
+            
+            
+            
+            //if boquillas.count > 5 {
+              if 0 > 5 {
                 
                 var marcasList: [String] = ["Teejet","Hardi","Albuz","Lechler","Discos","Otros"]
                 
@@ -363,7 +396,7 @@ class Cultivo1: UIViewController {
         else{
             println("ALGO")
             let vc : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("Cultivo2")
-            self.showViewController(vc as UIViewController, sender: vc)
+            self.showViewController(vc as! UIViewController, sender: vc)
         }
         //presentItemInfo()
         

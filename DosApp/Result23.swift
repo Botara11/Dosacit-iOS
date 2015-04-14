@@ -1,34 +1,30 @@
 //
-//  Result21.swift
+//  Result23.swift
 //  DosApp
 //
-//  Created by Alvaro Serneguet on 30/03/15.
+//  Created by Alvaro Serneguet on 14/04/15.
 //  Copyright (c) 2015 UPV. All rights reserved.
 //
 
 
-
 import UIKit
+import Foundation
 import CoreData
 
 
-class Result21: UIViewController, UITableViewDataSource, UITableViewDelegate{
+
+
+class Result23: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
+    var marca = String()
+    var presion = String()
     let cellIdentifier = "cellIdentifier"
     var tableData = [String]()
     
-    var IntervaloCaudalAdmisible0 = Double()
-    var IntervaloCaudalAdmisible1 = Double()
-    var IntervaloCaudalAdmisible2 = Double()
-    var IntervaloCaudalAdmisible3 = Double()
-    var IntervaloCaudalAdmisible4 = Double()
-    var IntervaloCaudalAdmisible5 = Double()
     
     @IBOutlet var tableView: UITableView!
     
     
-    var marcaPressed = String()
-
     var cadena = [String]()
     
     func estaEnCadena(item:String)->Bool{
@@ -42,37 +38,25 @@ class Result21: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        var str = ("marca == %@ AND presion == %@") as String
+        let predicate1 = NSPredicate(format: str , marca, presion)
         let fetchRequest = NSFetchRequest(entityName: "FiltroBoquillas")
+        fetchRequest.predicate = predicate1
         if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [FiltroBoquillas]{
             for fe in fetchResults{
-                if !estaEnCadena(fe.marca) {
-                    cadena.append(fe.marca)
-                    self.tableData.append(fe.marca)
-                }
+                    //Aqui habria que diferenciar entre zona1 zona2 y zona3
+                    cadena.append(fe.modelo)
+                    self.tableData.append(fe.modelo)
+                
             }
         }
-        
-        // Setup table data
-        //for index in 0...100 {
-         //   self.tableData.append("Item \(index)")
-        //}
         
         tableView?.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
         tableView.reloadData()
         //tableView.removeFromSuperview()
         
-        
     }
-    
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if(segue.identifier=="Result22"){
-            let vc = segue.destinationViewController as! Result22
-            vc.marca = marcaPressed
-        }
-    }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -101,13 +85,10 @@ class Result21: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         
-
-        let vc : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("res2")
-        marcaPressed = tableData[indexPath.row]
-        performSegueWithIdentifier("Result22", sender: self)
         
+        let vc : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("res2")
         self.showViewController(vc as! UIViewController, sender: vc)
-
+        
         
         
         let alert = UIAlertController(title: "Item selected", message: "You selected item \(indexPath.row)", preferredStyle: UIAlertControllerStyle.Alert)
@@ -122,5 +103,3 @@ class Result21: UIViewController, UITableViewDataSource, UITableViewDelegate{
         
     }
 }
-
-
