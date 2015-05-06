@@ -31,12 +31,12 @@ class SelecBoquillas3: UIViewController {
         let fetchRequest = NSFetchRequest(entityName: "B1")
         if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
             
-            IntervaloCaudalAdmisibleAlta.text = "\(fetchResults[0].caudalLiquidoBoquillaAlta)"
-            IntervaloCaudalAdmisibleMedia.text = "\(fetchResults[0].caudalLiquidoBoquillaMedia)"
-            IntervaloCaudalAdmisibleBaja.text = "\(fetchResults[0].caudalLiquidoBoquillaBaja)"
-            
+            IntervaloCaudalAdmisibleAlta.text = String(format:"%.1f",fetchResults[0].caudalLiquidoBoquillaAlta)
+            IntervaloCaudalAdmisibleMedia.text = String(format:"%.1f",fetchResults[0].caudalLiquidoBoquillaMedia)
+            IntervaloCaudalAdmisibleBaja.text = String(format:"%.1f",fetchResults[0].caudalLiquidoBoquillaBaja)
             
         }
+        
         
         
     }
@@ -116,26 +116,33 @@ class SelecBoquillas3: UIViewController {
                             
                             if(fetchResults1.count>0 && fetchResults2.count>0 && fetchResults3.count>0 ){
                                 
-                                let newItem = NSEntityDescription.insertNewObjectForEntityForName("FiltroBoquillas", inManagedObjectContext: managedObjectContext!) as! FiltroBoquillas
-                                let newItem2 = NSEntityDescription.insertNewObjectForEntityForName("FiltroBoquillas", inManagedObjectContext: managedObjectContext!) as! FiltroBoquillas
-                                let newItem3 = NSEntityDescription.insertNewObjectForEntityForName("FiltroBoquillas", inManagedObjectContext: managedObjectContext!) as! FiltroBoquillas
-                                let min = minimo(fetchResults1.count,b:fetchResults2.count,c:fetchResults3.count)
-                                for var r=0; r<min; r=r+1 {
+                                //let min = minimo(fetchResults1.count,b:fetchResults2.count,c:fetchResults3.count)
+                                
+                                for var r=0; r<fetchResults1.count; r=r+1 {
+                                    let newItem = NSEntityDescription.insertNewObjectForEntityForName("FiltroBoquillas", inManagedObjectContext: managedObjectContext!) as! FiltroBoquillas
+                                    
                                     newItem.marca = marca
                                     newItem.presion = presion
                                     newItem.modelo = fetchResults1[r].modelo
                                     newItem.zona = "alta"
-                                    
+                                }
+                                for var r=0; r<fetchResults2.count;r=r+1{
+                                let newItem2 = NSEntityDescription.insertNewObjectForEntityForName("FiltroBoquillas", inManagedObjectContext: managedObjectContext!) as! FiltroBoquillas
+                                
                                     newItem2.marca = marca
                                     newItem2.presion = presion
                                     newItem2.modelo = fetchResults2[r].modelo
                                     newItem2.zona = "media"
-                                    
+                                }
+                                for var r=0; r<fetchResults3.count;r=r+1{
+                                let newItem3 = NSEntityDescription.insertNewObjectForEntityForName("FiltroBoquillas", inManagedObjectContext: managedObjectContext!) as! FiltroBoquillas
+                                
                                     newItem3.marca = marca
                                     newItem3.presion = presion
                                     newItem3.modelo = fetchResults3[r].modelo
                                     newItem3.zona = "baja"
                                 }
+                                
                             }
                         }
                     }
@@ -156,17 +163,17 @@ class SelecBoquillas3: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         let fetchRequest = NSFetchRequest(entityName: "B1")
         if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
-            IntervaloCaudalAdmisibleAlta.text = "\(fetchResults[0].caudalLiquidoBoquillaAlta)"
-            IntervaloCaudalAdmisibleMedia.text = "\(fetchResults[0].caudalLiquidoBoquillaMedia)"
-            IntervaloCaudalAdmisibleBaja.text = "\(fetchResults[0].caudalLiquidoBoquillaBaja)"
+            IntervaloCaudalAdmisibleAlta.text = String(format:"%.1f",fetchResults[0].caudalLiquidoBoquillaAlta)
+            IntervaloCaudalAdmisibleMedia.text = String(format:"%.1f",fetchResults[0].caudalLiquidoBoquillaMedia)
+            IntervaloCaudalAdmisibleBaja.text = String(format:"%.1f",fetchResults[0].caudalLiquidoBoquillaBaja)
         }
     }
     
     
     func minimo (a:Int, b:Int, c:Int)-> Int{
-        if(a<b && a<c) {
+        if(a<=b && a<=c) {
             return a}
-        else if (b<a && b<c){
+        else if (b<=a && b<=c){
             return b}
         else {
             return c

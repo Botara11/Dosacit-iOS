@@ -46,9 +46,9 @@ class SelecBoquillas1: UIViewController {
         let fetchRequest = NSFetchRequest(entityName: "B1")
         if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
             
-            CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
+            CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
             
-            CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+            CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
             
         }
             
@@ -67,9 +67,9 @@ class SelecBoquillas1: UIViewController {
         let fetchRequest = NSFetchRequest(entityName: "B1")
         if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
             
-            CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
+            CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
             
-            CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+            CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
         }
         }
         //your code
@@ -88,9 +88,9 @@ class SelecBoquillas1: UIViewController {
                 let fetchRequest = NSFetchRequest(entityName: "B1")
                 if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
                     
-                    CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
+                    CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
                     
-                    CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+                    CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
                 }
                 newItem.volumenAplicacionLHA = (VolumenCalculadoText.text as NSString).integerValue
                 newItemB.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
@@ -110,9 +110,9 @@ class SelecBoquillas1: UIViewController {
                 let fetchRequest = NSFetchRequest(entityName: "B1")
                 if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
                     
-                    CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
+                    CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
                     
-                    CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+                    CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
                 }
                 newItem.volumenAplicacionLHA = (VolumenSiguienteText.text as NSString).integerValue
                 newItemB.volumenApp = (VolumenSiguienteText.text as NSString).doubleValue
@@ -138,9 +138,9 @@ class SelecBoquillas1: UIViewController {
             let fetchRequest = NSFetchRequest(entityName: "B1")
             if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
                 
-                CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
+                CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
                 
-                CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+                CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
                 }
                 newItem.volumenAplicacionLHA = (VolumenSiguienteText.text as NSString).integerValue
                 newItemB.volumenApp = (VolumenSiguienteText.text as NSString).doubleValue
@@ -162,9 +162,9 @@ class SelecBoquillas1: UIViewController {
                 let fetchRequest = NSFetchRequest(entityName: "B1")
                 if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
                     
-                    CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
+                    CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
                     
-                    CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+                    CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
                 }
                 newItem.volumenAplicacionLHA = (VolumenCalculadoText.text as NSString).integerValue
                 newItemB.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
@@ -189,9 +189,9 @@ class SelecBoquillas1: UIViewController {
                 let fetchRequest = NSFetchRequest(entityName: "B1")
                 if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
                     
-                    CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
+                    CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
                     
-                    CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+                    CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
                 }
             }
             
@@ -213,9 +213,9 @@ class SelecBoquillas1: UIViewController {
                 let fetchRequest = NSFetchRequest(entityName: "B1")
                 if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
                     
-                    CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
+                    CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
                     
-                    CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+                    CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
                 }
             }
             
@@ -239,9 +239,9 @@ class SelecBoquillas1: UIViewController {
             let fetchRequest = NSFetchRequest(entityName: "B1")
             if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
                 
-                CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
+                CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
                 
-                CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+                CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
             }
             }
 
@@ -261,9 +261,9 @@ class SelecBoquillas1: UIViewController {
                 let fetchRequest = NSFetchRequest(entityName: "B1")
                 if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
                     
-                    CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
+                    CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
                     
-                    CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+                    CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
                 }
             }
             
@@ -287,8 +287,8 @@ class SelecBoquillas1: UIViewController {
         let fetchRequest = NSFetchRequest(entityName: "B1")
         if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
             
-            CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
-        CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+            CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
+        CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
             
         }
     }
@@ -348,18 +348,18 @@ class SelecBoquillas1: UIViewController {
         caract2.calcularCaudalesB()
         let fetchRequest = NSFetchRequest(entityName: "B1")
         if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
-            
-            CaudalLiquidoTotalText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal)
-            
-            CaudalLiquidoSectorText.text = String(format:"%.2f",fetchResults[0].caudalLiquidoTotal/2)
+            if fetchResults.count != 0 {
+                CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
+                CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
+            }
         }
         
         let fetchRequestA = NSFetchRequest(entityName: "A1")
         if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequestA, error: nil) as? [A1] {
-            
-            VolumenCalculadoText.text = "\(fetchResults[0].volumenAplicacionLHA)"
-            AnchoCalculadoText.text = "\(fetchResults[0].anchoCalle)"
-            
+            if fetchResults.count != 0 {
+                VolumenCalculadoText.text = "\(fetchResults[0].volumenAplicacionLHA)"
+                AnchoCalculadoText.text = "\(fetchResults[0].anchoCalle)"
+            }
             
         }
         // Do any additional setup after loading the view, typically from a nib.

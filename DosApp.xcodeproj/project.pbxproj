@@ -138,7 +138,6 @@
 				2188CEE21ACB12CF0068CD52 /* VolumenCaldo.swift */,
 				B2557DE21AAF841C008A24D9 /* DosApp-Bridging-Header.h */,
 				B2557DE31AAF841C008A24D9 /* DosApp.xcdatamodeld */,
-				210584161ACB17B40058BCB3 /* C1.swift */,
 				B2557DE51AAF841C008A24D9 /* EntityBoquillas.swift */,
 				B2557DE61AAF841C008A24D9 /* Indice.swift */,
 				B2557DE71AAF841C008A24D9 /* Info.plist */,
@@ -151,6 +150,7 @@
 				B2557DFB1AAF8430008A24D9 /* Base.lproj */,
 				B2557DDB1AAF83FD008A24D9 /* A1.swift */,
 				2155E7441AB74EC4009D57E7 /* B1.swift */,
+				210584161ACB17B40058BCB3 /* C1.swift */,
 				2188CEE41ACB15030068CD52 /* CaldoAp.swift */,
 			);
 			path = DosApp;

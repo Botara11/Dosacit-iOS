@@ -19,6 +19,7 @@ class Result22: UIViewController, UITableViewDataSource, UITableViewDelegate{
     var marca = String()
     let cellIdentifier = "cellIdentifier"
     var tableData = [String]()
+    var tableDataAux = [Int]()
     
     @IBOutlet var tableView: UITableView!
     
@@ -48,11 +49,17 @@ class Result22: UIViewController, UITableViewDataSource, UITableViewDelegate{
             for fe in fetchResults{
                 if !estaEnCadena(fe.presion) {
                     cadena.append(fe.presion)
-                    self.tableData.append(fe.presion)
+                    var sss = fe.presion.stringByReplacingOccurrencesOfString("p", withString: "")
+                    //self.tableData.append("\(sss) bares")
+                    self.tableDataAux.append((sss as NSString).integerValue)
                 }
             }
         }
-
+        
+        tableDataAux.sort({$0<$1})
+        for uu in tableDataAux{
+            self.tableData.append("\(uu) bares")
+        }
         tableView?.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
         tableView.reloadData()
         //tableView.removeFromSuperview()
@@ -86,7 +93,9 @@ class Result22: UIViewController, UITableViewDataSource, UITableViewDelegate{
         if(segue.identifier == "Result23"){
             let vc = segue.destinationViewController as! Result23
             vc.marca = marca
-            vc.presion = presionPressed
+            var auxPres = presionPressed.stringByReplacingOccurrencesOfString(" bares", withString: "")
+            vc.presion = "p\(auxPres)"
+            println("La presion pulsada: \(presionPressed)")
         }
     }
     

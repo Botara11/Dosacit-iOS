@@ -15,9 +15,11 @@ import CoreData
 class C1: NSManagedObject {
     
     @NSManaged var anchoCalle: Double
-    @NSManaged var velocidadAvance: Double
+    @NSManaged var marcaBoquilla: Int
     @NSManaged var numBoqAbiertasAltaHidraulica: Int
     @NSManaged var numBoqAbiertasBajaHidraulica: Int
     @NSManaged var numBoqAbiertasMediaHidraulica: Int
+    @NSManaged var presionTrabajo: Int
+    @NSManaged var velocidadAvance: Double
 
 }

@@ -29,3 +29,6 @@ class Indice: UIViewController, UIScrollViewDelegate {
     
 }
 
+//let secondViewController = self.storyboard.instantiateViewControllerWithIdentifier("SecondViewController") as SecondViewController
+
+//self.navigationController.pushViewController(secondViewController, animated: true)
