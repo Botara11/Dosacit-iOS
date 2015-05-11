@@ -12,6 +12,7 @@ import CoreData
 
 let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
+
 let newItem = NSEntityDescription.insertNewObjectForEntityForName("A1", inManagedObjectContext: managedObjectContext!) as! A1
 
 let managedObjectContextC = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
@@ -83,7 +84,7 @@ class Cultivo1: UIViewController {
         
         newItem.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
         newItemB.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
-        //newItemC.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
+        newItemC.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
         newItem.distanciaArboles = (distanciaArboles.text as NSString).doubleValue
         newItem.longitudArboles = (longitudArboles.text as NSString).doubleValue
         newItem.anchuraArboles = (anchuraArboles.text as NSString).doubleValue
@@ -98,10 +99,13 @@ class Cultivo1: UIViewController {
         caract.alturaMeseta = (alturaMeseta.text as NSString).doubleValue */
         //        var densidad = densidadFoliar.
         
+        if (segue.identifier == "Cultivo"){
+        
         let comprobacion = caract.anchoCalle * caract.longitudArboles * caract.distanciaArboles * caract.anchuraArboles * caract.alturaArboles * caract.alturaMeseta
         
         if anchoCalleTextField.text == "" || distanciaArboles.text == "" || longitudArboles.text == "" || anchuraArboles.text == "" || alturaArboles.text == "" || alturaMeseta.text == "" {
             alert("ERROR",mensaje: "No puede haber campos vacíos y deben ser valores numéricos")
+        }
         }
             
         else{

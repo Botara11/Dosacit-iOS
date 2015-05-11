@@ -27,17 +27,35 @@ class SelecBoquillas2: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
+        if(segue.identifier == "B23"){
         
         
-        if NumBoqCerrAlta.text == "" || NumBoqCerrBaja.text == "" || NumBoqAbAlta.text == "" || NumBoqAbBaja.text == "" || NumBoqAbMedia.text == "" || PorcentajeVegAlta.text == "" || PorcentajeVegBaja == "" || PorcentajeVegMedia.text == "" {
+            if NumBoqCerrAlta.text == "" || NumBoqCerrBaja.text == "" || NumBoqAbAlta.text == "" || NumBoqAbBaja.text == "" || NumBoqAbMedia.text == "" || PorcentajeVegAlta.text == "" || PorcentajeVegBaja == "" || PorcentajeVegMedia.text == "" {
             
             alert("ERROR",mensaje: "No puede haber campos vacíos y deben ser valores numéricos")
             
-        }else if (((PorcentajeVegAlta.text as NSString).integerValue) + (PorcentajeVegMedia.text as NSString).integerValue + (PorcentajeVegBaja.text as NSString).integerValue != 100 ){
+            }else if (((PorcentajeVegAlta.text as NSString).integerValue) + (PorcentajeVegMedia.text as NSString).integerValue + (PorcentajeVegBaja.text as NSString).integerValue != 100 ){
             
             alert("ERROR",mensaje: "La suma del porcentaje de vegetación a pulverizar no es igual al 100%")
-        }else{
+            }else{
        
+                newItemB.numeroBoquillasCerradasAlta = (NumBoqCerrAlta.text as NSString).integerValue
+        
+                newItemB.numeroBoquillasCerradasBaja = (NumBoqCerrBaja.text as NSString).integerValue
+        
+                newItemB.numeroBoquillasAbiertasAlta = (NumBoqAbAlta.text as NSString).integerValue
+        
+                newItemB.numeroBoquillasAbiertasMedia = (NumBoqAbMedia.text as NSString).integerValue
+        
+                newItemB.numeroBoquillasAbiertasBaja = (NumBoqAbBaja.text as NSString).integerValue
+        
+                newItemB.porcentajeVegetacionAlta = (PorcentajeVegAlta.text as NSString).integerValue
+        
+                newItemB.porcentajeVegetacionMedia = (PorcentajeVegMedia.text as NSString).integerValue
+        
+                newItemB.porcentajeVegetacionBaja = (PorcentajeVegBaja.text as NSString).integerValue
+            }
+        }
         newItemB.numeroBoquillasCerradasAlta = (NumBoqCerrAlta.text as NSString).integerValue
         
         newItemB.numeroBoquillasCerradasBaja = (NumBoqCerrBaja.text as NSString).integerValue
@@ -53,8 +71,7 @@ class SelecBoquillas2: UIViewController {
         newItemB.porcentajeVegetacionMedia = (PorcentajeVegMedia.text as NSString).integerValue
         
         newItemB.porcentajeVegetacionBaja = (PorcentajeVegBaja.text as NSString).integerValue
-        }
-            
+        
         
         
     }
@@ -77,14 +94,11 @@ class SelecBoquillas2: UIViewController {
         if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
             
                 
-                if (fetchResults[0].numeroBoquillasCerradasAlta != 0){
+                if (fetchResults[0].numeroBoquillasAbiertasAlta != 0 || fetchResults[0].numeroBoquillasAbiertasBaja != 0 || fetchResults[0].numeroBoquillasAbiertasMedia != 0 || fetchResults[0].porcentajeVegetacionAlta != 0){
                     NumBoqCerrAlta.text = "\(fetchResults[0].numeroBoquillasCerradasAlta)"
-                }
-                
-                if (fetchResults[0].numeroBoquillasCerradasBaja != 0){
                     NumBoqCerrBaja.text = "\(fetchResults[0].numeroBoquillasCerradasBaja)"
                 }
-                
+            
                 if (fetchResults[0].numeroBoquillasAbiertasAlta != 0){
                     NumBoqAbAlta.text = "\(fetchResults[0].numeroBoquillasAbiertasAlta)"
                 }

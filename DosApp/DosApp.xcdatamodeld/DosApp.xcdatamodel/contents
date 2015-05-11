@@ -17,6 +17,7 @@
         <attribute name="humedadRelativa" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitudArboles" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="mojantes" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="parteAoB" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="productosAplicar" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="productosAplicarIndice" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
         <attribute name="temperatura" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -52,6 +53,7 @@
         <attribute name="numeroBoquillasSector" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
         <attribute name="numeroTotalBoquillas" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
         <attribute name="numeroTotalBoquillasAbiertas" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="parteAoB" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="porcentajeVegetacionAlta" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="porcentajeVegetacionBaja" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="porcentajeVegetacionMedia" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -59,14 +61,17 @@
         <attribute name="velocidadAvance" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="volumenApp" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
     </entity>
-    <entity name="C1" syncable="YES">
+    <entity name="C1" representedClassName="DosApp.C1" syncable="YES">
         <attribute name="anchoCalle" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="caudalTotal" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="marcaBoquilla" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="numBoqAbiertasAltaHidraulica" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="numBoqAbiertasBajaHidraulica" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="numBoqAbiertasMediaHidraulica" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="parteAoC" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="presionTrabajo" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="velocidadAvance" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="volumenCaldoAplicado" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
     </entity>
     <entity name="EntityBoquillas" representedClassName="DosApp.EntityBoquillas" syncable="YES">
         <attribute name="activo" optional="YES" attributeType="Integer 16" syncable="YES"/>
@@ -93,9 +98,9 @@
         <attribute name="zona" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="A1" positionX="-63" positionY="-18" width="128" height="435"/>
-        <element name="B1" positionX="-63" positionY="135" width="128" height="480"/>
-        <element name="C1" positionX="-63" positionY="135" width="128" height="150"/>
+        <element name="A1" positionX="-63" positionY="-18" width="128" height="450"/>
+        <element name="B1" positionX="-63" positionY="135" width="128" height="495"/>
+        <element name="C1" positionX="-63" positionY="135" width="128" height="195"/>
         <element name="EntityBoquillas" positionX="-63" positionY="0" width="128" height="285"/>
         <element name="FiltroBoquillas" positionX="-63" positionY="135" width="128" height="105"/>
     </elements>

@@ -280,9 +280,10 @@ class SelecBoquillas1: UIViewController {
     
     @IBAction func SliderChange(sender: AnyObject) {
         
-        var CurrentValue:float_t = SliderVA.value
+        var CurrentValue:float_t = round(SliderVA.value * 10)/10;
         VelocidadAvanceText.text = String(format:"%.1f",CurrentValue)
         newItemB.velocidadAvance = (CurrentValue as NSNumber).doubleValue
+        newItemC.velocidadAvance = (CurrentValue as NSNumber).doubleValue
         caract2.calcularCaudalesB()
         let fetchRequest = NSFetchRequest(entityName: "B1")
         if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
@@ -296,33 +297,45 @@ class SelecBoquillas1: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
-        if NumTotalBoquillasText.text == ""{
-             alert("ERROR",mensaje: "No puede haber campos vacíos y deben ser valores numéricos")
+        if(segue.identifier == "B1"){
+            
+            let fetchRequest = NSFetchRequest(entityName: "B1")
+            if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+            if NumTotalBoquillasText.text == ""{
+                alert("ERROR",mensaje: "No puede haber campos vacíos y deben ser valores numéricos")
             
             
-        }else{
+            }else if (fetchResults[0].volumenApp == 0){
+                alert("ERROR",mensaje: "El volumen de la aplicación no puede ser cero")
+                
+            }else if (fetchResults[0].anchoCalle == 0){
+                alert("ERROR",mensaje: "El ancho de trabajo no puede ser cero")
+                
+            }else{
         
-        newItemB.numeroTotalBoquillas = (NumTotalBoquillasText.text as NSString).integerValue
+                newItemB.numeroTotalBoquillas = (NumTotalBoquillasText.text as NSString).integerValue
         
         
-        if SwitchVC.on{
-            newItem.volumenAplicacionLHA = (VolumenCalculadoText.text as NSString).integerValue
-            newItemB.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
-        }
-        else {
-            newItem.volumenAplicacionLHA = (VolumenSiguienteText.text as NSString).integerValue
-            newItemB.volumenApp = (VolumenSiguienteText.text as NSString).doubleValue
+                if SwitchVC.on{
+                    newItem.volumenAplicacionLHA = (VolumenCalculadoText.text as NSString).integerValue
+                    newItemB.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
+                }
+                else {
+                    newItem.volumenAplicacionLHA = (VolumenSiguienteText.text as NSString).integerValue
+                    newItemB.volumenApp = (VolumenSiguienteText.text as NSString).doubleValue
             
-        }
+                }
         
-        if SwitchAC.on{
-            newItem.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
-            newItemB.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
+                if SwitchAC.on{
+                    newItem.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
+                    newItemB.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
             
-        }
-        else {
-            newItem.anchoCalle = (AnchoSiguienteText.text as NSString).doubleValue
-            newItemB.anchoCalle = (AnchoSiguienteText.text as NSString).doubleValue
+                }
+                else {
+                    newItem.anchoCalle = (AnchoSiguienteText.text as NSString).doubleValue
+                    newItemB.anchoCalle = (AnchoSiguienteText.text as NSString).doubleValue
+                }
+            }
         }
         }
     }
@@ -333,6 +346,8 @@ class SelecBoquillas1: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        newItem.parteAoB = 0;
         newItemB.velocidadAvance = 3;
         AnchoSiguienteText.addTarget(self, action: "textFieldDidChangeAncho:", forControlEvents: UIControlEvents.EditingChanged)
         VolumenSiguienteText.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
@@ -361,6 +376,7 @@ class SelecBoquillas1: UIViewController {
                 AnchoCalculadoText.text = "\(fetchResults[0].anchoCalle)"
             }
             
+                            
         }
         // Do any additional setup after loading the view, typically from a nib.
     }
