@@ -34,7 +34,11 @@
 		B28EAEA41ADB16AB0009D7FD /* FiltroBoquillas.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EAEA31ADB16AB0009D7FD /* FiltroBoquillas.swift */; };
 		B28EAEA61ADC5C920009D7FD /* Result22.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EAEA51ADC5C920009D7FD /* Result22.swift */; };
 		B28EAEA81ADDAC500009D7FD /* Result23.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EAEA71ADDAC500009D7FD /* Result23.swift */; };
+		B2D6C6691AFD29A500FAD48C /* Result31.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D6C6681AFD29A500FAD48C /* Result31.swift */; };
 		B2DDEC901AC9C34F0008008F /* Result21.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DDEC8F1AC9C34F0008008F /* Result21.swift */; };
+		B2DE74E41AFD4071009CF589 /* Result32.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DE74E31AFD4071009CF589 /* Result32.swift */; };
+		B2DE74E61AFD4082009CF589 /* Result33.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DE74E51AFD4082009CF589 /* Result33.swift */; };
+		B2DE74E81AFF7414009CF589 /* updateBoquillas.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DE74E71AFF7414009CF589 /* updateBoquillas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +85,11 @@
 		B28EAEA31ADB16AB0009D7FD /* FiltroBoquillas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FiltroBoquillas.swift; path = DosApp/FiltroBoquillas.swift; sourceTree = "<group>"; };
 		B28EAEA51ADC5C920009D7FD /* Result22.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result22.swift; sourceTree = "<group>"; };
 		B28EAEA71ADDAC500009D7FD /* Result23.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result23.swift; sourceTree = "<group>"; };
+		B2D6C6681AFD29A500FAD48C /* Result31.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result31.swift; sourceTree = "<group>"; };
 		B2DDEC8F1AC9C34F0008008F /* Result21.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result21.swift; sourceTree = "<group>"; };
+		B2DE74E31AFD4071009CF589 /* Result32.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result32.swift; sourceTree = "<group>"; };
+		B2DE74E51AFD4082009CF589 /* Result33.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result33.swift; sourceTree = "<group>"; };
+		B2DE74E71AFF7414009CF589 /* updateBoquillas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = updateBoquillas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,10 +136,14 @@
 				B2DDEC8F1AC9C34F0008008F /* Result21.swift */,
 				B28EAEA51ADC5C920009D7FD /* Result22.swift */,
 				B28EAEA71ADDAC500009D7FD /* Result23.swift */,
+				B2D6C6681AFD29A500FAD48C /* Result31.swift */,
+				B2DE74E31AFD4071009CF589 /* Result32.swift */,
+				B2DE74E51AFD4082009CF589 /* Result33.swift */,
 				21AB1AFB1AB0994D009275CD /* SelecBoquillas1.swift */,
 				2155E7421AB49119009D57E7 /* SelecBoquillas2.swift */,
 				218A54491ABC86FF009DD0EA /* SelecBoquillas3.swift */,
 				B2557DDE1AAF841B008A24D9 /* Cultivo1.swift */,
+				B2DE74E71AFF7414009CF589 /* updateBoquillas.swift */,
 				B2557DDF1AAF841B008A24D9 /* Cultivo2.swift */,
 				B2557DE01AAF841C008A24D9 /* Cultivo3.swift */,
 				B2557DE11AAF841C008A24D9 /* Cultivo4.swift */,
@@ -289,6 +301,7 @@
 				B2557DF71AAF841C008A24D9 /* ParteB.swift in Sources */,
 				B28EAEA81ADDAC500009D7FD /* Result23.swift in Sources */,
 				218A544A1ABC86FF009DD0EA /* SelecBoquillas3.swift in Sources */,
+				B2DE74E41AFD4071009CF589 /* Result32.swift in Sources */,
 				B2DDEC901AC9C34F0008008F /* Result21.swift in Sources */,
 				B2557DFA1AAF841C008A24D9 /* ViewController.swift in Sources */,
 				2188CEE51ACB15030068CD52 /* CaldoAp.swift in Sources */,
@@ -298,13 +311,16 @@
 				B2557DEF1AAF841C008A24D9 /* Cultivo2.swift in Sources */,
 				B2557DF21AAF841C008A24D9 /* DosApp.xcdatamodeld in Sources */,
 				2155E7431AB49119009D57E7 /* SelecBoquillas2.swift in Sources */,
+				B2D6C6691AFD29A500FAD48C /* Result31.swift in Sources */,
 				B2557DED1AAF841C008A24D9 /* AppDelegate.swift in Sources */,
+				B2DE74E81AFF7414009CF589 /* updateBoquillas.swift in Sources */,
 				B28EAEA41ADB16AB0009D7FD /* FiltroBoquillas.swift in Sources */,
 				B28EAEA61ADC5C920009D7FD /* Result22.swift in Sources */,
 				2155E7451AB74EC4009D57E7 /* B1.swift in Sources */,
 				B2557DF61AAF841C008A24D9 /* ParteA.swift in Sources */,
 				B2557DF11AAF841C008A24D9 /* Cultivo4.swift in Sources */,
 				B2557DF01AAF841C008A24D9 /* Cultivo3.swift in Sources */,
+				B2DE74E61AFD4082009CF589 /* Result33.swift in Sources */,
 				B2557DDC1AAF83FD008A24D9 /* A1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

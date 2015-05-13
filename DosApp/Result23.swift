@@ -24,6 +24,8 @@ class Result23: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     
     @IBOutlet var tableView: UITableView!
+    
+    
     let collation = UILocalizedIndexedCollation.currentCollation()
         as! UILocalizedIndexedCollation
 
@@ -135,7 +137,7 @@ class Result23: UIViewController, UITableViewDataSource, UITableViewDelegate{
         }
         return "HOLA BEBE"
     }
-
+/*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if(segue.identifier == "Result23"){
             let vc = segue.destinationViewController as! Result23
@@ -144,8 +146,9 @@ class Result23: UIViewController, UITableViewDataSource, UITableViewDelegate{
             vc.presion = "p\(auxPres)"
             println("La presion pulsada: \(presionPressed)")
         }
+
     }
-    
+*/
 
     
     class Section {
@@ -155,6 +158,4 @@ class Result23: UIViewController, UITableViewDataSource, UITableViewDelegate{
             self.boquis.append(boq)
         }
     }
-
-   
 }

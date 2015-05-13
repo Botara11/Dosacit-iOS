@@ -78,7 +78,7 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="IGT-RK-OE8" kind="show" id="gKD-k5-TpH"/>
+                                    <segue destination="gjh-My-eMD" kind="show" id="KcS-k3-QoR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEk-xg-uil">
@@ -2741,10 +2741,10 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
             </objects>
             <point key="canvasLocation" x="6701.5" y="382.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Result31-->
         <scene sceneID="sVz-aa-Qbg">
             <objects>
-                <viewController id="gjh-My-eMD" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="res31" id="gjh-My-eMD" customClass="Result31" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1tb-F8-AZk"/>
                         <viewControllerLayoutGuide type="bottom" id="2pW-lb-8qy"/>
@@ -2872,20 +2872,28 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="gjh-My-eMD" id="Q12-Pt-KQJ"/>
+                                    <outlet property="delegate" destination="gjh-My-eMD" id="iuc-g7-L1x"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="am1-St-tgi" id="k0l-YM-bwP"/>
+                        <segue destination="k70-QJ-d5d" kind="show" identifier="Result32" id="8Mk-Oe-eji"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZn-WE-5W8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7633.5" y="400.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Result32-->
         <scene sceneID="SVz-4w-UB7">
             <objects>
-                <viewController id="k70-QJ-d5d" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="res32" id="k70-QJ-d5d" customClass="Result32" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ruD-u6-j7d"/>
                         <viewControllerLayoutGuide type="bottom" id="7Re-Gj-Ki7"/>
@@ -2912,9 +2920,6 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="&gt;" id="fhM-7H-bPA">
                                             <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <connections>
-                                                <segue destination="gND-wc-YMc" kind="show" id="A0q-eq-HbT"/>
-                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -3022,6 +3027,10 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="k70-QJ-d5d" id="nZD-ef-sFh"/>
+                                    <outlet property="delegate" destination="k70-QJ-d5d" id="gLU-WE-fiN"/>
+                                </connections>
                             </tableView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Marcas" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cbv-6d-OhT">
                                 <rect key="frame" x="109" y="25" width="156" height="33"/>
@@ -3034,15 +3043,19 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                         <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="iL9-ov-hXQ" id="ENI-JB-1ax"/>
+                        <segue destination="gND-wc-YMc" kind="show" identifier="Result33" id="DTy-wH-VPl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sh1-0q-aQg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8525.5" y="413.5"/>
+            <point key="canvasLocation" x="8112.5" y="399.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Result33-->
         <scene sceneID="Lhk-i9-b2L">
             <objects>
-                <viewController id="gND-wc-YMc" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="res33" id="gND-wc-YMc" customClass="Result33" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7qC-92-ETC"/>
                         <viewControllerLayoutGuide type="bottom" id="NKN-VN-2U4"/>
@@ -3135,15 +3148,22 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="gND-wc-YMc" id="Q7X-J6-US8"/>
+                                    <outlet property="delegate" destination="gND-wc-YMc" id="alu-5q-GDC"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="kcp-Zj-a3g" id="Zdx-ph-cpQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Gy-NO-oUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8059.5" y="422.5"/>
+            <point key="canvasLocation" x="8559.5" y="394.5"/>
         </scene>
         <!--Volumen Caldo-->
         <scene sceneID="VaJ-jl-w6R">
@@ -4970,17 +4990,19 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
         <image name="Captura de pantalla 2015-01-19 a las 23.49.41" width="505" height="602"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="nnS-aD-7BB"/>
+        <segue reference="ERp-3Z-C22"/>
+        <segue reference="Rbs-9g-VVo"/>
+        <segue reference="g7L-38-bRg"/>
+        <segue reference="ISg-dM-oWA"/>
+        <segue reference="sq9-1q-Io4"/>
         <segue reference="OxX-fX-KmE"/>
         <segue reference="9nc-0V-s09"/>
-        <segue reference="sq9-1q-Io4"/>
-        <segue reference="ISg-dM-oWA"/>
         <segue reference="tWf-0p-byZ"/>
         <segue reference="7kC-hD-GqA"/>
-        <segue reference="Rbs-9g-VVo"/>
-        <segue reference="ERp-3Z-C22"/>
-        <segue reference="nnS-aD-7BB"/>
-        <segue reference="g7L-38-bRg"/>
+        <segue reference="KcS-k3-QoR"/>
         <segue reference="Cej-Ic-mg9"/>
+        <segue reference="8Mk-Oe-eji"/>
         <segue reference="Bm7-xH-oCR"/>
     </inferredMetricsTieBreakers>
 </document>

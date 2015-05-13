@@ -26,7 +26,6 @@ public class ParteB {
     var porcentajeVegetacion = [Int](); // Z.Alta Z.Media y Z.Baja
     var intervaloCaudalAdmisible = [Double](); // Z.Alta Z.Media y Z.Baja
     var variacionCaudalAdmisible = 0.0;
-    var alturaMeseta = 0.0; //PARTE A
     var numeroBoquillasSector = 0;
     var numeroTotalBoquillasAbiertas = 0;
     var caudalLiquidoZona = [Double]();
