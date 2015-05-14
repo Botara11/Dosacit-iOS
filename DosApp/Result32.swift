@@ -94,12 +94,12 @@ class Result32: UIViewController, UITableViewDataSource, UITableViewDelegate{
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        //if(segue.identifier == "Result33"){
+        if(segue.identifier == "Result33"){
             let vc = segue.destinationViewController as! Result33
             vc.marca = marcaPressed
             vc.presion = presion
             println("presion=\(presion) marca=\(marcaPressed)")
-        //}
+           }
     }
     
     

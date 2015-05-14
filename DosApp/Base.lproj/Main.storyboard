@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="soH-Zw-udU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="soH-Zw-udU">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -3371,7 +3371,7 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
                         <outlet property="SwitchVC" destination="UWd-wf-ZYg" id="Lsx-dj-Jew"/>
                         <outlet property="SwitchVS" destination="vnK-TS-UuX" id="qG4-wJ-kXd"/>
                         <outlet property="anchoCalleText" destination="8YL-BT-Eeh" id="4oY-0N-SpJ"/>
-                        <outlet property="anchoCalleTextField" destination="pGb-yS-gwW" id="HA3-vQ-zVC"/>
+                        <outlet property="anchoCalleTextField" destination="pGb-yS-gwW" id="Tps-MH-AYs"/>
                         <outlet property="boquillasAltaTextField" destination="2me-OT-Nww" id="QJK-iq-EIp"/>
                         <outlet property="boquillasBajaTextField" destination="hLn-XD-f1j" id="C40-WY-wSH"/>
                         <outlet property="boquillasMediaTextField" destination="YH9-ZG-ngz" id="GzP-Zx-nsa"/>
@@ -3516,19 +3516,21 @@ RW5yaXF1ZSBPcnTDrQ0KZW9ydGlAZG10YS51cHYuZXMAA
         <image name="Captura de pantalla 2015-01-19 a las 23.49.41" width="505" height="602"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nnS-aD-7BB"/>
-        <segue reference="ERp-3Z-C22"/>
-        <segue reference="Rbs-9g-VVo"/>
-        <segue reference="g7L-38-bRg"/>
+        <segue reference="Bm7-xH-oCR"/>
+        <segue reference="Cej-Ic-mg9"/>
+        <segue reference="tWf-0p-byZ"/>
         <segue reference="ISg-dM-oWA"/>
         <segue reference="sq9-1q-Io4"/>
         <segue reference="OxX-fX-KmE"/>
         <segue reference="9nc-0V-s09"/>
-        <segue reference="tWf-0p-byZ"/>
+        <segue reference="2z2-xY-adr"/>
+        <segue reference="zdz-u3-chg"/>
+        <segue reference="aYI-XE-rdh"/>
         <segue reference="7kC-hD-GqA"/>
-        <segue reference="KcS-k3-QoR"/>
-        <segue reference="Cej-Ic-mg9"/>
-        <segue reference="8Mk-Oe-eji"/>
-        <segue reference="Bm7-xH-oCR"/>
+        <segue reference="ERp-3Z-C22"/>
+        <segue reference="Rbs-9g-VVo"/>
+        <segue reference="g7L-38-bRg"/>
+        <segue reference="nnS-aD-7BB"/>
+        <segue reference="PCd-Nd-h4B"/>
     </inferredMetricsTieBreakers>
 </document>

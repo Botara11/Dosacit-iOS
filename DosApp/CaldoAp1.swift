@@ -15,7 +15,9 @@ class CaldoAp1: UIViewController {
     
     @IBOutlet var anchoCalleText: UITextView!
     @IBOutlet var velocidadAvance: UITextView!
+    
     @IBOutlet var anchoCalleTextField: UITextField!
+    
     @IBOutlet var velocidadAvanceTextField: UITextField!
     @IBOutlet var boquillasAltaTextField: UITextField!
     @IBOutlet var boquillasMediaTextField: UITextField!
@@ -97,6 +99,8 @@ class CaldoAp1: UIViewController {
             if(anchoCalleTextField.text == ""){
                 
             }else{
+                
+                alert("Bu", mensaje: anchoCalleTextField.text)
                 newItemB.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
                 caract2.calcularCaudalesB()
             }
@@ -110,7 +114,6 @@ class CaldoAp1: UIViewController {
             // AnchoSiguienteText.editable = false
             
             if(anchoCalleText.text == ""){
-                
             }else{
             
             newItemB.anchoCalle = (anchoCalleText.text as NSString).doubleValue
