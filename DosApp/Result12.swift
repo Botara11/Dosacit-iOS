@@ -28,6 +28,16 @@ class Result12 : UIViewController {
         
         let fetchRequest = NSFetchRequest(entityName: "A1")
         if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [A1] {
+            
+        if (fetchResults[0].anchuraArboles==0){
+            temperaturaText.backgroundColor = UIColor.grayColor();
+            humedadRelativaText.backgroundColor = UIColor.grayColor();
+            velocidadVientoText.backgroundColor = UIColor.grayColor();
+            tipoPulverizadorText.backgroundColor = UIColor.grayColor();
+            volumenAplicacionHAText.backgroundColor = UIColor.grayColor();
+            volumenAplicacionHGText.backgroundColor = UIColor.grayColor();
+            
+        }else{
         
         //Temperatura
         if (fetchResults[0].temperatura == 1){
@@ -78,6 +88,7 @@ class Result12 : UIViewController {
         volumenAplicacionHAText.text = "\(fetchResults[0].volumenAplicacionLHA) L/HA"
         volumenAplicacionHGText.text = "\(fetchResults[0].volumenAplicacionLHG) L/HG"
 
+        }
         }
 
     }

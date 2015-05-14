@@ -22,6 +22,7 @@ class A1: NSManagedObject {
     @NSManaged var humedadRelativa: Double
     @NSManaged var longitudArboles: Double
     @NSManaged var mojantes: Double
+    @NSManaged var parteAoB: Int
     @NSManaged var productosAplicar: Double
     @NSManaged var productosAplicarIndice: Int
     @NSManaged var temperatura: Double

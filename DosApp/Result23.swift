@@ -139,12 +139,12 @@ class Result23: UIViewController, UITableViewDataSource, UITableViewDelegate{
     }
 /*
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if(segue.identifier == "Result23"){
-            let vc = segue.destinationViewController as! Result23
+        if(segue.identifier == "Result32"){
+            let vc = segue.destinationViewController as! Result22
             vc.marca = marca
-            var auxPres = presionPressed.stringByReplacingOccurrencesOfString(" bares", withString: "")
-            vc.presion = "p\(auxPres)"
-            println("La presion pulsada: \(presionPressed)")
+            //var auxPres = presionPressed.stringByReplacingOccurrencesOfString(" bares", withString: "")
+           // vc.presion = "p\(auxPres)"
+           // println("La presion pulsada: \(presionPressed)")
         }
 
     }

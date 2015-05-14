@@ -31,9 +31,9 @@ class SelecBoquillas3: UIViewController {
         let fetchRequest = NSFetchRequest(entityName: "B1")
         if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
             
-            IntervaloCaudalAdmisibleAlta.text = String(format:"%.1f",fetchResults[0].caudalLiquidoBoquillaAlta)
-            IntervaloCaudalAdmisibleMedia.text = String(format:"%.1f",fetchResults[0].caudalLiquidoBoquillaMedia)
-            IntervaloCaudalAdmisibleBaja.text = String(format:"%.1f",fetchResults[0].caudalLiquidoBoquillaBaja)
+            IntervaloCaudalAdmisibleAlta.text = String(format:"%.2f",fetchResults[0].caudalLiquidoBoquillaAlta)
+            IntervaloCaudalAdmisibleMedia.text = String(format:"%.2f",fetchResults[0].caudalLiquidoBoquillaMedia)
+            IntervaloCaudalAdmisibleBaja.text = String(format:"%.2f",fetchResults[0].caudalLiquidoBoquillaBaja)
             
         }
         
@@ -163,9 +163,9 @@ class SelecBoquillas3: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         let fetchRequest = NSFetchRequest(entityName: "B1")
         if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
-            IntervaloCaudalAdmisibleAlta.text = String(format:"%.1f",fetchResults[0].caudalLiquidoBoquillaAlta)
-            IntervaloCaudalAdmisibleMedia.text = String(format:"%.1f",fetchResults[0].caudalLiquidoBoquillaMedia)
-            IntervaloCaudalAdmisibleBaja.text = String(format:"%.1f",fetchResults[0].caudalLiquidoBoquillaBaja)
+            IntervaloCaudalAdmisibleAlta.text = String(format:"%.2f",fetchResults[0].caudalLiquidoBoquillaAlta)
+            IntervaloCaudalAdmisibleMedia.text = String(format:"%.2f",fetchResults[0].caudalLiquidoBoquillaMedia)
+            IntervaloCaudalAdmisibleBaja.text = String(format:"%.2f",fetchResults[0].caudalLiquidoBoquillaBaja)
         }
     }
     

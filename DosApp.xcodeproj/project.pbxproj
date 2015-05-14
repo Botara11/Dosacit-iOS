@@ -13,6 +13,8 @@
 		2188CEE51ACB15030068CD52 /* CaldoAp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2188CEE41ACB15030068CD52 /* CaldoAp.swift */; };
 		218A544A1ABC86FF009DD0EA /* SelecBoquillas3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218A54491ABC86FF009DD0EA /* SelecBoquillas3.swift */; };
 		21AB1AFC1AB0994D009275CD /* SelecBoquillas1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AB1AFB1AB0994D009275CD /* SelecBoquillas1.swift */; };
+		21F4C8831AFE60E100401952 /* ParteC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4C8821AFE60E100401952 /* ParteC.swift */; };
+		21F4C8871AFE773000401952 /* CaldoAp1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4C8861AFE773000401952 /* CaldoAp1.swift */; };
 		B2557DB21AAF821E008A24D9 /* DosAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DB11AAF821E008A24D9 /* DosAppTests.swift */; };
 		B2557DDC1AAF83FD008A24D9 /* A1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DDB1AAF83FD008A24D9 /* A1.swift */; };
 		B2557DED1AAF841C008A24D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DDD1AAF841B008A24D9 /* AppDelegate.swift */; };
@@ -55,10 +57,11 @@
 		210584161ACB17B40058BCB3 /* C1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = C1.swift; sourceTree = "<group>"; };
 		2155E7421AB49119009D57E7 /* SelecBoquillas2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecBoquillas2.swift; sourceTree = "<group>"; };
 		2155E7441AB74EC4009D57E7 /* B1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = B1.swift; sourceTree = "<group>"; };
-		2188CEE31ACB12CF0068CD52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = VolumenCaldo.swift; sourceTree = "<group>"; };
 		2188CEE41ACB15030068CD52 /* CaldoAp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaldoAp.swift; sourceTree = "<group>"; };
 		218A54491ABC86FF009DD0EA /* SelecBoquillas3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecBoquillas3.swift; sourceTree = "<group>"; };
 		21AB1AFB1AB0994D009275CD /* SelecBoquillas1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecBoquillas1.swift; sourceTree = "<group>"; };
+		21F4C8821AFE60E100401952 /* ParteC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParteC.swift; sourceTree = "<group>"; };
+		21F4C8861AFE773000401952 /* CaldoAp1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaldoAp1.swift; sourceTree = "<group>"; };
 		B2557D931AAF821E008A24D9 /* DosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2557DAB1AAF821E008A24D9 /* DosAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DosAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2557DB01AAF821E008A24D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -147,7 +150,6 @@
 				B2557DDF1AAF841B008A24D9 /* Cultivo2.swift */,
 				B2557DE01AAF841C008A24D9 /* Cultivo3.swift */,
 				B2557DE11AAF841C008A24D9 /* Cultivo4.swift */,
-				2188CEE21ACB12CF0068CD52 /* VolumenCaldo.swift */,
 				B2557DE21AAF841C008A24D9 /* DosApp-Bridging-Header.h */,
 				B2557DE31AAF841C008A24D9 /* DosApp.xcdatamodeld */,
 				B2557DE51AAF841C008A24D9 /* EntityBoquillas.swift */,
@@ -155,6 +157,8 @@
 				B2557DE71AAF841C008A24D9 /* Info.plist */,
 				B2557DE81AAF841C008A24D9 /* ParteA.swift */,
 				B2557DE91AAF841C008A24D9 /* ParteB.swift */,
+				21F4C8821AFE60E100401952 /* ParteC.swift */,
+				21F4C8861AFE773000401952 /* CaldoAp1.swift */,
 				B2557DEA1AAF841C008A24D9 /* Result1.swift */,
 				B2557DEB1AAF841C008A24D9 /* Result12.swift */,
 				B2557DEC1AAF841C008A24D9 /* ViewController.swift */,
@@ -315,9 +319,11 @@
 				B2557DED1AAF841C008A24D9 /* AppDelegate.swift in Sources */,
 				B2DE74E81AFF7414009CF589 /* updateBoquillas.swift in Sources */,
 				B28EAEA41ADB16AB0009D7FD /* FiltroBoquillas.swift in Sources */,
+				21F4C8871AFE773000401952 /* CaldoAp1.swift in Sources */,
 				B28EAEA61ADC5C920009D7FD /* Result22.swift in Sources */,
 				2155E7451AB74EC4009D57E7 /* B1.swift in Sources */,
 				B2557DF61AAF841C008A24D9 /* ParteA.swift in Sources */,
+				21F4C8831AFE60E100401952 /* ParteC.swift in Sources */,
 				B2557DF11AAF841C008A24D9 /* Cultivo4.swift in Sources */,
 				B2557DF01AAF841C008A24D9 /* Cultivo3.swift in Sources */,
 				B2DE74E61AFD4082009CF589 /* Result33.swift in Sources */,
@@ -344,15 +350,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2188CEE21ACB12CF0068CD52 /* VolumenCaldo.swift */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2188CEE31ACB12CF0068CD52 /* Base */,
-			);
-			name = VolumenCaldo.swift;
-			path = Base.lproj;
-			sourceTree = "<group>";
-		};
 		B2557DFC1AAF8430008A24D9 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

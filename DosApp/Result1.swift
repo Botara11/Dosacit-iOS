@@ -65,6 +65,21 @@ class Result1 : UIViewController {
         let fetchRequest = NSFetchRequest(entityName: "A1")
         if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [A1] {
             
+            if (fetchResults[0].anchuraArboles == 0){
+                densidadFoliarText.backgroundColor = UIColor.grayColor();
+                anchoCalleText.backgroundColor = UIColor.grayColor();
+                distanciaArbolesText.backgroundColor = UIColor.grayColor();
+                volumenArbolText.backgroundColor = UIColor.grayColor();
+                formaArbolText.backgroundColor = UIColor.grayColor();
+                fechaUltimaPodaText.backgroundColor = UIColor.grayColor();
+                gradoPodaText.backgroundColor = UIColor.grayColor();
+                productosAplicarText.backgroundColor = UIColor.grayColor();
+                formaActuacionText.backgroundColor = UIColor.grayColor();
+                mojantesText.backgroundColor = UIColor.grayColor();
+                zonaCriticaText.backgroundColor = UIColor.grayColor();
+                
+            }
+            else{
             //Densidad foliar
             if (fetchResults[0].densidadFoliar == 1.15){
                 densidadFoliarText.text = "Alta"
@@ -188,7 +203,7 @@ class Result1 : UIViewController {
             if (fetchResults[0].zonaCriticaIndice == 2){
                 zonaCriticaText.text = "Exterior"
             }
-
+            }
             
             //let alert = UIAlertController(title: fetchResults[0].anchoCalle,
             //  message: "Hola",

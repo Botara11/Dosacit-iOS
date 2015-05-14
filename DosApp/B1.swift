@@ -37,14 +37,12 @@ class B1: NSManagedObject {
     @NSManaged var numeroBoquillasSector: Int
     @NSManaged var numeroTotalBoquillas: Int
     @NSManaged var numeroTotalBoquillasAbiertas: Int
+    @NSManaged var parteAoB: Int
     @NSManaged var porcentajeVegetacionAlta: Int
     @NSManaged var porcentajeVegetacionBaja: Int
     @NSManaged var porcentajeVegetacionMedia: Int
     @NSManaged var variacionCaudalAdmisible: Double
     @NSManaged var velocidadAvance: Double
     @NSManaged var volumenApp: Double
-    
-    
-    
-    
+      
 }
