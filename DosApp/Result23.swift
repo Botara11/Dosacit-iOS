@@ -44,6 +44,10 @@ class Result23: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        marca = newItemB.seleccionadaMarca
+        presion = newItemB.seleccionadaPresion
+        
         var se = Section()
         sections.append(Section())
         sections.append(Section())
