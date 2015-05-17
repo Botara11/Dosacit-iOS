@@ -39,6 +39,8 @@ class Result32: UIViewController, UITableViewDataSource, UITableViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        println(newItemC.presion)
+
         println("VALEEEEEEEEEEEEEEE")
 
         
@@ -96,8 +98,9 @@ class Result32: UIViewController, UITableViewDataSource, UITableViewDelegate{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if(segue.identifier == "Result33"){
             let vc = segue.destinationViewController as! Result33
-            vc.marca = marcaPressed
-            vc.presion = presion
+            //vc.marca = marcaPressed
+            //vc.presion = presion
+            newItemC.marca = marcaPressed
             println("presion=\(presion) marca=\(marcaPressed)")
            }
     }

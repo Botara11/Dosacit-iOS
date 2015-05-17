@@ -69,7 +69,8 @@ class Result21: UIViewController, UITableViewDataSource, UITableViewDelegate{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if(segue.identifier=="Result22"){
             let vc = segue.destinationViewController as! Result22
-            vc.marca = marcaPressed
+            //vc.marca = marcaPressed
+            newItemB.seleccionadaMarca = marcaPressed
         }
     }
     

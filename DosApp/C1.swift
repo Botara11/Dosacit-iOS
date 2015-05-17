@@ -24,5 +24,10 @@ class C1: NSManagedObject {
     @NSManaged var presionTrabajo: Int
     @NSManaged var velocidadAvance: Double
     @NSManaged var volumenCaldoAplicado: Double
+    @NSManaged var caudalZonaAlta: Double
+    @NSManaged var caudalZonaMedia: Double
+    @NSManaged var caudalZonaBaja: Double
+    @NSManaged var marca: String
+    @NSManaged var presion: String
 
 }

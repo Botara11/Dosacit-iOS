@@ -38,6 +38,7 @@ class Result22: UIViewController, UITableViewDataSource, UITableViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        marca = newItemB.seleccionadaMarca
         println(marca)
         println("VALEEEEEEEEEEEEEEE")
         
@@ -92,9 +93,11 @@ class Result22: UIViewController, UITableViewDataSource, UITableViewDelegate{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if(segue.identifier == "Result23"){
             let vc = segue.destinationViewController as! Result23
-            vc.marca = marca
+            //vc.marca = marca
+
             var auxPres = presionPressed.stringByReplacingOccurrencesOfString(" bares", withString: "")
-            vc.presion = "p\(auxPres)"
+            //vc.presion = "p\(auxPres)"
+            newItemB.seleccionadaPresion = "p\(auxPres)"
             println("La presion pulsada: \(presionPressed)")
         }
     }

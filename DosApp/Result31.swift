@@ -15,7 +15,6 @@ import CoreData
 class Result31: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
    
-    
     let cellIdentifier = "cellIdentifier"
     var tableData = ["6 bares","7 bares","8 bares","9 bares","10 bares","11 bares","12 bares","13 bares","14 bares","15 bares","16 bares"]
     
@@ -69,7 +68,8 @@ class Result31: UIViewController, UITableViewDataSource, UITableViewDelegate{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if(segue.identifier=="Result32"){
             let vc = segue.destinationViewController as! Result32
-            vc.presion = presionPressed
+            //vc.presion = presionPressed
+            newItemC.presion = presionPressed
         }
     }
     

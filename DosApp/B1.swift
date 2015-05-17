@@ -44,5 +44,8 @@ class B1: NSManagedObject {
     @NSManaged var variacionCaudalAdmisible: Double
     @NSManaged var velocidadAvance: Double
     @NSManaged var volumenApp: Double
+    
+    @NSManaged var seleccionadaPresion: String
+    @NSManaged var seleccionadaMarca: String
       
 }
