@@ -40,7 +40,8 @@ class Cultivo1: UIViewController {
     @IBOutlet var longitudArboles: UITextField!
     @IBOutlet var anchuraArboles: UITextField!
     @IBOutlet var alturaArboles: UITextField!
-    @IBOutlet var alturaMeseta: UITextField!
+    
+    
     
     @IBOutlet var densidadFoliar: UISegmentedControl!
     
@@ -84,12 +85,13 @@ class Cultivo1: UIViewController {
         
         newItem.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
         newItemB.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
+        newItemB.anchoCalleViejo = (anchoCalleTextField.text as NSString).doubleValue
         newItemC.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
         newItem.distanciaArboles = (distanciaArboles.text as NSString).doubleValue
         newItem.longitudArboles = (longitudArboles.text as NSString).doubleValue
         newItem.anchuraArboles = (anchuraArboles.text as NSString).doubleValue
         newItem.alturaArboles = (alturaArboles.text as NSString).doubleValue
-        newItem.alturaMeseta = (alturaMeseta.text as NSString).doubleValue
+        
         
         /*caract.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
         caract.longitudArboles = (longitudArboles.text as NSString).doubleValue
@@ -101,9 +103,9 @@ class Cultivo1: UIViewController {
         
         if (segue.identifier == "Cultivo"){
         
-        let comprobacion = caract.anchoCalle * caract.longitudArboles * caract.distanciaArboles * caract.anchuraArboles * caract.alturaArboles * caract.alturaMeseta
+        let comprobacion = caract.anchoCalle * caract.longitudArboles * caract.distanciaArboles * caract.anchuraArboles * caract.alturaArboles 
         
-        if anchoCalleTextField.text == "" || distanciaArboles.text == "" || longitudArboles.text == "" || anchuraArboles.text == "" || alturaArboles.text == "" || alturaMeseta.text == "" {
+        if anchoCalleTextField.text == "" || distanciaArboles.text == "" || longitudArboles.text == "" || anchuraArboles.text == "" || alturaArboles.text == "" {
             alert("ERROR",mensaje: "No puede haber campos vacíos y deben ser valores numéricos")
         }
         }
@@ -141,7 +143,7 @@ class Cultivo1: UIViewController {
         longitudArboles.keyboardType = UIKeyboardType.NumbersAndPunctuation
         anchuraArboles.keyboardType = UIKeyboardType.NumbersAndPunctuation
         alturaArboles.keyboardType = UIKeyboardType.NumbersAndPunctuation
-        alturaMeseta.keyboardType = UIKeyboardType.NumbersAndPunctuation
+        
         
         let fetchRequest = NSFetchRequest(entityName: "A1")
         if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [A1] {
@@ -165,9 +167,7 @@ class Cultivo1: UIViewController {
             if (fetchResults[0].alturaArboles != 0){
                 alturaArboles.text = "\(fetchResults[0].alturaArboles)"
             }
-            if (fetchResults[0].alturaMeseta != 0){
-                alturaMeseta.text = "\(fetchResults[0].alturaMeseta)"
-            }
+            
         }
         
         

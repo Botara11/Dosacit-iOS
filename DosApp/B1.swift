@@ -15,6 +15,8 @@ import CoreData
 class B1: NSManagedObject {
     
     @NSManaged var anchoCalle: Double
+    @NSManaged var anchoCalleNuevo: Double
+    @NSManaged var anchoCalleViejo: Double
     @NSManaged var caudalLiquidoBoquillaAlta: Double
     @NSManaged var caudalLiquidoBoquillaBaja: Double
     @NSManaged var caudalLiquidoBoquillaMedia: Double
@@ -23,6 +25,8 @@ class B1: NSManagedObject {
     @NSManaged var caudalLiquidoZonaAlta: Double
     @NSManaged var caudalLiquidoZonaBaja: Double
     @NSManaged var caudalLiquidoZonaMedia: Double
+    @NSManaged var flagVolumen: Int
+    @NSManaged var flagAncho: Int
     @NSManaged var intervaloCaudalAdmisible0: Double
     @NSManaged var intervaloCaudalAdmisible1: Double
     @NSManaged var intervaloCaudalAdmisible2: Double
@@ -44,7 +48,8 @@ class B1: NSManagedObject {
     @NSManaged var variacionCaudalAdmisible: Double
     @NSManaged var velocidadAvance: Double
     @NSManaged var volumenApp: Double
-    
+    @NSManaged var volumenAppNuevo: Double
+    @NSManaged var volumenAppViejo: Double
     @NSManaged var seleccionadaPresion: String
     @NSManaged var seleccionadaMarca: String
       

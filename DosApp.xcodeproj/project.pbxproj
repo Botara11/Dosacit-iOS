@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		210584171ACB17B40058BCB3 /* C1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210584161ACB17B40058BCB3 /* C1.swift */; };
+		211C019B1B6820CF000D847B /* Viewcontroller_iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 211C01991B6820CF000D847B /* Viewcontroller_iphone.xib */; };
 		2155E7431AB49119009D57E7 /* SelecBoquillas2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2155E7421AB49119009D57E7 /* SelecBoquillas2.swift */; };
 		2155E7451AB74EC4009D57E7 /* B1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2155E7441AB74EC4009D57E7 /* B1.swift */; };
 		2188CEE51ACB15030068CD52 /* CaldoAp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2188CEE41ACB15030068CD52 /* CaldoAp.swift */; };
 		218A544A1ABC86FF009DD0EA /* SelecBoquillas3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218A54491ABC86FF009DD0EA /* SelecBoquillas3.swift */; };
 		21AB1AFC1AB0994D009275CD /* SelecBoquillas1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AB1AFB1AB0994D009275CD /* SelecBoquillas1.swift */; };
+		21D52E071BC01D1100307BD5 /* StoryboardIpad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D52E051BC01D1100307BD5 /* StoryboardIpad.storyboard */; };
+		21D52E0A1BC0278D00307BD5 /* StoryboardIphone5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D52E081BC0278D00307BD5 /* StoryboardIphone5.storyboard */; };
 		21F4C8831AFE60E100401952 /* ParteC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4C8821AFE60E100401952 /* ParteC.swift */; };
 		21F4C8871AFE773000401952 /* CaldoAp1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4C8861AFE773000401952 /* CaldoAp1.swift */; };
 		B2557DB21AAF821E008A24D9 /* DosAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DB11AAF821E008A24D9 /* DosAppTests.swift */; };
@@ -55,11 +58,14 @@
 
 /* Begin PBXFileReference section */
 		210584161ACB17B40058BCB3 /* C1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = C1.swift; sourceTree = "<group>"; };
+		211C019A1B6820CF000D847B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Viewcontroller_iphone.xib; sourceTree = "<group>"; };
 		2155E7421AB49119009D57E7 /* SelecBoquillas2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecBoquillas2.swift; sourceTree = "<group>"; };
 		2155E7441AB74EC4009D57E7 /* B1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = B1.swift; sourceTree = "<group>"; };
 		2188CEE41ACB15030068CD52 /* CaldoAp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaldoAp.swift; sourceTree = "<group>"; };
 		218A54491ABC86FF009DD0EA /* SelecBoquillas3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecBoquillas3.swift; sourceTree = "<group>"; };
 		21AB1AFB1AB0994D009275CD /* SelecBoquillas1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecBoquillas1.swift; sourceTree = "<group>"; };
+		21D52E061BC01D1100307BD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = StoryboardIpad.storyboard; sourceTree = "<group>"; };
+		21D52E091BC0278D00307BD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = StoryboardIphone5.storyboard; sourceTree = "<group>"; };
 		21F4C8821AFE60E100401952 /* ParteC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParteC.swift; sourceTree = "<group>"; };
 		21F4C8861AFE773000401952 /* CaldoAp1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaldoAp1.swift; sourceTree = "<group>"; };
 		B2557D931AAF821E008A24D9 /* DosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,7 +199,10 @@
 			isa = PBXGroup;
 			children = (
 				B2557DFC1AAF8430008A24D9 /* LaunchScreen.xib */,
+				211C01991B6820CF000D847B /* Viewcontroller_iphone.xib */,
+				21D52E051BC01D1100307BD5 /* StoryboardIpad.storyboard */,
 				B2557DFE1AAF8430008A24D9 /* Main.storyboard */,
+				21D52E081BC0278D00307BD5 /* StoryboardIphone5.storyboard */,
 			);
 			path = Base.lproj;
 			sourceTree = "<group>";
@@ -278,9 +287,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21D52E0A1BC0278D00307BD5 /* StoryboardIphone5.storyboard in Resources */,
 				B2557E011AAF8430008A24D9 /* Main.storyboard in Resources */,
+				21D52E071BC01D1100307BD5 /* StoryboardIpad.storyboard in Resources */,
 				B2557E031AAF844E008A24D9 /* Images.xcassets in Resources */,
 				B2557E001AAF8430008A24D9 /* LaunchScreen.xib in Resources */,
+				211C019B1B6820CF000D847B /* Viewcontroller_iphone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +362,30 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		211C01991B6820CF000D847B /* Viewcontroller_iphone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				211C019A1B6820CF000D847B /* Base */,
+			);
+			name = Viewcontroller_iphone.xib;
+			sourceTree = "<group>";
+		};
+		21D52E051BC01D1100307BD5 /* StoryboardIpad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21D52E061BC01D1100307BD5 /* Base */,
+			);
+			name = StoryboardIpad.storyboard;
+			sourceTree = "<group>";
+		};
+		21D52E081BC0278D00307BD5 /* StoryboardIphone5.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21D52E091BC0278D00307BD5 /* Base */,
+			);
+			name = StoryboardIphone5.storyboard;
+			sourceTree = "<group>";
+		};
 		B2557DFC1AAF8430008A24D9 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

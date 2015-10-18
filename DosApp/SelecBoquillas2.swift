@@ -11,8 +11,6 @@ import CoreData
 
 class SelecBoquillas2: UIViewController {
     
-    
-    
    
     @IBOutlet var NumBoqCerrAlta: UITextField!
     @IBOutlet var NumBoqCerrBaja: UITextField!
@@ -27,6 +25,9 @@ class SelecBoquillas2: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
+        let fetchRequest = NSFetchRequest(entityName: "B1")
+        if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+        
         if(segue.identifier == "B23"){
         
         
@@ -37,6 +38,10 @@ class SelecBoquillas2: UIViewController {
             }else if (((PorcentajeVegAlta.text as NSString).integerValue) + (PorcentajeVegMedia.text as NSString).integerValue + (PorcentajeVegBaja.text as NSString).integerValue != 100 ){
             
             alert("ERROR",mensaje: "La suma del porcentaje de vegetación a pulverizar no es igual al 100%")
+            }else if(((NumBoqAbAlta.text as NSString).integerValue + (NumBoqAbMedia.text as NSString).integerValue + (NumBoqAbBaja.text as NSString).integerValue + (NumBoqCerrAlta.text as NSString).integerValue + (NumBoqCerrBaja.text as NSString).integerValue) != fetchResults[0].numeroTotalBoquillas ){
+            
+                alert("ERROR",mensaje: "La suma entre las boquillas abiertas y cerradas debe ser igual al número total de boquillas")
+                
             }else{
        
                 newItemB.numeroBoquillasCerradasAlta = (NumBoqCerrAlta.text as NSString).integerValue
@@ -71,7 +76,7 @@ class SelecBoquillas2: UIViewController {
         newItemB.porcentajeVegetacionMedia = (PorcentajeVegMedia.text as NSString).integerValue
         
         newItemB.porcentajeVegetacionBaja = (PorcentajeVegBaja.text as NSString).integerValue
-        
+        }
         
         
     }
@@ -94,8 +99,10 @@ class SelecBoquillas2: UIViewController {
         if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
             
                 
-                if (fetchResults[0].numeroBoquillasAbiertasAlta != 0 || fetchResults[0].numeroBoquillasAbiertasBaja != 0 || fetchResults[0].numeroBoquillasAbiertasMedia != 0 || fetchResults[0].porcentajeVegetacionAlta != 0){
+                if (fetchResults[0].numeroBoquillasCerradasAlta != 0){
                     NumBoqCerrAlta.text = "\(fetchResults[0].numeroBoquillasCerradasAlta)"
+                }
+                if (fetchResults[0].numeroBoquillasCerradasBaja != 0){
                     NumBoqCerrBaja.text = "\(fetchResults[0].numeroBoquillasCerradasBaja)"
                 }
             

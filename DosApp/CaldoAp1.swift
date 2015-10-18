@@ -51,6 +51,15 @@ class CaldoAp1: UIViewController {
             
         }
         
+        let fetchRequest1 = NSFetchRequest(entityName: "C1")
+        if let fetchResults = managedObjectContextC!.executeFetchRequest(fetchRequest, error: nil) as? [C1]{
+            
+            
+            
+            
+            
+        }
+        
     }
     
     
@@ -216,6 +225,14 @@ class CaldoAp1: UIViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!){
+        
+        
+        newItemB.numeroBoquillasAbiertasAlta = (boquillasAltaTextField.text as NSString).integerValue
+        newItemB.numeroBoquillasAbiertasMedia = (boquillasMediaTextField.text as NSString).integerValue
+        newItemB.numeroBoquillasAbiertasBaja = (boquillasBajaTextField.text as NSString).integerValue
+        newItemC.numBoqAbiertasAltaHidraulica = (boquillasAltaTextField.text as NSString).integerValue
+        newItemC.numBoqAbiertasMediaHidraulica = (boquillasMediaTextField.text as NSString).integerValue
+        newItemC.numBoqAbiertasBajaHidraulica = (boquillasBajaTextField.text as NSString).integerValue
         
         if(segue.identifier == "C12"){
             

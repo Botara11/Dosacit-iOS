@@ -1,0 +1,1512 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="paS-iR-8ei">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="1uw-MT-KGu">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="paS-iR-8ei" customClass="ViewController" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kdt-9c-BzT"/>
+                        <viewControllerLayoutGuide type="bottom" id="VWT-L7-Euz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xSA-pJ-xLm">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="54" placeholderIntrinsicHeight="44" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhP-Bk-AJc">
+                                <rect key="frame" x="224" y="463" width="320" height="98"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="58"/>
+                                <state key="normal" title="Comenzar">
+                                    <color key="titleColor" red="0.93294005300000005" green="1" blue="0.96171412199999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="Bsh-ht-3Rr" kind="presentation" id="IUo-Tf-f4s"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="v01" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wou-2o-eMc">
+                                <rect key="frame" x="224" y="277" width="320" height="98"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="63"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="JhP-Bk-AJc" secondAttribute="centerY" id="eF7-6d-ByH"/>
+                            <constraint firstAttribute="centerX" secondItem="JhP-Bk-AJc" secondAttribute="centerX" id="taA-XO-A4Z"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x4z-sX-rts" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-530" y="409"/>
+        </scene>
+        <!--Indice-->
+        <scene sceneID="Hbf-9l-bS4">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Bsh-ht-3Rr" customClass="Indice" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L14-jG-gjN"/>
+                        <viewControllerLayoutGuide type="bottom" id="P9y-v5-waQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HSN-Fc-tgG">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ic5-9u-mNt">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0P-ve-1aC">
+                                        <rect key="frame" x="76" y="543" width="617" height="73"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="C. Selección de boquillas">
+                                            <color key="titleColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUN-ra-z72">
+                                        <rect key="frame" x="76" y="737" width="617" height="73"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="D. Determinación del volumen de caldo aplicado">
+                                            <color key="titleColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKH-kU-SLu">
+                                        <rect key="frame" x="0.0" y="29" width="768" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <textAttributes key="titleTextAttributes">
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                        </textAttributes>
+                                        <items>
+                                            <navigationItem title="Índice" id="WOT-Vu-LBU">
+                                                <barButtonItem key="rightBarButtonItem" title="&gt;" id="vqY-4b-u9g">
+                                                    <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcG-vA-FCv">
+                                        <rect key="frame" x="76" y="153" width="617" height="73"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="A. Identificación del tratamiento">
+                                            <color key="titleColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lC1-AZ-MY0">
+                                        <rect key="frame" x="76" y="346" width="617" height="73"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="B. Determinación del Volumen de Aplicación">
+                                            <color key="titleColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="ocZ-aq-f5o" kind="presentation" id="XsE-9K-6Qe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J3P-mP-lck" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379" y="409"/>
+        </scene>
+        <!--Cultivo1-->
+        <scene sceneID="w5i-C9-vQt">
+            <objects>
+                <viewController id="0WO-Vz-MIf" customClass="Cultivo1" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a2m-mY-8gJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ifN-0h-6bn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DvH-td-J9V">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mnn-Bl-8kW">
+                                <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="B.1. Características del cultivo" id="zn9-b7-Igd">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="8gJ-Wx-S3X">
+                                            <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="&gt;" id="ldN-JL-wpi">
+                                            <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="accion:" destination="0WO-Vz-MIf" id="z9S-kd-2lh"/>
+                                                <segue destination="bKc-Y8-IiS" kind="presentation" identifier="Cultivo" id="sks-7U-6Mi"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Densidad foliar del árbol" translatesAutoresizingMaskIntoConstraints="NO" id="X0N-VC-WvZ">
+                                <rect key="frame" x="16" y="101" width="315" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Marco de plantación" translatesAutoresizingMaskIntoConstraints="NO" id="cG3-pf-OI2">
+                                <rect key="frame" x="16" y="234" width="308" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="x: Ancho de calle" translatesAutoresizingMaskIntoConstraints="NO" id="FsF-xR-Zoa">
+                                <rect key="frame" x="62" y="276" width="181" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="y: Distancia entre árboles" translatesAutoresizingMaskIntoConstraints="NO" id="9hX-nq-FfT">
+                                <rect key="frame" x="62" y="333" width="181" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mu3-MU-HcP">
+                                <rect key="frame" x="16" y="169" width="736" height="29"/>
+                                <segments>
+                                    <segment title="Alta"/>
+                                    <segment title="Media"/>
+                                    <segment title="Baja"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="elegirDensidadFoliar:" destination="0WO-Vz-MIf" eventType="valueChanged" id="hMp-C5-Zxz"/>
+                                </connections>
+                            </segmentedControl>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6kc-Lg-6eY">
+                                <rect key="frame" x="336" y="280" width="97" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qtY-NU-0aL">
+                                <rect key="frame" x="336" y="339" width="97" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="m" translatesAutoresizingMaskIntoConstraints="NO" id="4jr-me-6ez">
+                                <rect key="frame" x="441" y="278" width="25" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Dimensiones de los árboles:" translatesAutoresizingMaskIntoConstraints="NO" id="WSZ-rM-RtA">
+                                <rect key="frame" x="16" y="443" width="371" height="37"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="I. Longitud de los árboles" translatesAutoresizingMaskIntoConstraints="NO" id="hbV-Xn-CRM">
+                                <rect key="frame" x="62" y="495" width="279" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="II. Anchura de los árboles" translatesAutoresizingMaskIntoConstraints="NO" id="TMI-9I-AVw">
+                                <rect key="frame" x="62" y="559" width="299" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bnZ-U5-Qia">
+                                <rect key="frame" x="336" y="505" width="97" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="m" translatesAutoresizingMaskIntoConstraints="NO" id="9qg-Uc-KbN">
+                                <rect key="frame" x="441" y="503" width="25" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nq0-Ai-dJ5">
+                                <rect key="frame" x="336" y="563" width="97" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5xL-V7-Kgm">
+                                <rect key="frame" x="336" y="632" width="97" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="m" translatesAutoresizingMaskIntoConstraints="NO" id="UcS-J7-xkk">
+                                <rect key="frame" x="441" y="561" width="25" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="m" translatesAutoresizingMaskIntoConstraints="NO" id="zAt-zY-Ip7">
+                                <rect key="frame" x="441" y="630" width="25" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="m" translatesAutoresizingMaskIntoConstraints="NO" id="FXW-bb-IeZ">
+                                <rect key="frame" x="441" y="337" width="25" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQ6-bx-OAC">
+                                <rect key="frame" x="695" y="101" width="57" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" image="YES"/>
+                                </accessibility>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="?">
+                                    <color key="titleColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="III. Altura de los árboles" translatesAutoresizingMaskIntoConstraints="NO" id="5l5-Ty-F08">
+                                <rect key="frame" x="62" y="621" width="247" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Captura de pantalla 2015-01-19 a las 23.49.41" translatesAutoresizingMaskIntoConstraints="NO" id="60K-oL-KqX">
+                                <rect key="frame" x="474" y="326" width="278" height="587"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="moD-Nl-j3Y"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="AlturaArboles" destination="5xL-V7-Kgm" id="Y8m-TA-c0M"/>
+                        <outlet property="AnchuraArboles" destination="nq0-Ai-dJ5" id="U99-aT-USh"/>
+                        <outlet property="DistanciaArboles" destination="qtY-NU-0aL" id="77O-Ab-RI3"/>
+                        <outlet property="LongitudArboles" destination="bnZ-U5-Qia" id="53x-i2-XQC"/>
+                        <outlet property="anchoCalleTextField" destination="6kc-Lg-6eY" id="Auv-2J-ufm"/>
+                        <outlet property="boton" destination="ldN-JL-wpi" id="lDj-4k-hHw"/>
+                        <outlet property="densidadFoliar" destination="mu3-MU-HcP" id="Yyc-ED-QBC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="edg-aS-PQ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2275" y="391"/>
+        </scene>
+        <!--Cultivo2-->
+        <scene sceneID="70H-bx-N0x">
+            <objects>
+                <viewController storyboardIdentifier="Cultivo2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bKc-Y8-IiS" customClass="Cultivo2" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vTK-Fo-VLl"/>
+                        <viewControllerLayoutGuide type="bottom" id="ani-zI-arj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cn8-XB-Mr8">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXt-qM-wMF">
+                                <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="B1. Características del cultivo" id="zBe-Xu-RLJ">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="jPW-4F-GWi">
+                                            <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="0WO-Vz-MIf" kind="presentation" id="vVT-YW-WM6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="&gt;" id="d1r-C2-9Vi">
+                                            <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="UWh-0T-yy8" kind="presentation" identifier="Cultivo2" id="kyF-Qa-jnq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Forma del árbol" translatesAutoresizingMaskIntoConstraints="NO" id="bDl-uA-s8k">
+                                <rect key="frame" x="21" y="90" width="371" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mzL-Li-tLN">
+                                <rect key="frame" x="21" y="158" width="731" height="29"/>
+                                <segments>
+                                    <segment title="Esférica (globo)"/>
+                                    <segment title="Seto"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="formaArbol:" destination="bKc-Y8-IiS" eventType="valueChanged" id="qab-6t-f9U"/>
+                                </connections>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Poda" translatesAutoresizingMaskIntoConstraints="NO" id="jcX-yh-0lD">
+                                <rect key="frame" x="21" y="251" width="181" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Fecha de la última poda" translatesAutoresizingMaskIntoConstraints="NO" id="AOD-Be-KSA">
+                                <rect key="frame" x="75" y="298" width="276" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Grado de poda" translatesAutoresizingMaskIntoConstraints="NO" id="YHt-w5-RrZ">
+                                <rect key="frame" x="75" y="423" width="348" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="3Ti-Yp-4LT">
+                                <rect key="frame" x="21" y="484" width="445" height="29"/>
+                                <segments>
+                                    <segment title="Alto"/>
+                                    <segment title="Medio"/>
+                                    <segment title="Bajo"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="gradoPodaSelector:" destination="bKc-Y8-IiS" eventType="valueChanged" id="AGa-OT-Hjo"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SPB-ME-6Ve">
+                                <rect key="frame" x="21" y="355" width="445" height="29"/>
+                                <segments>
+                                    <segment title="&lt; 3 meses"/>
+                                    <segment title="3-12 meses"/>
+                                    <segment title="1-2 años"/>
+                                    <segment title="&gt;2 años"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="fechaUltimaPodaSelector:" destination="bKc-Y8-IiS" eventType="valueChanged" id="HH6-0u-XcP"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Captura de pantalla 2015-01-19 a las 23.49.41" translatesAutoresizingMaskIntoConstraints="NO" id="VtM-5b-urZ">
+                                <rect key="frame" x="479" y="320" width="278" height="587"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="fechaUltimaPoda" destination="SPB-ME-6Ve" id="pHn-An-bZl"/>
+                        <outlet property="formaArbol" destination="mzL-Li-tLN" id="Wb4-Vv-uJH"/>
+                        <outlet property="gradoPoda" destination="3Ti-Yp-4LT" id="wFe-tt-0Gf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frR-jT-y9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3145" y="391"/>
+        </scene>
+        <!--Cultivo3-->
+        <scene sceneID="Sgx-ai-mfb">
+            <objects>
+                <viewController id="UWh-0T-yy8" customClass="Cultivo3" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3VX-1N-BtI"/>
+                        <viewControllerLayoutGuide type="bottom" id="YAi-SG-4Pa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RY9-dy-9n7">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6y-sb-keG">
+                                <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="B.2. Tipo de tratamiento" id="0A2-uN-5G1">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="fBZ-6B-tbh">
+                                            <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="bKc-Y8-IiS" kind="presentation" id="Si6-ts-sP9"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="&gt;" id="cOX-S2-dLD">
+                                            <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="mFA-1a-EiF" kind="presentation" id="g5x-5r-Thk"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Productos a aplicar" translatesAutoresizingMaskIntoConstraints="NO" id="Fab-2b-O6Q">
+                                <rect key="frame" x="21" y="85" width="375" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Forma de actución" translatesAutoresizingMaskIntoConstraints="NO" id="YTo-pu-WsW">
+                                <rect key="frame" x="31" y="354" width="304" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Yig-2g-Urv">
+                                <rect key="frame" x="78" y="413" width="674" height="29"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.59999999999999964" height="0.69999999999999973"/>
+                                <segments>
+                                    <segment title="I"/>
+                                    <segment title="II"/>
+                                    <segment title="III"/>
+                                    <segment title="IV"/>
+                                    <segment title="V"/>
+                                    <segment title="VI"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="formaActuacionSelector:" destination="UWh-0T-yy8" eventType="valueChanged" id="5aQ-L0-5q7"/>
+                                </connections>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="¿Utiliza Coadyuvantes?" translatesAutoresizingMaskIntoConstraints="NO" id="7dM-eU-p36">
+                                <rect key="frame" x="31" y="623" width="304" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fAt-I3-UWV">
+                                <rect key="frame" x="78" y="684" width="674" height="29"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.59999999999999964" height="0.69999999999999973"/>
+                                <segments>
+                                    <segment title="Sí"/>
+                                    <segment title="No"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="utilizaCoadyuvantesSelector:" destination="UWh-0T-yy8" eventType="valueChanged" id="7wU-eR-Leo"/>
+                                </connections>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Zona crítica a tratar de la copa del árbol" translatesAutoresizingMaskIntoConstraints="NO" id="S7P-7D-U5y">
+                                <rect key="frame" x="46" y="754" width="460" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="L6j-u0-Lx7">
+                                <rect key="frame" x="78" y="140" width="674" height="29"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.59999999999999964" height="0.69999999999999973"/>
+                                <segments>
+                                    <segment title="I"/>
+                                    <segment title="II"/>
+                                    <segment title="III"/>
+                                    <segment title="IV"/>
+                                    <segment title="V"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="productosAplicarSelector:" destination="UWh-0T-yy8" eventType="valueChanged" id="iq8-55-73A"/>
+                                </connections>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="I. Acaricidas" translatesAutoresizingMaskIntoConstraints="NO" id="JDB-1b-YVc">
+                                <rect key="frame" x="119" y="188" width="181" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="II. Fungicidas" translatesAutoresizingMaskIntoConstraints="NO" id="aee-Ho-fFj">
+                                <rect key="frame" x="308" y="188" width="230" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="III.Insecticidas" translatesAutoresizingMaskIntoConstraints="NO" id="bi2-Lc-Sku">
+                                <rect key="frame" x="119" y="230" width="181" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="IV. Abonos foliares" translatesAutoresizingMaskIntoConstraints="NO" id="HuD-nG-HbL">
+                                <rect key="frame" x="308" y="230" width="230" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="V. Fitorreguladores" translatesAutoresizingMaskIntoConstraints="NO" id="Axh-4Q-7Ym">
+                                <rect key="frame" x="119" y="272" width="248" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="I. Asfixia" translatesAutoresizingMaskIntoConstraints="NO" id="4z3-Qm-KW5">
+                                <rect key="frame" x="119" y="468" width="103" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="II. Contacto" translatesAutoresizingMaskIntoConstraints="NO" id="1tr-Ih-3bh">
+                                <rect key="frame" x="308" y="468" width="124" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="III.Ingestión" translatesAutoresizingMaskIntoConstraints="NO" id="byC-m0-GQe">
+                                <rect key="frame" x="119" y="506" width="181" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="IV. Inhalación" translatesAutoresizingMaskIntoConstraints="NO" id="sS2-mo-DTD">
+                                <rect key="frame" x="308" y="506" width="181" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="V. Traslaminar" translatesAutoresizingMaskIntoConstraints="NO" id="Kcb-fa-rFs">
+                                <rect key="frame" x="119" y="548" width="181" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="VI. Sistémicos " translatesAutoresizingMaskIntoConstraints="NO" id="igL-us-HQ9">
+                                <rect key="frame" x="308" y="548" width="181" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Kmc-hn-rib">
+                                <rect key="frame" x="78" y="821" width="674" height="29"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.59999999999999964" height="0.69999999999999973"/>
+                                <segments>
+                                    <segment title="Interior"/>
+                                    <segment title="Interior y exterior"/>
+                                    <segment title="Exterior"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="copaArbolSelector:" destination="UWh-0T-yy8" eventType="valueChanged" id="AZM-Wg-Y8p"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="copaArbol" destination="Kmc-hn-rib" id="eGL-x2-7ni"/>
+                        <outlet property="formaActuacion" destination="Yig-2g-Urv" id="iMO-Kh-2lF"/>
+                        <outlet property="productosAplicar" destination="L6j-u0-Lx7" id="Ogs-6a-UWx"/>
+                        <outlet property="utilizaCoadyuvantes" destination="fAt-I3-UWV" id="wu1-sf-AzG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mGv-qU-piJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4141.40625" y="399.609375"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dlj-Qp-lep">
+            <objects>
+                <viewController id="Pic-AL-nKf" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VGy-L7-sEs"/>
+                        <viewControllerLayoutGuide type="bottom" id="JlB-Vk-vPO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5nt-ya-Mq4">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2F-5w-zZc">
+                                <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="A. Identificación del tratamiento" id="1bb-eI-1zl">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="AbG-XI-wMi">
+                                            <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="Bsh-ht-3Rr" kind="presentation" id="rVc-pt-vpV"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="&gt;" id="I58-M2-GtE">
+                                            <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="accion:" destination="Pic-AL-nKf" id="fLf-MU-xS7"/>
+                                                <segue destination="ocZ-aq-f5o" kind="presentation" id="LaE-HW-BtL"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Identificación de parcela" translatesAutoresizingMaskIntoConstraints="NO" id="KRD-gt-twe">
+                                <rect key="frame" x="103" y="281" width="333" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zOh-Uc-d4q">
+                                <rect key="frame" x="468" y="156" width="223" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Identificación del tratamiento" translatesAutoresizingMaskIntoConstraints="NO" id="pDW-Oe-jtF">
+                                <rect key="frame" x="103" y="421" width="340" height="50"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Referencia" translatesAutoresizingMaskIntoConstraints="NO" id="L7t-z6-mXD">
+                                <rect key="frame" x="116" y="557" width="181" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Fecha" translatesAutoresizingMaskIntoConstraints="NO" id="3Pe-NG-Gin">
+                                <rect key="frame" x="116" y="147" width="181" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ot0-x0-GTj">
+                                <rect key="frame" x="468" y="431" width="223" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3g7-Mv-aee">
+                                <rect key="frame" x="468" y="561" width="223" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2jP-e2-naO">
+                                <rect key="frame" x="468" y="290" width="223" height="30"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wF4-bX-iqo"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="AnchuraArboles" destination="3g7-Mv-aee" id="KkX-DW-gKZ"/>
+                        <outlet property="DistanciaArboles" destination="2jP-e2-naO" id="6yo-z7-hnu"/>
+                        <outlet property="LongitudArboles" destination="Ot0-x0-GTj" id="RFk-t7-0b6"/>
+                        <outlet property="anchoCalleTextField" destination="zOh-Uc-d4q" id="zlc-xt-oW7"/>
+                        <outlet property="boton" destination="I58-M2-GtE" id="S5I-RI-MPp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TDp-75-Cjs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379" y="-742"/>
+        </scene>
+        <!--Indice-->
+        <scene sceneID="Lde-WC-1k6">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ocZ-aq-f5o" customClass="Indice" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mGi-1y-QHe"/>
+                        <viewControllerLayoutGuide type="bottom" id="ugj-Sk-Jew"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jLj-ka-zal">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8mC-Zo-n3V">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R62-3b-4gv">
+                                        <rect key="frame" x="91" y="475" width="587" height="73"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="B.3. Condiciones meteorológicas">
+                                            <color key="titleColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wU8-oI-b1e">
+                                        <rect key="frame" x="91" y="190" width="587" height="73"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="B.1. Características del cultivo">
+                                            <color key="titleColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="0WO-Vz-MIf" kind="presentation" id="1WO-rY-ezu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKh-8h-pR0">
+                                        <rect key="frame" x="91" y="625" width="587" height="73"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="B.4. Equipo empleado">
+                                            <color key="titleColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLg-fk-olN">
+                                        <rect key="frame" x="91" y="331" width="587" height="73"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="B.2. Tipo de tratamiento">
+                                            <color key="titleColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="UWh-0T-yy8" kind="presentation" id="32j-aB-65B"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXo-x5-M8h">
+                                        <rect key="frame" x="91" y="774" width="587" height="73"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                        <state key="normal" title="B.R. Resumen y resultado">
+                                            <color key="titleColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMd-Hj-hSE">
+                                        <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <textAttributes key="titleTextAttributes">
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                        </textAttributes>
+                                        <items>
+                                            <navigationItem title="B. Determinación del volumen de aplicación (L/HA)" id="yoX-il-k7C">
+                                                <barButtonItem key="leftBarButtonItem" title="&lt;" id="OlL-ZI-WQW">
+                                                    <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <connections>
+                                                        <segue destination="Pic-AL-nKf" kind="presentation" id="cgy-DF-Ds9"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                                <barButtonItem key="rightBarButtonItem" title="&gt;" id="swa-f3-GaW">
+                                                    <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <connections>
+                                                        <action selector="accion:" destination="Pic-AL-nKf" id="r7p-b2-3A4"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r2d-x3-Dky" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1336" y="409"/>
+        </scene>
+        <!--Cultivo4-->
+        <scene sceneID="yQK-tM-Ihk">
+            <objects>
+                <viewController id="mFA-1a-EiF" customClass="Cultivo4" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qdU-Zm-u23"/>
+                        <viewControllerLayoutGuide type="bottom" id="RUb-Bc-OHb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yee-4V-0zM">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StL-iC-IhF">
+                                <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="B.3. Condiciones meteorológicas" id="753-La-8Q9">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="Mq5-1d-Hej">
+                                            <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="UWh-0T-yy8" kind="presentation" id="PsO-fX-dbU"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="&gt;" id="7ge-Vz-vQD">
+                                            <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="v7p-jg-kgT" kind="presentation" identifier="SegueResult1" id="ctg-f4-mmc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Temperatura (ºC)" translatesAutoresizingMaskIntoConstraints="NO" id="pTp-h4-2IP">
+                                <rect key="frame" x="16" y="81" width="205" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZBU-QY-4gW">
+                                <rect key="frame" x="56" y="141" width="696" height="29"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.59999999999999964" height="0.69999999999999973"/>
+                                <segments>
+                                    <segment title="&lt; 15"/>
+                                    <segment title="15 - 25"/>
+                                    <segment title="25 - 30"/>
+                                    <segment title="&gt; 30"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="temperaturaSelector:" destination="mFA-1a-EiF" eventType="valueChanged" id="YOS-ME-GeP"/>
+                                </connections>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Humedad relativa (%)" translatesAutoresizingMaskIntoConstraints="NO" id="Nwc-GD-mD9">
+                                <rect key="frame" x="16" y="199" width="277" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dYb-wp-X2m">
+                                <rect key="frame" x="56" y="374" width="696" height="29"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.59999999999999964" height="0.69999999999999973"/>
+                                <segments>
+                                    <segment title="&lt;1 "/>
+                                    <segment title="1-3 "/>
+                                    <segment title="&gt; 3"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="velocidadVientoSelector:" destination="mFA-1a-EiF" eventType="valueChanged" id="J0F-TZ-V7s"/>
+                                </connections>
+                            </segmentedControl>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRA-dc-pAZ">
+                                <rect key="frame" x="0.0" y="466" width="768" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="B.4. Equipo empleado" id="dY0-nl-v28"/>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Tipo de pulverizador" translatesAutoresizingMaskIntoConstraints="NO" id="ybp-0Z-jHD">
+                                <rect key="frame" x="16" y="549" width="343" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Velocidad del viento (m/s)" translatesAutoresizingMaskIntoConstraints="NO" id="Prg-UA-88k">
+                                <rect key="frame" x="16" y="309" width="350" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dOM-ti-enz">
+                                <rect key="frame" x="56" y="253" width="696" height="29"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.59999999999999964" height="0.69999999999999973"/>
+                                <segments>
+                                    <segment title="&lt; 35 "/>
+                                    <segment title="35-60"/>
+                                    <segment title="&gt;60"/>
+                                    <segment title="Lluvia"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="humedadRelativaSelector:" destination="mFA-1a-EiF" eventType="valueChanged" id="VMO-ep-rQx"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RH2-4k-W72">
+                                <rect key="frame" x="56" y="611" width="696" height="29"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.59999999999999964" height="0.69999999999999973"/>
+                                <segments>
+                                    <segment title="Pulv. hidroneumático"/>
+                                    <segment title="Pistola"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="tipoPulverizadorSelector:" destination="mFA-1a-EiF" eventType="valueChanged" id="J6Y-Uh-Lts"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="humedadRelativa" destination="dOM-ti-enz" id="gXZ-WZ-xzP"/>
+                        <outlet property="temperatura" destination="ZBU-QY-4gW" id="EMa-PA-62p"/>
+                        <outlet property="tipoPulverizador" destination="RH2-4k-W72" id="4gV-Db-IkX"/>
+                        <outlet property="velocidadViento" destination="dYb-wp-X2m" id="3iS-Hr-hCb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KTw-h8-1Zd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5161" y="391"/>
+        </scene>
+        <!--Result1-->
+        <scene sceneID="9PH-Bg-wd3">
+            <objects>
+                <viewController storyboardIdentifier="TablaResultados1" useStoryboardIdentifierAsRestorationIdentifier="YES" id="v7p-jg-kgT" customClass="Result1" customModule="DosApp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2Zv-KM-kUX"/>
+                        <viewControllerLayoutGuide type="bottom" id="okx-pg-5VE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ibp-EC-lYW">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8B4-eT-pEK">
+                                <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="B.R. Resumen y Resultado " id="KIZ-ej-RDs">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="q32-WP-7yK">
+                                            <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="mFA-1a-EiF" kind="presentation" id="P7k-jS-r5K"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="&gt;" id="yRI-oA-hZw">
+                                            <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="Lzr-pJ-bdJ" kind="presentation" identifier="SegueResult12" id="sr3-qF-tH4"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="A.1. CARACTERÍSTICAS DEL CULTIVO" translatesAutoresizingMaskIntoConstraints="NO" id="TBr-u1-mWA">
+                                <rect key="frame" x="0.0" y="72" width="768" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Densidad foliar del árbol" translatesAutoresizingMaskIntoConstraints="NO" id="H02-RF-Vmk">
+                                <rect key="frame" x="16" y="119" width="181" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Marco de plantación" translatesAutoresizingMaskIntoConstraints="NO" id="kzz-n9-J7Q">
+                                <rect key="frame" x="16" y="176" width="277" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Volumen del árbol" translatesAutoresizingMaskIntoConstraints="NO" id="9sb-Yy-nNw">
+                                <rect key="frame" x="16" y="233" width="270" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Forma del árbol" translatesAutoresizingMaskIntoConstraints="NO" id="3HH-3W-4bT">
+                                <rect key="frame" x="16" y="299" width="181" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Poda" translatesAutoresizingMaskIntoConstraints="NO" id="DvS-89-zA9">
+                                <rect key="frame" x="16" y="364" width="181" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Fecha de la última poda" translatesAutoresizingMaskIntoConstraints="NO" id="q9F-Bd-poU">
+                                <rect key="frame" x="64" y="416" width="239" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Grado de poda" translatesAutoresizingMaskIntoConstraints="NO" id="YJG-tw-PcH">
+                                <rect key="frame" x="74" y="474" width="181" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlv-5V-OcL">
+                                <rect key="frame" x="392" y="474" width="309" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="A.2. TIPO DE TRATAMIENTO" translatesAutoresizingMaskIntoConstraints="NO" id="mBw-Jk-24V">
+                                <rect key="frame" x="0.0" y="594" width="768" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Productos a aplicar" translatesAutoresizingMaskIntoConstraints="NO" id="ljs-jv-tRu">
+                                <rect key="frame" x="38" y="665" width="255" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Forma de actuación" translatesAutoresizingMaskIntoConstraints="NO" id="dIP-SS-ifU">
+                                <rect key="frame" x="38" y="733" width="248" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="¿Utiliza coadyuvantes?" translatesAutoresizingMaskIntoConstraints="NO" id="QgX-Q4-fqQ">
+                                <rect key="frame" x="38" y="798" width="286" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Zona crítica a tratar" translatesAutoresizingMaskIntoConstraints="NO" id="4J6-Jx-lcv">
+                                <rect key="frame" x="38" y="867" width="248" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxJ-Bt-Mhy">
+                                <rect key="frame" x="551" y="176" width="150" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2T-hk-ujf">
+                                <rect key="frame" x="389" y="119" width="312" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IHV-aD-9lk">
+                                <rect key="frame" x="389" y="233" width="312" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iX-ha-IY9">
+                                <rect key="frame" x="392" y="299" width="309" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKn-Nh-sNP">
+                                <rect key="frame" x="392" y="416" width="309" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHC-Rb-pwn">
+                                <rect key="frame" x="389" y="733" width="309" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjR-NY-44S">
+                                <rect key="frame" x="389" y="798" width="309" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6GN-8U-vEQ">
+                                <rect key="frame" x="389" y="867" width="309" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkS-dg-iup">
+                                <rect key="frame" x="389" y="176" width="130" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="x" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCa-pc-urU">
+                                <rect key="frame" x="534" y="182" width="9" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCB-sE-cIc">
+                                <rect key="frame" x="525" y="678" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lcR-gq-SAi">
+                                <rect key="frame" x="389" y="665" width="309" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="anchoCalleText" destination="dkS-dg-iup" id="4jn-bD-s0l"/>
+                        <outlet property="densidadFoliarText" destination="t2T-hk-ujf" id="jbr-E6-9Uw"/>
+                        <outlet property="distanciaArbolesText" destination="RxJ-Bt-Mhy" id="jKW-Tp-cUO"/>
+                        <outlet property="fechaUltimaPodaText" destination="VKn-Nh-sNP" id="td8-gT-7jc"/>
+                        <outlet property="formaActuacionText" destination="aHC-Rb-pwn" id="fT3-lw-9ty"/>
+                        <outlet property="formaArbolText" destination="4iX-ha-IY9" id="M1q-iD-zhY"/>
+                        <outlet property="gradoPodaText" destination="wlv-5V-OcL" id="iIj-rD-Vrk"/>
+                        <outlet property="mojantesText" destination="CjR-NY-44S" id="xId-PE-jMO"/>
+                        <outlet property="productosAplicarText" destination="lcR-gq-SAi" id="Q3O-eV-h5U"/>
+                        <outlet property="volumenArbolText" destination="IHV-aD-9lk" id="5Ar-w1-hbb"/>
+                        <outlet property="zonaCriticaText" destination="6GN-8U-vEQ" id="Hd2-5B-V2z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PNv-Qd-9Fq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5984" y="391"/>
+        </scene>
+        <!--Result12-->
+        <scene sceneID="S60-Jj-JTl">
+            <objects>
+                <viewController id="Lzr-pJ-bdJ" customClass="Result12" customModule="DosApp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LhA-68-HV5"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kbt-65-cKp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qxC-z0-i26">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xe-bD-UPe">
+                                <rect key="frame" x="0.0" y="20" width="768" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                    <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="B.R. Resumen y Resultado" id="Ddd-TD-0ko">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="gtK-TX-4wW">
+                                            <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="v7p-jg-kgT" kind="presentation" id="1et-2u-0Q2"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="&gt;" id="b4m-ND-sF3">
+                                            <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="A.3. CONDICIONES METEOROLÓGICAS" translatesAutoresizingMaskIntoConstraints="NO" id="kqA-f4-PZy">
+                                <rect key="frame" x="0.0" y="72" width="768" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Temperatura" translatesAutoresizingMaskIntoConstraints="NO" id="Ln0-to-97F">
+                                <rect key="frame" x="10" y="114" width="248" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKX-sz-AVI">
+                                <rect key="frame" x="410" y="190" width="318" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Humedad relativa" translatesAutoresizingMaskIntoConstraints="NO" id="OUl-AR-glo">
+                                <rect key="frame" x="10" y="190" width="324" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Velocidad del viento" translatesAutoresizingMaskIntoConstraints="NO" id="9pK-f1-6wj">
+                                <rect key="frame" x="10" y="273" width="254" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="A.4. EQUIPO EMPLEADO" translatesAutoresizingMaskIntoConstraints="NO" id="cip-qU-csv">
+                                <rect key="frame" x="0.0" y="364" width="768" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Tipo de pulverizador" translatesAutoresizingMaskIntoConstraints="NO" id="C3o-NR-Q4v">
+                                <rect key="frame" x="16" y="419" width="286" height="34"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="A.5. VOLUMEN DE APLICACIÓN" translatesAutoresizingMaskIntoConstraints="NO" id="pqy-Df-FnD">
+                                <rect key="frame" x="0.0" y="510" width="768" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0s2-Hu-QzW">
+                                <rect key="frame" x="410" y="115" width="318" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWX-w2-W5d">
+                                <rect key="frame" x="410" y="273" width="318" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uU7-0G-FTd">
+                                <rect key="frame" x="410" y="419" width="318" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zsq-Hk-WQ7">
+                                <rect key="frame" x="294" y="592" width="181" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSy-JL-u4g">
+                                <rect key="frame" x="294" y="658" width="181" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="humedadRelativaText" destination="gKX-sz-AVI" id="wYL-eL-k0f"/>
+                        <outlet property="temperaturaText" destination="0s2-Hu-QzW" id="XjP-fv-MNF"/>
+                        <outlet property="tipoPulverizadorText" destination="uU7-0G-FTd" id="QZA-nr-c8P"/>
+                        <outlet property="velocidadVientoText" destination="LWX-w2-W5d" id="Aec-co-jZH"/>
+                        <outlet property="volumenAplicacionHAText" destination="zsq-Hk-WQ7" id="76J-f0-jMp"/>
+                        <outlet property="volumenAplicacionHGText" destination="zSy-JL-u4g" id="wLj-Ja-hpI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0ms-HC-Piv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6838" y="391"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Captura de pantalla 2015-01-19 a las 23.49.41" width="505" height="602"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="IUo-Tf-f4s"/>
+        <segue reference="g5x-5r-Thk"/>
+        <segue reference="PsO-fX-dbU"/>
+        <segue reference="ctg-f4-mmc"/>
+        <segue reference="LaE-HW-BtL"/>
+        <segue reference="1WO-rY-ezu"/>
+        <segue reference="sks-7U-6Mi"/>
+    </inferredMetricsTieBreakers>
+</document>

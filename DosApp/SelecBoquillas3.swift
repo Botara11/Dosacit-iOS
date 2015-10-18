@@ -43,8 +43,8 @@ class SelecBoquillas3: UIViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        
-        
+
+        newItemB.variacionCaudalAdmisible = Double(VariacionCaudal.value)
         var intervaloCaudalAdmisible = [0.3,1.2,0.3,1.2,0.3,1.2] as [Double]
         
         let fetchRequest999 = NSFetchRequest(entityName: "B1")
@@ -155,10 +155,10 @@ class SelecBoquillas3: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        VariacionCaudal.maximumValue = 10.0
-        VariacionCaudal.value = 3.0
-        VariacionText.text = "\(3)"
-        newItemB.variacionCaudalAdmisible = 5;
+        //VariacionCaudal.maximumValue = 10.0
+        //VariacionCaudal.value = 0
+        //VariacionText.text = "\(0)"
+        //newItemB.variacionCaudalAdmisible = 5;
         caract2.calcularParteB()
         // Do any additional setup after loading the view, typically from a nib.
         let fetchRequest = NSFetchRequest(entityName: "B1")
@@ -166,6 +166,13 @@ class SelecBoquillas3: UIViewController {
             IntervaloCaudalAdmisibleAlta.text = String(format:"%.2f",fetchResults[0].caudalLiquidoBoquillaAlta)
             IntervaloCaudalAdmisibleMedia.text = String(format:"%.2f",fetchResults[0].caudalLiquidoBoquillaMedia)
             IntervaloCaudalAdmisibleBaja.text = String(format:"%.2f",fetchResults[0].caudalLiquidoBoquillaBaja)
+            VariacionText.text = String(format:"%.0f",round(fetchResults[0].variacionCaudalAdmisible * 100))
+            VariacionCaudal.value = (fetchResults[0].variacionCaudalAdmisible as NSNumber).floatValue * 100
+            println("\(fetchResults[0].variacionCaudalAdmisible)")
+                
+            
+
+            
         }
     }
     

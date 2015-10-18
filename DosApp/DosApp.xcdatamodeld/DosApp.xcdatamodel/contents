@@ -1,36 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14A389" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="A1" representedClassName="DosApp.A1" syncable="YES">
         <attribute name="alturaArboles" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="alturaMeseta" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="anchoCalle" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="anchuraArboles" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="densidadFoliar" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="densidadFoliarIndice" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="densidadFoliarIndice" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
         <attribute name="distanciaArboles" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="esfericoSeto" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="fechaUltimaPoda" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="formaActuacion" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="formaActuacionIndice" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="formaActuacionIndice" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
         <attribute name="formaArbol" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="gradoPoda" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="humedadRelativa" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitudArboles" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="mojantes" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="parteAoB" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="parteAoB" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="productosAplicar" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="productosAplicarIndice" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="productosAplicarIndice" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
         <attribute name="temperatura" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="tipoPulverizador" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="velocidadViento" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="volumenAplicacionLHA" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="volumenAplicacionLHG" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="volumenAplicacionLHA" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="volumenAplicacionLHG" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
         <attribute name="volumenArbol" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="zonaCritica" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="zonaCriticaIndice" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="zonaCriticaIndice" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
     </entity>
     <entity name="B1" representedClassName="DosApp.B1" syncable="YES">
         <attribute name="anchoCalle" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="anchoCalleNuevo" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="anchoCalleViejo" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="caudalLiquidoBoquillaAlta" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="caudalLiquidoBoquillaBaja" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="caudalLiquidoBoquillaMedia" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
@@ -39,29 +41,33 @@
         <attribute name="caudalLiquidoZonaAlta" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="caudalLiquidoZonaBaja" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="caudalLiquidoZonaMedia" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="flagAncho" optional="YES" attributeType="Integer 32" syncable="YES"/>
+        <attribute name="flagVolumen" optional="YES" attributeType="Integer 32" syncable="YES"/>
         <attribute name="intervaloCaudalAdmisible0" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="intervaloCaudalAdmisible1" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="intervaloCaudalAdmisible2" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="intervaloCaudalAdmisible3" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="intervaloCaudalAdmisible4" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="intervaloCaudalAdmisible5" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
-        <attribute name="numeroBoquillasAbiertasAlta" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="numeroBoquillasAbiertasBaja" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="numeroBoquillasAbiertasMedia" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="numeroBoquillasCerradasAlta" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="numeroBoquillasCerradasBaja" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="numeroBoquillasSector" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="numeroTotalBoquillas" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="numeroTotalBoquillasAbiertas" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
-        <attribute name="parteAoB" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="porcentajeVegetacionAlta" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="porcentajeVegetacionBaja" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="porcentajeVegetacionMedia" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="numeroBoquillasAbiertasAlta" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="numeroBoquillasAbiertasBaja" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="numeroBoquillasAbiertasMedia" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="numeroBoquillasCerradasAlta" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="numeroBoquillasCerradasBaja" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="numeroBoquillasSector" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="numeroTotalBoquillas" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="numeroTotalBoquillasAbiertas" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="parteAoB" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="porcentajeVegetacionAlta" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="porcentajeVegetacionBaja" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="porcentajeVegetacionMedia" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="seleccionadaMarca" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="seleccionadaPresion" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="variacionCaudalAdmisible" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="velocidadAvance" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="volumenApp" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="volumenAppNuevo" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="volumenAppViejo" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
     </entity>
     <entity name="C1" representedClassName="DosApp.C1" syncable="YES">
         <attribute name="anchoCalle" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -70,13 +76,13 @@
         <attribute name="caudalZonaBaja" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="caudalZonaMedia" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="marca" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="marcaBoquilla" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="numBoqAbiertasAltaHidraulica" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="numBoqAbiertasBajaHidraulica" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="numBoqAbiertasMediaHidraulica" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="parteAoC" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="marcaBoquilla" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="numBoqAbiertasAltaHidraulica" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="numBoqAbiertasBajaHidraulica" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="numBoqAbiertasMediaHidraulica" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="parteAoC" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="presion" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="presionTrabajo" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="presionTrabajo" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="velocidadAvance" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="volumenCaldoAplicado" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
     </entity>
@@ -106,7 +112,7 @@
     </entity>
     <elements>
         <element name="A1" positionX="-63" positionY="-18" width="128" height="450"/>
-        <element name="B1" positionX="-63" positionY="135" width="128" height="525"/>
+        <element name="B1" positionX="-63" positionY="135" width="128" height="615"/>
         <element name="C1" positionX="-63" positionY="135" width="128" height="270"/>
         <element name="EntityBoquillas" positionX="-63" positionY="0" width="128" height="285"/>
         <element name="FiltroBoquillas" positionX="-63" positionY="135" width="128" height="105"/>

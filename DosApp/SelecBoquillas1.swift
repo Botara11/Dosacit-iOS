@@ -79,6 +79,7 @@ class SelecBoquillas1: UIViewController {
     @IBAction func SwitchPressedVC(sender: AnyObject) {
         if SwitchVC.on{
             SwitchV.setOn(false, animated: true)
+            newItemB.flagVolumen = 0
             
             if (VolumenSiguienteText.text == ""){
                 
@@ -102,6 +103,8 @@ class SelecBoquillas1: UIViewController {
         }
         else {
             SwitchV.setOn(true, animated: true)
+            newItemB.flagVolumen = 1
+            
             if (VolumenSiguienteText.text == ""){
                 
             }else{
@@ -128,6 +131,9 @@ class SelecBoquillas1: UIViewController {
     @IBAction func SwitchPressedV(sender: AnyObject) {
         if SwitchV.on{
             SwitchVC.setOn(false, animated: true)
+            newItemB.flagVolumen = 1
+            
+            
             //VolumenSiguienteText.editable = true
             
             if (VolumenSiguienteText.text == ""){
@@ -153,6 +159,9 @@ class SelecBoquillas1: UIViewController {
         }
         else {
             SwitchVC.setOn(true, animated: true)
+            newItemB.flagVolumen = 0
+            
+            
             
             if (VolumenSiguienteText.text == ""){
                 
@@ -180,7 +189,7 @@ class SelecBoquillas1: UIViewController {
         
         if SwitchAC.on{
             SwitchAS.setOn(false, animated: true)
-            
+            newItemB.flagAncho = 0
             if(AnchoCalculadoText.text == ""){
                 
             }else{
@@ -204,7 +213,7 @@ class SelecBoquillas1: UIViewController {
         }
         else {
             SwitchAS.setOn(true, animated: true)
-            
+            newItemB.flagAncho = 1
             if(AnchoSiguienteText.text == ""){
                 
             }else{
@@ -230,6 +239,7 @@ class SelecBoquillas1: UIViewController {
         
         if SwitchAS.on{
             SwitchAC.setOn(false, animated: true)
+            newItemB.flagAncho = 1
            // AnchoSiguienteText.editable = true
             if(AnchoSiguienteText.text == ""){
                 
@@ -252,6 +262,7 @@ class SelecBoquillas1: UIViewController {
         }
         else {
             SwitchAC.setOn(true, animated: true)
+            newItemB.flagAncho = 0
            // AnchoSiguienteText.editable = false
             if(AnchoCalculadoText.text == ""){
                 
@@ -280,22 +291,48 @@ class SelecBoquillas1: UIViewController {
     
     @IBAction func SliderChange(sender: AnyObject) {
         
-        var CurrentValue:float_t = round(SliderVA.value * 10)/10;
+        var CurrentValue:float_t = SliderVA.value;
         VelocidadAvanceText.text = String(format:"%.1f",CurrentValue)
-        newItemB.velocidadAvance = (CurrentValue as NSNumber).doubleValue
-        newItemC.velocidadAvance = (CurrentValue as NSNumber).doubleValue
+        newItemB.velocidadAvance = (round(SliderVA.value * 10)/10 as NSNumber).doubleValue
+        newItemC.velocidadAvance = (round(SliderVA.value * 10)/10 as NSNumber).doubleValue
         caract2.calcularCaudalesB()
         let fetchRequest = NSFetchRequest(entityName: "B1")
         if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
             
             CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
-        CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
+            CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
             
         }
     }
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        
+        newItemB.numeroTotalBoquillas = (NumTotalBoquillasText.text as NSString).integerValue
+        
+        newItemB.velocidadAvance = (VelocidadAvanceText.text as NSString).doubleValue
+        newItemC.velocidadAvance = (VelocidadAvanceText.text as NSString).doubleValue
+        
+        if SwitchVC.on{
+            newItem.volumenAplicacionLHA = (VolumenCalculadoText.text as NSString).integerValue
+            newItemB.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
+        }
+        else {
+            newItem.volumenAplicacionLHA = (VolumenSiguienteText.text as NSString).integerValue
+            newItemB.volumenApp = (VolumenSiguienteText.text as NSString).doubleValue
+            newItemB.volumenAppNuevo = (VolumenSiguienteText.text as NSString).doubleValue
+            
+        }
+        
+        if SwitchAC.on{
+            newItem.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
+            newItemB.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
+            
+        }else {
+            newItem.anchoCalle = (AnchoSiguienteText.text as NSString).doubleValue
+            newItemB.anchoCalle = (AnchoSiguienteText.text as NSString).doubleValue
+            newItemB.anchoCalleNuevo = (AnchoSiguienteText.text as NSString).doubleValue
+        }
         
         if(segue.identifier == "B1"){
             
@@ -314,6 +351,9 @@ class SelecBoquillas1: UIViewController {
             }else{
         
                 newItemB.numeroTotalBoquillas = (NumTotalBoquillasText.text as NSString).integerValue
+                
+                newItemB.velocidadAvance = (VelocidadAvanceText.text as NSString).doubleValue
+                newItemC.velocidadAvance = (VelocidadAvanceText.text as NSString).doubleValue
         
         
                 if SwitchVC.on{
@@ -336,8 +376,15 @@ class SelecBoquillas1: UIViewController {
                     newItemB.anchoCalle = (AnchoSiguienteText.text as NSString).doubleValue
                 }
             }
+                
+                println("\(fetchResults[0].numeroTotalBoquillas)")
+                println("\(fetchResults[0].volumenApp)")
+                println("\(fetchResults[0].anchoCalle)")
+                println("\(fetchResults[0].velocidadAvance)")
+                println("\(fetchResults[0].caudalLiquidoTotal)")
         }
         }
+        
     }
     
     
@@ -348,7 +395,8 @@ class SelecBoquillas1: UIViewController {
         super.viewDidLoad()
         
         newItem.parteAoB = 0;
-        newItemB.velocidadAvance = 3;
+        newItemB.parteAoB = 0;
+        //newItemB.velocidadAvance = 3;
         AnchoSiguienteText.addTarget(self, action: "textFieldDidChangeAncho:", forControlEvents: UIControlEvents.EditingChanged)
         VolumenSiguienteText.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
         //VolumenSiguienteText!.delegate = self
@@ -358,26 +406,56 @@ class SelecBoquillas1: UIViewController {
         VolumenSiguienteText.keyboardType = UIKeyboardType.NumbersAndPunctuation
         //AnchoSiguienteText.editable = false
         AnchoSiguienteText.keyboardType = UIKeyboardType.NumbersAndPunctuation
-        SliderVA.value = (VelocidadAvanceText.text as NSString).floatValue
-        
+        //SliderVA.value = (VelocidadAvanceText.text as NSString).floatValue
         caract2.calcularCaudalesB()
+        
+        
         let fetchRequest = NSFetchRequest(entityName: "B1")
         if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+            
+            if(fetchResults[0].anchoCalleNuevo != 0){
+                AnchoSiguienteText.text = "\(fetchResults[0].anchoCalleNuevo)"
+                if(fetchResults[0].flagAncho==1){
+                    SwitchAS.setOn(true, animated: true)
+                    SwitchAC.setOn(false, animated: true)
+                }
+            }
+            
+            if(fetchResults[0].volumenAppNuevo != 0){
+                VolumenSiguienteText.text = "\(fetchResults[0].volumenAppNuevo)"
+                
+                if(fetchResults[0].flagVolumen==1){
+                    SwitchV.setOn(true, animated: true)
+                    SwitchVC.setOn(false, animated: true)
+                }
+                
+            }
+            
+            if(fetchResults[0].numeroTotalBoquillas != 0){
+                NumTotalBoquillasText.text = "\(fetchResults[0].numeroTotalBoquillas)"
+            }else{
+                newItemB.velocidadAvance=3;
+            }
+            
+            if(fetchResults[0].velocidadAvance != 0){
+                println("\(fetchResults[0].velocidadAvance)")
+                VelocidadAvanceText.text = "\(fetchResults[0].velocidadAvance)"
+                SliderVA.value = (fetchResults[0].velocidadAvance as NSNumber).floatValue
+                
+            }
+            
             if fetchResults.count != 0 {
                 CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
                 CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
             }
+            VolumenCalculadoText.text = "\(fetchResults[0].volumenAppViejo)"
+            AnchoCalculadoText.text = "\(fetchResults[0].anchoCalleViejo)"
+            
+            
         }
         
-        let fetchRequestA = NSFetchRequest(entityName: "A1")
-        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequestA, error: nil) as? [A1] {
-            if fetchResults.count != 0 {
-                VolumenCalculadoText.text = "\(fetchResults[0].volumenAplicacionLHA)"
-                AnchoCalculadoText.text = "\(fetchResults[0].anchoCalle)"
-            }
-            
-                            
-        }
+       
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     

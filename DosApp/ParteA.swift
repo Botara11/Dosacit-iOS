@@ -116,6 +116,7 @@ class ParteA {
         }
         newItem.volumenAplicacionLHA = litroHectarea
         newItemB.volumenApp = Double(litroHectarea)
+        newItemB.volumenAppViejo = Double(litroHectarea)
         newItem.volumenAplicacionLHG = litroHectarea/12
         
         //litroHanegada = litroHectarea/12;
