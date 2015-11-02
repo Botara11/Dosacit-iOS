@@ -19,7 +19,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="54" placeholderIntrinsicHeight="44" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhP-Bk-AJc">
                                 <rect key="frame" x="224" y="463" width="320" height="98"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="58"/>
                                 <state key="normal" title="Comenzar">
                                     <color key="titleColor" red="0.93294005300000005" green="1" blue="0.96171412199999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -34,7 +34,7 @@
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="v01" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wou-2o-eMc">
                                 <rect key="frame" x="224" y="277" width="320" height="98"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="63"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -43,7 +43,7 @@
                                 </variation>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="JhP-Bk-AJc" secondAttribute="centerY" id="eF7-6d-ByH"/>
                             <constraint firstAttribute="centerX" secondItem="JhP-Bk-AJc" secondAttribute="centerX" id="taA-XO-A4Z"/>
@@ -159,7 +159,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -211,28 +211,28 @@
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Densidad foliar del árbol" translatesAutoresizingMaskIntoConstraints="NO" id="X0N-VC-WvZ">
                                 <rect key="frame" x="16" y="101" width="315" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Marco de plantación" translatesAutoresizingMaskIntoConstraints="NO" id="cG3-pf-OI2">
                                 <rect key="frame" x="16" y="234" width="308" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="x: Ancho de calle" translatesAutoresizingMaskIntoConstraints="NO" id="FsF-xR-Zoa">
                                 <rect key="frame" x="62" y="276" width="181" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="y: Distancia entre árboles" translatesAutoresizingMaskIntoConstraints="NO" id="9hX-nq-FfT">
                                 <rect key="frame" x="62" y="333" width="181" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -263,28 +263,28 @@
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="m" translatesAutoresizingMaskIntoConstraints="NO" id="4jr-me-6ez">
                                 <rect key="frame" x="441" y="278" width="25" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Dimensiones de los árboles:" translatesAutoresizingMaskIntoConstraints="NO" id="WSZ-rM-RtA">
                                 <rect key="frame" x="16" y="443" width="371" height="37"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="I. Longitud de los árboles" translatesAutoresizingMaskIntoConstraints="NO" id="hbV-Xn-CRM">
                                 <rect key="frame" x="62" y="495" width="279" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="II. Anchura de los árboles" translatesAutoresizingMaskIntoConstraints="NO" id="TMI-9I-AVw">
                                 <rect key="frame" x="62" y="559" width="299" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -297,7 +297,7 @@
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="m" translatesAutoresizingMaskIntoConstraints="NO" id="9qg-Uc-KbN">
                                 <rect key="frame" x="441" y="503" width="25" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -316,21 +316,21 @@
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="m" translatesAutoresizingMaskIntoConstraints="NO" id="UcS-J7-xkk">
                                 <rect key="frame" x="441" y="561" width="25" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="m" translatesAutoresizingMaskIntoConstraints="NO" id="zAt-zY-Ip7">
                                 <rect key="frame" x="441" y="630" width="25" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="m" translatesAutoresizingMaskIntoConstraints="NO" id="FXW-bb-IeZ">
                                 <rect key="frame" x="441" y="337" width="25" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -354,7 +354,7 @@
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="III. Altura de los árboles" translatesAutoresizingMaskIntoConstraints="NO" id="5l5-Ty-F08">
                                 <rect key="frame" x="62" y="621" width="247" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -363,7 +363,7 @@
                                 <rect key="frame" x="474" y="326" width="278" height="587"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="moD-Nl-j3Y"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -423,7 +423,7 @@
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Forma del árbol" translatesAutoresizingMaskIntoConstraints="NO" id="bDl-uA-s8k">
                                 <rect key="frame" x="21" y="90" width="371" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -441,21 +441,21 @@
                             </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Poda" translatesAutoresizingMaskIntoConstraints="NO" id="jcX-yh-0lD">
                                 <rect key="frame" x="21" y="251" width="181" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Fecha de la última poda" translatesAutoresizingMaskIntoConstraints="NO" id="AOD-Be-KSA">
                                 <rect key="frame" x="75" y="298" width="276" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Grado de poda" translatesAutoresizingMaskIntoConstraints="NO" id="YHt-w5-RrZ">
                                 <rect key="frame" x="75" y="423" width="348" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -489,7 +489,7 @@
                                 <rect key="frame" x="479" y="320" width="278" height="587"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
@@ -544,14 +544,14 @@
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Productos a aplicar" translatesAutoresizingMaskIntoConstraints="NO" id="Fab-2b-O6Q">
                                 <rect key="frame" x="21" y="85" width="375" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Forma de actución" translatesAutoresizingMaskIntoConstraints="NO" id="YTo-pu-WsW">
                                 <rect key="frame" x="31" y="354" width="304" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -574,7 +574,7 @@
                             </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="¿Utiliza Coadyuvantes?" translatesAutoresizingMaskIntoConstraints="NO" id="7dM-eU-p36">
                                 <rect key="frame" x="31" y="623" width="304" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -593,7 +593,7 @@
                             </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Zona crítica a tratar de la copa del árbol" translatesAutoresizingMaskIntoConstraints="NO" id="S7P-7D-U5y">
                                 <rect key="frame" x="46" y="754" width="460" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -615,77 +615,77 @@
                             </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="I. Acaricidas" translatesAutoresizingMaskIntoConstraints="NO" id="JDB-1b-YVc">
                                 <rect key="frame" x="119" y="188" width="181" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="II. Fungicidas" translatesAutoresizingMaskIntoConstraints="NO" id="aee-Ho-fFj">
                                 <rect key="frame" x="308" y="188" width="230" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="III.Insecticidas" translatesAutoresizingMaskIntoConstraints="NO" id="bi2-Lc-Sku">
                                 <rect key="frame" x="119" y="230" width="181" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="IV. Abonos foliares" translatesAutoresizingMaskIntoConstraints="NO" id="HuD-nG-HbL">
                                 <rect key="frame" x="308" y="230" width="230" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="V. Fitorreguladores" translatesAutoresizingMaskIntoConstraints="NO" id="Axh-4Q-7Ym">
                                 <rect key="frame" x="119" y="272" width="248" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="I. Asfixia" translatesAutoresizingMaskIntoConstraints="NO" id="4z3-Qm-KW5">
                                 <rect key="frame" x="119" y="468" width="103" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="II. Contacto" translatesAutoresizingMaskIntoConstraints="NO" id="1tr-Ih-3bh">
                                 <rect key="frame" x="308" y="468" width="124" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="III.Ingestión" translatesAutoresizingMaskIntoConstraints="NO" id="byC-m0-GQe">
                                 <rect key="frame" x="119" y="506" width="181" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="IV. Inhalación" translatesAutoresizingMaskIntoConstraints="NO" id="sS2-mo-DTD">
                                 <rect key="frame" x="308" y="506" width="181" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="V. Traslaminar" translatesAutoresizingMaskIntoConstraints="NO" id="Kcb-fa-rFs">
                                 <rect key="frame" x="119" y="548" width="181" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="VI. Sistémicos " translatesAutoresizingMaskIntoConstraints="NO" id="igL-us-HQ9">
                                 <rect key="frame" x="308" y="548" width="181" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -704,7 +704,7 @@
                                 </connections>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
@@ -761,7 +761,7 @@
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Identificación de parcela" translatesAutoresizingMaskIntoConstraints="NO" id="KRD-gt-twe">
                                 <rect key="frame" x="103" y="281" width="333" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -774,21 +774,21 @@
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Identificación del tratamiento" translatesAutoresizingMaskIntoConstraints="NO" id="pDW-Oe-jtF">
                                 <rect key="frame" x="103" y="421" width="340" height="50"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Referencia" translatesAutoresizingMaskIntoConstraints="NO" id="L7t-z6-mXD">
                                 <rect key="frame" x="116" y="557" width="181" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Fecha" translatesAutoresizingMaskIntoConstraints="NO" id="3Pe-NG-Gin">
                                 <rect key="frame" x="116" y="147" width="181" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -812,7 +812,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="wF4-bX-iqo"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -950,7 +950,7 @@
                                         </items>
                                     </navigationBar>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1004,7 +1004,7 @@
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Temperatura (ºC)" translatesAutoresizingMaskIntoConstraints="NO" id="pTp-h4-2IP">
                                 <rect key="frame" x="16" y="81" width="205" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1025,7 +1025,7 @@
                             </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Humedad relativa (%)" translatesAutoresizingMaskIntoConstraints="NO" id="Nwc-GD-mD9">
                                 <rect key="frame" x="16" y="199" width="277" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1060,14 +1060,14 @@
                             </navigationBar>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Tipo de pulverizador" translatesAutoresizingMaskIntoConstraints="NO" id="ybp-0Z-jHD">
                                 <rect key="frame" x="16" y="549" width="343" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Velocidad del viento (m/s)" translatesAutoresizingMaskIntoConstraints="NO" id="Prg-UA-88k">
                                 <rect key="frame" x="16" y="309" width="350" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1099,7 +1099,7 @@
                                 </connections>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
@@ -1162,49 +1162,49 @@
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Densidad foliar del árbol" translatesAutoresizingMaskIntoConstraints="NO" id="H02-RF-Vmk">
                                 <rect key="frame" x="16" y="119" width="181" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Marco de plantación" translatesAutoresizingMaskIntoConstraints="NO" id="kzz-n9-J7Q">
                                 <rect key="frame" x="16" y="176" width="277" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Volumen del árbol" translatesAutoresizingMaskIntoConstraints="NO" id="9sb-Yy-nNw">
                                 <rect key="frame" x="16" y="233" width="270" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Forma del árbol" translatesAutoresizingMaskIntoConstraints="NO" id="3HH-3W-4bT">
                                 <rect key="frame" x="16" y="299" width="181" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Poda" translatesAutoresizingMaskIntoConstraints="NO" id="DvS-89-zA9">
                                 <rect key="frame" x="16" y="364" width="181" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Fecha de la última poda" translatesAutoresizingMaskIntoConstraints="NO" id="q9F-Bd-poU">
                                 <rect key="frame" x="64" y="416" width="239" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Grado de poda" translatesAutoresizingMaskIntoConstraints="NO" id="YJG-tw-PcH">
                                 <rect key="frame" x="74" y="474" width="181" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1225,28 +1225,28 @@
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Productos a aplicar" translatesAutoresizingMaskIntoConstraints="NO" id="ljs-jv-tRu">
                                 <rect key="frame" x="38" y="665" width="255" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Forma de actuación" translatesAutoresizingMaskIntoConstraints="NO" id="dIP-SS-ifU">
                                 <rect key="frame" x="38" y="733" width="248" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="¿Utiliza coadyuvantes?" translatesAutoresizingMaskIntoConstraints="NO" id="QgX-Q4-fqQ">
                                 <rect key="frame" x="38" y="798" width="286" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Zona crítica a tratar" translatesAutoresizingMaskIntoConstraints="NO" id="4J6-Jx-lcv">
                                 <rect key="frame" x="38" y="867" width="248" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1334,7 +1334,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
@@ -1404,7 +1404,7 @@
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Temperatura" translatesAutoresizingMaskIntoConstraints="NO" id="Ln0-to-97F">
                                 <rect key="frame" x="10" y="114" width="248" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1418,14 +1418,14 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Humedad relativa" translatesAutoresizingMaskIntoConstraints="NO" id="OUl-AR-glo">
                                 <rect key="frame" x="10" y="190" width="324" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Velocidad del viento" translatesAutoresizingMaskIntoConstraints="NO" id="9pK-f1-6wj">
                                 <rect key="frame" x="10" y="273" width="254" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1439,7 +1439,7 @@
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Tipo de pulverizador" translatesAutoresizingMaskIntoConstraints="NO" id="C3o-NR-Q4v">
                                 <rect key="frame" x="16" y="419" width="286" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -1487,7 +1487,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
@@ -1542,12 +1542,14 @@
                             </navigationBar>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="one-FP-hJH">
                                 <rect key="frame" x="56" y="153" width="51" height="31"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="SwitchPressedVC:" destination="fDU-Js-JWq" eventType="valueChanged" id="M8k-qx-ixh"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="28W-BC-3yA">
                                 <rect key="frame" x="63" y="195" width="51" height="31"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="SwitchPressedV:" destination="fDU-Js-JWq" eventType="valueChanged" id="TCZ-z6-9UH"/>
                                 </connections>
@@ -1575,12 +1577,14 @@
                             </textView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5fO-YO-gx1">
                                 <rect key="frame" x="56" y="336" width="51" height="31"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="SwitchPressedAC:" destination="fDU-Js-JWq" eventType="valueChanged" id="xYC-B6-sUO"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lOR-uy-ydB">
                                 <rect key="frame" x="56" y="376" width="51" height="31"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="SwitchPressedAS:" destination="fDU-Js-JWq" eventType="valueChanged" id="his-d8-4J6"/>
                                 </connections>
@@ -1763,7 +1767,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
@@ -2048,7 +2052,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
@@ -2224,7 +2228,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="VS7-qQ-hhq" firstAttribute="leading" secondItem="k5s-Zr-KLC" secondAttribute="leading" id="ewq-0z-nyW"/>
                             <constraint firstItem="VS7-qQ-hhq" firstAttribute="top" secondItem="ZjV-GX-K8P" secondAttribute="bottom" constant="3" id="j92-He-3JH"/>
@@ -2317,7 +2321,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="T6a-Lw-dkz" firstAttribute="bottom" secondItem="oS8-iX-8zp" secondAttribute="top" id="3eE-zs-u63"/>
                             <constraint firstAttribute="trailing" secondItem="T6a-Lw-dkz" secondAttribute="trailing" id="D5n-GZ-mmc"/>
@@ -2456,7 +2460,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
@@ -2657,7 +2661,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
@@ -2887,7 +2891,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
@@ -2897,7 +2901,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lVk-Wx-Sok" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14126" y="390"/>
+            <point key="canvasLocation" x="14134" y="390"/>
         </scene>
         <!--Result32-->
         <scene sceneID="1Qz-Dm-kIf">
@@ -3055,7 +3059,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
@@ -3115,7 +3119,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="mok-hj-Plb">
-                                <rect key="frame" x="0.0" y="64" width="768" height="962"/>
+                                <rect key="frame" x="0.0" y="67" width="768" height="959"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -3178,7 +3182,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
@@ -3292,12 +3296,14 @@
                             </navigationBar>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q5T-vw-uLe">
                                 <rect key="frame" x="89" y="144" width="51" height="31"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="SwitchPressedAC:" destination="LL3-Dx-6dq" eventType="valueChanged" id="JfX-px-iTw"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jRe-bq-Ykg">
                                 <rect key="frame" x="89" y="183" width="51" height="31"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="SwitchPressedAS:" destination="LL3-Dx-6dq" eventType="valueChanged" id="eHI-vs-9iS"/>
                                 </connections>
@@ -3345,22 +3351,17 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="84Q-6L-gMM">
-                                <rect key="frame" x="7" y="535" width="51" height="31"/>
+                                <rect key="frame" x="88" y="558" width="51" height="31"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="SwitchPressedVC:" destination="LL3-Dx-6dq" eventType="valueChanged" id="cMY-7f-pTv"/>
                                 </connections>
                             </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PKS-HI-Cgz">
-                                <rect key="frame" x="5" y="610" width="51" height="31"/>
-                                <connections>
-                                    <action selector="SwitchPressedVS:" destination="LL3-Dx-6dq" eventType="valueChanged" id="YjC-yX-82j"/>
-                                </connections>
-                            </switch>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Velocidad de avance anterior" translatesAutoresizingMaskIntoConstraints="NO" id="iqv-3U-5Xx">
-                                <rect key="frame" x="89" y="557" width="662" height="33"/>
+                                <rect key="frame" x="153" y="558" width="249" height="33"/>
                                 <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Seleccione una velocidad de avance:" translatesAutoresizingMaskIntoConstraints="NO" id="pAf-j3-ff0">
@@ -3370,21 +3371,28 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Velocidad de avance siguiente" translatesAutoresizingMaskIntoConstraints="NO" id="OKC-b7-lbn">
+                                <rect key="frame" x="158" y="633" width="278" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Km/h" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cWm-NF-Tch">
-                                <rect key="frame" x="708" y="637" width="49" height="39"/>
+                                <rect key="frame" x="625" y="629" width="49" height="39"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QdP-sq-KEn">
-                                <rect key="frame" x="642" y="646" width="58" height="30"/>
+                                <rect key="frame" x="559" y="638" width="58" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="v2D-Pu-esi">
-                                <rect key="frame" x="642" y="567" width="58" height="36"/>
+                                <rect key="frame" x="559" y="559" width="58" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -3398,7 +3406,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Km/h" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ws6-Qf-g3A">
-                                <rect key="frame" x="703" y="573" width="49" height="39"/>
+                                <rect key="frame" x="620" y="565" width="49" height="39"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -3423,15 +3431,15 @@
                                     <segue destination="2yG-tu-wxz" kind="presentation" id="3gJ-Qx-cm9"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Velocidad de avance siguiente" translatesAutoresizingMaskIntoConstraints="NO" id="OKC-b7-lbn">
-                                <rect key="frame" x="91" y="637" width="666" height="40"/>
-                                <color key="backgroundColor" red="1" green="0.60851760200000005" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PKS-HI-Cgz">
+                                <rect key="frame" x="88" y="633" width="51" height="31"/>
+                                <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="SwitchPressedVS:" destination="LL3-Dx-6dq" eventType="valueChanged" id="YjC-yX-82j"/>
+                                </connections>
+                            </switch>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
@@ -3461,11 +3469,11 @@
                         <viewControllerLayoutGuide type="bottom" id="9q0-o3-dCO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mx0-i4-UA4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boquillas" translatesAutoresizingMaskIntoConstraints="NO" id="qFK-l6-w0y">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TKH-5N-YJJ">
                                 <rect key="frame" x="11" y="38" width="92" height="40"/>
@@ -3491,11 +3499,11 @@
                             <constraint firstItem="qFK-l6-w0y" firstAttribute="leading" secondItem="mx0-i4-UA4" secondAttribute="leading" id="vDt-mo-IlO"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w5W-Qk-M9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13206.5" y="1601.5"/>
+            <point key="canvasLocation" x="13085.5" y="1591.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="8Sl-U5-kUw">
@@ -3705,7 +3713,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                 </viewController>
@@ -3720,22 +3728,22 @@
         <image name="Captura de pantalla 2015-01-19 a las 23.49.41" width="505" height="602"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xl3-iK-NDb"/>
-        <segue reference="mrd-CL-diR"/>
-        <segue reference="MBR-fs-nD0"/>
-        <segue reference="5k7-4b-Xev"/>
-        <segue reference="aO2-Ml-aX6"/>
-        <segue reference="4eb-7Z-DOu"/>
-        <segue reference="kVn-cL-G7k"/>
+        <segue reference="vVT-YW-WM6"/>
+        <segue reference="Si6-ts-sP9"/>
         <segue reference="PsO-fX-dbU"/>
-        <segue reference="g5x-5r-Thk"/>
-        <segue reference="XsE-9K-6Qe"/>
-        <segue reference="IUo-Tf-f4s"/>
-        <segue reference="Ztp-mf-V4O"/>
-        <segue reference="1WO-rY-ezu"/>
-        <segue reference="sks-7U-6Mi"/>
-        <segue reference="hiC-4g-AKz"/>
-        <segue reference="Aza-ee-PsV"/>
+        <segue reference="P7k-jS-r5K"/>
         <segue reference="1et-2u-0Q2"/>
+        <segue reference="rVc-pt-vpV"/>
+        <segue reference="Ztp-mf-V4O"/>
+        <segue reference="LaE-HW-BtL"/>
+        <segue reference="b8R-Bk-rvF"/>
+        <segue reference="Aza-ee-PsV"/>
+        <segue reference="mrd-CL-diR"/>
+        <segue reference="aO2-Ml-aX6"/>
+        <segue reference="5k7-4b-Xev"/>
+        <segue reference="TWz-sr-RFE"/>
+        <segue reference="xl3-iK-NDb"/>
+        <segue reference="dxX-20-4xE"/>
+        <segue reference="4eb-7Z-DOu"/>
     </inferredMetricsTieBreakers>
 </document>

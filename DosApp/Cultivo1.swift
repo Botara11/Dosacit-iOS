@@ -22,6 +22,7 @@ let newItemC = NSEntityDescription.insertNewObjectForEntityForName("C1", inManag
 
 class Cultivo1: UIViewController {
     
+    var pageSize = CGSizeMake(850,1100)
     
     let caract = ParteA()
     
@@ -41,6 +42,19 @@ class Cultivo1: UIViewController {
     @IBOutlet var anchuraArboles: UITextField!
     @IBOutlet var alturaArboles: UITextField!
     
+   
+    
+    @IBAction func PDFgeneratoraction(sender: AnyObject) {
+        let pageSize:CGSize = CGSizeMake (850, 1100)
+        let fileName: NSString = "xp.pdf"
+        let path:NSArray = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        let documentDirectory: AnyObject = path.objectAtIndex(0)
+        let pdfPathWithFileName = documentDirectory.stringByAppendingPathComponent(fileName as String)
+        
+        generatePDFs(pdfPathWithFileName)
+        
+        
+    }
     
     
     @IBOutlet var densidadFoliar: UISegmentedControl!
@@ -433,8 +447,43 @@ class Cultivo1: UIViewController {
         }
     }
     
+    func generatePDFs(filePath: String) {
+        UIGraphicsBeginPDFContextToFile(filePath, CGRectZero, nil)
+        UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 850, 1100), nil)
+        drawBackground()
+        drawText()
+        println("PDF creado!")
+        UIGraphicsEndPDFContext()
+        
+        
+        
+    }
     
+    func drawBackground(){
+        
+        println("back creado!")
+        let context:CGContextRef = UIGraphicsGetCurrentContext()
+        let rect:CGRect = CGRectMake(0, 0, 850, 1100)
+        CGContextSetFillColorWithColor(context, UIColor.whiteColor().CGColor)
+        CGContextFillRect(context, rect)
+        
+        
+        
+    }
     
+    func drawText(){
+        
+        println("back creado!")
+        let context:CGContextRef = UIGraphicsGetCurrentContext()
+        let font:UIFont = UIFont (name: "Times New Roman", size: 14)!
+        CGContextSetFillColorWithColor(context, UIColor.blackColor().CGColor)
+        let textRect:CGRect = CGRectMake(10, 10, 100, 20)
+        let baselineAdjust = 1.0
+        let attrsDictionary =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust] as [NSObject : AnyObject]
+        let myString:NSString = "Azúcar Álvaro"
+        myString.drawInRect(textRect, withAttributes: attrsDictionary)
+        
+    }
     
     
     
