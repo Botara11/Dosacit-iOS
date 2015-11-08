@@ -20,7 +20,7 @@ let managedObjectContextC = (UIApplication.sharedApplication().delegate as! AppD
 let newItemC = NSEntityDescription.insertNewObjectForEntityForName("C1", inManagedObjectContext: managedObjectContextC!) as! C1
 
 
-class Cultivo1: UIViewController {
+class Cultivo1: ResponsiveTextFieldViewController {
     
     var pageSize = CGSizeMake(850,1100)
     
@@ -477,7 +477,7 @@ class Cultivo1: UIViewController {
         let context:CGContextRef = UIGraphicsGetCurrentContext()
         let font:UIFont = UIFont (name: "Times New Roman", size: 14)!
         CGContextSetFillColorWithColor(context, UIColor.blackColor().CGColor)
-        let textRect:CGRect = CGRectMake(10, 10, 100, 20)
+        let textRect:CGRect = CGRectMake(30, 10, 100, 20)
         let baselineAdjust = 1.0
         let attrsDictionary =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust] as [NSObject : AnyObject]
         let myString:NSString = "Azúcar Álvaro"

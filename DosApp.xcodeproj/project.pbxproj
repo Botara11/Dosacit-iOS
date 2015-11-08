@@ -11,6 +11,10 @@
 		211C019B1B6820CF000D847B /* Viewcontroller_iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 211C01991B6820CF000D847B /* Viewcontroller_iphone.xib */; };
 		2155E7431AB49119009D57E7 /* SelecBoquillas2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2155E7421AB49119009D57E7 /* SelecBoquillas2.swift */; };
 		2155E7451AB74EC4009D57E7 /* B1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2155E7441AB74EC4009D57E7 /* B1.swift */; };
+		2161FC891BEE8D8C00CBF50E /* printer.png in Resources */ = {isa = PBXBuildFile; fileRef = 2161FC881BEE8D8C00CBF50E /* printer.png */; };
+		2161FC8B1BEF714B00CBF50E /* ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161FC8A1BEF714B00CBF50E /* ID.swift */; };
+		2161FC8D1BEF728600CBF50E /* Z1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161FC8C1BEF728600CBF50E /* Z1.swift */; };
+		2161FC8F1BEF9D6200CBF50E /* ResponsiveTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161FC8E1BEF9D6100CBF50E /* ResponsiveTextFieldViewController.swift */; };
 		2188CEE51ACB15030068CD52 /* CaldoAp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2188CEE41ACB15030068CD52 /* CaldoAp.swift */; };
 		218A544A1ABC86FF009DD0EA /* SelecBoquillas3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218A54491ABC86FF009DD0EA /* SelecBoquillas3.swift */; };
 		21AB1AFC1AB0994D009275CD /* SelecBoquillas1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AB1AFB1AB0994D009275CD /* SelecBoquillas1.swift */; };
@@ -61,6 +65,10 @@
 		211C019A1B6820CF000D847B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Viewcontroller_iphone.xib; sourceTree = "<group>"; };
 		2155E7421AB49119009D57E7 /* SelecBoquillas2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecBoquillas2.swift; sourceTree = "<group>"; };
 		2155E7441AB74EC4009D57E7 /* B1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = B1.swift; sourceTree = "<group>"; };
+		2161FC881BEE8D8C00CBF50E /* printer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = printer.png; sourceTree = "<group>"; };
+		2161FC8A1BEF714B00CBF50E /* ID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ID.swift; sourceTree = "<group>"; };
+		2161FC8C1BEF728600CBF50E /* Z1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Z1.swift; sourceTree = "<group>"; };
+		2161FC8E1BEF9D6100CBF50E /* ResponsiveTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponsiveTextFieldViewController.swift; sourceTree = "<group>"; };
 		2188CEE41ACB15030068CD52 /* CaldoAp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaldoAp.swift; sourceTree = "<group>"; };
 		218A54491ABC86FF009DD0EA /* SelecBoquillas3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecBoquillas3.swift; sourceTree = "<group>"; };
 		21AB1AFB1AB0994D009275CD /* SelecBoquillas1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecBoquillas1.swift; sourceTree = "<group>"; };
@@ -151,6 +159,7 @@
 				21AB1AFB1AB0994D009275CD /* SelecBoquillas1.swift */,
 				2155E7421AB49119009D57E7 /* SelecBoquillas2.swift */,
 				218A54491ABC86FF009DD0EA /* SelecBoquillas3.swift */,
+				2161FC8E1BEF9D6100CBF50E /* ResponsiveTextFieldViewController.swift */,
 				B2557DDE1AAF841B008A24D9 /* Cultivo1.swift */,
 				B2DE74E71AFF7414009CF589 /* updateBoquillas.swift */,
 				B2557DDF1AAF841B008A24D9 /* Cultivo2.swift */,
@@ -158,6 +167,7 @@
 				B2557DE11AAF841C008A24D9 /* Cultivo4.swift */,
 				B2557DE21AAF841C008A24D9 /* DosApp-Bridging-Header.h */,
 				B2557DE31AAF841C008A24D9 /* DosApp.xcdatamodeld */,
+				2161FC8A1BEF714B00CBF50E /* ID.swift */,
 				B2557DE51AAF841C008A24D9 /* EntityBoquillas.swift */,
 				B2557DE61AAF841C008A24D9 /* Indice.swift */,
 				B2557DE71AAF841C008A24D9 /* Info.plist */,
@@ -169,8 +179,10 @@
 				B2557DEB1AAF841C008A24D9 /* Result12.swift */,
 				B2557DEC1AAF841C008A24D9 /* ViewController.swift */,
 				B2557E021AAF844E008A24D9 /* Images.xcassets */,
+				2161FC881BEE8D8C00CBF50E /* printer.png */,
 				B2557DFB1AAF8430008A24D9 /* Base.lproj */,
 				B2557DDB1AAF83FD008A24D9 /* A1.swift */,
+				2161FC8C1BEF728600CBF50E /* Z1.swift */,
 				2155E7441AB74EC4009D57E7 /* B1.swift */,
 				210584161ACB17B40058BCB3 /* C1.swift */,
 				2188CEE41ACB15030068CD52 /* CaldoAp.swift */,
@@ -291,6 +303,7 @@
 				B2557E011AAF8430008A24D9 /* Main.storyboard in Resources */,
 				21D52E071BC01D1100307BD5 /* StoryboardIpad.storyboard in Resources */,
 				B2557E031AAF844E008A24D9 /* Images.xcassets in Resources */,
+				2161FC891BEE8D8C00CBF50E /* printer.png in Resources */,
 				B2557E001AAF8430008A24D9 /* LaunchScreen.xib in Resources */,
 				211C019B1B6820CF000D847B /* Viewcontroller_iphone.xib in Resources */,
 			);
@@ -324,11 +337,13 @@
 				B2557DF41AAF841C008A24D9 /* Indice.swift in Sources */,
 				B2557DF91AAF841C008A24D9 /* Result12.swift in Sources */,
 				210584171ACB17B40058BCB3 /* C1.swift in Sources */,
+				2161FC8D1BEF728600CBF50E /* Z1.swift in Sources */,
 				B2557DEF1AAF841C008A24D9 /* Cultivo2.swift in Sources */,
 				B2557DF21AAF841C008A24D9 /* DosApp.xcdatamodeld in Sources */,
 				2155E7431AB49119009D57E7 /* SelecBoquillas2.swift in Sources */,
 				B2D6C6691AFD29A500FAD48C /* Result31.swift in Sources */,
 				B2557DED1AAF841C008A24D9 /* AppDelegate.swift in Sources */,
+				2161FC8B1BEF714B00CBF50E /* ID.swift in Sources */,
 				B2DE74E81AFF7414009CF589 /* updateBoquillas.swift in Sources */,
 				B28EAEA41ADB16AB0009D7FD /* FiltroBoquillas.swift in Sources */,
 				21F4C8871AFE773000401952 /* CaldoAp1.swift in Sources */,
@@ -338,6 +353,7 @@
 				21F4C8831AFE60E100401952 /* ParteC.swift in Sources */,
 				B2557DF11AAF841C008A24D9 /* Cultivo4.swift in Sources */,
 				B2557DF01AAF841C008A24D9 /* Cultivo3.swift in Sources */,
+				2161FC8F1BEF9D6200CBF50E /* ResponsiveTextFieldViewController.swift in Sources */,
 				B2DE74E61AFD4082009CF589 /* Result33.swift in Sources */,
 				B2557DDC1AAF83FD008A24D9 /* A1.swift in Sources */,
 			);

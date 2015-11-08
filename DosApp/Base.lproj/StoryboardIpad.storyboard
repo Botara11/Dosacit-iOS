@@ -3728,22 +3728,22 @@
         <image name="Captura de pantalla 2015-01-19 a las 23.49.41" width="505" height="602"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="vVT-YW-WM6"/>
-        <segue reference="Si6-ts-sP9"/>
-        <segue reference="PsO-fX-dbU"/>
-        <segue reference="P7k-jS-r5K"/>
+        <segue reference="TWz-sr-RFE"/>
+        <segue reference="5k7-4b-Xev"/>
+        <segue reference="aO2-Ml-aX6"/>
         <segue reference="1et-2u-0Q2"/>
+        <segue reference="P7k-jS-r5K"/>
+        <segue reference="PsO-fX-dbU"/>
+        <segue reference="Si6-ts-sP9"/>
+        <segue reference="vVT-YW-WM6"/>
+        <segue reference="XsE-9K-6Qe"/>
         <segue reference="rVc-pt-vpV"/>
         <segue reference="Ztp-mf-V4O"/>
-        <segue reference="LaE-HW-BtL"/>
-        <segue reference="b8R-Bk-rvF"/>
-        <segue reference="Aza-ee-PsV"/>
         <segue reference="mrd-CL-diR"/>
-        <segue reference="aO2-Ml-aX6"/>
-        <segue reference="5k7-4b-Xev"/>
-        <segue reference="TWz-sr-RFE"/>
-        <segue reference="xl3-iK-NDb"/>
         <segue reference="dxX-20-4xE"/>
+        <segue reference="xl3-iK-NDb"/>
         <segue reference="4eb-7Z-DOu"/>
+        <segue reference="Aza-ee-PsV"/>
+        <segue reference="hiC-4g-AKz"/>
     </inferredMetricsTieBreakers>
 </document>

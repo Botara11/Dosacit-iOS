@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class CaldoAp1: UIViewController {
+class CaldoAp1: ResponsiveTextFieldViewController {
     
     var caract2 = ParteB()
     

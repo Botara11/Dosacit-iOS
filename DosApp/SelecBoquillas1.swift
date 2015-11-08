@@ -14,7 +14,7 @@ let managedObjectContextB = (UIApplication.sharedApplication().delegate as! AppD
 let newItemB = NSEntityDescription.insertNewObjectForEntityForName("B1", inManagedObjectContext: managedObjectContext!) as! B1
 
 
-class SelecBoquillas1: UIViewController {
+class SelecBoquillas1: ResponsiveTextFieldViewController {
     
     var caract2 = ParteB()
     
@@ -401,8 +401,8 @@ class SelecBoquillas1: UIViewController {
         VolumenSiguienteText.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
         //VolumenSiguienteText!.delegate = self
         //VolumenSiguienteText.editable = false
-        VolumenSiguienteText.keyboardType = UIKeyboardType.NumberPad
-        NumTotalBoquillasText.keyboardType = UIKeyboardType.NumberPad
+        VolumenSiguienteText.keyboardType = UIKeyboardType.NumbersAndPunctuation
+        NumTotalBoquillasText.keyboardType = UIKeyboardType.NumbersAndPunctuation
         VolumenSiguienteText.keyboardType = UIKeyboardType.NumbersAndPunctuation
         //AnchoSiguienteText.editable = false
         AnchoSiguienteText.keyboardType = UIKeyboardType.NumbersAndPunctuation

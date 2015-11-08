@@ -110,11 +110,18 @@
         <attribute name="presion" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="zona" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Z1" representedClassName="DosApp.Z1" syncable="YES">
+        <attribute name="fecha" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idParcela" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idTratamiento" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="referencia" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="A1" positionX="-63" positionY="-18" width="128" height="450"/>
         <element name="B1" positionX="-63" positionY="135" width="128" height="615"/>
         <element name="C1" positionX="-63" positionY="135" width="128" height="270"/>
         <element name="EntityBoquillas" positionX="-63" positionY="0" width="128" height="285"/>
         <element name="FiltroBoquillas" positionX="-63" positionY="135" width="128" height="105"/>
+        <element name="Z1" positionX="-63" positionY="135" width="128" height="105"/>
     </elements>
 </model>

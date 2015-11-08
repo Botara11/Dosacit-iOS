@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class SelecBoquillas2: UIViewController {
+class SelecBoquillas2: ResponsiveTextFieldViewController {
     
    
     @IBOutlet var NumBoqCerrAlta: UITextField!
@@ -86,14 +86,14 @@ class SelecBoquillas2: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        NumBoqCerrAlta.keyboardType = UIKeyboardType.NumberPad
-        NumBoqCerrBaja.keyboardType = UIKeyboardType.NumberPad
-        NumBoqAbAlta.keyboardType = UIKeyboardType.NumberPad
-        NumBoqAbMedia.keyboardType = UIKeyboardType.NumberPad
-        NumBoqAbBaja.keyboardType = UIKeyboardType.NumberPad
-        PorcentajeVegAlta.keyboardType = UIKeyboardType.NumberPad
-        PorcentajeVegMedia.keyboardType = UIKeyboardType.NumberPad
-        PorcentajeVegBaja.keyboardType = UIKeyboardType.NumberPad
+        NumBoqCerrAlta.keyboardType = UIKeyboardType.NumbersAndPunctuation
+        NumBoqCerrBaja.keyboardType = UIKeyboardType.NumbersAndPunctuation
+        NumBoqAbAlta.keyboardType = UIKeyboardType.NumbersAndPunctuation
+        NumBoqAbMedia.keyboardType = UIKeyboardType.NumbersAndPunctuation
+        NumBoqAbBaja.keyboardType = UIKeyboardType.NumbersAndPunctuation
+        PorcentajeVegAlta.keyboardType = UIKeyboardType.NumbersAndPunctuation
+        PorcentajeVegMedia.keyboardType = UIKeyboardType.NumbersAndPunctuation
+        PorcentajeVegBaja.keyboardType = UIKeyboardType.NumbersAndPunctuation
         
         let fetchRequest = NSFetchRequest(entityName: "B1")
         if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
