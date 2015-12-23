@@ -44,17 +44,7 @@ class Cultivo1: ResponsiveTextFieldViewController {
     
    
     
-    @IBAction func PDFgeneratoraction(sender: AnyObject) {
-        let pageSize:CGSize = CGSizeMake (850, 1100)
-        let fileName: NSString = "xp.pdf"
-        let path:NSArray = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-        let documentDirectory: AnyObject = path.objectAtIndex(0)
-        let pdfPathWithFileName = documentDirectory.stringByAppendingPathComponent(fileName as String)
-        
-        generatePDFs(pdfPathWithFileName)
-        
-        
-    }
+    
     
     
     @IBOutlet var densidadFoliar: UISegmentedControl!
@@ -67,19 +57,19 @@ class Cultivo1: ResponsiveTextFieldViewController {
             newItem.densidadFoliar = 1.15
             caract.densidadFoliar = 1.15;
             newItem.densidadFoliarIndice = 0
-            println("densidad foliar : alta")
+            print("densidad foliar : alta")
         }
         else if (densidadFoliar.selectedSegmentIndex == 1){
             newItem.densidadFoliar = 1
             caract.densidadFoliar = 1;
             newItem.densidadFoliarIndice = 1
-            println("densidad foliar : media")
+            print("densidad foliar : media")
         }
         else if (densidadFoliar.selectedSegmentIndex == 2){
             newItem.densidadFoliar = 0.9
             caract.densidadFoliar = 0.9;
             newItem.densidadFoliarIndice = 2
-            println("densidad foliar : baja")
+            print("densidad foliar : baja")
         }
     }
     
@@ -97,14 +87,14 @@ class Cultivo1: ResponsiveTextFieldViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
         
-        newItem.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
-        newItemB.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
-        newItemB.anchoCalleViejo = (anchoCalleTextField.text as NSString).doubleValue
-        newItemC.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
-        newItem.distanciaArboles = (distanciaArboles.text as NSString).doubleValue
-        newItem.longitudArboles = (longitudArboles.text as NSString).doubleValue
-        newItem.anchuraArboles = (anchuraArboles.text as NSString).doubleValue
-        newItem.alturaArboles = (alturaArboles.text as NSString).doubleValue
+        newItem.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
+        newItemB.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
+        newItemB.anchoCalleViejo = (anchoCalleTextField.text! as NSString).doubleValue
+        newItemC.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
+        newItem.distanciaArboles = (distanciaArboles.text! as NSString).doubleValue
+        newItem.longitudArboles = (longitudArboles.text! as NSString).doubleValue
+        newItem.anchuraArboles = (anchuraArboles.text! as NSString).doubleValue
+        newItem.alturaArboles = (alturaArboles.text! as NSString).doubleValue
         
         
         /*caract.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
@@ -128,10 +118,10 @@ class Cultivo1: ResponsiveTextFieldViewController {
             
             if (segue.identifier == "Cultivo"){
                 let fetchRequest = NSFetchRequest(entityName: "A1")
-                if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [A1] {
-                    println(fetchResults[0].densidadFoliar)
+                if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [A1] {
+                    print(fetchResults[0].densidadFoliar)
                 }
-                var DestViewController = segue.destinationViewController as! Cultivo2
+                let DestViewController = segue.destinationViewController as! Cultivo2
                 DestViewController.caract2 = caract
             }
         }
@@ -146,7 +136,7 @@ class Cultivo1: ResponsiveTextFieldViewController {
         if (newItem.densidadFoliar == 0){
             newItem.densidadFoliar = 1.15
             densidadFoliar.selectedSegmentIndex = 0
-            println("densidad foliar : alta")
+            print("densidad foliar : alta")
             
         }else {
             densidadFoliar.selectedSegmentIndex = newItem.densidadFoliarIndice
@@ -160,7 +150,7 @@ class Cultivo1: ResponsiveTextFieldViewController {
         
         
         let fetchRequest = NSFetchRequest(entityName: "A1")
-        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [A1] {
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [A1] {
             
             if (fetchResults[0].anchoCalle != 0){
                 anchoCalleTextField.text = "\(fetchResults[0].anchoCalle)"
@@ -184,12 +174,13 @@ class Cultivo1: ResponsiveTextFieldViewController {
             
         }
         
+//+++++++  AQUI EMPIEZA  +++++++++++++++++++
         
-        
-        let url = NSURL(string: "http://secuest.comuf.com/dosacitric/BBDD.html")
+       /* let url = NSURL(string: "http://secuest.comuf.com/dosacitric/BBDD.html")
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
-            var result : NSString = NSString(data: data, encoding: NSUTF8StringEncoding)!
+//+++++++  AQUI PETA  ++++++++
+            var result : NSString = NSString(data: data!, encoding: NSUTF8StringEncoding)!
             //            println(result)
             result = result.stringByReplacingOccurrencesOfString(",", withString: ".")
             var array1 = [String]()
@@ -226,16 +217,16 @@ class Cultivo1: ResponsiveTextFieldViewController {
                     dbBoquillas.p16 = k * pow(16,0.5)
                     
                     if(dbBoquillas.modelo=="ATR/blanca"){
-                        println(" TESTE\n")
-                        println("k=\(k) str=0-\(boq[0]) 1-\(boq[1]) 2-\(boq[2]) 3-\(boq[3]) 4-\(boq[4]) ")
-                        println(" p6=\(dbBoquillas.p6) p7=\(dbBoquillas.p7) p8=\(dbBoquillas.p8)")
+                        print(" TESTE\n")
+                        print("k=\(k) str=0-\(boq[0]) 1-\(boq[1]) 2-\(boq[2]) 3-\(boq[3]) 4-\(boq[4]) ")
+                        print(" p6=\(dbBoquillas.p6) p7=\(dbBoquillas.p7) p8=\(dbBoquillas.p8)")
                     }
                     
                     
                 }
                 
             }
-            println(boquillas[0])
+            print(boquillas[0])
             /*
             let fetchRequest = NSFetchRequest(entityName: "EntityBoquillas")
             let fetchResults1 = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]
@@ -270,11 +261,11 @@ class Cultivo1: ResponsiveTextFieldViewController {
                     //var str2 = (presion + " > %f AND " + presion + "< %f AND marca == %@"  ) as String
                     //let predicateTest = NSPredicate(format: str2 , 0, 99999, marca)
                     //fetchRequestTest.predicate = predicateTest
-                    if let fetchResultsTest = self.managedObjectContext!.executeFetchRequest(fetchRequestTest, error: nil) as? [EntityBoquillas]{
-                        println("AQUI EMPIEZA TEST \(fetchResultsTest.count)")
+                    if let fetchResultsTest = (try? self.managedObjectContext!.executeFetchRequest(fetchRequestTest)) as? [EntityBoquillas]{
+                        print("AQUI EMPIEZA TEST \(fetchResultsTest.count)")
                         for (var jj=0  ;jj<fetchResultsTest.count;jj++){
                             if(fetchResultsTest[jj].marca=="Albuz"){
-                                println("\(fetchResultsTest[jj].marca)  \(fetchResultsTest[jj].modelo) p6=\(fetchResultsTest[jj].p6) p7=\(fetchResultsTest[jj].p7) p8=\(fetchResultsTest[jj].p8) p9=\(fetchResultsTest[jj].p9) ")
+                                print("\(fetchResultsTest[jj].marca)  \(fetchResultsTest[jj].modelo) p6=\(fetchResultsTest[jj].p6) p7=\(fetchResultsTest[jj].p7) p8=\(fetchResultsTest[jj].p8) p9=\(fetchResultsTest[jj].p9) ")
                         
                             }
                         }
@@ -288,9 +279,9 @@ class Cultivo1: ResponsiveTextFieldViewController {
             //if boquillas.count > 5 {
               if 0 > 5 {
                 
-                var marcasList: [String] = ["Teejet","Hardi","Albuz","Lechler","Discos","Otros"]
+                let marcasList: [String] = ["Teejet","Hardi","Albuz","Lechler","Discos","Otros"]
                 
-                var presionList: [String] = ["p6","p7","p8","p9","p10","p11","p12","p13","p14","p15","p16"]
+                let presionList: [String] = ["p6","p7","p8","p9","p10","p11","p12","p13","p14","p15","p16"]
                 
                 let fetchRequest = NSFetchRequest(entityName: "EntityBoquillas")
                 let fetchRequest2 = NSFetchRequest(entityName: "EntityBoquillas")
@@ -307,12 +298,12 @@ class Cultivo1: ResponsiveTextFieldViewController {
                         var str = (presion + " > %f AND " + presion + "< %f AND marca == %@"  ) as String
                         let predicate1 = NSPredicate(format: str , intervaloCaudalAdmisible[0], intervaloCaudalAdmisible[1], marca)
                         fetchRequest.predicate = predicate1
-                        if let fetchResults1 = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]{
+                        if let fetchResults1 = (try? self.managedObjectContext!.executeFetchRequest(fetchRequest)) as? [EntityBoquillas]{
                             
                             str = (presion + " > %f AND " + presion + "< %f AND marca == %@") as String
                             let predicate2 = NSPredicate(format: str , intervaloCaudalAdmisible[2], intervaloCaudalAdmisible[3], marca)
                             fetchRequest.predicate = predicate2
-                            if let fetchResults2 = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]{
+                            if let fetchResults2 = (try? self.managedObjectContext!.executeFetchRequest(fetchRequest)) as? [EntityBoquillas]{
                                 
                                 /*for i in fetchResults2 {
                                 println(i.marca)
@@ -322,9 +313,9 @@ class Cultivo1: ResponsiveTextFieldViewController {
                                 str = (presion + " > %f AND " + presion + "< %f AND marca == %@") as String
                                 let predicate3 = NSPredicate(format: str , intervaloCaudalAdmisible[4], intervaloCaudalAdmisible[5], marca)
                                 fetchRequest.predicate = predicate3
-                                if let fetchResults3 = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]{
+                                if let fetchResults3 = (try? self.managedObjectContext!.executeFetchRequest(fetchRequest)) as? [EntityBoquillas]{
                                     
-                                    println("Todo perfectisimo")
+                                    print("Todo perfectisimo")
 
                                     //Todo de la presion "presion" y de la marca "marca"
                                     //fetchResults1 son boquillas adecuadas para zona Alta
@@ -347,11 +338,13 @@ class Cultivo1: ResponsiveTextFieldViewController {
             logItems = fetchResults
             }
             */
-            /*********  AQUI TERMINA  **********/
+          */  
             
-        }
-        task.resume()
+       // }
+        //task.resume()
         /*
+        
+//++++++ AQUI TERMINA ++++++
         pagina = (new http()).connect("http://secuest.comuf.com/dosacitric/BBDD.html");
         pagina = pagina.replace(",", ".");
         String[] nuevo = pagina.split("<!-- Hosting24 Analytics Code -->");					//*****CAMBIAR CUANDO HAYA CAMBIADO EL HOSTING*****///
@@ -412,7 +405,7 @@ class Cultivo1: ResponsiveTextFieldViewController {
             
         }
         else{
-            println("ALGO")
+            print("ALGO")
             let vc : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("Cultivo2")
             self.showViewController(vc as! UIViewController, sender: vc)
         }
@@ -435,7 +428,7 @@ class Cultivo1: ResponsiveTextFieldViewController {
     
     func presentItemInfo() {
         let fetchRequest = NSFetchRequest(entityName: "A1")
-        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [A1] {
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [A1] {
             
             //let alert = UIAlertController(title: fetchResults[0].anchoCalle,
             //  message: "Hola",
@@ -447,45 +440,7 @@ class Cultivo1: ResponsiveTextFieldViewController {
         }
     }
     
-    func generatePDFs(filePath: String) {
-        UIGraphicsBeginPDFContextToFile(filePath, CGRectZero, nil)
-        UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 850, 1100), nil)
-        drawBackground()
-        drawText()
-        println("PDF creado!")
-        UIGraphicsEndPDFContext()
         
-        
-        
-    }
-    
-    func drawBackground(){
-        
-        println("back creado!")
-        let context:CGContextRef = UIGraphicsGetCurrentContext()
-        let rect:CGRect = CGRectMake(0, 0, 850, 1100)
-        CGContextSetFillColorWithColor(context, UIColor.whiteColor().CGColor)
-        CGContextFillRect(context, rect)
-        
-        
-        
-    }
-    
-    func drawText(){
-        
-        println("back creado!")
-        let context:CGContextRef = UIGraphicsGetCurrentContext()
-        let font:UIFont = UIFont (name: "Times New Roman", size: 14)!
-        CGContextSetFillColorWithColor(context, UIColor.blackColor().CGColor)
-        let textRect:CGRect = CGRectMake(30, 10, 100, 20)
-        let baselineAdjust = 1.0
-        let attrsDictionary =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust] as [NSObject : AnyObject]
-        let myString:NSString = "Azúcar Álvaro"
-        myString.drawInRect(textRect, withAttributes: attrsDictionary)
-        
-    }
-    
-    
     
     
 }

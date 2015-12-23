@@ -125,7 +125,7 @@ class Cultivo3: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        println(anotherString3)
+        print(anotherString3)
         
         
         

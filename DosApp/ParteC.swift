@@ -26,7 +26,7 @@ public class ParteC {
         
         
         let fetchRequest = NSFetchRequest(entityName: "C1")
-        if let fetchResults = managedObjectContextC!.executeFetchRequest(fetchRequest, error: nil) as? [C1] {
+        if let fetchResults = (try? managedObjectContextC!.executeFetchRequest(fetchRequest)) as? [C1] {
             
             
             

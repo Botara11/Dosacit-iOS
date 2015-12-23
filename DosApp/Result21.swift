@@ -44,7 +44,7 @@ class Result21: UIViewController, UITableViewDataSource, UITableViewDelegate{
         super.viewDidLoad()
 
         let fetchRequest = NSFetchRequest(entityName: "FiltroBoquillas")
-        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [FiltroBoquillas]{
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [FiltroBoquillas]{
             for fe in fetchResults{
                 if !estaEnCadena(fe.marca) {
                     cadena.append(fe.marca)
@@ -91,7 +91,7 @@ class Result21: UIViewController, UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier) as! UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier)! as UITableViewCell
         
         cell.textLabel?.text = self.tableData[indexPath.row]
         
@@ -116,7 +116,7 @@ class Result21: UIViewController, UITableViewDataSource, UITableViewDelegate{
         alert.addAction(UIAlertAction(title: "OK",
             style: UIAlertActionStyle.Default,
             handler: {
-                (alert: UIAlertAction!) in println("An alert of type \(alert.style.hashValue) was tapped!")
+                (alert: UIAlertAction) in print("An alert of type \(alert.style.hashValue) was tapped!")
         }))
         
         self.presentViewController(alert, animated: true, completion: nil)

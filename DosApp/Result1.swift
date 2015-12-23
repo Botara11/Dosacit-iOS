@@ -39,8 +39,8 @@ class Result1 : UIViewController {
         
         
         if (segue.identifier == "SegueResult12"){
-            println(caract2.anchoCalle)
-            var DestViewController : Result12 = segue.destinationViewController as! Result12
+            print(caract2.anchoCalle)
+            let DestViewController : Result12 = segue.destinationViewController as! Result12
             
             DestViewController.caract2 =  caract2
             
@@ -63,7 +63,7 @@ class Result1 : UIViewController {
         
         
         let fetchRequest = NSFetchRequest(entityName: "A1")
-        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [A1] {
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [A1] {
             
             if (fetchResults[0].anchuraArboles == 0){
                 densidadFoliarText.backgroundColor = UIColor.grayColor();
@@ -92,13 +92,13 @@ class Result1 : UIViewController {
             }
             
             //Ancho Calle
-            var b:String = String(format:"%.02f", fetchResults[0].anchoCalle)
+            let b:String = String(format:"%.02f", fetchResults[0].anchoCalle)
             
             anchoCalleText.text = ("\(b) m")
             //anchoCalleText.text = "\(caract2.anchoCalle) m"
             
             //Distancia Árboles
-            var c:String = String(format:"%.02f", fetchResults[0].distanciaArboles)
+            let c:String = String(format:"%.02f", fetchResults[0].distanciaArboles)
             distanciaArbolesText.text = ("\(c) m")
             
             
@@ -106,12 +106,12 @@ class Result1 : UIViewController {
             
             //Volumen Árbol
             caract2.calcularVolumenArbol()
-            var d:String = String(format:"%.02f", fetchResults[0].volumenArbol)
+            let d:String = String(format:"%.02f", fetchResults[0].volumenArbol)
             volumenArbolText.text = ("\(d) m3")
             
             
             //Forma Árbol
-            println(fetchResults[0].formaArbol)
+            print(fetchResults[0].formaArbol)
             if (fetchResults[0].esfericoSeto == 0) {
                 formaArbolText.text = "Esférica"
             }

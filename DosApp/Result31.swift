@@ -90,7 +90,7 @@ class Result31: UIViewController, UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier) as! UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier)! as UITableViewCell
         
         cell.textLabel?.text = self.tableData[indexPath.row]
         
@@ -113,7 +113,7 @@ class Result31: UIViewController, UITableViewDataSource, UITableViewDelegate{
         alert.addAction(UIAlertAction(title: "OK",
             style: UIAlertActionStyle.Default,
             handler: {
-                (alert: UIAlertAction!) in println("An alert of type \(alert.style.hashValue) was tapped!")
+                (alert: UIAlertAction) in print("An alert of type \(alert.style.hashValue) was tapped!")
         }))
         
         self.presentViewController(alert, animated: true, completion: nil)

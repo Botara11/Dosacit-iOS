@@ -23,13 +23,13 @@ class SelecBoquillas3: UIViewController {
     
     @IBAction func SliderVariacionCaudal(sender: AnyObject) {
 
-        var CurrentValue = Int(VariacionCaudal.value)
+        let CurrentValue = Int(VariacionCaudal.value)
         VariacionText.text = "\(CurrentValue)"
         newItemB.variacionCaudalAdmisible = Double(CurrentValue)
         caract2.calcularParteB()
         
         let fetchRequest = NSFetchRequest(entityName: "B1")
-        if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+        if let fetchResults = (try? managedObjectContextB!.executeFetchRequest(fetchRequest)) as? [B1] {
             
             IntervaloCaudalAdmisibleAlta.text = String(format:"%.2f",fetchResults[0].caudalLiquidoBoquillaAlta)
             IntervaloCaudalAdmisibleMedia.text = String(format:"%.2f",fetchResults[0].caudalLiquidoBoquillaMedia)
@@ -48,19 +48,19 @@ class SelecBoquillas3: UIViewController {
         var intervaloCaudalAdmisible = [0.3,1.2,0.3,1.2,0.3,1.2] as [Double]
         
         let fetchRequest999 = NSFetchRequest(entityName: "B1")
-        if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest999, error: nil) as? [B1] {
+        if let fetchResults = (try? managedObjectContextB!.executeFetchRequest(fetchRequest999)) as? [B1] {
             intervaloCaudalAdmisible[0] = fetchResults[0].intervaloCaudalAdmisible0
             intervaloCaudalAdmisible[1] = fetchResults[0].intervaloCaudalAdmisible1
             intervaloCaudalAdmisible[2] = fetchResults[0].intervaloCaudalAdmisible2
             intervaloCaudalAdmisible[3] = fetchResults[0].intervaloCaudalAdmisible3
             intervaloCaudalAdmisible[4] = fetchResults[0].intervaloCaudalAdmisible4
             intervaloCaudalAdmisible[5] = fetchResults[0].intervaloCaudalAdmisible5
-            println("\(intervaloCaudalAdmisible[0])-\(intervaloCaudalAdmisible[1]) _ \(intervaloCaudalAdmisible[2])-\(intervaloCaudalAdmisible[3]) _ \(intervaloCaudalAdmisible[4])-\(intervaloCaudalAdmisible[5]) ")
+            print("\(intervaloCaudalAdmisible[0])-\(intervaloCaudalAdmisible[1]) _ \(intervaloCaudalAdmisible[2])-\(intervaloCaudalAdmisible[3]) _ \(intervaloCaudalAdmisible[4])-\(intervaloCaudalAdmisible[5]) ")
         }
         
         
         
-        var managedObjectContext : NSManagedObjectContext? = {
+        let managedObjectContext : NSManagedObjectContext? = {
             let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             if let managedObjectContext = appDelegate.managedObjectContext {
                 return managedObjectContext
@@ -72,9 +72,9 @@ class SelecBoquillas3: UIViewController {
         
         
         
-        var marcasList: [String] = ["Teejet","Hardi","Albuz","Lechler","Discos","Otros"]
+        let marcasList: [String] = ["Teejet","Hardi","Albuz","Lechler","Discos","Otros"]
         
-        var presionList: [String] = ["p6","p7","p8","p9","p10","p11","p12","p13","p14","p15","p16"]
+        let presionList: [String] = ["p6","p7","p8","p9","p10","p11","p12","p13","p14","p15","p16"]
         
         let fetchRequest = NSFetchRequest(entityName: "EntityBoquillas")
         let fetchRequest2 = NSFetchRequest(entityName: "EntityBoquillas")
@@ -93,14 +93,14 @@ class SelecBoquillas3: UIViewController {
                 var str = (presion + " > %f AND " + presion + "< %f AND marca == %@"  ) as String
                 let predicate1 = NSPredicate(format: str , intervaloCaudalAdmisible[0], intervaloCaudalAdmisible[1], marca)
                 fetchRequest.predicate = predicate1
-                if let fetchResults1 = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]{
+                if let fetchResults1 = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [EntityBoquillas]{
                     //var al = (fetchResults1 as [EntityBoquillas])[0].marca
                     //println(al)
                     
                     str = (presion + " > %f AND " + presion + "< %f AND marca == %@") as String
                     let predicate2 = NSPredicate(format: str , intervaloCaudalAdmisible[2], intervaloCaudalAdmisible[3], marca)
                     fetchRequest.predicate = predicate2
-                    if let fetchResults2 = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]{
+                    if let fetchResults2 = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [EntityBoquillas]{
                         
                         /*for i in fetchResults2 {
                         println(i.marca)
@@ -110,9 +110,9 @@ class SelecBoquillas3: UIViewController {
                         str = (presion + " >= %f AND " + presion + "<= %f AND marca == %@") as String
                         let predicate3 = NSPredicate(format: str , intervaloCaudalAdmisible[4], intervaloCaudalAdmisible[5], marca)
                         fetchRequest.predicate = predicate3
-                        if let fetchResults3 = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]{
+                        if let fetchResults3 = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [EntityBoquillas]{
                             
-                            println("Todo perfectisimo \(fetchResults1.count) \(fetchResults2.count) \(fetchResults3.count) de \(marca) en \(presion)")
+                            print("Todo perfectisimo \(fetchResults1.count) \(fetchResults2.count) \(fetchResults3.count) de \(marca) en \(presion)")
                             
                             if(fetchResults1.count>0 && fetchResults2.count>0 && fetchResults3.count>0 ){
                                 
@@ -162,13 +162,13 @@ class SelecBoquillas3: UIViewController {
         caract2.calcularParteB()
         // Do any additional setup after loading the view, typically from a nib.
         let fetchRequest = NSFetchRequest(entityName: "B1")
-        if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+        if let fetchResults = (try? managedObjectContextB!.executeFetchRequest(fetchRequest)) as? [B1] {
             IntervaloCaudalAdmisibleAlta.text = String(format:"%.2f",fetchResults[0].caudalLiquidoBoquillaAlta)
             IntervaloCaudalAdmisibleMedia.text = String(format:"%.2f",fetchResults[0].caudalLiquidoBoquillaMedia)
             IntervaloCaudalAdmisibleBaja.text = String(format:"%.2f",fetchResults[0].caudalLiquidoBoquillaBaja)
             VariacionText.text = String(format:"%.0f",round(fetchResults[0].variacionCaudalAdmisible * 100))
             VariacionCaudal.value = (fetchResults[0].variacionCaudalAdmisible as NSNumber).floatValue * 100
-            println("\(fetchResults[0].variacionCaudalAdmisible)")
+            print("\(fetchResults[0].variacionCaudalAdmisible)")
                 
             
 

@@ -32,7 +32,7 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     
     let collation = UILocalizedIndexedCollation.currentCollation()
-        as! UILocalizedIndexedCollation
+        
     
     
     var cadena = [String]()
@@ -63,11 +63,11 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
         sections.append(Section())
         sections.append(Section())
         sections.append(Section())
-        var str = ("marca == %@") as String
+        let str = ("marca == %@") as String
         let predicate1 = NSPredicate(format: str , marca)
         let fetchRequest = NSFetchRequest(entityName: "EntityBoquillas")
         fetchRequest.predicate = predicate1
-        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]{
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [EntityBoquillas]{
             for fe in fetchResults{
                 //Aqui habria que diferenciar entre zona1 zona2 y zona3
                 //cadena.append(fe.modelo)
@@ -103,16 +103,16 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        println("Seccion \(section) hay \(self.sections[section].boquis.count)")
+        print("Seccion \(section) hay \(self.sections[section].boquis.count)")
         return self.sections[section].boquis.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier) as! UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier)! as UITableViewCell
         
         //cell.textLabel?.text = self.tableData[indexPath.row]
         cell.textLabel?.text = self.sections[indexPath.section].boquis[indexPath.row]
-        println("secc=\(indexPath.section) item=\(indexPath.item)")
+        print("secc=\(indexPath.section) item=\(indexPath.item)")
         switch(indexPath.section){
         case 0:
             if (indexPath.item == selSeccion0){
@@ -202,12 +202,12 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     func saveCaudalXZona(selSecc: Int) -> Double {
         
-        var str = ("modelo == %@ AND marca == %@") as String
+        let str = ("modelo == %@ AND marca == %@") as String
         let predicate1 = NSPredicate(format: str , self.sections[0].boquis[selSecc], marca)
         let fetchRequest = NSFetchRequest(entityName: "EntityBoquillas")
         fetchRequest.predicate = predicate1
         var caudal = Double()
-        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]{
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [EntityBoquillas]{
             for fe in fetchResults{
                 
                 switch(presion){
@@ -259,7 +259,7 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
             newItemC.caudalZonaAlta = saveCaudalXZona(selSeccion0)
             newItemC.caudalZonaMedia = saveCaudalXZona(selSeccion1)
             newItemC.caudalZonaBaja = saveCaudalXZona(selSeccion2)
-            println(newItemC.caudalZonaAlta)
+            print(newItemC.caudalZonaAlta)
         }
         
     }

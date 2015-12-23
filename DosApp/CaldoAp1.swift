@@ -42,7 +42,7 @@ class CaldoAp1: ResponsiveTextFieldViewController {
         boquillasBajaTextField.keyboardType = UIKeyboardType.NumberPad
         
         let fetchRequest = NSFetchRequest(entityName: "B1")
-        if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1]{
+        if let fetchResults = (try? managedObjectContextB!.executeFetchRequest(fetchRequest)) as? [B1]{
             
             
                 anchoCalleText.text = String(format:"%.2f",fetchResults[0].anchoCalle)
@@ -52,7 +52,7 @@ class CaldoAp1: ResponsiveTextFieldViewController {
         }
         
         let fetchRequest1 = NSFetchRequest(entityName: "C1")
-        if let fetchResults = managedObjectContextC!.executeFetchRequest(fetchRequest, error: nil) as? [C1]{
+        if let fetchResults = (try? managedObjectContextC!.executeFetchRequest(fetchRequest)) as? [C1]{
             
             
             
@@ -88,14 +88,14 @@ class CaldoAp1: ResponsiveTextFieldViewController {
             if(anchoCalleTextField.text == ""){
                 
             }else{
-                newItemB.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
+                newItemB.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
                 caract2.calcularCaudalesB()
                 
             }
             
-            newItem.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
-            newItemB.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
-            newItemC.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
+            newItem.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
+            newItemB.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
+            newItemC.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
         }
         
     }
@@ -109,13 +109,13 @@ class CaldoAp1: ResponsiveTextFieldViewController {
                 
             }else{
                 
-                alert("Bu", mensaje: anchoCalleTextField.text)
-                newItemB.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
+                alert("Bu", mensaje: anchoCalleTextField.text!)
+                newItemB.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
                 caract2.calcularCaudalesB()
             }
-            newItem.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
-            newItemB.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
-            newItemC.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
+            newItem.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
+            newItemB.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
+            newItemC.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
             
         }
         else {
@@ -161,10 +161,10 @@ class CaldoAp1: ResponsiveTextFieldViewController {
             if (velocidadAvanceTextField.text == ""){
                 
             }else{
-                newItemB.velocidadAvance = (velocidadAvanceTextField.text as NSString).doubleValue
+                newItemB.velocidadAvance = (velocidadAvanceTextField.text! as NSString).doubleValue
                 caract2.calcularCaudalesB()
-                newItemB.velocidadAvance = (velocidadAvanceTextField.text as NSString).doubleValue
-                newItemC.velocidadAvance = (velocidadAvanceTextField.text as NSString).doubleValue
+                newItemB.velocidadAvance = (velocidadAvanceTextField.text! as NSString).doubleValue
+                newItemC.velocidadAvance = (velocidadAvanceTextField.text! as NSString).doubleValue
                 
             }
             
@@ -187,11 +187,11 @@ class CaldoAp1: ResponsiveTextFieldViewController {
             if (velocidadAvanceTextField.text == ""){
                 
             }else{
-                newItemB.velocidadAvance = (velocidadAvanceTextField.text as NSString).doubleValue
+                newItemB.velocidadAvance = (velocidadAvanceTextField.text! as NSString).doubleValue
                 caract2.calcularCaudalesB()
                 
-                newItemB.velocidadAvance = (velocidadAvanceTextField.text as NSString).doubleValue
-                newItemC.velocidadAvance = (velocidadAvanceTextField.text as NSString).doubleValue
+                newItemB.velocidadAvance = (velocidadAvanceTextField.text! as NSString).doubleValue
+                newItemC.velocidadAvance = (velocidadAvanceTextField.text! as NSString).doubleValue
                 
             }
             
@@ -227,17 +227,17 @@ class CaldoAp1: ResponsiveTextFieldViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!){
         
         
-        newItemB.numeroBoquillasAbiertasAlta = (boquillasAltaTextField.text as NSString).integerValue
-        newItemB.numeroBoquillasAbiertasMedia = (boquillasMediaTextField.text as NSString).integerValue
-        newItemB.numeroBoquillasAbiertasBaja = (boquillasBajaTextField.text as NSString).integerValue
-        newItemC.numBoqAbiertasAltaHidraulica = (boquillasAltaTextField.text as NSString).integerValue
-        newItemC.numBoqAbiertasMediaHidraulica = (boquillasMediaTextField.text as NSString).integerValue
-        newItemC.numBoqAbiertasBajaHidraulica = (boquillasBajaTextField.text as NSString).integerValue
+        newItemB.numeroBoquillasAbiertasAlta = (boquillasAltaTextField.text! as NSString).integerValue
+        newItemB.numeroBoquillasAbiertasMedia = (boquillasMediaTextField.text! as NSString).integerValue
+        newItemB.numeroBoquillasAbiertasBaja = (boquillasBajaTextField.text! as NSString).integerValue
+        newItemC.numBoqAbiertasAltaHidraulica = (boquillasAltaTextField.text! as NSString).integerValue
+        newItemC.numBoqAbiertasMediaHidraulica = (boquillasMediaTextField.text! as NSString).integerValue
+        newItemC.numBoqAbiertasBajaHidraulica = (boquillasBajaTextField.text! as NSString).integerValue
         
         if(segue.identifier == "C12"){
             
             let fetchRequest = NSFetchRequest(entityName: "B1")
-            if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+            if let fetchResults = (try? managedObjectContextB!.executeFetchRequest(fetchRequest)) as? [B1] {
                 if (boquillasAltaTextField.text == "" || boquillasMediaTextField.text == "" || boquillasBajaTextField.text == ""){
                     alert("ERROR",mensaje: "No puede haber campos vacíos y deben ser valores numéricos")
                     
@@ -251,12 +251,12 @@ class CaldoAp1: ResponsiveTextFieldViewController {
                 }else{
                     
                     
-                    newItemB.numeroBoquillasAbiertasAlta = (boquillasAltaTextField.text as NSString).integerValue
-                    newItemB.numeroBoquillasAbiertasMedia = (boquillasMediaTextField.text as NSString).integerValue
-                    newItemB.numeroBoquillasAbiertasBaja = (boquillasBajaTextField.text as NSString).integerValue
-                    newItemC.numBoqAbiertasAltaHidraulica = (boquillasAltaTextField.text as NSString).integerValue
-                    newItemC.numBoqAbiertasMediaHidraulica = (boquillasMediaTextField.text as NSString).integerValue
-                    newItemC.numBoqAbiertasBajaHidraulica = (boquillasBajaTextField.text as NSString).integerValue
+                    newItemB.numeroBoquillasAbiertasAlta = (boquillasAltaTextField.text! as NSString).integerValue
+                    newItemB.numeroBoquillasAbiertasMedia = (boquillasMediaTextField.text! as NSString).integerValue
+                    newItemB.numeroBoquillasAbiertasBaja = (boquillasBajaTextField.text! as NSString).integerValue
+                    newItemC.numBoqAbiertasAltaHidraulica = (boquillasAltaTextField.text! as NSString).integerValue
+                    newItemC.numBoqAbiertasMediaHidraulica = (boquillasMediaTextField.text! as NSString).integerValue
+                    newItemC.numBoqAbiertasBajaHidraulica = (boquillasBajaTextField.text! as NSString).integerValue
                     
                     
                     

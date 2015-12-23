@@ -32,14 +32,14 @@ class Cultivo2: UIViewController {
             newItem.formaArbol = 1
             newItem.esfericoSeto = 0
             caract2.esfericoSeto = 0;
-            println("densidad foliar : esferica")
+            print("densidad foliar : esferica")
         }
         else {
             caract2.formaArbol = 1;
             caract2.esfericoSeto = 1;
             newItem.formaArbol = 1
             newItem.esfericoSeto = 1
-            println("densidad foliar : ")
+            print("densidad foliar : ")
         }
     }
 
@@ -95,7 +95,7 @@ class Cultivo2: UIViewController {
                 
         if (segue.identifier == "Cultivo2"){
             
-            var DestViewController : Cultivo3 = segue.destinationViewController as! Cultivo3
+            let DestViewController : Cultivo3 = segue.destinationViewController as! Cultivo3
             
             DestViewController.caract2 = caract2
         }
@@ -150,10 +150,10 @@ class Cultivo2: UIViewController {
         
         
         let fetchRequest = NSFetchRequest(entityName: "A1")
-        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [A1] {
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [A1] {
         
         
-        println(fetchResults[0].anchoCalle)
+        print(fetchResults[0].anchoCalle)
             
         }
         

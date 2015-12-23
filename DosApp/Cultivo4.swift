@@ -120,8 +120,8 @@ class Cultivo4: UIViewController {
         
         
         if (segue.identifier == "SegueResult1"){
-            println(caract2.anchoCalle)
-            var DestViewController : Result1 = segue.destinationViewController as! Result1
+            print(caract2.anchoCalle)
+            let DestViewController : Result1 = segue.destinationViewController as! Result1
             
             var stringValue = "\(caract2.anchoCalle)"
             
@@ -144,7 +144,7 @@ class Cultivo4: UIViewController {
     
        override func viewDidLoad() {
         super.viewDidLoad()
-        println(anotherString4)
+        print(anotherString4)
         
         if (newItem.temperatura == 0){
             newItem.temperatura = 1
@@ -179,9 +179,9 @@ class Cultivo4: UIViewController {
             newItem.tipoPulverizador = 1
             
             let fetchRequest = NSFetchRequest(entityName: "A1")
-            if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [A1] {
+            if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [A1] {
                 
-            println("Pulverizador ******* \(fetchResults[0].tipoPulverizador)")
+            print("Pulverizador ******* \(fetchResults[0].tipoPulverizador)")
             }
         }else if (newItem.tipoPulverizador == 1){
             tipoPulverizador.selectedSegmentIndex = 0

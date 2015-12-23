@@ -34,7 +34,7 @@ func updateBoquillas() {
     let url = NSURL(string: "http://secuest.comuf.com/dosacitric/BBDD.html")
     
     let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
-        var result : NSString = NSString(data: data, encoding: NSUTF8StringEncoding)!
+        var result : NSString = NSString(data: data!, encoding: NSUTF8StringEncoding)!
         //            println(result)
         result = result.stringByReplacingOccurrencesOfString(",", withString: ".")
         var array1 = [String]()
@@ -71,16 +71,16 @@ func updateBoquillas() {
                 dbBoquillas.p16 = k * pow(16,0.5)
                 
                 if(dbBoquillas.modelo=="ATR/blanca"){
-                    println(" TESTE\n")
-                    println("k=\(k) str=0-\(boq[0]) 1-\(boq[1]) 2-\(boq[2]) 3-\(boq[3]) 4-\(boq[4]) ")
-                    println(" p6=\(dbBoquillas.p6) p7=\(dbBoquillas.p7) p8=\(dbBoquillas.p8)")
+                    print(" TESTE\n")
+                    print("k=\(k) str=0-\(boq[0]) 1-\(boq[1]) 2-\(boq[2]) 3-\(boq[3]) 4-\(boq[4]) ")
+                    print(" p6=\(dbBoquillas.p6) p7=\(dbBoquillas.p7) p8=\(dbBoquillas.p8)")
                 }
                 
                 
             }
             
         }
-        println(boquillas[0])
+        print(boquillas[0])
         /*
         let fetchRequest = NSFetchRequest(entityName: "EntityBoquillas")
         let fetchResults1 = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]
@@ -115,11 +115,11 @@ func updateBoquillas() {
         //var str2 = (presion + " > %f AND " + presion + "< %f AND marca == %@"  ) as String
         //let predicateTest = NSPredicate(format: str2 , 0, 99999, marca)
         //fetchRequestTest.predicate = predicateTest
-        if let fetchResultsTest = self.managedObjectContext!.executeFetchRequest(fetchRequestTest, error: nil) as? [EntityBoquillas]{
-            println("AQUI EMPIEZA TEST \(fetchResultsTest.count)")
+        if let fetchResultsTest = (try? self.managedObjectContext!.executeFetchRequest(fetchRequestTest)) as? [EntityBoquillas]{
+            print("AQUI EMPIEZA TEST \(fetchResultsTest.count)")
             for (var jj=0  ;jj<fetchResultsTest.count;jj++){
                 if(fetchResultsTest[jj].marca=="Albuz"){
-                    println("\(fetchResultsTest[jj].marca)  \(fetchResultsTest[jj].modelo) p6=\(fetchResultsTest[jj].p6) p7=\(fetchResultsTest[jj].p7) p8=\(fetchResultsTest[jj].p8) p9=\(fetchResultsTest[jj].p9) ")
+                    print("\(fetchResultsTest[jj].marca)  \(fetchResultsTest[jj].modelo) p6=\(fetchResultsTest[jj].p6) p7=\(fetchResultsTest[jj].p7) p8=\(fetchResultsTest[jj].p8) p9=\(fetchResultsTest[jj].p9) ")
                     
                 }
             }
@@ -133,9 +133,9 @@ func updateBoquillas() {
         //if boquillas.count > 5 {
         if 0 > 5 {
             
-            var marcasList: [String] = ["Teejet","Hardi","Albuz","Lechler","Discos","Otros"]
+            let marcasList: [String] = ["Teejet","Hardi","Albuz","Lechler","Discos","Otros"]
             
-            var presionList: [String] = ["p6","p7","p8","p9","p10","p11","p12","p13","p14","p15","p16"]
+            let presionList: [String] = ["p6","p7","p8","p9","p10","p11","p12","p13","p14","p15","p16"]
             
             let fetchRequest = NSFetchRequest(entityName: "EntityBoquillas")
             let fetchRequest2 = NSFetchRequest(entityName: "EntityBoquillas")
@@ -152,12 +152,12 @@ func updateBoquillas() {
                     var str = (presion + " > %f AND " + presion + "< %f AND marca == %@"  ) as String
                     let predicate1 = NSPredicate(format: str , intervaloCaudalAdmisible[0], intervaloCaudalAdmisible[1], marca)
                     fetchRequest.predicate = predicate1
-                    if let fetchResults1 = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]{
+                    if let fetchResults1 = (try? self.managedObjectContext!.executeFetchRequest(fetchRequest)) as? [EntityBoquillas]{
                         
                         str = (presion + " > %f AND " + presion + "< %f AND marca == %@") as String
                         let predicate2 = NSPredicate(format: str , intervaloCaudalAdmisible[2], intervaloCaudalAdmisible[3], marca)
                         fetchRequest.predicate = predicate2
-                        if let fetchResults2 = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]{
+                        if let fetchResults2 = (try? self.managedObjectContext!.executeFetchRequest(fetchRequest)) as? [EntityBoquillas]{
                             
                             /*for i in fetchResults2 {
                             println(i.marca)
@@ -167,9 +167,9 @@ func updateBoquillas() {
                             str = (presion + " > %f AND " + presion + "< %f AND marca == %@") as String
                             let predicate3 = NSPredicate(format: str , intervaloCaudalAdmisible[4], intervaloCaudalAdmisible[5], marca)
                             fetchRequest.predicate = predicate3
-                            if let fetchResults3 = self.managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [EntityBoquillas]{
+                            if let fetchResults3 = (try? self.managedObjectContext!.executeFetchRequest(fetchRequest)) as? [EntityBoquillas]{
                                 
-                                println("Todo perfectisimo")
+                                print("Todo perfectisimo")
                                 
                                 //Todo de la presion "presion" y de la marca "marca"
                                 //fetchResults1 son boquillas adecuadas para zona Alta

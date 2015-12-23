@@ -39,25 +39,25 @@ class Result22: UIViewController, UITableViewDataSource, UITableViewDelegate{
         super.viewDidLoad()
         
         marca = newItemB.seleccionadaMarca
-        println(marca)
-        println("VALEEEEEEEEEEEEEEE")
+        print(marca)
+        print("VALEEEEEEEEEEEEEEE")
         
-        var str = ("marca == %@") as String
+        let str = ("marca == %@") as String
         let predicate1 = NSPredicate(format: str , marca)
         let fetchRequest = NSFetchRequest(entityName: "FiltroBoquillas")
         fetchRequest.predicate = predicate1
-        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [FiltroBoquillas]{
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [FiltroBoquillas]{
             for fe in fetchResults{
                 if !estaEnCadena(fe.presion) {
                     cadena.append(fe.presion)
-                    var sss = fe.presion.stringByReplacingOccurrencesOfString("p", withString: "")
+                    let sss = fe.presion.stringByReplacingOccurrencesOfString("p", withString: "")
                     //self.tableData.append("\(sss) bares")
                     self.tableDataAux.append((sss as NSString).integerValue)
                 }
             }
         }
         
-        tableDataAux.sort({$0<$1})
+        tableDataAux.sortInPlace({$0<$1})
         for uu in tableDataAux{
             self.tableData.append("\(uu) bares")
         }
@@ -83,7 +83,7 @@ class Result22: UIViewController, UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier) as! UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier)! as UITableViewCell
         
         cell.textLabel?.text = self.tableData[indexPath.row]
         
@@ -95,10 +95,10 @@ class Result22: UIViewController, UITableViewDataSource, UITableViewDelegate{
             let vc = segue.destinationViewController as! Result23
             //vc.marca = marca
 
-            var auxPres = presionPressed.stringByReplacingOccurrencesOfString(" bares", withString: "")
+            let auxPres = presionPressed.stringByReplacingOccurrencesOfString(" bares", withString: "")
             //vc.presion = "p\(auxPres)"
             newItemB.seleccionadaPresion = "p\(auxPres)"
-            println("La presion pulsada: \(presionPressed)")
+            print("La presion pulsada: \(presionPressed)")
         }
     }
     
@@ -121,7 +121,7 @@ class Result22: UIViewController, UITableViewDataSource, UITableViewDelegate{
         alert.addAction(UIAlertAction(title: "OK",
             style: UIAlertActionStyle.Default,
             handler: {
-                (alert: UIAlertAction!) in println("An alert of type \(alert.style.hashValue) was tapped!")
+                (alert: UIAlertAction) in print("An alert of type \(alert.style.hashValue) was tapped!")
         }))
         
         self.presentViewController(alert, animated: true, completion: nil)

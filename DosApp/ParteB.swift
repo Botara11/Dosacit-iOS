@@ -34,7 +34,7 @@ public class ParteB {
     func calcularCaudalesB(){
         
         let fetchRequest = NSFetchRequest(entityName: "B1")
-        if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+        if let fetchResults = (try? managedObjectContextB!.executeFetchRequest(fetchRequest)) as? [B1] {
             
         newItemB.caudalLiquidoTotal = fetchResults[0].volumenApp * fetchResults[0].anchoCalle * fetchResults[0].velocidadAvance / 600;
         newItemC.caudalTotal = fetchResults[0].volumenApp * fetchResults[0].anchoCalle * fetchResults[0].velocidadAvance / 600;
@@ -49,7 +49,7 @@ public class ParteB {
         
         
     let fetchRequest = NSFetchRequest(entityName: "B1")
-    if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+    if let fetchResults = (try? managedObjectContextB!.executeFetchRequest(fetchRequest)) as? [B1] {
                 
 
     
@@ -75,10 +75,10 @@ public class ParteB {
     newItemB.intervaloCaudalAdmisible4 = (fetchResults[0].caudalLiquidoBoquillaBaja) * (1-fetchResults[0].variacionCaudalAdmisible);
     newItemB.intervaloCaudalAdmisible5 = (fetchResults[0].caudalLiquidoBoquillaBaja) * (1+fetchResults[0].variacionCaudalAdmisible);
         
-    println("caudalLiquidoBoquillaAlta \(fetchResults[0].caudalLiquidoBoquillaMedia)")
-    println("CaudalLiquido total \(fetchResults[0].caudalLiquidoTotal)")
-        println("porcentajeVegetacionMedia \(fetchResults[0].porcentajeVegetacionMedia)")
-        println("numeroBoquillasAbiertasMedia \(fetchResults[0].numeroBoquillasAbiertasMedia)")
+    print("caudalLiquidoBoquillaAlta \(fetchResults[0].caudalLiquidoBoquillaMedia)")
+    print("CaudalLiquido total \(fetchResults[0].caudalLiquidoTotal)")
+        print("porcentajeVegetacionMedia \(fetchResults[0].porcentajeVegetacionMedia)")
+        print("numeroBoquillasAbiertasMedia \(fetchResults[0].numeroBoquillasAbiertasMedia)")
         
         }
     

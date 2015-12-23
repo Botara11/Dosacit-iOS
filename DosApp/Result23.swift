@@ -27,7 +27,7 @@ class Result23: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     
     let collation = UILocalizedIndexedCollation.currentCollation()
-        as! UILocalizedIndexedCollation
+        
 
     
     var cadena = [String]()
@@ -52,26 +52,26 @@ class Result23: UIViewController, UITableViewDataSource, UITableViewDelegate{
         sections.append(Section())
         sections.append(Section())
         sections.append(Section())
-        var str = ("marca == %@ AND presion == %@") as String
+        let str = ("marca == %@ AND presion == %@") as String
         let predicate1 = NSPredicate(format: str , marca, presion)
         let fetchRequest = NSFetchRequest(entityName: "FiltroBoquillas")
         fetchRequest.predicate = predicate1
-        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [FiltroBoquillas]{
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [FiltroBoquillas]{
             for fe in fetchResults{
                     //Aqui habria que diferenciar entre zona1 zona2 y zona3
                     //cadena.append(fe.modelo)
                     //self.tableData.append(fe.modelo)
                 if fe.zona == "alta" {
                     self.sections[0].addBoq(fe.modelo)
-                    println("alta \(fe.modelo)")
+                    print("alta \(fe.modelo)")
                 }
                 if fe.zona == "media" {
                     self.sections[1].addBoq(fe.modelo)
-                    println("media \(fe.modelo)")
+                    print("media \(fe.modelo)")
                 }
                 if fe.zona == "baja" {
                     self.sections[2].addBoq(fe.modelo)
-                    println("baja \(fe.modelo)")
+                    print("baja \(fe.modelo)")
                 }
             }
         }
@@ -94,12 +94,12 @@ class Result23: UIViewController, UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        println("Seccion \(section) hay \(self.sections[section].boquis.count)")
+        print("Seccion \(section) hay \(self.sections[section].boquis.count)")
         return self.sections[section].boquis.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier) as! UITableViewCell
+        var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier)! as UITableViewCell
         
         //cell.textLabel?.text = self.tableData[indexPath.row]
         cell.textLabel?.text = self.sections[indexPath.section].boquis[indexPath.row]
@@ -120,7 +120,7 @@ class Result23: UIViewController, UITableViewDataSource, UITableViewDelegate{
         alert.addAction(UIAlertAction(title: "OK",
             style: UIAlertActionStyle.Default,
             handler: {
-                (alert: UIAlertAction!) in println("An alert of type \(alert.style.hashValue) was tapped!")
+                (alert: UIAlertAction) in print("An alert of type \(alert.style.hashValue) was tapped!")
         }))
         
         self.presentViewController(alert, animated: true, completion: nil)

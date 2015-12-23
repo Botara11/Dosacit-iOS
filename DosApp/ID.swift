@@ -23,6 +23,7 @@ let newItemZ = NSEntityDescription.insertNewObjectForEntityForName("Z1", inManag
 
 class ID: UIViewController {
     
+   
     @IBOutlet var fechaText: UITextField!
     @IBOutlet var idParcelaText: UITextField!
     @IBOutlet var idTratamientoText: UITextField!
@@ -34,11 +35,11 @@ class ID: UIViewController {
         
         
             
-            newItemZ.fecha = fechaText.text as String
-            newItemZ.idParcela = idParcelaText.text as String
-            newItemZ.idTratamiento = idTratamientoText.text as String
-            newItemZ.referencia = referenciaText.text as String
-            println(idTratamientoText.text)
+            newItemZ.fecha = fechaText.text! as String
+            newItemZ.idParcela = idParcelaText.text! as String
+            newItemZ.idTratamiento = idTratamientoText.text! as String
+            newItemZ.referencia = referenciaText.text! as String
+            print(idTratamientoText.text)
 
         
         

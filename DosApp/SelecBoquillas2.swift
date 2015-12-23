@@ -26,7 +26,7 @@ class SelecBoquillas2: ResponsiveTextFieldViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
         let fetchRequest = NSFetchRequest(entityName: "B1")
-        if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+        if let fetchResults = (try? managedObjectContextB!.executeFetchRequest(fetchRequest)) as? [B1] {
         
         if(segue.identifier == "B23"){
         
@@ -35,47 +35,47 @@ class SelecBoquillas2: ResponsiveTextFieldViewController {
             
             alert("ERROR",mensaje: "No puede haber campos vacíos y deben ser valores numéricos")
             
-            }else if (((PorcentajeVegAlta.text as NSString).integerValue) + (PorcentajeVegMedia.text as NSString).integerValue + (PorcentajeVegBaja.text as NSString).integerValue != 100 ){
+            }else if (((PorcentajeVegAlta.text! as NSString).integerValue) + (PorcentajeVegMedia.text! as NSString).integerValue + (PorcentajeVegBaja.text! as NSString).integerValue != 100 ){
             
             alert("ERROR",mensaje: "La suma del porcentaje de vegetación a pulverizar no es igual al 100%")
-            }else if(((NumBoqAbAlta.text as NSString).integerValue + (NumBoqAbMedia.text as NSString).integerValue + (NumBoqAbBaja.text as NSString).integerValue + (NumBoqCerrAlta.text as NSString).integerValue + (NumBoqCerrBaja.text as NSString).integerValue) != fetchResults[0].numeroTotalBoquillas ){
+            }else if(((NumBoqAbAlta.text! as NSString).integerValue + (NumBoqAbMedia.text! as NSString).integerValue + (NumBoqAbBaja.text! as NSString).integerValue + (NumBoqCerrAlta.text! as NSString).integerValue + (NumBoqCerrBaja.text! as NSString).integerValue) != fetchResults[0].numeroTotalBoquillas ){
             
                 alert("ERROR",mensaje: "La suma entre las boquillas abiertas y cerradas debe ser igual al número total de boquillas")
                 
             }else{
        
-                newItemB.numeroBoquillasCerradasAlta = (NumBoqCerrAlta.text as NSString).integerValue
+                newItemB.numeroBoquillasCerradasAlta = (NumBoqCerrAlta.text! as NSString).integerValue
         
-                newItemB.numeroBoquillasCerradasBaja = (NumBoqCerrBaja.text as NSString).integerValue
+                newItemB.numeroBoquillasCerradasBaja = (NumBoqCerrBaja.text! as NSString).integerValue
         
-                newItemB.numeroBoquillasAbiertasAlta = (NumBoqAbAlta.text as NSString).integerValue
+                newItemB.numeroBoquillasAbiertasAlta = (NumBoqAbAlta.text! as NSString).integerValue
         
-                newItemB.numeroBoquillasAbiertasMedia = (NumBoqAbMedia.text as NSString).integerValue
+                newItemB.numeroBoquillasAbiertasMedia = (NumBoqAbMedia.text! as NSString).integerValue
         
-                newItemB.numeroBoquillasAbiertasBaja = (NumBoqAbBaja.text as NSString).integerValue
+                newItemB.numeroBoquillasAbiertasBaja = (NumBoqAbBaja.text! as NSString).integerValue
         
-                newItemB.porcentajeVegetacionAlta = (PorcentajeVegAlta.text as NSString).integerValue
+                newItemB.porcentajeVegetacionAlta = (PorcentajeVegAlta.text! as NSString).integerValue
         
-                newItemB.porcentajeVegetacionMedia = (PorcentajeVegMedia.text as NSString).integerValue
+                newItemB.porcentajeVegetacionMedia = (PorcentajeVegMedia.text! as NSString).integerValue
         
-                newItemB.porcentajeVegetacionBaja = (PorcentajeVegBaja.text as NSString).integerValue
+                newItemB.porcentajeVegetacionBaja = (PorcentajeVegBaja.text! as NSString).integerValue
             }
         }
-        newItemB.numeroBoquillasCerradasAlta = (NumBoqCerrAlta.text as NSString).integerValue
+        newItemB.numeroBoquillasCerradasAlta = (NumBoqCerrAlta.text! as NSString).integerValue
         
-        newItemB.numeroBoquillasCerradasBaja = (NumBoqCerrBaja.text as NSString).integerValue
+        newItemB.numeroBoquillasCerradasBaja = (NumBoqCerrBaja.text! as NSString).integerValue
         
-        newItemB.numeroBoquillasAbiertasAlta = (NumBoqAbAlta.text as NSString).integerValue
+        newItemB.numeroBoquillasAbiertasAlta = (NumBoqAbAlta.text! as NSString).integerValue
         
-        newItemB.numeroBoquillasAbiertasMedia = (NumBoqAbMedia.text as NSString).integerValue
+        newItemB.numeroBoquillasAbiertasMedia = (NumBoqAbMedia.text! as NSString).integerValue
         
-        newItemB.numeroBoquillasAbiertasBaja = (NumBoqAbBaja.text as NSString).integerValue
+        newItemB.numeroBoquillasAbiertasBaja = (NumBoqAbBaja.text! as NSString).integerValue
         
-        newItemB.porcentajeVegetacionAlta = (PorcentajeVegAlta.text as NSString).integerValue
+        newItemB.porcentajeVegetacionAlta = (PorcentajeVegAlta.text! as NSString).integerValue
         
-        newItemB.porcentajeVegetacionMedia = (PorcentajeVegMedia.text as NSString).integerValue
+        newItemB.porcentajeVegetacionMedia = (PorcentajeVegMedia.text! as NSString).integerValue
         
-        newItemB.porcentajeVegetacionBaja = (PorcentajeVegBaja.text as NSString).integerValue
+        newItemB.porcentajeVegetacionBaja = (PorcentajeVegBaja.text! as NSString).integerValue
         }
         
         
@@ -96,7 +96,7 @@ class SelecBoquillas2: ResponsiveTextFieldViewController {
         PorcentajeVegBaja.keyboardType = UIKeyboardType.NumbersAndPunctuation
         
         let fetchRequest = NSFetchRequest(entityName: "B1")
-        if let fetchResults = managedObjectContextB!.executeFetchRequest(fetchRequest, error: nil) as? [B1] {
+        if let fetchResults = (try? managedObjectContextB!.executeFetchRequest(fetchRequest)) as? [B1] {
             
                 
                 if (fetchResults[0].numeroBoquillasCerradasAlta != 0){
