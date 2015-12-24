@@ -31,7 +31,7 @@ let managedObjectContextC = (UIApplication.sharedApplication().delegate as! AppD
 func updateBoquillas() {
     
         
-    let url = NSURL(string: "http://secuest.comuf.com/dosacitric/BBDD.html")
+    let url = NSURL(string: "http://dosacitric.webs.upv.es/BBDD.txt")
     
     let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
         var result : NSString = NSString(data: data!, encoding: NSUTF8StringEncoding)!
