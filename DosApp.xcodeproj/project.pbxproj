@@ -11,6 +11,7 @@
 		211C019B1B6820CF000D847B /* Viewcontroller_iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 211C01991B6820CF000D847B /* Viewcontroller_iphone.xib */; };
 		2155E7431AB49119009D57E7 /* SelecBoquillas2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2155E7421AB49119009D57E7 /* SelecBoquillas2.swift */; };
 		2155E7451AB74EC4009D57E7 /* B1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2155E7441AB74EC4009D57E7 /* B1.swift */; };
+		2158A6FB1C3B076500E62889 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2158A6FA1C3B076500E62889 /* CloudKit.framework */; };
 		2161FC891BEE8D8C00CBF50E /* printer.png in Resources */ = {isa = PBXBuildFile; fileRef = 2161FC881BEE8D8C00CBF50E /* printer.png */; };
 		2161FC8B1BEF714B00CBF50E /* ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161FC8A1BEF714B00CBF50E /* ID.swift */; };
 		2161FC8D1BEF728600CBF50E /* Z1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161FC8C1BEF728600CBF50E /* Z1.swift */; };
@@ -65,6 +66,8 @@
 		211C019A1B6820CF000D847B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Viewcontroller_iphone.xib; sourceTree = "<group>"; };
 		2155E7421AB49119009D57E7 /* SelecBoquillas2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecBoquillas2.swift; sourceTree = "<group>"; };
 		2155E7441AB74EC4009D57E7 /* B1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = B1.swift; sourceTree = "<group>"; };
+		2158A6F91C3B072E00E62889 /* DosApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DosApp.entitlements; sourceTree = "<group>"; };
+		2158A6FA1C3B076500E62889 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		2161FC881BEE8D8C00CBF50E /* printer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = printer.png; sourceTree = "<group>"; };
 		2161FC8A1BEF714B00CBF50E /* ID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ID.swift; sourceTree = "<group>"; };
 		2161FC8C1BEF728600CBF50E /* Z1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Z1.swift; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2158A6FB1C3B076500E62889 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +134,7 @@
 		B2557D8A1AAF821E008A24D9 = {
 			isa = PBXGroup;
 			children = (
+				2158A6FA1C3B076500E62889 /* CloudKit.framework */,
 				B28EAEA31ADB16AB0009D7FD /* FiltroBoquillas.swift */,
 				B2557D951AAF821E008A24D9 /* DosApp */,
 				B2557DAE1AAF821E008A24D9 /* DosAppTests */,
@@ -149,6 +154,7 @@
 		B2557D951AAF821E008A24D9 /* DosApp */ = {
 			isa = PBXGroup;
 			children = (
+				2158A6F91C3B072E00E62889 /* DosApp.entitlements */,
 				B2557DDD1AAF841B008A24D9 /* AppDelegate.swift */,
 				B2DDEC8F1AC9C34F0008008F /* Result21.swift */,
 				B28EAEA51ADC5C920009D7FD /* Result22.swift */,
@@ -271,6 +277,11 @@
 					B2557D921AAF821E008A24D9 = {
 						CreatedOnToolsVersion = 6.1.1;
 						DevelopmentTeam = 456AZC6XUE;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					B2557DAA1AAF821E008A24D9 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -508,6 +519,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = DosApp/DosApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DosApp/Info.plist;
@@ -524,6 +536,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = DosApp/DosApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DosApp/Info.plist;

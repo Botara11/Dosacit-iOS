@@ -21,7 +21,7 @@ let newItemZ = NSEntityDescription.insertNewObjectForEntityForName("Z1", inManag
 
 
 
-class ID: UIViewController {
+class ID: ResponsiveTextFieldViewController {
     
    
     @IBOutlet var fechaText: UITextField!
