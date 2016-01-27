@@ -141,7 +141,7 @@ class Cultivo1: ResponsiveTextFieldViewController, UITextFieldDelegate {
         
         
         let nuevo : updateBoquillas = updateBoquillas()
-        //nuevo.updateBoquillas()
+        nuevo.updateBoquillas()
         
         if (newItem.densidadFoliar == 0){
             newItem.densidadFoliar = 1.15
