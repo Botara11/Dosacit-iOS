@@ -21,7 +21,7 @@ let newItemZ = NSEntityDescription.insertNewObjectForEntityForName("Z1", inManag
 
 
 
-class ID: ResponsiveTextFieldViewController {
+class ID: ResponsiveTextFieldViewController, UITextFieldDelegate {
     
    
     @IBOutlet var fechaText: UITextField!
@@ -29,6 +29,15 @@ class ID: ResponsiveTextFieldViewController {
     @IBOutlet var idTratamientoText: UITextField!
     @IBOutlet var referenciaText: UITextField!
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == fechaText{
+            idParcelaText.becomeFirstResponder()
+        }else{
+            idParcelaText.resignFirstResponder()
+        }
+        return true;
+    }
+
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         

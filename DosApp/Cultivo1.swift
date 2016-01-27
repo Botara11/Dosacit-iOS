@@ -20,7 +20,7 @@ let managedObjectContextC = (UIApplication.sharedApplication().delegate as! AppD
 let newItemC = NSEntityDescription.insertNewObjectForEntityForName("C1", inManagedObjectContext: managedObjectContextC!) as! C1
 
 
-class Cultivo1: ResponsiveTextFieldViewController {
+class Cultivo1: ResponsiveTextFieldViewController, UITextFieldDelegate {
     
     var pageSize = CGSizeMake(850,1100)
     
@@ -43,7 +43,14 @@ class Cultivo1: ResponsiveTextFieldViewController {
     @IBOutlet var alturaArboles: UITextField!
     
    
-    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == anchoCalleTextField{
+            distanciaArboles.becomeFirstResponder()
+        }else{
+            distanciaArboles.resignFirstResponder()
+        }
+        return true;
+    }
     
     
     
@@ -134,7 +141,7 @@ class Cultivo1: ResponsiveTextFieldViewController {
         
         
         let nuevo : updateBoquillas = updateBoquillas()
-        nuevo.updateBoquillas()
+        //nuevo.updateBoquillas()
         
         if (newItem.densidadFoliar == 0){
             newItem.densidadFoliar = 1.15

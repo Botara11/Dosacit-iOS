@@ -39,7 +39,7 @@ class Result31: UIViewController, UITableViewDataSource, UITableViewDelegate{
 
         let hola = updateBoquillas()
         
-        hola.updateBoquillas()
+        //hola.updateBoquillas()
         
         /*
         let fetchRequest = NSFetchRequest(entityName: "FiltroBoquillas")
