@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		210584171ACB17B40058BCB3 /* C1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210584161ACB17B40058BCB3 /* C1.swift */; };
-		211C019B1B6820CF000D847B /* Viewcontroller_iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 211C01991B6820CF000D847B /* Viewcontroller_iphone.xib */; };
 		2155E7431AB49119009D57E7 /* SelecBoquillas2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2155E7421AB49119009D57E7 /* SelecBoquillas2.swift */; };
 		2155E7451AB74EC4009D57E7 /* B1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2155E7441AB74EC4009D57E7 /* B1.swift */; };
 		2158A6FB1C3B076500E62889 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2158A6FA1C3B076500E62889 /* CloudKit.framework */; };
@@ -17,19 +16,17 @@
 		2161FC8D1BEF728600CBF50E /* Z1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161FC8C1BEF728600CBF50E /* Z1.swift */; };
 		2161FC8F1BEF9D6200CBF50E /* ResponsiveTextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161FC8E1BEF9D6100CBF50E /* ResponsiveTextFieldViewController.swift */; };
 		2188CEE51ACB15030068CD52 /* CaldoAp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2188CEE41ACB15030068CD52 /* CaldoAp.swift */; };
-		218A544A1ABC86FF009DD0EA /* SelecBoquillas3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218A54491ABC86FF009DD0EA /* SelecBoquillas3.swift */; };
 		21AB1AFC1AB0994D009275CD /* SelecBoquillas1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AB1AFB1AB0994D009275CD /* SelecBoquillas1.swift */; };
+		21D3AD7F1CF1F4A700684018 /* Portada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3AD7E1CF1F4A700684018 /* Portada.swift */; };
 		21D52E071BC01D1100307BD5 /* StoryboardIpad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D52E051BC01D1100307BD5 /* StoryboardIpad.storyboard */; };
-		21D52E0A1BC0278D00307BD5 /* StoryboardIphone5.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D52E081BC0278D00307BD5 /* StoryboardIphone5.storyboard */; };
 		21F4C8831AFE60E100401952 /* ParteC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4C8821AFE60E100401952 /* ParteC.swift */; };
 		21F4C8871AFE773000401952 /* CaldoAp1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4C8861AFE773000401952 /* CaldoAp1.swift */; };
+		B23F0E751CF7268E002D5594 /* ResultadosD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23F0E741CF7268E002D5594 /* ResultadosD.swift */; };
 		B2557DB21AAF821E008A24D9 /* DosAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DB11AAF821E008A24D9 /* DosAppTests.swift */; };
 		B2557DDC1AAF83FD008A24D9 /* A1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DDB1AAF83FD008A24D9 /* A1.swift */; };
 		B2557DED1AAF841C008A24D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DDD1AAF841B008A24D9 /* AppDelegate.swift */; };
 		B2557DEE1AAF841C008A24D9 /* Cultivo1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DDE1AAF841B008A24D9 /* Cultivo1.swift */; };
-		B2557DEF1AAF841C008A24D9 /* Cultivo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DDF1AAF841B008A24D9 /* Cultivo2.swift */; };
 		B2557DF01AAF841C008A24D9 /* Cultivo3.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DE01AAF841C008A24D9 /* Cultivo3.swift */; };
-		B2557DF11AAF841C008A24D9 /* Cultivo4.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DE11AAF841C008A24D9 /* Cultivo4.swift */; };
 		B2557DF21AAF841C008A24D9 /* DosApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2557DE31AAF841C008A24D9 /* DosApp.xcdatamodeld */; };
 		B2557DF31AAF841C008A24D9 /* EntityBoquillas.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DE51AAF841C008A24D9 /* EntityBoquillas.swift */; };
 		B2557DF41AAF841C008A24D9 /* Indice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DE61AAF841C008A24D9 /* Indice.swift */; };
@@ -41,6 +38,7 @@
 		B2557E001AAF8430008A24D9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2557DFC1AAF8430008A24D9 /* LaunchScreen.xib */; };
 		B2557E011AAF8430008A24D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2557DFE1AAF8430008A24D9 /* Main.storyboard */; };
 		B2557E031AAF844E008A24D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2557E021AAF844E008A24D9 /* Images.xcassets */; };
+		B26BEB951CF1A7D100DE7180 /* Result2CR.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26BEB941CF1A7D100DE7180 /* Result2CR.swift */; };
 		B28EAEA41ADB16AB0009D7FD /* FiltroBoquillas.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EAEA31ADB16AB0009D7FD /* FiltroBoquillas.swift */; };
 		B28EAEA61ADC5C920009D7FD /* Result22.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EAEA51ADC5C920009D7FD /* Result22.swift */; };
 		B28EAEA81ADDAC500009D7FD /* Result23.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28EAEA71ADDAC500009D7FD /* Result23.swift */; };
@@ -63,7 +61,6 @@
 
 /* Begin PBXFileReference section */
 		210584161ACB17B40058BCB3 /* C1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = C1.swift; sourceTree = "<group>"; };
-		211C019A1B6820CF000D847B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Viewcontroller_iphone.xib; sourceTree = "<group>"; };
 		2155E7421AB49119009D57E7 /* SelecBoquillas2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecBoquillas2.swift; sourceTree = "<group>"; };
 		2155E7441AB74EC4009D57E7 /* B1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = B1.swift; sourceTree = "<group>"; };
 		2158A6F91C3B072E00E62889 /* DosApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DosApp.entitlements; sourceTree = "<group>"; };
@@ -73,12 +70,12 @@
 		2161FC8C1BEF728600CBF50E /* Z1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Z1.swift; sourceTree = "<group>"; };
 		2161FC8E1BEF9D6100CBF50E /* ResponsiveTextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponsiveTextFieldViewController.swift; sourceTree = "<group>"; };
 		2188CEE41ACB15030068CD52 /* CaldoAp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaldoAp.swift; sourceTree = "<group>"; };
-		218A54491ABC86FF009DD0EA /* SelecBoquillas3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecBoquillas3.swift; sourceTree = "<group>"; };
 		21AB1AFB1AB0994D009275CD /* SelecBoquillas1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecBoquillas1.swift; sourceTree = "<group>"; };
+		21D3AD7E1CF1F4A700684018 /* Portada.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Portada.swift; sourceTree = "<group>"; };
 		21D52E061BC01D1100307BD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = StoryboardIpad.storyboard; sourceTree = "<group>"; };
-		21D52E091BC0278D00307BD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = StoryboardIphone5.storyboard; sourceTree = "<group>"; };
 		21F4C8821AFE60E100401952 /* ParteC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParteC.swift; sourceTree = "<group>"; };
 		21F4C8861AFE773000401952 /* CaldoAp1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaldoAp1.swift; sourceTree = "<group>"; };
+		B23F0E741CF7268E002D5594 /* ResultadosD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultadosD.swift; sourceTree = "<group>"; };
 		B2557D931AAF821E008A24D9 /* DosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2557DAB1AAF821E008A24D9 /* DosAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DosAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2557DB01AAF821E008A24D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,9 +83,7 @@
 		B2557DDB1AAF83FD008A24D9 /* A1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = A1.swift; sourceTree = "<group>"; };
 		B2557DDD1AAF841B008A24D9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2557DDE1AAF841B008A24D9 /* Cultivo1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cultivo1.swift; sourceTree = "<group>"; };
-		B2557DDF1AAF841B008A24D9 /* Cultivo2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cultivo2.swift; sourceTree = "<group>"; };
 		B2557DE01AAF841C008A24D9 /* Cultivo3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cultivo3.swift; sourceTree = "<group>"; };
-		B2557DE11AAF841C008A24D9 /* Cultivo4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cultivo4.swift; sourceTree = "<group>"; };
 		B2557DE21AAF841C008A24D9 /* DosApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DosApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		B2557DE41AAF841C008A24D9 /* DosApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DosApp.xcdatamodel; sourceTree = "<group>"; };
 		B2557DE51AAF841C008A24D9 /* EntityBoquillas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityBoquillas.swift; sourceTree = "<group>"; };
@@ -102,6 +97,7 @@
 		B2557DFD1AAF8430008A24D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		B2557DFF1AAF8430008A24D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		B2557E021AAF844E008A24D9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B26BEB941CF1A7D100DE7180 /* Result2CR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result2CR.swift; sourceTree = "<group>"; };
 		B28EAEA31ADB16AB0009D7FD /* FiltroBoquillas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FiltroBoquillas.swift; path = DosApp/FiltroBoquillas.swift; sourceTree = "<group>"; };
 		B28EAEA51ADC5C920009D7FD /* Result22.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result22.swift; sourceTree = "<group>"; };
 		B28EAEA71ADDAC500009D7FD /* Result23.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result23.swift; sourceTree = "<group>"; };
@@ -156,33 +152,33 @@
 			children = (
 				2158A6F91C3B072E00E62889 /* DosApp.entitlements */,
 				B2557DDD1AAF841B008A24D9 /* AppDelegate.swift */,
+				21D3AD7E1CF1F4A700684018 /* Portada.swift */,
+				B2557DE61AAF841C008A24D9 /* Indice.swift */,
+				2161FC8A1BEF714B00CBF50E /* ID.swift */,
+				B2557DDE1AAF841B008A24D9 /* Cultivo1.swift */,
+				B2557DE01AAF841C008A24D9 /* Cultivo3.swift */,
+				B2557DEA1AAF841C008A24D9 /* Result1.swift */,
+				B2557DEB1AAF841C008A24D9 /* Result12.swift */,
+				21AB1AFB1AB0994D009275CD /* SelecBoquillas1.swift */,
+				2155E7421AB49119009D57E7 /* SelecBoquillas2.swift */,
+				B26BEB941CF1A7D100DE7180 /* Result2CR.swift */,
 				B2DDEC8F1AC9C34F0008008F /* Result21.swift */,
 				B28EAEA51ADC5C920009D7FD /* Result22.swift */,
 				B28EAEA71ADDAC500009D7FD /* Result23.swift */,
+				21F4C8861AFE773000401952 /* CaldoAp1.swift */,
 				B2D6C6681AFD29A500FAD48C /* Result31.swift */,
 				B2DE74E31AFD4071009CF589 /* Result32.swift */,
 				B2DE74E51AFD4082009CF589 /* Result33.swift */,
-				21AB1AFB1AB0994D009275CD /* SelecBoquillas1.swift */,
-				2155E7421AB49119009D57E7 /* SelecBoquillas2.swift */,
-				218A54491ABC86FF009DD0EA /* SelecBoquillas3.swift */,
-				2161FC8E1BEF9D6100CBF50E /* ResponsiveTextFieldViewController.swift */,
-				B2557DDE1AAF841B008A24D9 /* Cultivo1.swift */,
+				B23F0E741CF7268E002D5594 /* ResultadosD.swift */,
 				B2DE74E71AFF7414009CF589 /* updateBoquillas.swift */,
-				B2557DDF1AAF841B008A24D9 /* Cultivo2.swift */,
-				B2557DE01AAF841C008A24D9 /* Cultivo3.swift */,
-				B2557DE11AAF841C008A24D9 /* Cultivo4.swift */,
 				B2557DE21AAF841C008A24D9 /* DosApp-Bridging-Header.h */,
 				B2557DE31AAF841C008A24D9 /* DosApp.xcdatamodeld */,
-				2161FC8A1BEF714B00CBF50E /* ID.swift */,
 				B2557DE51AAF841C008A24D9 /* EntityBoquillas.swift */,
-				B2557DE61AAF841C008A24D9 /* Indice.swift */,
 				B2557DE71AAF841C008A24D9 /* Info.plist */,
 				B2557DE81AAF841C008A24D9 /* ParteA.swift */,
 				B2557DE91AAF841C008A24D9 /* ParteB.swift */,
 				21F4C8821AFE60E100401952 /* ParteC.swift */,
-				21F4C8861AFE773000401952 /* CaldoAp1.swift */,
-				B2557DEA1AAF841C008A24D9 /* Result1.swift */,
-				B2557DEB1AAF841C008A24D9 /* Result12.swift */,
+				2161FC8E1BEF9D6100CBF50E /* ResponsiveTextFieldViewController.swift */,
 				B2557DEC1AAF841C008A24D9 /* ViewController.swift */,
 				B2557E021AAF844E008A24D9 /* Images.xcassets */,
 				2161FC881BEE8D8C00CBF50E /* printer.png */,
@@ -217,10 +213,8 @@
 			isa = PBXGroup;
 			children = (
 				B2557DFC1AAF8430008A24D9 /* LaunchScreen.xib */,
-				211C01991B6820CF000D847B /* Viewcontroller_iphone.xib */,
 				21D52E051BC01D1100307BD5 /* StoryboardIpad.storyboard */,
 				B2557DFE1AAF8430008A24D9 /* Main.storyboard */,
-				21D52E081BC0278D00307BD5 /* StoryboardIphone5.storyboard */,
 			);
 			path = Base.lproj;
 			sourceTree = "<group>";
@@ -313,13 +307,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21D52E0A1BC0278D00307BD5 /* StoryboardIphone5.storyboard in Resources */,
 				B2557E011AAF8430008A24D9 /* Main.storyboard in Resources */,
 				21D52E071BC01D1100307BD5 /* StoryboardIpad.storyboard in Resources */,
 				B2557E031AAF844E008A24D9 /* Images.xcassets in Resources */,
 				2161FC891BEE8D8C00CBF50E /* printer.png in Resources */,
 				B2557E001AAF8430008A24D9 /* LaunchScreen.xib in Resources */,
-				211C019B1B6820CF000D847B /* Viewcontroller_iphone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,26 +330,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2557DF81AAF841C008A24D9 /* Result1.swift in Sources */,
+				21D3AD7F1CF1F4A700684018 /* Portada.swift in Sources */,
 				B2557DEE1AAF841C008A24D9 /* Cultivo1.swift in Sources */,
 				B2557DF31AAF841C008A24D9 /* EntityBoquillas.swift in Sources */,
 				21AB1AFC1AB0994D009275CD /* SelecBoquillas1.swift in Sources */,
 				B2557DF71AAF841C008A24D9 /* ParteB.swift in Sources */,
 				B28EAEA81ADDAC500009D7FD /* Result23.swift in Sources */,
-				218A544A1ABC86FF009DD0EA /* SelecBoquillas3.swift in Sources */,
 				B2DE74E41AFD4071009CF589 /* Result32.swift in Sources */,
 				B2DDEC901AC9C34F0008008F /* Result21.swift in Sources */,
 				B2557DFA1AAF841C008A24D9 /* ViewController.swift in Sources */,
 				2188CEE51ACB15030068CD52 /* CaldoAp.swift in Sources */,
 				B2557DF41AAF841C008A24D9 /* Indice.swift in Sources */,
+				B23F0E751CF7268E002D5594 /* ResultadosD.swift in Sources */,
 				B2557DF91AAF841C008A24D9 /* Result12.swift in Sources */,
 				210584171ACB17B40058BCB3 /* C1.swift in Sources */,
 				2161FC8D1BEF728600CBF50E /* Z1.swift in Sources */,
-				B2557DEF1AAF841C008A24D9 /* Cultivo2.swift in Sources */,
 				B2557DF21AAF841C008A24D9 /* DosApp.xcdatamodeld in Sources */,
 				2155E7431AB49119009D57E7 /* SelecBoquillas2.swift in Sources */,
 				B2D6C6691AFD29A500FAD48C /* Result31.swift in Sources */,
 				B2557DED1AAF841C008A24D9 /* AppDelegate.swift in Sources */,
 				2161FC8B1BEF714B00CBF50E /* ID.swift in Sources */,
+				B26BEB951CF1A7D100DE7180 /* Result2CR.swift in Sources */,
 				B2DE74E81AFF7414009CF589 /* updateBoquillas.swift in Sources */,
 				B28EAEA41ADB16AB0009D7FD /* FiltroBoquillas.swift in Sources */,
 				21F4C8871AFE773000401952 /* CaldoAp1.swift in Sources */,
@@ -365,7 +358,6 @@
 				2155E7451AB74EC4009D57E7 /* B1.swift in Sources */,
 				B2557DF61AAF841C008A24D9 /* ParteA.swift in Sources */,
 				21F4C8831AFE60E100401952 /* ParteC.swift in Sources */,
-				B2557DF11AAF841C008A24D9 /* Cultivo4.swift in Sources */,
 				B2557DF01AAF841C008A24D9 /* Cultivo3.swift in Sources */,
 				2161FC8F1BEF9D6200CBF50E /* ResponsiveTextFieldViewController.swift in Sources */,
 				B2DE74E61AFD4082009CF589 /* Result33.swift in Sources */,
@@ -392,28 +384,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		211C01991B6820CF000D847B /* Viewcontroller_iphone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				211C019A1B6820CF000D847B /* Base */,
-			);
-			name = Viewcontroller_iphone.xib;
-			sourceTree = "<group>";
-		};
 		21D52E051BC01D1100307BD5 /* StoryboardIpad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				21D52E061BC01D1100307BD5 /* Base */,
 			);
 			name = StoryboardIpad.storyboard;
-			sourceTree = "<group>";
-		};
-		21D52E081BC0278D00307BD5 /* StoryboardIphone5.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				21D52E091BC0278D00307BD5 /* Base */,
-			);
-			name = StoryboardIphone5.storyboard;
 			sourceTree = "<group>";
 		};
 		B2557DFC1AAF8430008A24D9 /* LaunchScreen.xib */ = {

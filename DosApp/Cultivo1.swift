@@ -10,22 +10,14 @@ import CoreData
 
 
 
-let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-
-
-let newItem = NSEntityDescription.insertNewObjectForEntityForName("A1", inManagedObjectContext: managedObjectContext!) as! A1
-
-let managedObjectContextC = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-
-let newItemC = NSEntityDescription.insertNewObjectForEntityForName("C1", inManagedObjectContext: managedObjectContextC!) as! C1
-
-
-class Cultivo1: ResponsiveTextFieldViewController, UITextFieldDelegate {
-    
+class Cultivo1: UIViewController, UITextFieldDelegate {
+     var anotherString = String()
     var pageSize = CGSizeMake(850,1100)
     
     let caract = ParteA()
     
+    
+//    var newItemA! : A1
     
     var url : NSURL? = nil
     var request : NSMutableURLRequest? = nil
@@ -34,48 +26,118 @@ class Cultivo1: ResponsiveTextFieldViewController, UITextFieldDelegate {
     var data: NSMutableData? = nil
     var done: (NSError?, NSData, NSString?) -> () = { (_, _, _) -> () in }
     
-    
+    @IBOutlet var densidadFoliar: UISegmentedControl!
     @IBOutlet var boton: UIBarButtonItem!
     @IBOutlet var anchoCalleTextField: UITextField!
-    @IBOutlet var distanciaArboles: UITextField!
-    @IBOutlet var longitudArboles: UITextField!
-    @IBOutlet var anchuraArboles: UITextField!
-    @IBOutlet var alturaArboles: UITextField!
     
-   
+    @IBOutlet weak var alturaArboles: UITextField!
+    @IBOutlet weak var anchuraArboles: UITextField!
+    @IBOutlet weak var longitudArboles: UITextField!
+    @IBOutlet weak var distanciaArboles: UITextField!
+    @IBOutlet weak var formaArbol: UISegmentedControl!
+    @IBOutlet weak var fechaUltimaPoda: UISegmentedControl!
+    @IBOutlet weak var gradoPoda: UISegmentedControl!
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        if textField == anchoCalleTextField{
-            distanciaArboles.becomeFirstResponder()
-        }else{
-            distanciaArboles.resignFirstResponder()
+        let nextTag: NSInteger = textField.tag + 1;
+        // Try to find next responder
+        if let nextResponder: UIResponder! = textField.superview!.viewWithTag(nextTag){
+            nextResponder.becomeFirstResponder()
         }
-        return true;
+        else {
+            // Not found, so remove keyboard.
+            textField.resignFirstResponder()
+        }
+        return false // We do not want UITextField to insert line-breaks.
+    }
+
+    
+    @IBAction func formaArbol(sender: AnyObject) {
+        
+        if (formaArbol.selectedSegmentIndex == 0){
+            caract.formaArbol = 1;
+            newItemA!.formaArbol = 1
+            newItemA!.esfericoSeto = 0
+            caract.esfericoSeto = 0;
+            print("densidad foliar : esferica")
+        }
+        else {
+            caract.formaArbol = 1;
+            caract.esfericoSeto = 1;
+            newItemA!.formaArbol = 1
+            newItemA!.esfericoSeto = 1
+            print("densidad foliar : ")
+        }
+
+    }
+    
+    @IBAction func fechaUltimaPodaSelector(sender: AnyObject) {
+        
+        
+        
+        if (fechaUltimaPoda.selectedSegmentIndex == 0){
+            newItemA!.fechaUltimaPoda = 0.95
+            caract.fechaUltimaPoda = 0.95;
+        }
+        else if (fechaUltimaPoda.selectedSegmentIndex == 1){
+            newItemA!.fechaUltimaPoda = 1
+            caract.fechaUltimaPoda = 1;
+            
+        }
+        else if(fechaUltimaPoda.selectedSegmentIndex == 2){
+            newItemA!.fechaUltimaPoda = 1.075
+            caract.fechaUltimaPoda = 1.075;
+            
+        }
+        else {
+            newItemA!.fechaUltimaPoda = 1.15
+            caract.fechaUltimaPoda = 1.15;
+            
+        }
+    }
+    
+    @IBAction func gradoPodaSelector(sender: AnyObject) {
+        
+        
+        
+        if (gradoPoda.selectedSegmentIndex == 0){
+            caract.gradoPoda = 0.95;
+            newItemA!.gradoPoda = 0.95
+        }
+        if (gradoPoda.selectedSegmentIndex == 1){
+            caract.gradoPoda = 1;
+            newItemA!.gradoPoda = 1
+        }
+        else {
+            caract.gradoPoda = 1.05;
+            newItemA!.gradoPoda = 1.05
+        }
     }
     
     
+
     
-    @IBOutlet var densidadFoliar: UISegmentedControl!
     
     @IBAction func elegirDensidadFoliar(sender: AnyObject) {
         
         
         if (densidadFoliar.selectedSegmentIndex == 0) {
             
-            newItem.densidadFoliar = 1.15
+            newItemA!.densidadFoliar = 1.15
             caract.densidadFoliar = 1.15;
-            newItem.densidadFoliarIndice = 0
+            newItemA!.densidadFoliarIndice = 0
             print("densidad foliar : alta")
         }
         else if (densidadFoliar.selectedSegmentIndex == 1){
-            newItem.densidadFoliar = 1
+            newItemA!.densidadFoliar = 1
             caract.densidadFoliar = 1;
-            newItem.densidadFoliarIndice = 1
+            newItemA!.densidadFoliarIndice = 1
             print("densidad foliar : media")
         }
         else if (densidadFoliar.selectedSegmentIndex == 2){
-            newItem.densidadFoliar = 0.9
+            newItemA!.densidadFoliar = 0.9
             caract.densidadFoliar = 0.9;
-            newItem.densidadFoliarIndice = 2
+            newItemA!.densidadFoliarIndice = 2
             print("densidad foliar : baja")
         }
     }
@@ -92,46 +154,46 @@ class Cultivo1: ResponsiveTextFieldViewController, UITextFieldDelegate {
         }()
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        
-        
-        newItem.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
-        newItemB.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
-        newItemB.anchoCalleViejo = (anchoCalleTextField.text! as NSString).doubleValue
-        newItemC.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
-        newItem.distanciaArboles = (distanciaArboles.text! as NSString).doubleValue
-        newItem.longitudArboles = (longitudArboles.text! as NSString).doubleValue
-        newItem.anchuraArboles = (anchuraArboles.text! as NSString).doubleValue
-        newItem.alturaArboles = (alturaArboles.text! as NSString).doubleValue
-        
-        
-        /*caract.anchoCalle = (anchoCalleTextField.text as NSString).doubleValue
-        caract.longitudArboles = (longitudArboles.text as NSString).doubleValue
-        caract.distanciaArboles = (distanciaArboles.text as NSString).doubleValue
-        caract.anchuraArboles = (anchuraArboles.text as NSString).doubleValue
-        caract.alturaArboles = (alturaArboles.text as NSString).doubleValue
-        caract.alturaMeseta = (alturaMeseta.text as NSString).doubleValue */
-        //        var densidad = densidadFoliar.
-        
-        if (segue.identifier == "Cultivo"){
-        
-        let comprobacion = caract.anchoCalle * caract.longitudArboles * caract.distanciaArboles * caract.anchuraArboles * caract.alturaArboles 
-        
-        if anchoCalleTextField.text == "" || distanciaArboles.text == "" || longitudArboles.text == "" || anchuraArboles.text == "" || alturaArboles.text == "" {
-            alert("ERROR",mensaje: "No puede haber campos vacíos y deben ser valores numéricos")
-        }
-        }
+        if (segue.identifier == "Cultivo3"){
             
-        else{
+            newItemA!.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
+            newItemA!.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
+            newItemB!.anchoCalleViejo = (anchoCalleTextField.text! as NSString).doubleValue
+            newItemA!.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
+            newItemA!.distanciaArboles = (distanciaArboles.text! as NSString).doubleValue
+            newItemA!.longitudArboles = (longitudArboles.text! as NSString).doubleValue
+            newItemA!.anchuraArboles = (anchuraArboles.text! as NSString).doubleValue
+            newItemA!.alturaArboles = (alturaArboles.text! as NSString).doubleValue
+            
+            
+            
+            let comprobacion = caract.anchoCalle * caract.longitudArboles * caract.distanciaArboles * caract.anchuraArboles * caract.alturaArboles
+            
+            if anchoCalleTextField.text == "" || distanciaArboles.text == "" || longitudArboles.text == "" || anchuraArboles.text == "" || alturaArboles.text == "" {
+                alert("ERROR",mensaje: "No puede haber campos vacíos y deben ser valores numéricos")
+            }
+            
+            /*
+            else{
             
             if (segue.identifier == "Cultivo"){
-                let fetchRequest = NSFetchRequest(entityName: "A1")
-                if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [A1] {
-                    print(fetchResults[0].densidadFoliar)
-                }
-                let DestViewController = segue.destinationViewController as! Cultivo2
-                DestViewController.caract2 = caract
+            let fetchRequest = NSFetchRequest(entityName: "A1")
+            if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [A1] {
+            print(fetchResults[0].densidadFoliar)
+            }
+            let DestViewController = segue.destinationViewController as! Cultivo3
+            DestViewController.caract2 = caract
+            }
+            
+            } */
+            
+            do {
+                try managedObjectContext!.save()
+            } catch {
+                fatalError("Failure to save context: \(error)")
             }
         }
+        
     }
     
     
@@ -139,17 +201,70 @@ class Cultivo1: ResponsiveTextFieldViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let fetchRequest2 = NSFetchRequest(entityName: "A1")
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest2)) as? [A1] {
+            print("Cultivo1 Objetos: \(fetchResults.count)")
+            newItemA! = fetchResults[0]
+        }
+        anchoCalleTextField.tag = 0
+        distanciaArboles.tag = 1
+        longitudArboles.tag = 2
+        anchuraArboles.tag = 3
+        alturaArboles.tag = 4
         
-        let nuevo : updateBoquillas = updateBoquillas()
-        nuevo.updateBoquillas()
         
-        if (newItem.densidadFoliar == 0){
-            newItem.densidadFoliar = 1.15
+        //let nuevo : updateBoquillas = updateBoquillas()
+        //nuevo.updateBoquillas()
+        
+        
+        if (newItemA!.esfericoSeto == 0){
+            newItemA!.formaArbol = 1
+            newItemA!.esfericoSeto = 0
+            formaArbol.selectedSegmentIndex = 0
+        }else if (newItemA!.esfericoSeto == 1){
+            newItemA!.formaArbol = 1
+            newItemA!.esfericoSeto = 1
+            formaArbol.selectedSegmentIndex = 1
+        }
+        
+        if (newItemA!.fechaUltimaPoda == 0){
+            newItemA!.fechaUltimaPoda = 0.95
+            fechaUltimaPoda.selectedSegmentIndex = 0
+        }else if (newItemA!.fechaUltimaPoda == 0.95){
+            newItemA!.fechaUltimaPoda = 0.95
+            fechaUltimaPoda.selectedSegmentIndex = 0
+        }else if (newItemA!.fechaUltimaPoda == 1){
+            newItemA!.fechaUltimaPoda = 1
+            fechaUltimaPoda.selectedSegmentIndex = 1
+        }else if (newItemA!.fechaUltimaPoda == 1.075){
+            fechaUltimaPoda.selectedSegmentIndex = 2
+        }else if (newItemA!.fechaUltimaPoda == 1.15){
+            fechaUltimaPoda.selectedSegmentIndex = 3
+        }
+        
+        if(newItemA!.gradoPoda == 0){
+            newItemA!.gradoPoda = 0.95
+            gradoPoda.selectedSegmentIndex = 0
+        }else if (newItemA!.gradoPoda == 0.95){
+            newItemA!.gradoPoda = 0.95
+            gradoPoda.selectedSegmentIndex = 0
+        }else if (newItemA!.gradoPoda == 1){
+            newItemA!.gradoPoda = 1
+            gradoPoda.selectedSegmentIndex = 1
+        }else if (newItemA!.gradoPoda == 1.05){
+            newItemA!.gradoPoda = 1.05
+            gradoPoda.selectedSegmentIndex = 2
+        }
+        
+
+        
+        if (newItemA!.densidadFoliar == 0){
+            newItemA!.densidadFoliar = 1.15
             densidadFoliar.selectedSegmentIndex = 0
             print("densidad foliar : alta")
             
         }else {
-            densidadFoliar.selectedSegmentIndex = newItem.densidadFoliarIndice
+            densidadFoliar.selectedSegmentIndex = newItemA!.densidadFoliarIndice
         }
         
         anchoCalleTextField.keyboardType = UIKeyboardType.NumbersAndPunctuation

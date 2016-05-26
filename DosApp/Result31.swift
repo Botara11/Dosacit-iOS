@@ -36,27 +36,12 @@ class Result31: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let hola = updateBoquillas()
         
-        //hola.updateBoquillas()
-        
-        /*
-        let fetchRequest = NSFetchRequest(entityName: "FiltroBoquillas")
-        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [FiltroBoquillas]{
-            for fe in fetchResults{
-                if !estaEnCadena(fe.marca) {
-                    cadena.append(fe.marca)
-                    self.tableData.append(fe.marca)
-                }
-            }
+        let fetchRequest = NSFetchRequest(entityName: "C1")
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [C1] {
+            print("Result31 Objetos: \(fetchResults.count)")
+            
         }
-        */
-        // Setup table data
-        //for index in 0...100 {
-        //   self.tableData.append("Item \(index)")
-        //}
-        
         tableView?.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
         tableView.reloadData()
         //tableView.removeFromSuperview()
@@ -67,9 +52,16 @@ class Result31: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if(segue.identifier=="Result32"){
-            let vc = segue.destinationViewController as! Result32
-            //vc.presion = presionPressed
-            newItemC.presion = presionPressed
+            
+            let fetchRequest = NSFetchRequest(entityName: "C1")
+            if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [C1] {
+                fetchResults[0].presion = presionPressed
+                do {
+                    try managedObjectContext!.save()
+                } catch {
+                    fatalError("Failure to save context: \(error)")
+                }
+            }
         }
     }
     

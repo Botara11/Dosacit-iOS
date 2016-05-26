@@ -9,15 +9,12 @@
 import UIKit
 import CoreData
 
-let managedObjectContextB = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-
-let newItemB = NSEntityDescription.insertNewObjectForEntityForName("B1", inManagedObjectContext: managedObjectContext!) as! B1
 
 
-class SelecBoquillas1: ResponsiveTextFieldViewController {
+class SelecBoquillas1: UIViewController, UITextFieldDelegate {
     
     var caract2 = ParteB()
-    
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet var SwitchVC: UISwitch!
     @IBOutlet var SwitchV: UISwitch!
     @IBOutlet var SwitchAC: UISwitch!
@@ -36,15 +33,41 @@ class SelecBoquillas1: ResponsiveTextFieldViewController {
     @IBOutlet var NumTotalBoquillasText: UITextField!
     
     
+    func textFieldDidBeginEditing(textField: UITextField) {
+        if(textField.tag == 2){
+            scrollView.setContentOffset(CGPointMake(0,250), animated: true)
+        }
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        if(textField.tag == 2){
+            scrollView.setContentOffset(CGPointMake(0,0), animated: true)
+        }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        let nextTag: NSInteger = textField.tag + 1;
+        // Try to find next responder
+        if let nextResponder: UIResponder! = textField.superview!.viewWithTag(nextTag){
+            nextResponder.becomeFirstResponder()
+        }
+        else {
+            // Not found, so remove keyboard.
+            textField.resignFirstResponder()
+        }
+        return false // We do not want UITextField to insert line-breaks.
+    }
+
+    
     func textFieldDidChange(VolumenSiguienteText: UITextField) {
         
         if SwitchV.on{
             
         
-        newItemB.volumenApp = (VolumenSiguienteText.text! as NSString).doubleValue
+        newItemB!.volumenApp = (VolumenSiguienteText.text! as NSString).doubleValue
         caract2.calcularCaudalesB()
         let fetchRequest = NSFetchRequest(entityName: "B1")
-        if let fetchResults = (try? managedObjectContextB!.executeFetchRequest(fetchRequest)) as? [B1] {
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [B1] {
             
             CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
             
@@ -62,10 +85,10 @@ class SelecBoquillas1: ResponsiveTextFieldViewController {
     func textFieldDidChangeAncho(AnchoSiguienteText: UITextField) {
         
         if SwitchAS.on{
-        newItemB.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
+        newItemB!.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
         caract2.calcularCaudalesB()
         let fetchRequest = NSFetchRequest(entityName: "B1")
-        if let fetchResults = (try? managedObjectContextB!.executeFetchRequest(fetchRequest)) as? [B1] {
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [B1] {
             
             CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
             
@@ -79,22 +102,22 @@ class SelecBoquillas1: ResponsiveTextFieldViewController {
     @IBAction func SwitchPressedVC(sender: AnyObject) {
         if SwitchVC.on{
             SwitchV.setOn(false, animated: true)
-            newItemB.flagVolumen = 0
+            newItemB!.flagVolumen = 0
             
             if (VolumenSiguienteText.text == ""){
                 
             }else{
-                newItemB.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
+                newItemB!.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
                 caract2.calcularCaudalesB()
                 let fetchRequest = NSFetchRequest(entityName: "B1")
-                if let fetchResults = (try? managedObjectContextB!.executeFetchRequest(fetchRequest)) as? [B1] {
+                if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [B1] {
                     
                     CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
                     
                     CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
                 }
-                newItem.volumenAplicacionLHA = (VolumenCalculadoText.text as NSString).integerValue
-                newItemB.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
+                //newItemA!.volumenAplicacionLHA = (VolumenCalculadoText.text as NSString).integerValue
+                newItemB!.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
             }
             //VolumenSiguienteText.editable = false
             
@@ -103,22 +126,22 @@ class SelecBoquillas1: ResponsiveTextFieldViewController {
         }
         else {
             SwitchV.setOn(true, animated: true)
-            newItemB.flagVolumen = 1
+            newItemB!.flagVolumen = 1
             
             if (VolumenSiguienteText.text == ""){
                 
             }else{
-                newItemB.volumenApp = (VolumenSiguienteText.text! as NSString).doubleValue
+                newItemB!.volumenApp = (VolumenSiguienteText.text! as NSString).doubleValue
                 caract2.calcularCaudalesB()
                 let fetchRequest = NSFetchRequest(entityName: "B1")
-                if let fetchResults = (try? managedObjectContextB!.executeFetchRequest(fetchRequest)) as? [B1] {
+                if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [B1] {
                     
                     CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
                     
                     CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
                 }
-                newItem.volumenAplicacionLHA = (VolumenSiguienteText.text! as NSString).integerValue
-                newItemB.volumenApp = (VolumenSiguienteText.text! as NSString).doubleValue
+                //newItemA!.volumenAplicacionLHA = (VolumenSiguienteText.text! as NSString).integerValue
+                newItemB!.volumenApp = (VolumenSiguienteText.text! as NSString).doubleValue
                 
             }
             
@@ -131,7 +154,7 @@ class SelecBoquillas1: ResponsiveTextFieldViewController {
     @IBAction func SwitchPressedV(sender: AnyObject) {
         if SwitchV.on{
             SwitchVC.setOn(false, animated: true)
-            newItemB.flagVolumen = 1
+            newItemB!.flagVolumen = 1
             
             
             //VolumenSiguienteText.editable = true
@@ -139,17 +162,17 @@ class SelecBoquillas1: ResponsiveTextFieldViewController {
             if (VolumenSiguienteText.text == ""){
                 
             }else{
-            newItemB.volumenApp = (VolumenSiguienteText.text! as NSString).doubleValue
+            newItemB!.volumenApp = (VolumenSiguienteText.text! as NSString).doubleValue
             caract2.calcularCaudalesB()
             let fetchRequest = NSFetchRequest(entityName: "B1")
-            if let fetchResults = (try? managedObjectContextB!.executeFetchRequest(fetchRequest)) as? [B1] {
+            if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [B1] {
                 
                 CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
                 
                 CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
                 }
-                newItem.volumenAplicacionLHA = (VolumenSiguienteText.text! as NSString).integerValue
-                newItemB.volumenApp = (VolumenSiguienteText.text! as NSString).doubleValue
+                //newItemA!.volumenAplicacionLHA = (VolumenSiguienteText.text! as NSString).integerValue
+                newItemB!.volumenApp = (VolumenSiguienteText.text! as NSString).doubleValue
                 
             }
 
@@ -159,24 +182,24 @@ class SelecBoquillas1: ResponsiveTextFieldViewController {
         }
         else {
             SwitchVC.setOn(true, animated: true)
-            newItemB.flagVolumen = 0
+            newItemB!.flagVolumen = 0
             
             
             
             if (VolumenSiguienteText.text == ""){
                 
             }else{
-                newItemB.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
+                newItemB!.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
                 caract2.calcularCaudalesB()
                 let fetchRequest = NSFetchRequest(entityName: "B1")
-                if let fetchResults = (try? managedObjectContextB!.executeFetchRequest(fetchRequest)) as? [B1] {
+                if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [B1] {
                     
                     CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
                     
                     CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
                 }
-                newItem.volumenAplicacionLHA = (VolumenCalculadoText.text as NSString).integerValue
-                newItemB.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
+                //newItemA!.volumenAplicacionLHA = (VolumenCalculadoText.text as NSString).integerValue
+                newItemB!.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
             }
             //VolumenSiguienteText.editable = false
             
@@ -189,14 +212,14 @@ class SelecBoquillas1: ResponsiveTextFieldViewController {
         
         if SwitchAC.on{
             SwitchAS.setOn(false, animated: true)
-            newItemB.flagAncho = 0
+            newItemB!.flagAncho = 0
             if(AnchoCalculadoText.text == ""){
                 
             }else{
-                newItemB.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
+                newItemB!.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
                 caract2.calcularCaudalesB()
                 let fetchRequest = NSFetchRequest(entityName: "B1")
-                if let fetchResults = (try? managedObjectContextB!.executeFetchRequest(fetchRequest)) as? [B1] {
+                if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [B1] {
                     
                     CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
                     
@@ -205,22 +228,22 @@ class SelecBoquillas1: ResponsiveTextFieldViewController {
             }
             
             
-            newItem.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
-            newItemB.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
+            //newItemA!.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
+            newItemB!.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
         
 
             
         }
         else {
             SwitchAS.setOn(true, animated: true)
-            newItemB.flagAncho = 1
+            newItemB!.flagAncho = 1
             if(AnchoSiguienteText.text == ""){
                 
             }else{
-                newItemB.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
+                newItemB!.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
                 caract2.calcularCaudalesB()
                 let fetchRequest = NSFetchRequest(entityName: "B1")
-                if let fetchResults = (try? managedObjectContextB!.executeFetchRequest(fetchRequest)) as? [B1] {
+                if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [B1] {
                     
                     CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
                     
@@ -229,8 +252,8 @@ class SelecBoquillas1: ResponsiveTextFieldViewController {
             }
             
             
-            newItem.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
-            newItemB.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
+            //newItemA!.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
+            newItemB!.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
         }
         
     }
@@ -239,15 +262,15 @@ class SelecBoquillas1: ResponsiveTextFieldViewController {
         
         if SwitchAS.on{
             SwitchAC.setOn(false, animated: true)
-            newItemB.flagAncho = 1
+            newItemB!.flagAncho = 1
            // AnchoSiguienteText.editable = true
             if(AnchoSiguienteText.text == ""){
                 
             }else{
-            newItemB.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
+            newItemB!.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
             caract2.calcularCaudalesB()
             let fetchRequest = NSFetchRequest(entityName: "B1")
-            if let fetchResults = (try? managedObjectContextB!.executeFetchRequest(fetchRequest)) as? [B1] {
+            if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [B1] {
                 
                 CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
                 
@@ -256,21 +279,21 @@ class SelecBoquillas1: ResponsiveTextFieldViewController {
             }
 
             
-            newItem.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
-            newItemB.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
+            //newItemA!.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
+            newItemB!.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
             
         }
         else {
             SwitchAC.setOn(true, animated: true)
-            newItemB.flagAncho = 0
+            newItemB!.flagAncho = 0
            // AnchoSiguienteText.editable = false
             if(AnchoCalculadoText.text == ""){
                 
             }else{
-                newItemB.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
+                newItemB!.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
                 caract2.calcularCaudalesB()
                 let fetchRequest = NSFetchRequest(entityName: "B1")
-                if let fetchResults = (try? managedObjectContextB!.executeFetchRequest(fetchRequest)) as? [B1] {
+                if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [B1] {
                     
                     CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
                     
@@ -279,8 +302,8 @@ class SelecBoquillas1: ResponsiveTextFieldViewController {
             }
             
             
-            newItem.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
-            newItemB.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
+            //newItemA!.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
+            newItemB!.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
             
 
         }
@@ -293,11 +316,16 @@ class SelecBoquillas1: ResponsiveTextFieldViewController {
         
         let CurrentValue:float_t = SliderVA.value;
         VelocidadAvanceText.text = String(format:"%.1f",CurrentValue)
-        newItemB.velocidadAvance = (round(SliderVA.value * 10)/10 as NSNumber).doubleValue
-        newItemC.velocidadAvance = (round(SliderVA.value * 10)/10 as NSNumber).doubleValue
+        newItemB!.velocidadAvance = (round(SliderVA.value * 10)/10 as NSNumber).doubleValue
+        //newItemC.velocidadAvance = (round(SliderVA.value * 10)/10 as NSNumber).doubleValue
+        do {
+            try managedObjectContext!.save()
+        } catch {
+            fatalError("Failure to save context: \(error)")
+        }
         caract2.calcularCaudalesB()
         let fetchRequest = NSFetchRequest(entityName: "B1")
-        if let fetchResults = (try? managedObjectContextB!.executeFetchRequest(fetchRequest)) as? [B1] {
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [B1] {
             
             CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
             CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
@@ -308,36 +336,35 @@ class SelecBoquillas1: ResponsiveTextFieldViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
-        newItemB.numeroTotalBoquillas = (NumTotalBoquillasText.text! as NSString).integerValue
+        newItemB!.numeroTotalBoquillas = (NumTotalBoquillasText.text! as NSString).integerValue
         
-        newItemB.velocidadAvance = (VelocidadAvanceText.text as NSString).doubleValue
-        newItemC.velocidadAvance = (VelocidadAvanceText.text as NSString).doubleValue
+        newItemB!.velocidadAvance = (VelocidadAvanceText.text as NSString).doubleValue
         
         if SwitchVC.on{
-            newItem.volumenAplicacionLHA = (VolumenCalculadoText.text as NSString).integerValue
-            newItemB.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
+            //newItemA!.volumenAplicacionLHA = (VolumenCalculadoText.text as NSString).integerValue
+            newItemB!.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
         }
         else {
-            newItem.volumenAplicacionLHA = (VolumenSiguienteText.text! as NSString).integerValue
-            newItemB.volumenApp = (VolumenSiguienteText.text! as NSString).doubleValue
-            newItemB.volumenAppNuevo = (VolumenSiguienteText.text! as NSString).doubleValue
+            //newItemA!.volumenAplicacionLHA = (VolumenSiguienteText.text! as NSString).integerValue
+            newItemB!.volumenApp = (VolumenSiguienteText.text! as NSString).doubleValue
+            newItemB!.volumenAppNuevo = (VolumenSiguienteText.text! as NSString).doubleValue
             
         }
         
         if SwitchAC.on{
-            newItem.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
-            newItemB.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
+            //newItemA!.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
+            newItemB!.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
             
         }else {
-            newItem.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
-            newItemB.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
-            newItemB.anchoCalleNuevo = (AnchoSiguienteText.text! as NSString).doubleValue
+            //newItemA!.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
+            newItemB!.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
+            newItemB!.anchoCalleNuevo = (AnchoSiguienteText.text! as NSString).doubleValue
         }
         
         if(segue.identifier == "B1"){
             
             let fetchRequest = NSFetchRequest(entityName: "B1")
-            if let fetchResults = (try? managedObjectContextB!.executeFetchRequest(fetchRequest)) as? [B1] {
+            if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [B1] {
             if NumTotalBoquillasText.text == ""{
                 alert("ERROR",mensaje: "No puede haber campos vacíos y deben ser valores numéricos")
             
@@ -350,30 +377,28 @@ class SelecBoquillas1: ResponsiveTextFieldViewController {
                 
             }else{
         
-                newItemB.numeroTotalBoquillas = (NumTotalBoquillasText.text! as NSString).integerValue
+                newItemB!.numeroTotalBoquillas = (NumTotalBoquillasText.text! as NSString).integerValue
                 
-                newItemB.velocidadAvance = (VelocidadAvanceText.text as NSString).doubleValue
-                newItemC.velocidadAvance = (VelocidadAvanceText.text as NSString).doubleValue
-        
-        
+                newItemB!.velocidadAvance = (VelocidadAvanceText.text as NSString).doubleValue
+                      
                 if SwitchVC.on{
-                    newItem.volumenAplicacionLHA = (VolumenCalculadoText.text as NSString).integerValue
-                    newItemB.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
+                    //newItemA!.volumenAplicacionLHA = (VolumenCalculadoText.text as NSString).integerValue
+                    newItemB!.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
                 }
                 else {
-                    newItem.volumenAplicacionLHA = (VolumenSiguienteText.text! as NSString).integerValue
-                    newItemB.volumenApp = (VolumenSiguienteText.text! as NSString).doubleValue
+                    //newItemA!.volumenAplicacionLHA = (VolumenSiguienteText.text! as NSString).integerValue
+                    newItemB!.volumenApp = (VolumenSiguienteText.text! as NSString).doubleValue
             
                 }
         
                 if SwitchAC.on{
-                    newItem.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
-                    newItemB.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
+                    //newItemA!.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
+                    newItemB!.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
             
                 }
                 else {
-                    newItem.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
-                    newItemB.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
+                    //newItemA!.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
+                    newItemB!.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
                 }
             }
                 
@@ -385,6 +410,11 @@ class SelecBoquillas1: ResponsiveTextFieldViewController {
         }
         }
         
+        do {
+            try managedObjectContext!.save()
+        } catch {
+            fatalError("Failure to save context: \(error)")
+        }
     }
     
     
@@ -394,24 +424,26 @@ class SelecBoquillas1: ResponsiveTextFieldViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        newItem.parteAoB = 0;
-        newItemB.parteAoB = 0;
-        //newItemB.velocidadAvance = 3;
-        AnchoSiguienteText.addTarget(self, action: "textFieldDidChangeAncho:", forControlEvents: UIControlEvents.EditingChanged)
-        VolumenSiguienteText.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
-        //VolumenSiguienteText!.delegate = self
-        //VolumenSiguienteText.editable = false
-        VolumenSiguienteText.keyboardType = UIKeyboardType.NumbersAndPunctuation
-        NumTotalBoquillasText.keyboardType = UIKeyboardType.NumbersAndPunctuation
-        VolumenSiguienteText.keyboardType = UIKeyboardType.NumbersAndPunctuation
-        //AnchoSiguienteText.editable = false
-        AnchoSiguienteText.keyboardType = UIKeyboardType.NumbersAndPunctuation
-        //SliderVA.value = (VelocidadAvanceText.text as NSString).floatValue
+    
+        VolumenSiguienteText.tag = 0
+        AnchoSiguienteText.tag = 1
+        NumTotalBoquillasText.tag = 2
+        
         caract2.calcularCaudalesB()
         
         
         let fetchRequest = NSFetchRequest(entityName: "B1")
-        if let fetchResults = (try? managedObjectContextB!.executeFetchRequest(fetchRequest)) as? [B1] {
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [B1] {
+            print("SelecBoquill1 Objetos: \(fetchResults.count)")
+            newItemB = fetchResults[0]
+            
+            AnchoSiguienteText.addTarget(self, action: "textFieldDidChangeAncho:", forControlEvents: UIControlEvents.EditingChanged)
+            VolumenSiguienteText.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+            VolumenSiguienteText.keyboardType = UIKeyboardType.NumbersAndPunctuation
+            NumTotalBoquillasText.keyboardType = UIKeyboardType.NumbersAndPunctuation
+            VolumenSiguienteText.keyboardType = UIKeyboardType.NumbersAndPunctuation
+            AnchoSiguienteText.keyboardType = UIKeyboardType.NumbersAndPunctuation
+            
             
             if(fetchResults[0].anchoCalleNuevo != 0){
                 AnchoSiguienteText.text = "\(fetchResults[0].anchoCalleNuevo)"
@@ -434,7 +466,7 @@ class SelecBoquillas1: ResponsiveTextFieldViewController {
             if(fetchResults[0].numeroTotalBoquillas != 0){
                 NumTotalBoquillasText.text = "\(fetchResults[0].numeroTotalBoquillas)"
             }else{
-                newItemB.velocidadAvance=3;
+                newItemB!.velocidadAvance=3;
             }
             
             if(fetchResults[0].velocidadAvance != 0){
@@ -448,15 +480,19 @@ class SelecBoquillas1: ResponsiveTextFieldViewController {
                 CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
                 CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
             }
-            VolumenCalculadoText.text = "\(fetchResults[0].volumenAppViejo)"
-            AnchoCalculadoText.text = "\(fetchResults[0].anchoCalleViejo)"
+            
+           
             
             
         }
         
-       
+        //Coger Volumen y ancho calculado de A
+        let fetchRequestA = NSFetchRequest(entityName: "A1")
+        if let fetchResultsA = (try? managedObjectContext!.executeFetchRequest(fetchRequestA)) as? [A1] {
+            VolumenCalculadoText.text = "\(fetchResultsA[0].volumenAplicacionLHA)"
+            AnchoCalculadoText.text = "\(fetchResultsA[0].anchoCalle)"
+        }
         
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {

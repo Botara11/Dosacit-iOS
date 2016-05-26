@@ -55,6 +55,7 @@ class Result12 : UIViewController {
         let path:NSArray = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         let documentDirectory: AnyObject = path.objectAtIndex(0)
         let pdfPathWithFileName = documentDirectory.stringByAppendingPathComponent(fileName as String)
+         print(pdfPathWithFileName)
         
         generatePDFs(pdfPathWithFileName)
         

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14A389" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Automatic">
     <entity name="A1" representedClassName="DosApp.A1" syncable="YES">
         <attribute name="alturaArboles" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="alturaMeseta" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -77,6 +77,9 @@
         <attribute name="caudalZonaMedia" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="marca" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="marcaBoquilla" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="nombreZonaAlta" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nombreZonaBaja" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nombreZonaMedia" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="numBoqAbiertasAltaHidraulica" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="numBoqAbiertasBajaHidraulica" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="numBoqAbiertasMediaHidraulica" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -119,7 +122,7 @@
     <elements>
         <element name="A1" positionX="-63" positionY="-18" width="128" height="450"/>
         <element name="B1" positionX="-63" positionY="135" width="128" height="615"/>
-        <element name="C1" positionX="-63" positionY="135" width="128" height="270"/>
+        <element name="C1" positionX="-63" positionY="135" width="128" height="315"/>
         <element name="EntityBoquillas" positionX="-63" positionY="0" width="128" height="285"/>
         <element name="FiltroBoquillas" positionX="-63" positionY="135" width="128" height="105"/>
         <element name="Z1" positionX="-63" positionY="135" width="128" height="105"/>

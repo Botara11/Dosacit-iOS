@@ -14,7 +14,7 @@ import UIKit
 
 
 class ParteA {
-
+    
     var IndiceDosificacion =  0.085;
     var litroHanegada = 1;
     var VolumenArbol = 1.0
@@ -57,90 +57,100 @@ class ParteA {
         
         var  NumeroArbolesPorHect = 1.0, VolumenSetoAsigArbol = 1.0, TRV = 1.0;
         var litroHectarea = 0;
-
+        
         
         let fetchRequest = NSFetchRequest(entityName: "A1")
         if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [A1] {
-        
-        if (fetchResults[0].esfericoSeto == 0){
-        VolumenArbol = pi * fetchResults[0].longitudArboles * fetchResults[0].anchuraArboles * fetchResults[0].alturaArboles / 6;
-        } else if (fetchResults[0].esfericoSeto == 1){
-            VolumenArbol = fetchResults[0].longitudArboles * fetchResults[0].anchuraArboles * fetchResults[0].alturaArboles;
-        }
-        
-        NumeroArbolesPorHect = 10000 / (fetchResults[0].anchoCalle * fetchResults[0].distanciaArboles);
-        VolumenSetoAsigArbol = fetchResults[0].volumenArbol * fetchResults[0].distanciaArboles
-        / fetchResults[0].longitudArboles;
-        TRV = NumeroArbolesPorHect * VolumenSetoAsigArbol;
-        
-        print("\(TRV) TRV")
             
-        var FactorA1 = 0.0, FactorA2 = 0.0, FactorA3 = 0.0, FactorA4 = 0.0, FactorEficiencia = 0.0;
-        
-        FactorA1 = fetchResults[0].densidadFoliar * fetchResults[0].formaArbol * fetchResults[0].fechaUltimaPoda * fetchResults[0].gradoPoda;
-        print("\(FactorA1) FactorA1")
+            if (fetchResults[0].esfericoSeto == 0){
+                
+                VolumenArbol = pi * fetchResults[0].longitudArboles * fetchResults[0].anchuraArboles * fetchResults[0].alturaArboles / 6;
+            } else if (fetchResults[0].esfericoSeto == 1){
+                VolumenArbol = fetchResults[0].longitudArboles * fetchResults[0].anchuraArboles * fetchResults[0].alturaArboles;
+            }
+            
+            
+            
+            print("ParteA hay \(fetchResults.count) objetos")
+            for (var i=0; i<fetchResults.count;i++){
+                print("Obj:\(i)=\(fetchResults[i].anchuraArboles)")
+            }
+            
+            
+            
+            NumeroArbolesPorHect = 10000 / (fetchResults[0].anchoCalle * fetchResults[0].distanciaArboles);
+            VolumenSetoAsigArbol = fetchResults[0].volumenArbol * fetchResults[0].distanciaArboles
+                / fetchResults[0].longitudArboles;
+            TRV = NumeroArbolesPorHect * VolumenSetoAsigArbol;
+            
+            print("\(TRV) TRV")
+            
+            var FactorA1 = 0.0, FactorA2 = 0.0, FactorA3 = 0.0, FactorA4 = 0.0, FactorEficiencia = 0.0;
+            
+            FactorA1 = fetchResults[0].densidadFoliar * fetchResults[0].formaArbol * fetchResults[0].fechaUltimaPoda * fetchResults[0].gradoPoda;
+            print("\(FactorA1) FactorA1")
             print("\(fetchResults[0].densidadFoliar) fetchResults[0].densidad")
             print("\(fetchResults[0].formaArbol) fetchResults[0].forma")
             print("\(fetchResults[0].fechaUltimaPoda) fetchResults[0].fecha")
             print("\(fetchResults[0].gradoPoda) fetchResults[0].grado")
-        
-        FactorA2 = fetchResults[0].productosAplicar * fetchResults[0].formaActuacion * fetchResults[0].mojantes
-        * fetchResults[0].zonaCritica;
+            
+            FactorA2 = fetchResults[0].productosAplicar * fetchResults[0].formaActuacion * fetchResults[0].mojantes
+                * fetchResults[0].zonaCritica;
             print("\(fetchResults[0].productosAplicar) fetchResults[0].productosAplicar")
             print("\(fetchResults[0].formaActuacion) fetchResults[0].ACTUACION")
             print("\(fetchResults[0].mojantes) fetchResults[0].mojantes")
             print("\(fetchResults[0].zonaCritica) fetchResults[0].zonacritica")
-        FactorA3 = fetchResults[0].temperatura * fetchResults[0].humedadRelativa * fetchResults[0].velocidadViento;
+            FactorA3 = fetchResults[0].temperatura * fetchResults[0].humedadRelativa * fetchResults[0].velocidadViento;
             print("\(FactorA3) FactorA3")
-        FactorA4 = fetchResults[0].tipoPulverizador;
+            FactorA4 = fetchResults[0].tipoPulverizador;
             print("\(FactorA4) FactorA4")
-        
-        FactorEficiencia = FactorA1 * FactorA2 * FactorA3 * FactorA4;
-        
-        // VOLUMEN DE APLICACION
-        let temp = TRV * IndiceDosificacion * FactorEficiencia;
-        print("\(temp) temp")
-        
-        if (temp % 100 > 50){
-            let a = (( (temp) / 100));
-            let IntTemp:Int = Int(a)
-            litroHectarea = (IntTemp + 1) * 100;
-        }
-        else{
-            let b = ( (temp / 100));
-            let IntTempB:Int = Int(b);
-            litroHectarea = IntTempB * 100;
+            
+            FactorEficiencia = FactorA1 * FactorA2 * FactorA3 * FactorA4;
+            
+            // VOLUMEN DE APLICACION
+            let temp = TRV * IndiceDosificacion * FactorEficiencia;
+            print("\(temp) temp")
+            
+            if (temp % 100 > 50){
+                let a = (( (temp) / 100));
+                let IntTemp:Int = Int(a)
+                litroHectarea = (IntTemp + 1) * 100;
+            }
+            else{
+                let b = ( (temp / 100));
+                let IntTempB:Int = Int(b);
+                litroHectarea = IntTempB * 100;
+                
+            }
             
         }
-        
-        }
-        newItem.volumenAplicacionLHA = litroHectarea
-        newItemB.volumenApp = Double(litroHectarea)
-        newItemB.volumenAppViejo = Double(litroHectarea)
-        newItem.volumenAplicacionLHG = litroHectarea/12
+        newItemA!.volumenAplicacionLHA = litroHectarea
+        newItemB!.volumenApp = Double(litroHectarea)
+        newItemB!.volumenAppViejo = Double(litroHectarea)
+        newItemA!.volumenAplicacionLHG = litroHectarea/12
         
         //litroHanegada = litroHectarea/12;
-
+        
         return litroHectarea;
-
+        
     }
     
     func calcularVolumenArbol () ->Double{
         
         let fetchRequest = NSFetchRequest(entityName: "A1")
         if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [A1] {
-        
-        if (fetchResults[0].esfericoSeto == 0){
-            VolumenArbol = pi * fetchResults[0].longitudArboles * fetchResults[0].anchuraArboles * fetchResults[0].alturaArboles / 6;
-        } else if (fetchResults[0].esfericoSeto == 1){
-            VolumenArbol = fetchResults[0].longitudArboles * fetchResults[0].anchuraArboles * fetchResults[0].alturaArboles;
-        }
+            
+            if (fetchResults[0].esfericoSeto == 0){
+                VolumenArbol = pi * fetchResults[0].longitudArboles * fetchResults[0].anchuraArboles * fetchResults[0].alturaArboles / 6;
+            } else if (fetchResults[0].esfericoSeto == 1){
+                VolumenArbol = fetchResults[0].longitudArboles * fetchResults[0].anchuraArboles * fetchResults[0].alturaArboles;
+            }
             
         }
         
         
         
-            newItem.volumenArbol = VolumenArbol
+        newItemA!.volumenArbol = VolumenArbol
         
         
         return VolumenArbol;

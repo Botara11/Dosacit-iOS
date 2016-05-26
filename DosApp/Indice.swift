@@ -11,11 +11,6 @@ import UIKit
 import CoreData
 
 
-let managedObjectContextZ3 = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-
-
-let newItemZ3 = NSEntityDescription.insertNewObjectForEntityForName("Z1", inManagedObjectContext: managedObjectContext!) as! Z1
-
 class Indice: UIViewController {
     
     
@@ -23,10 +18,7 @@ class Indice: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        newItemZ.fecha = " Sin fecha"
-        newItemZ.idParcela = "Sin identificar"
-        newItemZ.idTratamiento = "Sin identificar"
-        newItemZ.referencia = "Sin referencia"
+                
         //scroller.userInteractionEnabled = true
         //scroller.contentSize = CGSizeMake(375, 588)
         // Do any additional setup after loading the view, typically from a nib.

@@ -29,5 +29,8 @@ class C1: NSManagedObject {
     @NSManaged var caudalZonaBaja: Double
     @NSManaged var marca: String
     @NSManaged var presion: String
-
+    @NSManaged var nombreZonaAlta: String
+    @NSManaged var nombreZonaMedia: String
+    @NSManaged var nombreZonaBaja: String
+    
 }

@@ -41,14 +41,16 @@ class Result23: UIViewController, UITableViewDataSource, UITableViewDelegate{
         }
         return false
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        let fetchRequest = NSFetchRequest(entityName: "B1")
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [B1] {
+        print("Result23 Objetos: \(fetchResults.count)")
+            
+        marca = fetchResults[0].seleccionadaMarca
+        presion = fetchResults[0].seleccionadaPresion
         
-        marca = newItemB.seleccionadaMarca
-        presion = newItemB.seleccionadaPresion
-        
-        var se = Section()
         sections.append(Section())
         sections.append(Section())
         sections.append(Section())
@@ -79,7 +81,7 @@ class Result23: UIViewController, UITableViewDataSource, UITableViewDelegate{
         tableView?.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
         tableView.reloadData()
         //tableView.removeFromSuperview()
-        
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -114,7 +116,7 @@ class Result23: UIViewController, UITableViewDataSource, UITableViewDelegate{
        // let vc : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("res2")
        // self.showViewController(vc as! UIViewController, sender: vc)
         
-        
+        /*
         let alert = UIAlertController(title: "Item selected", message: "You selected item \(indexPath.row)", preferredStyle: UIAlertControllerStyle.Alert)
         
         alert.addAction(UIAlertAction(title: "OK",
@@ -124,7 +126,7 @@ class Result23: UIViewController, UITableViewDataSource, UITableViewDelegate{
         }))
         
         self.presentViewController(alert, animated: true, completion: nil)
-        
+        */
     }
     
     

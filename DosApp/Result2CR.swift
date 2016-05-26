@@ -11,31 +11,33 @@ import UIKit
 import CoreData
 
 
-class Result1 : UIViewController {
+class Result2CR : UIViewController {
     
-    var caract2 = ParteA()
+    var caract2 = ParteB()
     var productosAplicarIndice = 0;
     var formaActuacionIndice = 0;
     var zonaCriticaIndice = 0;
     
-    @IBOutlet var densidadFoliarText: UILabel!
-    @IBOutlet var anchoCalleText: UILabel!
-    @IBOutlet var distanciaArbolesText: UILabel!
-    @IBOutlet var volumenArbolText: UILabel!
-    @IBOutlet var formaArbolText: UILabel!
-    @IBOutlet var fechaUltimaPodaText: UILabel!
-    @IBOutlet var gradoPodaText: UILabel!
-    @IBOutlet var productosAplicarText: UILabel!
-    @IBOutlet var formaActuacionText: UILabel!
-    @IBOutlet var mojantesText: UILabel!
-    @IBOutlet var zonaCriticaText: UILabel!
-    
-    
-    @IBOutlet weak var volumenAplicacionHAText: UILabel!
-    @IBOutlet weak var tipoPulverizadorText: UILabel!
-    @IBOutlet weak var velocidadVientoText: UILabel!
-    @IBOutlet weak var humedadRelativaText: UILabel!
-    @IBOutlet weak var temperaturaText: UILabel!
+    @IBOutlet weak var volumenAplicacion: UILabel!
+    @IBOutlet weak var velocidadAvance: UILabel!
+    @IBOutlet weak var anchoTrabajo: UILabel!
+    @IBOutlet weak var caudalLiqTotal: UILabel!
+    @IBOutlet weak var numBoquillasTotal: UILabel!
+    @IBOutlet weak var numBoquillasPorSector: UILabel!
+    @IBOutlet weak var boquillasCerrarZonaAlta: UILabel!
+    @IBOutlet weak var boquillasCerrarZonaBaja: UILabel!
+    @IBOutlet weak var NumBoquillasZonaAlta: UILabel!
+    @IBOutlet weak var NumBoquillasZonaMedia: UILabel!
+    @IBOutlet weak var NumBoquillasZonaBaja: UILabel!
+    @IBOutlet weak var vegetacionZonaAlta: UILabel!
+    @IBOutlet weak var vegetacionZonaMedia: UILabel!
+    @IBOutlet weak var vegetacionZonaBaja: UILabel!
+    @IBOutlet weak var caudalLiquidoSector: UILabel!
+    @IBOutlet weak var variacionCaudalAdmisible: UILabel!
+    @IBOutlet weak var caudalLiquidoZonaAlta: UILabel!
+    @IBOutlet weak var caudalLiquidoZonaMedia: UILabel!
+    @IBOutlet weak var caudalLiquidoZonaBaja: UILabel!
+  
     
     
     var LabelText = String ()
@@ -50,7 +52,7 @@ class Result1 : UIViewController {
     var idTratamientoText: String!
     var referenciaText: String!
     
-
+    
     
     
     @IBAction func PDFgeneratoraction(sender: AnyObject) {
@@ -62,13 +64,14 @@ class Result1 : UIViewController {
         print(pdfPathWithFileName)
         
         generatePDFs(pdfPathWithFileName)
+        
         var docController:UIDocumentInteractionController!
         let url = NSURL(fileURLWithPath: pdfPathWithFileName)
         docController = UIDocumentInteractionController(URL: url)
         docController.presentOptionsMenuFromRect(sender.frame, inView:self.view, animated:true)
         
     }
-
+    
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
@@ -77,233 +80,75 @@ class Result1 : UIViewController {
         if (segue.identifier == "SegueResult12"){
             print(caract2.anchoCalle)
             let DestViewController : Result12 = segue.destinationViewController as! Result12
-            
             DestViewController.caract2 =  caract2
         }
         */
+
     }
-
     
     
     
-     override func viewDidLoad() {
+    
+    override func viewDidLoad() {
         
-        let fetchRequest = NSFetchRequest(entityName: "A1")
-        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [A1] {
+        let fetchRequest = NSFetchRequest(entityName: "B1")
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [B1] {
+            print("ResultadosCR Objetos: \(fetchResults.count)")
+            newItemB = fetchResults[0]
             
-            if (fetchResults[0].anchuraArboles == 0){
-                densidadFoliarText.backgroundColor = UIColor.grayColor();
-                anchoCalleText.backgroundColor = UIColor.grayColor();
-                distanciaArbolesText.backgroundColor = UIColor.grayColor();
-                volumenArbolText.backgroundColor = UIColor.grayColor();
-                formaArbolText.backgroundColor = UIColor.grayColor();
-                fechaUltimaPodaText.backgroundColor = UIColor.grayColor();
-                gradoPodaText.backgroundColor = UIColor.grayColor();
-                productosAplicarText.backgroundColor = UIColor.grayColor();
-                formaActuacionText.backgroundColor = UIColor.grayColor();
-                mojantesText.backgroundColor = UIColor.grayColor();
-                zonaCriticaText.backgroundColor = UIColor.grayColor();
-                //RES12
-                temperaturaText.backgroundColor = UIColor.grayColor();
-                humedadRelativaText.backgroundColor = UIColor.grayColor();
-                velocidadVientoText.backgroundColor = UIColor.grayColor();
-                tipoPulverizadorText.backgroundColor = UIColor.grayColor();
-                volumenAplicacionHAText.backgroundColor = UIColor.grayColor();
+            if (fetchResults[0].anchoCalle == 0){
+                
+                volumenAplicacion.backgroundColor = UIColor.grayColor();
+                velocidadAvance.backgroundColor = UIColor.grayColor();
+                anchoTrabajo.backgroundColor = UIColor.grayColor();
+                caudalLiqTotal.backgroundColor = UIColor.grayColor();
+                numBoquillasTotal.backgroundColor = UIColor.grayColor();
+                numBoquillasPorSector.backgroundColor = UIColor.grayColor();
+                boquillasCerrarZonaAlta.backgroundColor = UIColor.grayColor();
+                boquillasCerrarZonaBaja.backgroundColor = UIColor.grayColor();
+                NumBoquillasZonaAlta.backgroundColor = UIColor.grayColor();
+                NumBoquillasZonaMedia.backgroundColor = UIColor.grayColor();
+                NumBoquillasZonaBaja.backgroundColor = UIColor.grayColor();
+                vegetacionZonaAlta.backgroundColor = UIColor.grayColor();
+                vegetacionZonaMedia.backgroundColor = UIColor.grayColor();
+                vegetacionZonaBaja.backgroundColor = UIColor.grayColor();
+                caudalLiquidoSector.backgroundColor = UIColor.grayColor();
+                variacionCaudalAdmisible.backgroundColor = UIColor.grayColor();
+                caudalLiquidoZonaAlta.backgroundColor = UIColor.grayColor();
+                caudalLiquidoZonaMedia.backgroundColor = UIColor.grayColor();
+                caudalLiquidoZonaBaja.backgroundColor = UIColor.grayColor();
                 
             }
             else{
-            //Densidad foliar
-            if (fetchResults[0].densidadFoliar == 1.15){
-                densidadFoliarText.text = "Alta"
-            }
-            else if (fetchResults[0].densidadFoliar == 1){
-                densidadFoliarText.text = "Media"
-            }
-            else {
-                densidadFoliarText.text = "Baja"
-            }
+                let fetchRequest3 = NSFetchRequest(entityName: "B1")
+                if let resultados = (try? managedObjectContext!.executeFetchRequest(fetchRequest3)) as? [B1] {
+                    
 
-
-            
-            //Ancho Calle
-            let b:String = String(format:"%.02f", fetchResults[0].anchoCalle)
-            
-            anchoCalleText.text = ("\(b) m")
-            //anchoCalleText.text = "\(caract2.anchoCalle) m"
-            
-            //Distancia Árboles
-            let c:String = String(format:"%.02f", fetchResults[0].distanciaArboles)
-            distanciaArbolesText.text = ("\(c) m")
-            
-            
-            //distanciaArbolesText.text = "\(caract2.distanciaArboles) m"
-            
-            //Volumen Árbol
-            caract2.calcularVolumenArbol()
-            let d:String = String(format:"%.02f", fetchResults[0].volumenArbol)
-            volumenArbolText.text = ("\(d) m3")
-            
-            
-            //Forma Árbol
-            print(fetchResults[0].formaArbol)
-            if (fetchResults[0].esfericoSeto == 0) {
-                formaArbolText.text = "Esférica"
-            }
-            else{
-                formaArbolText.text = "Seto"
-            }
-            
-            //Fecha Última Poda
-            if (fetchResults[0].fechaUltimaPoda == 0.95){
-                fechaUltimaPodaText.text = "< 3 meses"
-            }
-            else if (fetchResults[0].fechaUltimaPoda == 1){
-                fechaUltimaPodaText.text = "3 - 12 meses"
-            }
-            else if (fetchResults[0].fechaUltimaPoda == 1.075){
-                fechaUltimaPodaText.text = "1 - 2 años"
-            }
-            else{
-                fechaUltimaPodaText.text = "> 2 años"
-            }
-            
-            // Grado Poda
-            if (fetchResults[0].gradoPoda == 0.95){
-                gradoPodaText.text = "Alto"
-            }
-            else if (fetchResults[0].gradoPoda == 1){
-                gradoPodaText.text = "Medio"
-            }
-            else {
-                gradoPodaText.text = "Bajo"
-            }
-            
-            //Productos a aplicar
-            if (fetchResults[0].productosAplicarIndice == 0){
-                productosAplicarText.text = "Acaricidas"
-            }
-            else if (fetchResults[0].productosAplicarIndice == 1){
-                productosAplicarText.text = "Fungicidas"
-            }
-            else if (fetchResults[0].productosAplicarIndice == 2){
-                productosAplicarText.text = "Insecticidas"
-            }
-            else if (fetchResults[0].productosAplicarIndice == 3){
-                productosAplicarText.text = "Abonos foliares"
-            }
-            else {
-                productosAplicarText.text = "Fitorreguladores"
-            }
-            
-            
-            //Forma Actuación
-            if (fetchResults[0].formaActuacionIndice == 0){
-                formaActuacionText.text = "Por asfixia (aceite)"
-            }
-            else if (fetchResults[0].formaActuacionIndice == 1){
-                formaActuacionText.text = "Por contacto"
-            }
-            else if (fetchResults[0].formaActuacionIndice == 2){
-                formaActuacionText.text = "Por ingestión"
-            }
-            else if (fetchResults[0].formaActuacionIndice == 3){
-                formaActuacionText.text = "Por inhalación"
-            }
-            else if (fetchResults[0].formaActuacionIndice == 4){
-                formaActuacionText.text = "Traslaminar"
-            }
-            else {
-                formaActuacionText.text = "Sistémicos"
-            }
-            
-            
-            //Mojantes
-            if (fetchResults[0].mojantes == 1){
-                mojantesText.text = "Sí"
-            }
-            else {
-                mojantesText.text = "No"
-            }
-            
-            
-            //Zona crítica a tratar
-            
-            if (fetchResults[0].zonaCriticaIndice == 0){
-                zonaCriticaText.text = "Interior"
-            }
-            else if (fetchResults[0].zonaCriticaIndice == 1){
-                zonaCriticaText.text = "Interior y exterior"
-            }
-            if (fetchResults[0].zonaCriticaIndice == 2){
-                zonaCriticaText.text = "Exterior"
-            }
+                volumenAplicacion.text = "\(resultados[0].volumenApp) L/ha"
                 
+                velocidadAvance.text = "\(resultados[0].velocidadAvance) km/h"
                 
-                //Temperatura
-                if (fetchResults[0].temperatura == 1){
-                    temperaturaText.text = "< 15 ºC"
-                    temperaturaTextA = "< 15 ºC"
+                anchoTrabajo.text = "\(resultados[0].anchoCalle) m"
+                
+                caudalLiqTotal.text = "\(resultados[0].caudalLiquidoTotal) L/min"
+                
+                numBoquillasTotal.text = "\(resultados[0].numeroTotalBoquillas) "
+                numBoquillasPorSector.text = "\(resultados[0].numeroBoquillasSector) "
+                boquillasCerrarZonaAlta.text = "\(resultados[0].numeroBoquillasCerradasAlta) "
+                boquillasCerrarZonaBaja.text = "\(resultados[0].numeroBoquillasCerradasBaja) "
+                NumBoquillasZonaAlta.text = "\(resultados[0].numeroBoquillasAbiertasAlta) "
+                NumBoquillasZonaMedia.text = "\(resultados[0].numeroBoquillasAbiertasMedia) "
+                NumBoquillasZonaBaja.text = "\(resultados[0].numeroBoquillasAbiertasBaja) "
+                vegetacionZonaAlta.text = "\(resultados[0].porcentajeVegetacionAlta) %"
+                vegetacionZonaMedia.text = "\(resultados[0].porcentajeVegetacionMedia) %"
+                vegetacionZonaBaja.text = "\(resultados[0].porcentajeVegetacionBaja) %"
+                caudalLiquidoSector.text = "\(resultados[0].caudalLiquidoSector) L/min"
+                variacionCaudalAdmisible.text = "\(resultados[0].variacionCaudalAdmisible) %"
+                caudalLiquidoZonaAlta.text = "\(resultados[0].intervaloCaudalAdmisible0) - \(resultados[0].intervaloCaudalAdmisible1) L/min"
+                caudalLiquidoZonaMedia.text = "\(resultados[0].intervaloCaudalAdmisible2) - \(resultados[0].intervaloCaudalAdmisible3) L/min"
+                caudalLiquidoZonaBaja.text = "\(resultados[0].intervaloCaudalAdmisible4) - \(resultados[0].intervaloCaudalAdmisible5) L/min"
+                
                 }
-                else if (fetchResults[0].temperatura == 1.025){
-                    temperaturaText.text = "De 15 a 25 ºC"
-                    temperaturaTextA = "De 15 a 25 ºC"
-                }
-                else {
-                    temperaturaText.text = "De 25 a 30 ºC"
-                    temperaturaTextA = "De 25 a 30 ºC"
-                }
-                
-                
-                
-                //Humedad Relativa
-                if (fetchResults[0].humedadRelativa == 1.05){
-                    humedadRelativaText.text = "< 35% (muy seco)"
-                    humedadRelativaTextA = "< 35% (muy seco)"
-                }
-                else if (fetchResults[0].humedadRelativa == 1){
-                    humedadRelativaText.text = "35-60% (normal)"
-                    humedadRelativaTextA = "35-60% (normal)"
-                }
-                else {
-                    humedadRelativaText.text = "> 60% (muy húmedo)"
-                    humedadRelativaTextA = "> 60% (muy húmedo)"
-                }
-                
-                
-                
-                //Velocidad del viento
-                if (fetchResults[0].velocidadViento == 1){
-                    velocidadVientoText.text = "< 1m/s (sin viento)"
-                    velocidadVientoTextA = "< 1m/s (sin viento)"
-                }
-                else {
-                    velocidadVientoText.text = "1-3 m/s (brisa suave)"
-                    velocidadVientoTextA = "1-3 m/s (brisa suave)"
-                }
-                
-                print("Pulverizador ******* \(fetchResults[0].tipoPulverizador)")
-                
-                //Tipo de pulverizador
-                if (fetchResults[0].tipoPulverizador == 1){
-                    tipoPulverizadorText.text = "Pulv. hidroneumático"
-                    tipoPulverizadorTextA = "Pulv. hidroneumático"
-                }
-                else {
-                    tipoPulverizadorText.text = "Pistola"
-                    tipoPulverizadorTextA = "Pulv. hidroneumático"
-                }
-                
-
-                
-                //Volumen de aplicación
-                caract2.volumenDeAplicacion()
-                
-                volumenAplicacionHAText.text = "\(fetchResults[0].volumenAplicacionLHA) L/HA"
-                volumenAplicacionHATextA = "\(fetchResults[0].volumenAplicacionLHA) L/HA"
-               
-                
-
-                
             }
             
             let fetchRequestZ = NSFetchRequest(entityName: "Z1")
@@ -324,7 +169,7 @@ class Result1 : UIViewController {
             //  animated: true,
             //completion: nil)
             
-
+            
             
         }
         
@@ -336,7 +181,7 @@ class Result1 : UIViewController {
         UIGraphicsBeginPDFContextToFile(filePath, CGRectZero, nil)
         UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 850, 1200), nil)
         drawBackground()
-        drawText()
+        //drawText()
         print("PDF creado!")
         UIGraphicsEndPDFContext()
         
@@ -356,7 +201,7 @@ class Result1 : UIViewController {
         
     }
     
-    
+    /*
     
     func drawText(){
         
@@ -492,11 +337,8 @@ class Result1 : UIViewController {
         var B5Array = "B.5. Volumen de aplicación"
         textRect = CGRectMake(CGFloat(80), CGFloat(1000), CGFloat(800), CGFloat(90))
         B5Array.drawInRect(textRect, withAttributes: attrsB5)
-        
-        
-        
     }
-
+    */
     
     
     

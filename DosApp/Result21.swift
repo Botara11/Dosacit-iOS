@@ -68,9 +68,17 @@ class Result21: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if(segue.identifier=="Result22"){
-            let vc = segue.destinationViewController as! Result22
-            //vc.marca = marcaPressed
-            newItemB.seleccionadaMarca = marcaPressed
+            let fetchRequest = NSFetchRequest(entityName: "B1")
+            if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [B1] {
+                print("Result21 Objetos: \(fetchResults.count)")
+                newItemB = fetchResults[0]
+                fetchResults[0].seleccionadaMarca = marcaPressed
+                do {
+                    try managedObjectContext!.save()
+                } catch {
+                    fatalError("Failure to save context: \(error)")
+                }
+            }
         }
     }
     

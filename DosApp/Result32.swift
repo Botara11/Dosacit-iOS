@@ -38,33 +38,14 @@ class Result32: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(newItemC.presion)
-
-        print("VALEEEEEEEEEEEEEEE")
-
-        
-        /*
-        var str = ("marca == %@") as String
-        let predicate1 = NSPredicate(format: str , marca)
-        let fetchRequest = NSFetchRequest(entityName: "FiltroBoquillas")
-        fetchRequest.predicate = predicate1
-        if let fetchResults = managedObjectContext!.executeFetchRequest(fetchRequest, error: nil) as? [FiltroBoquillas]{
-            for fe in fetchResults{
-                if !estaEnCadena(fe.presion) {
-                    cadena.append(fe.presion)
-                    var sss = fe.presion.stringByReplacingOccurrencesOfString("p", withString: "")
-                    //self.tableData.append("\(sss) bares")
-                    self.tableDataAux.append((sss as NSString).integerValue)
-                }
-            }
+        let fetchRequest = NSFetchRequest(entityName: "C1")
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [C1] {
+                print("Result32 Objetos: \(fetchResults.count)")
+                presion = fetchResults[0].presion
+                print(fetchResults[0].presion)
+            
         }
         
-        tableDataAux.sort({$0<$1})
-        for uu in tableDataAux{
-            self.tableData.append("\(uu) bares")
-        }
-        */
         
         tableView?.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
         tableView.reloadData()
@@ -97,12 +78,18 @@ class Result32: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if(segue.identifier == "Result33"){
-            let vc = segue.destinationViewController as! Result33
-            //vc.marca = marcaPressed
-            //vc.presion = presion
-            newItemC.marca = marcaPressed
-            print("presion=\(presion) marca=\(marcaPressed)")
-           }
+            let fetchRequest = NSFetchRequest(entityName: "C1")
+            if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [C1] {
+                fetchResults[0].marca = marcaPressed
+                print("presion=\(presion) marca=\(marcaPressed)")
+                
+                do {
+                    try managedObjectContext!.save()
+                } catch {
+                    fatalError("Failure to save context: \(error)")
+                }
+            }
+        }
     }
     
     

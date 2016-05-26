@@ -37,34 +37,35 @@ class Result22: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        marca = newItemB.seleccionadaMarca
-        print(marca)
-        print("VALEEEEEEEEEEEEEEE")
-        
-        let str = ("marca == %@") as String
-        let predicate1 = NSPredicate(format: str , marca)
-        let fetchRequest = NSFetchRequest(entityName: "FiltroBoquillas")
-        fetchRequest.predicate = predicate1
-        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [FiltroBoquillas]{
-            for fe in fetchResults{
-                if !estaEnCadena(fe.presion) {
-                    cadena.append(fe.presion)
-                    let sss = fe.presion.stringByReplacingOccurrencesOfString("p", withString: "")
-                    //self.tableData.append("\(sss) bares")
-                    self.tableDataAux.append((sss as NSString).integerValue)
+        let fetchRequest = NSFetchRequest(entityName: "B1")
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [B1] {
+            print("Result22 Objetos: \(fetchResults.count)")
+            marca = fetchResults[0].seleccionadaMarca
+            print(marca)
+            
+            let str = ("marca == %@") as String
+            let predicate1 = NSPredicate(format: str , marca)
+            let fetchRequest = NSFetchRequest(entityName: "FiltroBoquillas")
+            fetchRequest.predicate = predicate1
+            if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [FiltroBoquillas]{
+                for fe in fetchResults{
+                    if !estaEnCadena(fe.presion) {
+                        cadena.append(fe.presion)
+                        let sss = fe.presion.stringByReplacingOccurrencesOfString("p", withString: "")
+                        //self.tableData.append("\(sss) bares")
+                        self.tableDataAux.append((sss as NSString).integerValue)
+                    }
                 }
             }
+            
+            tableDataAux.sortInPlace({$0<$1})
+            for uu in tableDataAux{
+                self.tableData.append("\(uu) bares")
+            }
+            tableView?.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
+            tableView.reloadData()
+            //tableView.removeFromSuperview()
         }
-        
-        tableDataAux.sortInPlace({$0<$1})
-        for uu in tableDataAux{
-            self.tableData.append("\(uu) bares")
-        }
-        tableView?.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
-        tableView.reloadData()
-        //tableView.removeFromSuperview()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -92,13 +93,24 @@ class Result22: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if(segue.identifier == "Result23"){
+            /*
             let vc = segue.destinationViewController as! Result23
-            //vc.marca = marca
-
-            let auxPres = presionPressed.stringByReplacingOccurrencesOfString(" bares", withString: "")
-            //vc.presion = "p\(auxPres)"
-            newItemB.seleccionadaPresion = "p\(auxPres)"
-            print("La presion pulsada: \(presionPressed)")
+            vc.marca = marca
+            */
+            let fetchRequest = NSFetchRequest(entityName: "B1")
+            if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [B1] {
+                print("Result22 Objetos: \(fetchResults.count)")
+                
+                let auxPres = presionPressed.stringByReplacingOccurrencesOfString(" bares", withString: "")
+                
+                fetchResults[0].seleccionadaPresion = "p\(auxPres)"
+                print("La presion pulsada: \(presionPressed)")
+                do {
+                    try managedObjectContext!.save()
+                } catch {
+                    fatalError("Failure to save context: \(error)")
+                }
+            }
         }
     }
     

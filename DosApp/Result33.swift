@@ -27,6 +27,10 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
     var selSeccion2 = Int()
     
     
+    var modeloZonaAlta = String()
+    var modeloZonaMedia = String()
+    var modeloZonaBaja = String()
+    
     
     @IBOutlet var tableView: UITableView!
     
@@ -50,15 +54,22 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.allowsMultipleSelection = true
-        presion=newItemC.presion
-        marca=newItemC.marca
+        let fetchRequest2 = NSFetchRequest(entityName: "C1")
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest2)) as? [C1] {
+            print("Result33 Objetos: \(fetchResults.count)")
+            newItemC = fetchResults[0]
+            presion=fetchResults[0].presion
+            marca=fetchResults[0].marca
+            
+        }
+        
+        
         /*
         selSeccion0=0
         selSeccion1=0
         selSeccion2=0
         */
         var path = NSIndexPath(forItem: 2, inSection: 0)
-        
         var se = Section()
         sections.append(Section())
         sections.append(Section())
@@ -73,13 +84,14 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
                 //cadena.append(fe.modelo)
                 //self.tableData.append(fe.modelo)
                 self.sections[0].addBoq(fe.modelo)
-                //println("alta \(fe.modelo)")
+                print("alta \(fe.modelo)")
                 
                 self.sections[1].addBoq(fe.modelo)
-                //println("media \(fe.modelo)")
+                print("media \(fe.modelo)")
                 
                 self.sections[2].addBoq(fe.modelo)
-                //println("baja \(fe.modelo)")
+                print("baja \(fe.modelo)")
+
             }
         }
         
@@ -88,6 +100,12 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
         tableView.reloadData()
         
         //tableView.removeFromSuperview()
+        
+        
+        modeloZonaAlta = sections[0].boquis[0]
+        modeloZonaMedia = sections[1].boquis[0]
+        modeloZonaBaja = sections[2].boquis[0]
+        
         
     }
     
@@ -103,7 +121,7 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("Seccion \(section) hay \(self.sections[section].boquis.count)")
+        //print("Seccion \(section) hay \(self.sections[section].boquis.count)")
         return self.sections[section].boquis.count
     }
     
@@ -112,7 +130,7 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
         
         //cell.textLabel?.text = self.tableData[indexPath.row]
         cell.textLabel?.text = self.sections[indexPath.section].boquis[indexPath.row]
-        print("secc=\(indexPath.section) item=\(indexPath.item)")
+        //print("secc=\(indexPath.section) item=\(indexPath.item) seleccionado=\(selSeccion0) \(self.sections[indexPath.section].boquis[indexPath.item])")
         switch(indexPath.section){
         case 0:
             if (indexPath.item == selSeccion0){
@@ -157,14 +175,18 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
         
         //tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text="XXXXXXX"
         //tableView.cellForRowAtIndexPath(indexPath)?.selected = false
+        print("Ha sido sele: \(indexPath.section) \(indexPath.item)")
         switch(indexPath.section){
         case 0:
+            modeloZonaAlta = self.sections[indexPath.section].boquis[indexPath.item]
             selSeccion0 = indexPath.item
             break
         case 1:
+            modeloZonaMedia = self.sections[indexPath.section].boquis[indexPath.item]
             selSeccion1 = indexPath.item
             break
         case 2:
+            modeloZonaBaja = self.sections[indexPath.section].boquis[indexPath.item]
             selSeccion2 = indexPath.item
             break
         default:
@@ -256,10 +278,27 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!){
         
         if(segue.identifier == "C33"){
-            newItemC.caudalZonaAlta = saveCaudalXZona(selSeccion0)
-            newItemC.caudalZonaMedia = saveCaudalXZona(selSeccion1)
-            newItemC.caudalZonaBaja = saveCaudalXZona(selSeccion2)
-            print(newItemC.caudalZonaAlta)
+            let fetchRequest2 = NSFetchRequest(entityName: "C1")
+            if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest2)) as? [C1] {
+                
+                fetchResults[0].caudalZonaAlta = saveCaudalXZona(selSeccion0)
+                fetchResults[0].caudalZonaMedia = saveCaudalXZona(selSeccion1)
+                fetchResults[0].caudalZonaBaja = saveCaudalXZona(selSeccion2)
+                
+                
+                
+                fetchResults[0].nombreZonaAlta = modeloZonaAlta
+                fetchResults[0].nombreZonaMedia = modeloZonaMedia
+                fetchResults[0].nombreZonaBaja = modeloZonaBaja
+                
+                print(fetchResults[0].caudalZonaAlta)
+                
+                do {
+                    try managedObjectContext!.save()
+                } catch {
+                    fatalError("Failure to save context: \(error)")
+                }
+            }
         }
         
     }
