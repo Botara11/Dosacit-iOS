@@ -206,26 +206,21 @@ class Cultivo3: UIViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "ResultadosCultivo"){
-            newItemA!.productosAplicarIndice = productosAplicar.selectedSegmentIndex
-            
-            newItemA!.formaActuacionIndice = formaActuacion.selectedSegmentIndex
-            
-            newItemA!.zonaCriticaIndice = copaArbol.selectedSegmentIndex
-            
-            newItemA!.productosAplicarIndice = productosAplicar.selectedSegmentIndex
-            
-            newItemA!.formaActuacionIndice = formaActuacion.selectedSegmentIndex
-            
-            newItemA!.zonaCriticaIndice = copaArbol.selectedSegmentIndex
-            
-            do {
-                try managedObjectContext!.save()
-            } catch {
-                fatalError("Failure to save context: \(error)")
-            }
-            
+        
+        newItemA!.productosAplicarIndice = productosAplicar.selectedSegmentIndex
+        newItemA!.formaActuacionIndice = formaActuacion.selectedSegmentIndex
+        newItemA!.zonaCriticaIndice = copaArbol.selectedSegmentIndex
+        newItemA!.productosAplicarIndice = productosAplicar.selectedSegmentIndex
+        newItemA!.formaActuacionIndice = formaActuacion.selectedSegmentIndex
+        newItemA!.zonaCriticaIndice = copaArbol.selectedSegmentIndex
+        
+        do {
+            try managedObjectContext!.save()
+        } catch {
+            fatalError("Failure to save context: \(error)")
         }
+        
+        
     }
     
     override func viewDidLoad() {

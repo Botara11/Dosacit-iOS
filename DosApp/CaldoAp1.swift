@@ -166,30 +166,40 @@ class CaldoAp1: UIViewController, UITextFieldDelegate  {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!){
         
-        
-        
-        if(segue.identifier == "SelPres"){
-            
-            let fetchRequest = NSFetchRequest(entityName: "C1")
-            if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [C1] {
-                newItemC = fetchResults[0]
-                var miAncho = 0.0
-                var miVelo = 0.0
-                
-                if SwitchAS.on{
-                    miAncho = (anchoCalleTextField.text! as NSString).doubleValue
-                }
-                else{
-                    miAncho = (anchoCalleText.text! as NSString).doubleValue
-                }
-                
-                if SwitchVS.on{
-                    miVelo = (velocidadAvanceTextField.text! as NSString).doubleValue
-                }
-                else{
-                    miVelo = (velocidadAvance.text! as NSString).doubleValue
-                }
+        let fetchRequest = NSFetchRequest(entityName: "C1")
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [C1] {
+            newItemC = fetchResults[0]
+            var miAncho = 0.0
+            var miVelo = 0.0
 
+            
+            if SwitchAS.on{
+                miAncho = (anchoCalleTextField.text! as NSString).doubleValue
+            }
+            else{
+                miAncho = (anchoCalleText.text! as NSString).doubleValue
+            }
+            
+            if SwitchVS.on{
+                miVelo = (velocidadAvanceTextField.text! as NSString).doubleValue
+            }
+            else{
+                miVelo = (velocidadAvance.text! as NSString).doubleValue
+            }
+            
+            newItemC!.anchoCalle = miAncho
+            newItemC!.velocidadAvance = miVelo
+            newItemC!.numBoqAbiertasAltaHidraulica = (boquillasAltaTextField.text! as NSString).integerValue
+            newItemC!.numBoqAbiertasMediaHidraulica = (boquillasMediaTextField.text! as NSString).integerValue
+            newItemC!.numBoqAbiertasBajaHidraulica = (boquillasBajaTextField.text! as NSString).integerValue
+            print ("Store : \(newItemC!.numBoqAbiertasAltaHidraulica) + \(newItemC!.numBoqAbiertasMediaHidraulica) + \(newItemC!.numBoqAbiertasBajaHidraulica)")
+            do {
+                try managedObjectContext!.save()
+            } catch {
+                fatalError("Failure to save context: \(error)")
+            }
+            
+            if(segue.identifier == "SelPres"){
                 
                 if (boquillasAltaTextField.text == "" || boquillasMediaTextField.text == "" || boquillasBajaTextField.text == ""){
                     alert("ERROR",mensaje: "No puede haber campos vacíos y deben ser valores numéricos")
@@ -199,20 +209,6 @@ class CaldoAp1: UIViewController, UITextFieldDelegate  {
                     
                 }else if (miVelo == 0){
                     alert("ERROR",mensaje: "La velocidad de avance no puede ser cero")
-                    
-                }else{
-                    
-                    newItemC!.anchoCalle = miAncho
-                    newItemC!.velocidadAvance = miVelo
-                    newItemC!.numBoqAbiertasAltaHidraulica = (boquillasAltaTextField.text! as NSString).integerValue
-                    newItemC!.numBoqAbiertasMediaHidraulica = (boquillasMediaTextField.text! as NSString).integerValue
-                    newItemC!.numBoqAbiertasBajaHidraulica = (boquillasBajaTextField.text! as NSString).integerValue
-                    print ("Store : \(newItemC!.numBoqAbiertasAltaHidraulica) + \(newItemC!.numBoqAbiertasMediaHidraulica) + \(newItemC!.numBoqAbiertasBajaHidraulica)")
-                    do {
-                        try managedObjectContext!.save()
-                    } catch {
-                        fatalError("Failure to save context: \(error)")
-                    }
                     
                 }
             }

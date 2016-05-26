@@ -154,18 +154,24 @@ class Cultivo1: UIViewController, UITextFieldDelegate {
         }()
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        
+        
+        newItemA!.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
+        newItemA!.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
+        newItemB!.anchoCalleViejo = (anchoCalleTextField.text! as NSString).doubleValue
+        newItemA!.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
+        newItemA!.distanciaArboles = (distanciaArboles.text! as NSString).doubleValue
+        newItemA!.longitudArboles = (longitudArboles.text! as NSString).doubleValue
+        newItemA!.anchuraArboles = (anchuraArboles.text! as NSString).doubleValue
+        newItemA!.alturaArboles = (alturaArboles.text! as NSString).doubleValue
+        
+        do {
+            try managedObjectContext!.save()
+        } catch {
+            fatalError("Failure to save context: \(error)")
+        }
+        
         if (segue.identifier == "Cultivo3"){
-            
-            newItemA!.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
-            newItemA!.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
-            newItemB!.anchoCalleViejo = (anchoCalleTextField.text! as NSString).doubleValue
-            newItemA!.anchoCalle = (anchoCalleTextField.text! as NSString).doubleValue
-            newItemA!.distanciaArboles = (distanciaArboles.text! as NSString).doubleValue
-            newItemA!.longitudArboles = (longitudArboles.text! as NSString).doubleValue
-            newItemA!.anchuraArboles = (anchuraArboles.text! as NSString).doubleValue
-            newItemA!.alturaArboles = (alturaArboles.text! as NSString).doubleValue
-            
-            
             
             let comprobacion = caract.anchoCalle * caract.longitudArboles * caract.distanciaArboles * caract.anchuraArboles * caract.alturaArboles
             
@@ -187,11 +193,7 @@ class Cultivo1: UIViewController, UITextFieldDelegate {
             
             } */
             
-            do {
-                try managedObjectContext!.save()
-            } catch {
-                fatalError("Failure to save context: \(error)")
-            }
+            
         }
         
     }

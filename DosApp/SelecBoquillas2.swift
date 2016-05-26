@@ -112,23 +112,13 @@ class SelecBoquillas2: UIViewController, UITextFieldDelegate{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
         newItemB!.variacionCaudalAdmisible = Double(VariacionCaudal.value)
-        var intervaloCaudalAdmisible = [0.3,1.2,0.3,1.2,0.3,1.2] as [Double]
-        
-        
         newItemB!.numeroBoquillasCerradasAlta = (NumBoqCerrAlta.text! as NSString).integerValue
-        
         newItemB!.numeroBoquillasCerradasBaja = (NumBoqCerrBaja.text! as NSString).integerValue
-        
         newItemB!.numeroBoquillasAbiertasAlta = (NumBoqAbAlta.text! as NSString).integerValue
-        
         newItemB!.numeroBoquillasAbiertasMedia = (NumBoqAbMedia.text! as NSString).integerValue
-        
         newItemB!.numeroBoquillasAbiertasBaja = (NumBoqAbBaja.text! as NSString).integerValue
-        
         newItemB!.porcentajeVegetacionAlta = (PorcentajeVegAlta.text! as NSString).integerValue
-        
         newItemB!.porcentajeVegetacionMedia = (PorcentajeVegMedia.text! as NSString).integerValue
-        
         newItemB!.porcentajeVegetacionBaja = (PorcentajeVegBaja.text! as NSString).integerValue
         
         do {
@@ -139,6 +129,7 @@ class SelecBoquillas2: UIViewController, UITextFieldDelegate{
         print("Antes:  \(NumBoqAbAlta.text! as NSString).integerValue) + \(NumBoqAbMedia.text! as NSString).integerValue) + \(NumBoqAbBaja.text! as NSString).integerValue) != \(newItemB!.numeroTotalBoquillas)")
         
         if(segue.identifier == "B23"){
+            var intervaloCaudalAdmisible = [0.3,1.2,0.3,1.2,0.3,1.2] as [Double]
             intervaloCaudalAdmisible[0] = newItemB!.intervaloCaudalAdmisible0
             intervaloCaudalAdmisible[1] = newItemB!.intervaloCaudalAdmisible1
             intervaloCaudalAdmisible[2] = newItemB!.intervaloCaudalAdmisible2

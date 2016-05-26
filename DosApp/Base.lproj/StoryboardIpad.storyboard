@@ -1067,7 +1067,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Hyl-Wi-2FU" kind="presentation" id="SCx-Sb-Hqj"/>
+                                    <segue destination="Hyl-Wi-2FU" kind="presentation" identifier="" id="SCx-Sb-Hqj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1O-iv-Fcv">
@@ -1079,7 +1079,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Hyl-Wi-2FU" kind="presentation" id="IAU-u6-ab7"/>
+                                    <segue destination="Hyl-Wi-2FU" kind="presentation" identifier="" id="IAU-u6-ab7"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logodosactitric" translatesAutoresizingMaskIntoConstraints="NO" id="pS9-Ug-yHG">
@@ -1886,7 +1886,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="kGU-Y6-l6z" kind="presentation" id="B9A-Ij-QPY"/>
+                                    <segue destination="kGU-Y6-l6z" kind="presentation" identifier="B1" id="B9A-Ij-QPY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51f-ao-bcf">
@@ -2431,7 +2431,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="6At-Cj-ikK" kind="presentation" id="sv1-m0-Tfs"/>
+                                    <segue destination="6At-Cj-ikK" kind="presentation" identifier="B23" id="sv1-m0-Tfs"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logodosactitric" translatesAutoresizingMaskIntoConstraints="NO" id="0Xh-xb-PI1">
@@ -2446,7 +2446,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="6At-Cj-ikK" kind="presentation" id="QNK-oa-iXe"/>
+                                    <segue destination="6At-Cj-ikK" kind="presentation" identifier="B23" id="QNK-oa-iXe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -7714,23 +7714,9 @@
         <image name="zonas_boquillas" width="369" height="321"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oSY-ES-Jrb"/>
-        <segue reference="b8R-Bk-rvF"/>
-        <segue reference="B9A-Ij-QPY"/>
-        <segue reference="sv1-m0-Tfs"/>
-        <segue reference="SON-24-RY8"/>
-        <segue reference="RMw-ft-yIC"/>
-        <segue reference="cXZ-28-CDe"/>
-        <segue reference="3R8-3F-ZAO"/>
-        <segue reference="dAq-bU-kqQ"/>
-        <segue reference="zoi-C4-jAd"/>
-        <segue reference="uPV-8h-mMd"/>
-        <segue reference="j8T-ol-82k"/>
-        <segue reference="YQL-Eh-eZ1"/>
-        <segue reference="EHX-o7-fMG"/>
-        <segue reference="ePU-vi-k5t"/>
-        <segue reference="hov-lw-895"/>
-        <segue reference="SCx-Sb-Hqj"/>
+        <segue reference="lS0-cK-aJN"/>
+        <segue reference="wCG-tV-5BN"/>
+        <segue reference="q8k-fp-UZo"/>
         <segue reference="LEl-di-c1R"/>
         <segue reference="vMb-Dx-Exr"/>
         <segue reference="XCx-Em-AWB"/>
@@ -7738,7 +7724,21 @@
         <segue reference="nhG-iF-rX5"/>
         <segue reference="fVl-dP-UNR"/>
         <segue reference="TWz-sr-RFE"/>
-        <segue reference="wCG-tV-5BN"/>
-        <segue reference="q8k-fp-UZo"/>
+        <segue reference="EHX-o7-fMG"/>
+        <segue reference="j8T-ol-82k"/>
+        <segue reference="zoi-C4-jAd"/>
+        <segue reference="b8R-Bk-rvF"/>
+        <segue reference="B9A-Ij-QPY"/>
+        <segue reference="QNK-oa-iXe"/>
+        <segue reference="SON-24-RY8"/>
+        <segue reference="RMw-ft-yIC"/>
+        <segue reference="cXZ-28-CDe"/>
+        <segue reference="3R8-3F-ZAO"/>
+        <segue reference="dAq-bU-kqQ"/>
+        <segue reference="uPV-8h-mMd"/>
+        <segue reference="SCx-Sb-Hqj"/>
+        <segue reference="ePU-vi-k5t"/>
+        <segue reference="5rC-S0-jhU"/>
+        <segue reference="hov-lw-895"/>
     </inferredMetricsTieBreakers>
 </document>
