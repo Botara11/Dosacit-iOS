@@ -28,6 +28,8 @@ class ResultadosD: UIViewController{
     @IBOutlet weak var presionTextfield: UITextView!
     @IBOutlet weak var PDFGenerar: UIButton!
     
+    var docController:UIDocumentInteractionController!
+    
     @IBAction func PDGgeneratoraction(sender: AnyObject) {
         let pageSize:CGSize = CGSizeMake (850, 1100)
         let fileName: NSString = "DosacítricD.pdf"
@@ -37,7 +39,7 @@ class ResultadosD: UIViewController{
         print(pdfPathWithFileName)
         
         generatePDFs(pdfPathWithFileName)
-        var docController:UIDocumentInteractionController!
+        
         let url = NSURL(fileURLWithPath: pdfPathWithFileName)
         docController = UIDocumentInteractionController(URL: url)
         docController.presentOptionsMenuFromRect(sender.frame, inView:self.view, animated:true)
@@ -161,21 +163,44 @@ class ResultadosD: UIViewController{
     }
     
     
+    
+    
+    
+    override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
+        if (identifier != nil && identifier == "nuevoTratamiento"){
+            let alertController = UIAlertController(title: "Nuevo tratamiento", message: "¿Realmente quiere borrar todos los datos introducidos en DOSACITRIC?", preferredStyle: .Alert)
+            
+            let cancelAction = UIAlertAction(title: "No", style: .Cancel) { (action) in
+                print("Cancel")
+            }
+            let OKAction = UIAlertAction(title: "Si", style: .Default) { (action) in
+                print("ok")
+                var error : NSError?
+                self.deleteAllObjectsForEntity(&error)
+                do {
+                    try managedObjectContext!.save()
+                } catch {
+                    fatalError("Failure to save context: \(error)")
+                }
+                let vc = self.storyboard?.instantiateViewControllerWithIdentifier("indice") as! Indice
+                self.presentViewController(vc, animated: true, completion: nil)
+            }
+            alertController.addAction(cancelAction)
+            alertController.addAction(OKAction)
+            self.presentViewController(alertController, animated: true) {}
+            return false
+        }else{
+            return true
+        }
+    }
+
+    
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "nuevoTratamiento"){
      
-            var error : NSError?
-            deleteAllObjectsForEntity(&error)
-            
-            do {
-                try managedObjectContext!.save()
-            } catch {
-                fatalError("Failure to save context: \(error)")
-            }
-            
-            
-        }
         
+        }
     }
     
     

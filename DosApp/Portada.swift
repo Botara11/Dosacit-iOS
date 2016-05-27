@@ -40,18 +40,40 @@ class Portada: ResponsiveTextFieldViewController, UITextFieldDelegate {
     @IBOutlet weak var comenzar: UIButton!
     @IBOutlet weak var nuevoTratamiento: UIButton!
     @IBOutlet weak var fondo: UIButton!
-    
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "borrarDatos"){
+   
+
+    override func shouldPerformSegueWithIdentifier(identifier: String!, sender: AnyObject!) -> Bool {
+        if (identifier != nil && identifier == "borrarDatos"){
+        let alertController = UIAlertController(title: "Nuevo tratamiento", message: "¿Realmente quiere borrar todos los datos introducidos en DOSACITRIC?", preferredStyle: .Alert)
+        
+        let cancelAction = UIAlertAction(title: "No", style: .Cancel) { (action) in
+            print("Cancel")
+        }
+        let OKAction = UIAlertAction(title: "Si", style: .Default) { (action) in
+            print("ok")
             var error : NSError?
-            deleteAllObjectsForEntity(&error)
-            
+            self.deleteAllObjectsForEntity(&error)
             do {
                 try managedObjectContext!.save()
             } catch {
                 fatalError("Failure to save context: \(error)")
             }
+            let vc = self.storyboard?.instantiateViewControllerWithIdentifier("indice") as! Indice
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(OKAction)
+        self.presentViewController(alertController, animated: true) {}
+        return false
+        }
+        else{
+            return true
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "borrarDatos"){
+           
             
             
         }

@@ -50,29 +50,29 @@ class Result1 : UIViewController {
     var idTratamientoText: String!
     var referenciaText: String!
     
-
+    
+    var docController:UIDocumentInteractionController!
     
     
     @IBAction func PDFgeneratoraction(sender: AnyObject) {
         let pageSize:CGSize = CGSizeMake (850, 1100)
-        let fileName: NSString = "Dosacítric.pdf"
+        let fileName: NSString = "DosacítricB.pdf"
         let path:NSArray = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         let documentDirectory: AnyObject = path.objectAtIndex(0)
         let pdfPathWithFileName = documentDirectory.stringByAppendingPathComponent(fileName as String)
         print(pdfPathWithFileName)
         
         generatePDFs(pdfPathWithFileName)
-        var docController:UIDocumentInteractionController!
         let url = NSURL(fileURLWithPath: pdfPathWithFileName)
         docController = UIDocumentInteractionController(URL: url)
         docController.presentOptionsMenuFromRect(sender.frame, inView:self.view, animated:true)
         
     }
 
+
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        
         /*
         if (segue.identifier == "SegueResult12"){
             print(caract2.anchoCalle)
@@ -332,9 +332,12 @@ class Result1 : UIViewController {
     
     
     
+    
+    
     func generatePDFs(filePath: String) {
         UIGraphicsBeginPDFContextToFile(filePath, CGRectZero, nil)
-        UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 850, 1200), nil)
+        //UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 850, 1200), nil)
+        UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 595,842), nil)
         drawBackground()
         drawText()
         print("PDF creado!")
@@ -348,7 +351,8 @@ class Result1 : UIViewController {
         
         print("back creado!")
         let context:CGContextRef = UIGraphicsGetCurrentContext()!
-        let rect:CGRect = CGRectMake(0, 0, 850, 1100)
+        //let rect:CGRect = CGRectMake(0, 0, 850, 1100)
+        let rect:CGRect = CGRectMake(0, 0, 595, 842)
         CGContextSetFillColorWithColor(context, UIColor.whiteColor().CGColor)
         CGContextFillRect(context, rect)
         
@@ -376,19 +380,29 @@ class Result1 : UIViewController {
             // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
             y=y+30;
             // let myString:NSString = "Azúcar Álvaro"
-            var auxiliar = PDFarray[i] as! NSString
+            let auxiliar = PDFarray[i] as! NSString
             auxiliar.drawInRect(textRect, withAttributes: attrsDictionary)
         }
         
         y = 410;
         
-        for i in 0...5{
-            textRect = CGRectMake(CGFloat(100), CGFloat(y), CGFloat(400), CGFloat(20))
-            var PDFarray = ["Densidad foliar del árbol: \(densidadFoliarText)", "Marco de plantación de \(anchoCalleText) x \(distanciaArbolesText)", "Volumen del árbol: \(volumenArbolText)","Forma del árbol: \(formaArbolText)", "Fecha de la última poda: \(fechaUltimaPodaText)", "\(gradoPodaText)"];
+        for i in 0...2{
+            textRect = CGRectMake(CGFloat(100), CGFloat(y), CGFloat(500), CGFloat(20))
+            var PDFarray = ["Densidad Foliar: " + densidadFoliarText.text!, "Marco de plantación: " + anchoCalleText.text! + " x " + distanciaArbolesText.text!, "Volumen del árbol: " + volumenArbolText.text!];
             // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
             y=y+30;
             // let myString:NSString = "Azúcar Álvaro"
-            var auxiliar = PDFarray[i] as! NSString
+            let auxiliar = PDFarray[i] as! NSString
+            auxiliar.drawInRect(textRect, withAttributes: attrsDictionary)
+        }
+        
+        for i in 0...1{
+            textRect = CGRectMake(CGFloat(100), CGFloat(y), CGFloat(500), CGFloat(20))
+            var PDFarray = ["Forma del árbol: " + formaArbolText.text!, "Fecha de la última poda: "+fechaUltimaPodaText.text!];
+            // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
+            y=y+30;
+            // let myString:NSString = "Azúcar Álvaro"
+            let auxiliar = PDFarray[i] as! NSString
             auxiliar.drawInRect(textRect, withAttributes: attrsDictionary)
         }
         
@@ -396,7 +410,7 @@ class Result1 : UIViewController {
         
         for i in 0...3{
             textRect = CGRectMake(CGFloat(100), CGFloat(y), CGFloat(350), CGFloat(20))
-            var PDFarray = ["Productos a aplicar: \(productosAplicarText)", "Forma de actuación: \(formaActuacionText)", "¿Utiliza coadyuvantes? \(mojantesText)", "Zona crítica a tratar: \(zonaCriticaText)", "\(gradoPodaText)"];
+            var PDFarray = ["Productos a aplicar: " + productosAplicarText.text!, "Forma de actuación: " + formaActuacionText.text!, "¿Utiliza coadyuvantes?: " + mojantesText.text!, "Zona crítica a tratar: " + zonaCriticaText.text!, "\(gradoPodaText.text)"];
             // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
             y=y+30;
             // let myString:NSString = "Azúcar Álvaro"
@@ -436,6 +450,22 @@ class Result1 : UIViewController {
         // let myString:NSString = "Azúcar Álvaro"
         PDFarrayV[0].drawInRect(textRect, withAttributes: attrsDictionary)
         
+        y=25;
+        font = UIFont (name: "Times New Roman", size: 15)!
+        CGContextSetFillColorWithColor(context, UIColor.blackColor().CGColor)
+        let baselineAdj = 1.0
+        let attrsDiction =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdj]
+        
+        for i in 0...2{
+            textRect = CGRectMake(CGFloat(450), CGFloat(y), CGFloat(400), CGFloat(20))
+            var PDFarray = ["dosacitric@upv.es", "Unidad de Mecanización y Tecnología Agraria", "UNIVERSIDAD POLITÉCNICA DE VALENCIA"];
+            // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
+            y=y+25;
+            // let myString:NSString = "Azúcar Álvaro"
+            let auxiliar = PDFarray[i] as NSString
+            auxiliar.drawInRect(textRect, withAttributes: attrsDiction)
+        }
+        
         
         font = UIFont (name: "Times New Roman", size: 60)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
@@ -444,49 +474,49 @@ class Result1 : UIViewController {
         textRect = CGRectMake(CGFloat(40), CGFloat(25), CGFloat(800), CGFloat(60))
         tituloArray.drawInRect(textRect, withAttributes: attrsTitulo)
         
-        font = UIFont (name: "Times New Roman", size: 40)!
+        font = UIFont (name: "Times New Roman", size: 30)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
         let attrsA =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
         var AArray = "A. IDENTIFICACIÓN DEL TRATAMIENTO"
-        textRect = CGRectMake(CGFloat(40), CGFloat(110), CGFloat(800), CGFloat(90))
+        textRect = CGRectMake(CGFloat(40), CGFloat(120), CGFloat(800), CGFloat(90))
         AArray.drawInRect(textRect, withAttributes: attrsA)
         
-        font = UIFont (name: "Times New Roman", size: 40)!
+        font = UIFont (name: "Times New Roman", size: 30)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
         let attrsB =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
         var BArray = "B. VOLUMEN DE APLICACIÓN"
         textRect = CGRectMake(CGFloat(40), CGFloat(320), CGFloat(800), CGFloat(90))
         BArray.drawInRect(textRect, withAttributes: attrsB)
         
-        font = UIFont (name: "Times New Roman", size: 30)!
+        font = UIFont (name: "Times New Roman", size: 25)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
         let attrsB1 =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
         var B1Array = "B.1. Características del cultivo"
         textRect = CGRectMake(CGFloat(80), CGFloat(370), CGFloat(800), CGFloat(90))
         B1Array.drawInRect(textRect, withAttributes: attrsB1)
         
-        font = UIFont (name: "Times New Roman", size: 30)!
+        font = UIFont (name: "Times New Roman", size: 25)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
         let attrsB2 =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
         var B2Array = "B.2. Tipo de tratamiento"
         textRect = CGRectMake(CGFloat(80), CGFloat(600), CGFloat(800), CGFloat(90))
         B2Array.drawInRect(textRect, withAttributes: attrsB2)
         
-        font = UIFont (name: "Times New Roman", size: 30)!
+        font = UIFont (name: "Times New Roman", size: 25)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
         let attrsB3 =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
         var B3Array = "B.3. Condiciones meteorológicas"
         textRect = CGRectMake(CGFloat(80), CGFloat(770), CGFloat(800), CGFloat(90))
         B3Array.drawInRect(textRect, withAttributes: attrsB3)
         
-        font = UIFont (name: "Times New Roman", size: 30)!
+        font = UIFont (name: "Times New Roman", size: 25)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
         let attrsB4 =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
         var B4Array = "B.4. Equipo empleado"
         textRect = CGRectMake(CGFloat(80), CGFloat(910), CGFloat(800), CGFloat(90))
         B4Array.drawInRect(textRect, withAttributes: attrsB4)
         
-        font = UIFont (name: "Times New Roman", size: 30)!
+        font = UIFont (name: "Times New Roman", size: 25)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
         let attrsB5 =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
         var B5Array = "B.5. Volumen de aplicación"
@@ -496,7 +526,7 @@ class Result1 : UIViewController {
         
         
     }
-
+    
     
     
     
