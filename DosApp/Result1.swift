@@ -392,7 +392,7 @@ class Result1 : UIViewController {
             // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
             y=y+30;
             // let myString:NSString = "Azúcar Álvaro"
-            let auxiliar = PDFarray[i] as! NSString
+            let auxiliar = PDFarray[i] as NSString
             auxiliar.drawInRect(textRect, withAttributes: attrsDictionary)
         }
         
@@ -402,7 +402,7 @@ class Result1 : UIViewController {
             // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
             y=y+30;
             // let myString:NSString = "Azúcar Álvaro"
-            let auxiliar = PDFarray[i] as! NSString
+            let auxiliar = PDFarray[i]as NSString
             auxiliar.drawInRect(textRect, withAttributes: attrsDictionary)
         }
         
@@ -414,7 +414,7 @@ class Result1 : UIViewController {
             // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
             y=y+30;
             // let myString:NSString = "Azúcar Álvaro"
-            var auxiliar = PDFarray[i] as! NSString
+            let auxiliar = PDFarray[i] as NSString
             auxiliar.drawInRect(textRect, withAttributes: attrsDictionary)
         }
         
@@ -426,7 +426,7 @@ class Result1 : UIViewController {
             // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
             y=y+30;
             // let myString:NSString = "Azúcar Álvaro"
-            var auxiliar = PDFarray[i] as! NSString
+            let auxiliar = PDFarray[i] as NSString
             auxiliar.drawInRect(textRect, withAttributes: attrsDictionary)
         }
         
@@ -470,56 +470,56 @@ class Result1 : UIViewController {
         font = UIFont (name: "Times New Roman", size: 60)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
         let attrsTitulo =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
-        var tituloArray = "DOSACÍTRIC"
+        let tituloArray = "DOSACÍTRIC"
         textRect = CGRectMake(CGFloat(40), CGFloat(25), CGFloat(800), CGFloat(60))
         tituloArray.drawInRect(textRect, withAttributes: attrsTitulo)
         
         font = UIFont (name: "Times New Roman", size: 30)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
         let attrsA =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
-        var AArray = "A. IDENTIFICACIÓN DEL TRATAMIENTO"
+        let AArray = "A. IDENTIFICACIÓN DEL TRATAMIENTO"
         textRect = CGRectMake(CGFloat(40), CGFloat(120), CGFloat(800), CGFloat(90))
         AArray.drawInRect(textRect, withAttributes: attrsA)
         
         font = UIFont (name: "Times New Roman", size: 30)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
         let attrsB =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
-        var BArray = "B. VOLUMEN DE APLICACIÓN"
+        let BArray = "B. VOLUMEN DE APLICACIÓN"
         textRect = CGRectMake(CGFloat(40), CGFloat(320), CGFloat(800), CGFloat(90))
         BArray.drawInRect(textRect, withAttributes: attrsB)
         
         font = UIFont (name: "Times New Roman", size: 25)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
         let attrsB1 =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
-        var B1Array = "B.1. Características del cultivo"
+        let B1Array = "B.1. Características del cultivo"
         textRect = CGRectMake(CGFloat(80), CGFloat(370), CGFloat(800), CGFloat(90))
         B1Array.drawInRect(textRect, withAttributes: attrsB1)
         
         font = UIFont (name: "Times New Roman", size: 25)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
         let attrsB2 =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
-        var B2Array = "B.2. Tipo de tratamiento"
+        let B2Array = "B.2. Tipo de tratamiento"
         textRect = CGRectMake(CGFloat(80), CGFloat(600), CGFloat(800), CGFloat(90))
         B2Array.drawInRect(textRect, withAttributes: attrsB2)
         
         font = UIFont (name: "Times New Roman", size: 25)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
         let attrsB3 =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
-        var B3Array = "B.3. Condiciones meteorológicas"
+        let B3Array = "B.3. Condiciones meteorológicas"
         textRect = CGRectMake(CGFloat(80), CGFloat(770), CGFloat(800), CGFloat(90))
         B3Array.drawInRect(textRect, withAttributes: attrsB3)
         
         font = UIFont (name: "Times New Roman", size: 25)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
         let attrsB4 =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
-        var B4Array = "B.4. Equipo empleado"
+        let B4Array = "B.4. Equipo empleado"
         textRect = CGRectMake(CGFloat(80), CGFloat(910), CGFloat(800), CGFloat(90))
         B4Array.drawInRect(textRect, withAttributes: attrsB4)
         
         font = UIFont (name: "Times New Roman", size: 25)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
         let attrsB5 =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
-        var B5Array = "B.5. Volumen de aplicación"
+        let B5Array = "B.5. Volumen de aplicación"
         textRect = CGRectMake(CGFloat(80), CGFloat(1000), CGFloat(800), CGFloat(90))
         B5Array.drawInRect(textRect, withAttributes: attrsB5)
         

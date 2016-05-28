@@ -31,7 +31,7 @@ class ResultadosD: UIViewController{
     var docController:UIDocumentInteractionController!
     
     @IBAction func PDGgeneratoraction(sender: AnyObject) {
-        let pageSize:CGSize = CGSizeMake (850, 1100)
+        //let pageSize:CGSize = CGSizeMake (850, 1100)
         let fileName: NSString = "DosacítricD.pdf"
         let path:NSArray = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         let documentDirectory: AnyObject = path.objectAtIndex(0)
@@ -222,7 +222,7 @@ class ResultadosD: UIViewController{
                 }
             }
         }
-        newItemA = NSEntityDescription.insertNewObjectForEntityForName("A1", inManagedObjectContext: managedObjectContext!) as! A1
+        newItemA = NSEntityDescription.insertNewObjectForEntityForName("A1", inManagedObjectContext: managedObjectContext!) as? A1
         
         
         fetchRequest.entity = NSEntityDescription.entityForName("B1", inManagedObjectContext: managedObjectContext!)
@@ -236,7 +236,7 @@ class ResultadosD: UIViewController{
                 }
             }
         }
-        newItemB = NSEntityDescription.insertNewObjectForEntityForName("B1", inManagedObjectContext: managedObjectContext!) as! B1
+        newItemB = NSEntityDescription.insertNewObjectForEntityForName("B1", inManagedObjectContext: managedObjectContext!) as? B1
         
         
         fetchRequest.entity = NSEntityDescription.entityForName("C1", inManagedObjectContext: managedObjectContext!)
@@ -250,7 +250,7 @@ class ResultadosD: UIViewController{
                 }
             }
         }
-        newItemC = NSEntityDescription.insertNewObjectForEntityForName("C1", inManagedObjectContext: managedObjectContext!) as! C1
+        newItemC = NSEntityDescription.insertNewObjectForEntityForName("C1", inManagedObjectContext: managedObjectContext!) as? C1
         
         
         fetchRequest.entity = NSEntityDescription.entityForName("Z1", inManagedObjectContext: managedObjectContext!)
@@ -272,7 +272,7 @@ class ResultadosD: UIViewController{
                     managedObjectContext!.deleteObject(object)
                 }
             }
-            newItemZ = NSEntityDescription.insertNewObjectForEntityForName("Z1", inManagedObjectContext: managedObjectContext!) as! Z1
+            newItemZ = NSEntityDescription.insertNewObjectForEntityForName("Z1", inManagedObjectContext: managedObjectContext!) as? Z1
             
         }
         do {
@@ -381,7 +381,7 @@ class ResultadosD: UIViewController{
         
         font = UIFont (name: "Times New Roman", size: 60)!
         CGContextSetFillColorWithColor(context, UIColor.orangeColor().CGColor)
-        var attrsTitulo =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
+        let attrsTitulo =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
         let tituloArray = "DOSACÍTRIC"
         textRect = CGRectMake(CGFloat(40), CGFloat(25), CGFloat(800), CGFloat(60))
         tituloArray.drawInRect(textRect, withAttributes: attrsTitulo)
