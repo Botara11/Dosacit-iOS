@@ -18,9 +18,9 @@
 		2188CEE51ACB15030068CD52 /* CaldoAp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2188CEE41ACB15030068CD52 /* CaldoAp.swift */; };
 		21AB1AFC1AB0994D009275CD /* SelecBoquillas1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21AB1AFB1AB0994D009275CD /* SelecBoquillas1.swift */; };
 		21D3AD7F1CF1F4A700684018 /* Portada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D3AD7E1CF1F4A700684018 /* Portada.swift */; };
-		21D52E071BC01D1100307BD5 /* StoryboardIpad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D52E051BC01D1100307BD5 /* StoryboardIpad.storyboard */; };
 		21F4C8831AFE60E100401952 /* ParteC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4C8821AFE60E100401952 /* ParteC.swift */; };
 		21F4C8871AFE773000401952 /* CaldoAp1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F4C8861AFE773000401952 /* CaldoAp1.swift */; };
+		B21DCF2F1CFA2BF200E408FA /* StoryboardIpad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B21DCF2D1CFA2BF200E408FA /* StoryboardIpad.storyboard */; };
 		B23F0E751CF7268E002D5594 /* ResultadosD.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23F0E741CF7268E002D5594 /* ResultadosD.swift */; };
 		B2557DB21AAF821E008A24D9 /* DosAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DB11AAF821E008A24D9 /* DosAppTests.swift */; };
 		B2557DDC1AAF83FD008A24D9 /* A1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2557DDB1AAF83FD008A24D9 /* A1.swift */; };
@@ -72,9 +72,9 @@
 		2188CEE41ACB15030068CD52 /* CaldoAp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaldoAp.swift; sourceTree = "<group>"; };
 		21AB1AFB1AB0994D009275CD /* SelecBoquillas1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelecBoquillas1.swift; sourceTree = "<group>"; };
 		21D3AD7E1CF1F4A700684018 /* Portada.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Portada.swift; sourceTree = "<group>"; };
-		21D52E061BC01D1100307BD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = StoryboardIpad.storyboard; sourceTree = "<group>"; };
 		21F4C8821AFE60E100401952 /* ParteC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParteC.swift; sourceTree = "<group>"; };
 		21F4C8861AFE773000401952 /* CaldoAp1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaldoAp1.swift; sourceTree = "<group>"; };
+		B21DCF2E1CFA2BF200E408FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = StoryboardIpad.storyboard; sourceTree = "<group>"; };
 		B23F0E741CF7268E002D5594 /* ResultadosD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultadosD.swift; sourceTree = "<group>"; };
 		B2557D931AAF821E008A24D9 /* DosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2557DAB1AAF821E008A24D9 /* DosAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DosAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,7 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				B2557DFC1AAF8430008A24D9 /* LaunchScreen.xib */,
-				21D52E051BC01D1100307BD5 /* StoryboardIpad.storyboard */,
+				B21DCF2D1CFA2BF200E408FA /* StoryboardIpad.storyboard */,
 				B2557DFE1AAF8430008A24D9 /* Main.storyboard */,
 			);
 			path = Base.lproj;
@@ -308,7 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2557E011AAF8430008A24D9 /* Main.storyboard in Resources */,
-				21D52E071BC01D1100307BD5 /* StoryboardIpad.storyboard in Resources */,
+				B21DCF2F1CFA2BF200E408FA /* StoryboardIpad.storyboard in Resources */,
 				B2557E031AAF844E008A24D9 /* Images.xcassets in Resources */,
 				2161FC891BEE8D8C00CBF50E /* printer.png in Resources */,
 				B2557E001AAF8430008A24D9 /* LaunchScreen.xib in Resources */,
@@ -384,10 +384,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		21D52E051BC01D1100307BD5 /* StoryboardIpad.storyboard */ = {
+		B21DCF2D1CFA2BF200E408FA /* StoryboardIpad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				21D52E061BC01D1100307BD5 /* Base */,
+				B21DCF2E1CFA2BF200E408FA /* Base */,
 			);
 			name = StoryboardIpad.storyboard;
 			sourceTree = "<group>";

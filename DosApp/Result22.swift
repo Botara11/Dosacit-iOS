@@ -52,7 +52,7 @@ class Result22: UIViewController, UITableViewDataSource, UITableViewDelegate{
                     if !estaEnCadena(fe.presion) {
                         cadena.append(fe.presion)
                         let sss = fe.presion.stringByReplacingOccurrencesOfString("p", withString: "")
-                        //self.tableData.append("\(sss) bares")
+                        //self.tableData.append("\(sss) bar")
                         self.tableDataAux.append((sss as NSString).integerValue)
                     }
                 }
@@ -60,10 +60,11 @@ class Result22: UIViewController, UITableViewDataSource, UITableViewDelegate{
             
             tableDataAux.sortInPlace({$0<$1})
             for uu in tableDataAux{
-                self.tableData.append("\(uu) bares")
+                self.tableData.append("\(uu) bar")
             }
             tableView?.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
             tableView.reloadData()
+            tableView.backgroundColor = UIColor.blackColor()
             //tableView.removeFromSuperview()
         }
     }
@@ -87,6 +88,8 @@ class Result22: UIViewController, UITableViewDataSource, UITableViewDelegate{
         var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier)! as UITableViewCell
         
         cell.textLabel?.text = self.tableData[indexPath.row]
+        cell.backgroundColor = UIColor.blackColor()
+        cell.textLabel?.textColor = UIColor.whiteColor()
         
         return cell
     }
@@ -101,7 +104,7 @@ class Result22: UIViewController, UITableViewDataSource, UITableViewDelegate{
             if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [B1] {
                 print("Result22 Objetos: \(fetchResults.count)")
                 
-                let auxPres = presionPressed.stringByReplacingOccurrencesOfString(" bares", withString: "")
+                let auxPres = presionPressed.stringByReplacingOccurrencesOfString(" bar", withString: "")
                 
                 fetchResults[0].seleccionadaPresion = "p\(auxPres)"
                 print("La presion pulsada: \(presionPressed)")

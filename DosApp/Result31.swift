@@ -16,7 +16,7 @@ class Result31: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
    
     let cellIdentifier = "cellIdentifier"
-    var tableData = ["6 bares","7 bares","8 bares","9 bares","10 bares","11 bares","12 bares","13 bares","14 bares","15 bares","16 bares"]
+    var tableData = ["6 bar","7 bar","8 bar","9 bar","10 bar","11 bar","12 bar","13 bar","14 bar","15 bar","16 bar"]
     
     @IBOutlet var tableView: UITableView!
     
@@ -44,6 +44,7 @@ class Result31: UIViewController, UITableViewDataSource, UITableViewDelegate{
         }
         tableView?.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
         tableView.reloadData()
+        tableView.backgroundColor = UIColor.blackColor()
         //tableView.removeFromSuperview()
         
         
@@ -85,6 +86,8 @@ class Result31: UIViewController, UITableViewDataSource, UITableViewDelegate{
         var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier)! as UITableViewCell
         
         cell.textLabel?.text = self.tableData[indexPath.row]
+        cell.backgroundColor = UIColor.blackColor()
+        cell.textLabel?.textColor = UIColor.whiteColor()
         
         return cell
     }
@@ -95,7 +98,7 @@ class Result31: UIViewController, UITableViewDataSource, UITableViewDelegate{
         
         
         let vc : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("res32")
-        presionPressed = "p" + tableData[indexPath.row].stringByReplacingOccurrencesOfString(" bares", withString: "")
+        presionPressed = "p" + tableData[indexPath.row].stringByReplacingOccurrencesOfString(" bar", withString: "")
         performSegueWithIdentifier("Result32", sender: self)
         
         self.showViewController(vc as! UIViewController, sender: vc)

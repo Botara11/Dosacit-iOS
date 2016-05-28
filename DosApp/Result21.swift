@@ -60,6 +60,7 @@ class Result21: UIViewController, UITableViewDataSource, UITableViewDelegate{
         
         tableView?.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
         tableView.reloadData()
+        tableView.backgroundColor = UIColor.blackColor()
         //tableView.removeFromSuperview()
         
         
@@ -100,7 +101,8 @@ class Result21: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier)! as UITableViewCell
-        
+        cell.backgroundColor = UIColor.blackColor()
+        cell.textLabel?.textColor = UIColor.whiteColor()
         cell.textLabel?.text = self.tableData[indexPath.row]
         
         return cell

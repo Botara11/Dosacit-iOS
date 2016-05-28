@@ -129,6 +129,21 @@ class Result2CR : UIViewController {
         
     }
     
+    @IBAction func siguiente(){
+        
+        let fetchRequest2 = NSFetchRequest(entityName: "FiltroBoquillas")
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest2)) as? [FiltroBoquillas]{
+            if (fetchResults.count != 0){
+                let vc = self.storyboard?.instantiateViewControllerWithIdentifier("Result21") as! Result21
+                self.presentViewController(vc, animated: true, completion: nil)
+            }
+            else{
+                let vc = self.storyboard?.instantiateViewControllerWithIdentifier("sinboquillas") 
+                self.presentViewController(vc!, animated: true, completion: nil)
+            }
+        }
+
+    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
@@ -229,10 +244,12 @@ class Result2CR : UIViewController {
             
             let fetchRequest2 = NSFetchRequest(entityName: "FiltroBoquillas")
             if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest2)) as? [FiltroBoquillas]{
-                for fe in fetchResults{
-                    if !estaEnCadena(fe.marca) {
-                        cadena.append(fe.marca)
-                       
+                if (fetchResults.count != 0){
+                    for fe in fetchResults{
+                        if !estaEnCadena(fe.marca) {
+                            cadena.append(fe.marca)
+                            
+                        }
                     }
                 }
             }

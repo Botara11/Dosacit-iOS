@@ -388,8 +388,8 @@ class SelecBoquillas1: UIViewController, UITextFieldDelegate {
             AnchoSiguienteText.keyboardType = UIKeyboardType.NumbersAndPunctuation
             
             
-            if(fetchResults[0].anchoCalleNuevo != 0){
-                AnchoSiguienteText.text = "\(fetchResults[0].anchoCalleNuevo)"
+            if(fetchResults[0].anchoCalle != 0){
+                AnchoSiguienteText.text = "\(fetchResults[0].anchoCalle)"
             }
             
             if(fetchResults[0].volumenAppNuevo != 0){

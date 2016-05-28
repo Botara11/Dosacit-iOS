@@ -104,47 +104,47 @@ class ResultadosD: UIViewController{
             
             if(fetchResults[0].presion=="p6"){
                 
-                presionTextfield.text = ("6 bares")
+                presionTextfield.text = ("6 bar")
                 
             }else if(fetchResults[0].presion=="p7"){
                 
-                presionTextfield.text = ("7 bares")
+                presionTextfield.text = ("7 bar")
                 
             }else if(fetchResults[0].presion=="p8"){
                 
-                presionTextfield.text = ("8 bares")
+                presionTextfield.text = ("8 bar")
                 
             }else if(fetchResults[0].presion=="p9"){
                 
-                presionTextfield.text = ("9 bares")
+                presionTextfield.text = ("9 bar")
                 
             }else if(fetchResults[0].presion=="p10"){
                 
-                presionTextfield.text = ("10 bares")
+                presionTextfield.text = ("10 bar")
                 
             }else if(fetchResults[0].presion=="p11"){
                 
-                presionTextfield.text = ("11 bares")
+                presionTextfield.text = ("11 bar")
                 
             }else if(fetchResults[0].presion=="p12"){
                 
-                presionTextfield.text = ("12 bares")
+                presionTextfield.text = ("12 bar")
                 
             }else if(fetchResults[0].presion=="p13"){
                 
-                presionTextfield.text = ("13 bares")
+                presionTextfield.text = ("13 bar")
                 
             }else if(fetchResults[0].presion=="p14"){
                 
-                presionTextfield.text = ("14 bares")
+                presionTextfield.text = ("14 bar")
                 
             }else if(fetchResults[0].presion=="p15"){
                 
-                presionTextfield.text = ("15 bares")
+                presionTextfield.text = ("15 bar")
                 
             }else if(fetchResults[0].presion=="p16"){
                 
-                presionTextfield.text = ("16 bares")
+                presionTextfield.text = ("16 bar")
                 
             }
             

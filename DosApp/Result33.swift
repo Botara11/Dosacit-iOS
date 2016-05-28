@@ -98,6 +98,7 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
         
         tableView?.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
         tableView.reloadData()
+        tableView.backgroundColor = UIColor.blackColor()
         
         //tableView.removeFromSuperview()
         
@@ -127,6 +128,8 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier)! as UITableViewCell
+        cell.backgroundColor = UIColor.blackColor()
+        cell.textLabel?.textColor = UIColor.whiteColor()
         
         //cell.textLabel?.text = self.tableData[indexPath.row]
         cell.textLabel?.text = self.sections[indexPath.section].boquis[indexPath.row]
@@ -171,8 +174,6 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     func tableView(tableView2: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         
-        
-        
         //tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text="XXXXXXX"
         //tableView.cellForRowAtIndexPath(indexPath)?.selected = false
         print("Ha sido sele: \(indexPath.section) \(indexPath.item)")
@@ -194,6 +195,21 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
         }
         tableView.reloadData()
     }
+    
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        var returnedView = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 50)) //set these values as necessary
+        var naranja = UIColor.init(red: 1, green: 0.4, blue: 0,
+            alpha: 1)
+        returnedView.backgroundColor = naranja
+        
+        var label = UILabel(frame: CGRectMake(10,0, tableView.frame.size.width/2, 20))
+        label.text = self.tableView(tableView, titleForHeaderInSection: section)
+        returnedView.addSubview(label)
+        
+        return returnedView
+    }
+    
     
     
     // print the date as the section header title
@@ -284,8 +300,6 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
                 fetchResults[0].caudalZonaAlta = saveCaudalXZona(selSeccion0)
                 fetchResults[0].caudalZonaMedia = saveCaudalXZona(selSeccion1)
                 fetchResults[0].caudalZonaBaja = saveCaudalXZona(selSeccion2)
-                
-                
                 
                 fetchResults[0].nombreZonaAlta = modeloZonaAlta
                 fetchResults[0].nombreZonaMedia = modeloZonaMedia
