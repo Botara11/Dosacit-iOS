@@ -13,6 +13,7 @@ import CoreData
 
 class Result2CR : UIViewController {
     
+    //var size:Int = 0;
     var caract2 = ParteB()
     var productosAplicarIndice = 0;
     var formaActuacionIndice = 0;
@@ -52,12 +53,68 @@ class Result2CR : UIViewController {
     var idTratamientoText: String!
     var referenciaText: String!
     
+    var marca1: String!
+    var marca2: String!
+    var marca3: String!
+    var marca4: String!
+    
+    var varaux:Int=0;
+    
+    
+    var cadena = [String]()
+    
+    func estaEnCadena(item:String)->Bool{
+        for aux in cadena{
+            if aux==item{
+                return true
+            }
+        }
+        return false
+    }
+    
+    var presiones = [String]()
+    
+    func estaEnCadenaPres(item:String)->Bool{
+        for aux in presiones{
+            if aux==item{
+                return true
+            }
+        }
+        return false
+    }
+    
+    var presOrden = [Int]()
+    
+    var zona = [String]()
+    var sections = [Section]()
+    
+    func estaEnCadenaBoq(item:String)->Bool{
+        for aux in zona{
+            if aux==item{
+                return true
+            }
+        }
+        return false
+    }
+    
+    class Section {
+        var boquis: [String] = []
+        
+        func addBoq(boq: String) {
+            self.boquis.append(boq)
+        }
+    }
+    
+    var zonaA = [String]()
+    var zonaM = [String]()
+    var zonaB = [String]()
+    
     
     
     var docController:UIDocumentInteractionController!
     
     @IBAction func PDFgeneratoraction(sender: AnyObject) {
-        let pageSize:CGSize = CGSizeMake (850, 1100)
+        //let pageSize:CGSize = CGSizeMake (850, 1100)
         let fileName: NSString = "DosacítricC.pdf"
         let path:NSArray = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         let documentDirectory: AnyObject = path.objectAtIndex(0)
@@ -168,6 +225,27 @@ class Result2CR : UIViewController {
             //  animated: true,
             //completion: nil)
             
+            let fetchRequest = NSFetchRequest(entityName: "FiltroBoquillas")
+            if let fetchResultsB = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [FiltroBoquillas] {
+                
+               
+                marca1 = "\(fetchResultsB[0].marca)"
+                marca2 = "\(fetchResultsB[1].presion)"
+                
+            }
+            
+            let fetchRequest2 = NSFetchRequest(entityName: "FiltroBoquillas")
+            if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest2)) as? [FiltroBoquillas]{
+                for fe in fetchResults{
+                    if !estaEnCadena(fe.marca) {
+                        cadena.append(fe.marca)
+                       
+                    }
+                }
+            }
+            
+   
+            
             
             
         }
@@ -178,7 +256,7 @@ class Result2CR : UIViewController {
     
     func generatePDFs(filePath: String) {
         UIGraphicsBeginPDFContextToFile(filePath, CGRectZero, nil)
-        UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 850, 1200), nil)
+        UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 850, 1250), nil)
         drawBackground()
         //drawText()
         print("PDF creado!")
@@ -220,7 +298,7 @@ class Result2CR : UIViewController {
             // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
             y=y+30;
             // let myString:NSString = "Azúcar Álvaro"
-            var auxiliar = PDFarray[i] as NSString
+            let auxiliar = PDFarray[i] as NSString
             auxiliar.drawInRect(textRect, withAttributes: attrsDictionary)
         }
         
@@ -232,7 +310,7 @@ class Result2CR : UIViewController {
             // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
             y=y+35;
             // let myString:NSString = "Azúcar Álvaro"
-            var auxiliar = PDFarray[i] as! NSString
+            let auxiliar = PDFarray[i] as NSString
             auxiliar.drawInRect(textRect, withAttributes: attrsDictionary)
         }
         
@@ -249,7 +327,7 @@ class Result2CR : UIViewController {
             // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
             y=y+30;
             // let myString:NSString = "Azúcar Álvaro"
-            var auxiliar = PDFarray[i] as NSString
+            let auxiliar = PDFarray[i] as NSString
             auxiliar.drawInRect(textRect, withAttributes: attrsDictionar)
         }
         
@@ -275,7 +353,7 @@ class Result2CR : UIViewController {
             // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
             y=y+30;
             // let myString:NSString = "Azúcar Álvaro"
-            var auxiliar = PDFarray[i] as! NSString
+            let auxiliar = PDFarray[i] as NSString
             auxiliar.drawInRect(textRect, withAttributes: attrsTitulo2)
         }
         
@@ -299,7 +377,7 @@ class Result2CR : UIViewController {
             // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
             y=y+30;
             // let myString:NSString = "Azúcar Álvaro"
-            var auxiliar = PDFarray[i] as! NSString
+            let auxiliar = PDFarray[i] as NSString
             auxiliar.drawInRect(textRect, withAttributes: attrsTitulo4)
         }
         
@@ -323,7 +401,7 @@ class Result2CR : UIViewController {
             // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
             y=y+30;
             // let myString:NSString = "Azúcar Álvaro"
-            var auxiliar = PDFarray[i] as! NSString
+            let auxiliar = PDFarray[i] as NSString
             auxiliar.drawInRect(textRect, withAttributes: attrsTitulo6)
         }
         
@@ -332,10 +410,10 @@ class Result2CR : UIViewController {
         let attrsTitulo7 =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
         let tituloArray7 = "Caudal líquido por boquilla"
         textRect = CGRectMake(CGFloat(100), CGFloat(y), CGFloat(800), CGFloat(60))
-        tituloArray5.drawInRect(textRect, withAttributes: attrsTitulo7)
+        tituloArray7.drawInRect(textRect, withAttributes: attrsTitulo7)
         
         y = y + 30;
-        
+       
         font = UIFont (name: "Times New Roman", size: 18)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
         let attrsTitulo8 =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
@@ -347,9 +425,10 @@ class Result2CR : UIViewController {
             // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
             y=y+30;
             // let myString:NSString = "Azúcar Álvaro"
-            var auxiliar = PDFarray[i] as! NSString
+            let auxiliar = PDFarray[i] as NSString
             auxiliar.drawInRect(textRect, withAttributes: attrsTitulo8)
         }
+
         
         y = 25;
         font = UIFont (name: "Times New Roman", size: 15)!
@@ -368,26 +447,451 @@ class Result2CR : UIViewController {
         }
         
         
+
+        
+        
+        
         font = UIFont (name: "Times New Roman", size: 60)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
         let attrsTitulo =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
-        var tituloArray = "DOSACÍTRIC"
+        let tituloArray = "DOSACÍTRIC"
         textRect = CGRectMake(CGFloat(40), CGFloat(25), CGFloat(800), CGFloat(60))
         tituloArray.drawInRect(textRect, withAttributes: attrsTitulo)
         
         font = UIFont (name: "Times New Roman", size: 30)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
         let attrsA =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
-        var AArray = "A. IDENTIFICACIÓN DEL TRATAMIENTO"
+        let AArray = "A. IDENTIFICACIÓN DEL TRATAMIENTO"
         textRect = CGRectMake(CGFloat(40), CGFloat(120), CGFloat(800), CGFloat(90))
         AArray.drawInRect(textRect, withAttributes: attrsA)
         
         font = UIFont (name: "Times New Roman", size: 30)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
         let attrsB =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
-        var BArray = "C. REGULACIÓN DEL PULVERIZADOR HIDRONEUMÁTICO (TURBO)"
+        let BArray = "C. REGULACIÓN DEL PULVERIZADOR HIDRONEUMÁTICO (TURBO)"
         textRect = CGRectMake(CGFloat(40), CGFloat(320), CGFloat(800), CGFloat(90))
         BArray.drawInRect(textRect, withAttributes: attrsB)
+        
+        
+        
+        
+        UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 850, 1200), nil)
+        font = UIFont (name: "Times New Roman", size: 60)!
+        CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
+        let attrsTitul =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
+        let tituloArra = "DOSACÍTRIC"
+        textRect = CGRectMake(CGFloat(40), CGFloat(25), CGFloat(800), CGFloat(60))
+        tituloArra.drawInRect(textRect, withAttributes: attrsTitul)
+        
+        y = 25;
+        font = UIFont (name: "Times New Roman", size: 15)!
+        CGContextSetFillColorWithColor(context, UIColor.blackColor().CGColor)
+        let baselineAd = 1.0
+        let attrsDictio =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAd]
+        
+        for i in 0...2{
+            textRect = CGRectMake(CGFloat(450), CGFloat(y), CGFloat(400), CGFloat(20))
+            var PDFarray = ["dosacitric@upv.es", "Unidad de Mecanización y Tecnología Agraria", "UNIVERSIDAD POLITÉCNICA DE VALENCIA"];
+            // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
+            y=y+25;
+            // let myString:NSString = "Azúcar Álvaro"
+            let auxiliar = PDFarray[i] as NSString
+            auxiliar.drawInRect(textRect, withAttributes: attrsDictio)
+        }
+        
+        
+        
+        
+        
+
+        
+        
+
+        
+        y=120;
+        
+        
+        for i in 0...cadena.count-1{
+            
+            CGContextSetLineWidth(context, 1.0);
+            
+            CGContextMoveToPoint(context, 40, CGFloat(y));
+            CGContextAddLineToPoint(context, 600, CGFloat(y));
+            
+            CGContextMoveToPoint(context, 40, CGFloat(y));
+            CGContextAddLineToPoint(context, 40, CGFloat(y+41));
+            
+            CGContextMoveToPoint(context, 40, CGFloat(y+41));
+            CGContextAddLineToPoint(context, 600, CGFloat(y+41));
+            
+            CGContextMoveToPoint(context, 600, CGFloat(y));
+            CGContextAddLineToPoint(context, 600, CGFloat(y+41));
+            
+            CGContextStrokePath(context);
+            
+            font = UIFont (name: "Times New Roman", size: 21)!
+            CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
+            let attrsTitulo9 =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
+            textRect = CGRectMake(CGFloat(50), CGFloat(y+10), CGFloat(400), CGFloat(25))
+            let PDFarray = cadena[i];
+            PDFarray.drawInRect(textRect, withAttributes: attrsTitulo9)
+            if(y>=1150){
+                UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 850, 1200), nil)
+                font = UIFont (name: "Times New Roman", size: 60)!
+                CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
+                let attrsTitul =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
+                let tituloArra = "DOSACÍTRIC"
+                textRect = CGRectMake(CGFloat(40), CGFloat(25), CGFloat(800), CGFloat(60))
+                tituloArra.drawInRect(textRect, withAttributes: attrsTitul)
+                
+                y = 25;
+                font = UIFont (name: "Times New Roman", size: 15)!
+                CGContextSetFillColorWithColor(context, UIColor.blackColor().CGColor)
+                let baselineAd = 1.0
+                let attrsDictio =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAd]
+                
+                for i in 0...2{
+                    textRect = CGRectMake(CGFloat(450), CGFloat(y), CGFloat(400), CGFloat(20))
+                    var PDFarray = ["dosacitric@upv.es", "Unidad de Mecanización y Tecnología Agraria", "UNIVERSIDAD POLITÉCNICA DE VALENCIA"];
+                    // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
+                    y=y+25;
+                    // let myString:NSString = "Azúcar Álvaro"
+                    let auxiliar = PDFarray[i] as NSString
+                    auxiliar.drawInRect(textRect, withAttributes: attrsDictio)
+                }
+                
+                y=100;
+                
+            }
+            y=y+60;
+            
+            
+                let str = ("marca == %@") as String
+                let predicate1 = NSPredicate(format: str , cadena[i])
+                let fetchRequest = NSFetchRequest(entityName: "FiltroBoquillas")
+                fetchRequest.predicate = predicate1
+                if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [FiltroBoquillas]{
+                    for fe in fetchResults{
+                        if !estaEnCadenaPres(fe.presion) {
+                            presiones.append(fe.presion)
+                        }
+                    }
+                }
+            
+                for x in 0...100{
+                    presOrden.append(0);
+                }
+            
+            
+                for u in 0...presiones.count-1{
+                    if(presiones[u]=="p6"){
+                        presOrden[u]=6;
+                    }else if(presiones[u]=="p7"){
+                        presOrden[u]=7;
+                    }else if(presiones[u]=="p8"){
+                        presOrden[u]=8;
+                    }else if(presiones[u]=="p9"){
+                        presOrden[u]=9;
+                    }else if(presiones[u]=="p10"){
+                        presOrden[u]=10;
+                    }else if(presiones[u]=="p11"){
+                        presOrden[u]=11;
+                    }else if(presiones[u]=="p12"){
+                        presOrden[u]=12;
+                    }else if(presiones[u]=="p13"){
+                        presOrden[u]=13;
+                    }else if(presiones[u]=="p14"){
+                        presOrden[u]=14;
+                    }else if(presiones[u]=="p15"){
+                        presOrden[u]=15;
+                    }else if(presiones[u]=="p16"){
+                       presOrden[u]=16;
+                    }
+
+                    print(cadena[i], presiones[u], presOrden[u])
+                    
+                }
+            
+                for a in 0...presiones.count-2{
+                    for b in a+1...presiones.count-1{
+                        if(presOrden[a]>presOrden[b]){
+                            varaux=presOrden[a];
+                            presOrden[a]=presOrden[b];
+                            presOrden[b]=varaux;
+                        }
+                    }
+                }
+            
+            
+            
+            
+            for o in 0...presiones.count-1{
+                //print(cadena[i], presOrden[o])
+                font = UIFont (name: "Times New Roman", size: 21)!
+                CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
+                let attrsTitulopresiones =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
+                textRect = CGRectMake(CGFloat(50), CGFloat(y), CGFloat(400), CGFloat(25))
+                let PDFarray = "Presión: \(presOrden[o]) bar";
+                PDFarray.drawInRect(textRect, withAttributes: attrsTitulopresiones)
+                y=y+25;
+                
+                CGContextSetLineWidth(context, 1.0);
+                
+                CGContextMoveToPoint(context, 40, CGFloat(y));
+                CGContextAddLineToPoint(context, 810, CGFloat(y));
+                CGContextStrokePath(context);
+                if(y>=1150){
+                    UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 850, 1200), nil)
+                    font = UIFont (name: "Times New Roman", size: 60)!
+                    CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
+                    let attrsTitul =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
+                    let tituloArra = "DOSACÍTRIC"
+                    textRect = CGRectMake(CGFloat(40), CGFloat(25), CGFloat(800), CGFloat(60))
+                    tituloArra.drawInRect(textRect, withAttributes: attrsTitul)
+                    
+                    y = 25;
+                    font = UIFont (name: "Times New Roman", size: 15)!
+                    CGContextSetFillColorWithColor(context, UIColor.blackColor().CGColor)
+                    let baselineAd = 1.0
+                    let attrsDictio =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAd]
+                    
+                    for i in 0...2{
+                        textRect = CGRectMake(CGFloat(450), CGFloat(y), CGFloat(400), CGFloat(20))
+                        var PDFarray = ["dosacitric@upv.es", "Unidad de Mecanización y Tecnología Agraria", "UNIVERSIDAD POLITÉCNICA DE VALENCIA"];
+                        // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
+                        y=y+25;
+                        // let myString:NSString = "Azúcar Álvaro"
+                        let auxiliar = PDFarray[i] as NSString
+                        auxiliar.drawInRect(textRect, withAttributes: attrsDictio)
+                    }
+                    
+                    y=100;
+                    
+                }
+                y=y+10;
+                
+                for x in 0...100{
+                    zonaA.append("");
+                    zonaM.append("");
+                    zonaB.append("");
+                }
+                
+                var countA:Int=0;
+                var countM:Int=0;
+                var countB:Int=0;
+                let str = ("marca == %@ AND presion == %@") as String
+                let predicate1 = NSPredicate(format: str , cadena[i], "p\(presOrden[o])")
+                let fetchRequest = NSFetchRequest(entityName: "FiltroBoquillas")
+                fetchRequest.predicate = predicate1
+                if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [FiltroBoquillas]{
+                    for fe in fetchResults{
+                        //Aqui habria que diferenciar entre zona1 zona2 y zona3
+                        //cadena.append(fe.modelo)
+                        //self.tableData.append(fe.modelo)
+
+                        if fe.zona == "alta" {
+                            //self.sections[0].addBoq(fe.modelo)
+                            print("alta \(fe.modelo)")
+                            zonaA[countA]=fe.modelo;
+                            countA++;
+                        }
+                        if fe.zona == "media" {
+                            //self.sections[1].addBoq(fe.modelo)
+                            print("media \(fe.modelo)")
+                            zonaM[countM]=fe.modelo;
+                            countM++;
+                        }
+                        if fe.zona == "baja" {
+                            //self.sections[2].addBoq(fe.modelo)
+                            print("baja \(fe.modelo)")
+                            zonaB[countB]=fe.modelo;
+                            countB++;
+                        }
+                    }
+                }
+                
+                countA=0;
+                countB=0;
+                countM=0;
+                
+                font = UIFont (name: "Times New Roman", size: 18)!
+                CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
+                let attrsTitulopresiones2 =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
+                textRect = CGRectMake(CGFloat(50), CGFloat(y), CGFloat(400), CGFloat(25))
+                let PDFarray2 = "Zona Alta: ";
+                PDFarray2.drawInRect(textRect, withAttributes: attrsTitulopresiones2)
+                var x=160;
+                
+                for ab in 0...zonaA.count-1{
+                    
+                    
+                    font = UIFont (name: "Times New Roman", size: 18)!
+                    CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
+                    let attrsTitulopresiones1 =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
+                    textRect = CGRectMake(CGFloat(x), CGFloat(y), CGFloat(400), CGFloat(25))
+                    let PDFarray1 = "\(zonaA[ab])";
+                    PDFarray1.drawInRect(textRect, withAttributes: attrsTitulopresiones1)
+                    print(zonaA[ab])
+                    x=x+160;
+                    
+                    
+                
+                }
+                //zonaA.removeAll()
+                
+                if(y>=1150){
+                    UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 850, 1200), nil)
+                    font = UIFont (name: "Times New Roman", size: 60)!
+                    CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
+                    let attrsTitul =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
+                    let tituloArra = "DOSACÍTRIC"
+                    textRect = CGRectMake(CGFloat(40), CGFloat(25), CGFloat(800), CGFloat(60))
+                    tituloArra.drawInRect(textRect, withAttributes: attrsTitul)
+                    
+                    y = 25;
+                    font = UIFont (name: "Times New Roman", size: 15)!
+                    CGContextSetFillColorWithColor(context, UIColor.blackColor().CGColor)
+                    let baselineAd = 1.0
+                    let attrsDictio =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAd]
+                    
+                    for i in 0...2{
+                        textRect = CGRectMake(CGFloat(450), CGFloat(y), CGFloat(400), CGFloat(20))
+                        var PDFarray = ["dosacitric@upv.es", "Unidad de Mecanización y Tecnología Agraria", "UNIVERSIDAD POLITÉCNICA DE VALENCIA"];
+                        // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
+                        y=y+25;
+                        // let myString:NSString = "Azúcar Álvaro"
+                        let auxiliar = PDFarray[i] as NSString
+                        auxiliar.drawInRect(textRect, withAttributes: attrsDictio)
+                    }
+                    
+                    y=100;
+
+                }
+                y=y+25;
+                x=160;
+                
+                font = UIFont (name: "Times New Roman", size: 18)!
+                CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
+                let attrsTitulopresiones3 =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
+                textRect = CGRectMake(CGFloat(50), CGFloat(y), CGFloat(400), CGFloat(25))
+                let PDFarray3 = "Zona Media: ";
+                PDFarray3.drawInRect(textRect, withAttributes: attrsTitulopresiones3)
+              
+                
+                for ab in 0...zonaM.count-1{
+                    
+                    
+                    font = UIFont (name: "Times New Roman", size: 18)!
+                    CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
+                    let attrsTitulopresiones1 =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
+                    textRect = CGRectMake(CGFloat(x), CGFloat(y), CGFloat(400), CGFloat(25))
+                    let PDFarray1 = "\(zonaM[ab])";
+                    PDFarray1.drawInRect(textRect, withAttributes: attrsTitulopresiones1)
+                    
+                    x=x+160;
+                    
+                    
+                    
+                }
+                
+                //zonaM.removeAll()
+                if(y>=1150){
+                    UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 850, 1200), nil)
+                    font = UIFont (name: "Times New Roman", size: 60)!
+                    CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
+                    let attrsTitul =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
+                    let tituloArra = "DOSACÍTRIC"
+                    textRect = CGRectMake(CGFloat(40), CGFloat(25), CGFloat(800), CGFloat(60))
+                    tituloArra.drawInRect(textRect, withAttributes: attrsTitul)
+                    
+                    y = 25;
+                    font = UIFont (name: "Times New Roman", size: 15)!
+                    CGContextSetFillColorWithColor(context, UIColor.blackColor().CGColor)
+                    let baselineAd = 1.0
+                    let attrsDictio =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAd]
+                    
+                    for i in 0...2{
+                        textRect = CGRectMake(CGFloat(450), CGFloat(y), CGFloat(400), CGFloat(20))
+                        var PDFarray = ["dosacitric@upv.es", "Unidad de Mecanización y Tecnología Agraria", "UNIVERSIDAD POLITÉCNICA DE VALENCIA"];
+                        // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
+                        y=y+25;
+                        // let myString:NSString = "Azúcar Álvaro"
+                        let auxiliar = PDFarray[i] as NSString
+                        auxiliar.drawInRect(textRect, withAttributes: attrsDictio)
+                    }
+                    
+                    y=100;
+                    
+                }
+                y=y+25;
+                x=160;
+                
+                font = UIFont (name: "Times New Roman", size: 18)!
+                CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
+                let attrsTitulopresiones4 =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
+                textRect = CGRectMake(CGFloat(50), CGFloat(y), CGFloat(400), CGFloat(25))
+                let PDFarray4 = "Zona Baja: ";
+                PDFarray4.drawInRect(textRect, withAttributes: attrsTitulopresiones4)
+                
+                
+                for ab in 0...zonaB.count-1{
+                    
+                    
+                    font = UIFont (name: "Times New Roman", size: 18)!
+                    CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
+                    let attrsTitulopresiones1 =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
+                    textRect = CGRectMake(CGFloat(x), CGFloat(y), CGFloat(400), CGFloat(25))
+                    let PDFarray1 = "\(zonaB[ab])";
+                    PDFarray1.drawInRect(textRect, withAttributes: attrsTitulopresiones1)
+                    
+                    x=x+160;
+                    
+                    
+                    
+                }
+
+                
+                //zonaB.removeAll()
+                
+                
+                
+                if(y>=1150){
+                    UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 850, 1200), nil)
+                    font = UIFont (name: "Times New Roman", size: 60)!
+                    CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
+                    let attrsTitul =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
+                    let tituloArra = "DOSACÍTRIC"
+                    textRect = CGRectMake(CGFloat(40), CGFloat(25), CGFloat(800), CGFloat(60))
+                    tituloArra.drawInRect(textRect, withAttributes: attrsTitul)
+                    
+                    y = 25;
+                    font = UIFont (name: "Times New Roman", size: 15)!
+                    CGContextSetFillColorWithColor(context, UIColor.blackColor().CGColor)
+                    let baselineAd = 1.0
+                    let attrsDictio =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAd]
+                    
+                    for i in 0...2{
+                        textRect = CGRectMake(CGFloat(450), CGFloat(y), CGFloat(400), CGFloat(20))
+                        var PDFarray = ["dosacitric@upv.es", "Unidad de Mecanización y Tecnología Agraria", "UNIVERSIDAD POLITÉCNICA DE VALENCIA"];
+                        // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
+                        y=y+25;
+                        // let myString:NSString = "Azúcar Álvaro"
+                        let auxiliar = PDFarray[i] as NSString
+                        auxiliar.drawInRect(textRect, withAttributes: attrsDictio)
+                    }
+                    
+                    y=100;
+                    
+                }
+                y=y+50;
+            }
+
+            
+        }
+        
+        
+
+        
         
     }
     
