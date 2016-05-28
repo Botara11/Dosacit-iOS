@@ -265,7 +265,7 @@ class SelecBoquillas2: UIViewController, UITextFieldDelegate{
             IntervaloCaudalAdmisibleAlta.text = String(format:"%.2f",fetchResults[0].intervaloCaudalAdmisible0)+" - "+String(format:"%.2f",fetchResults[0].intervaloCaudalAdmisible1)
             IntervaloCaudalAdmisibleMedia.text = String(format:"%.2f",fetchResults[0].intervaloCaudalAdmisible2)+" - "+String(format:"%.2f",fetchResults[0].intervaloCaudalAdmisible3)
             IntervaloCaudalAdmisibleBaja.text = String(format:"%.2f",fetchResults[0].intervaloCaudalAdmisible4)+" - "+String(format:"%.2f",fetchResults[0].intervaloCaudalAdmisible5)
-            VariacionText.text = String(format:"%.0f",round(fetchResults[0].variacionCaudalAdmisible * 100))
+            VariacionText.text = String(format:"%.0f",round(fetchResults[0].variacionCaudalAdmisible))
             VariacionCaudal.value = (fetchResults[0].variacionCaudalAdmisible as NSNumber).floatValue * 100
             print("\(fetchResults[0].variacionCaudalAdmisible)")
             

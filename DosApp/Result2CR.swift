@@ -225,14 +225,7 @@ class Result2CR : UIViewController {
             //  animated: true,
             //completion: nil)
             
-            let fetchRequest = NSFetchRequest(entityName: "FiltroBoquillas")
-            if let fetchResultsB = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [FiltroBoquillas] {
-                
-               
-                marca1 = "\(fetchResultsB[0].marca)"
-                marca2 = "\(fetchResultsB[1].presion)"
-                
-            }
+           
             
             let fetchRequest2 = NSFetchRequest(entityName: "FiltroBoquillas")
             if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest2)) as? [FiltroBoquillas]{

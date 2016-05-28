@@ -285,7 +285,7 @@ class SelecBoquillas1: UIViewController, UITextFieldDelegate {
     @IBAction func SliderChange(sender: AnyObject) {
         
         let CurrentValue:float_t = SliderVA.value;
-        VelocidadAvanceText.text = String(format:"%.1f",CurrentValue)
+        VelocidadAvanceText.text = String(format:"%.2f",CurrentValue)
         newItemB!.velocidadAvance = (round(SliderVA.value * 10)/10 as NSNumber).doubleValue
         do {
             try managedObjectContext!.save()
