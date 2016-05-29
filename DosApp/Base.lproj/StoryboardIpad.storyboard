@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vZY-JR-egG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vZY-JR-egG">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -1515,7 +1515,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
-                                <state key="normal" title="?">
+                                <state key="normal">
                                     <color key="titleColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -4900,8 +4900,8 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Unidad de mecanización y tecnología agraria" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U0q-C8-sGU">
-                                <rect key="frame" x="0.0" y="176" width="768" height="39"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Unidad de Mecanización y Tecnología Agraria" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U0q-C8-sGU">
+                                <rect key="frame" x="0.0" y="176" width="768" height="43"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
@@ -5348,7 +5348,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
-                                <state key="normal" title="?">
+                                <state key="normal">
                                     <color key="titleColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -7595,7 +7595,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
-                                <state key="normal" title="?">
+                                <state key="normal">
                                     <color key="titleColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -7787,30 +7787,30 @@
         <image name="zonas_boquillas" width="369" height="321"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nhG-iF-rX5"/>
-        <segue reference="XCx-Em-AWB"/>
         <segue reference="lS0-cK-aJN"/>
         <segue reference="wCG-tV-5BN"/>
         <segue reference="q8k-fp-UZo"/>
-        <segue reference="vMb-Dx-Exr"/>
+        <segue reference="XCx-Em-AWB"/>
         <segue reference="qS8-Xe-qW2"/>
-        <segue reference="FLv-Pi-hiS"/>
+        <segue reference="vMb-Dx-Exr"/>
         <segue reference="LEl-di-c1R"/>
+        <segue reference="FLv-Pi-hiS"/>
+        <segue reference="igc-EZ-AJt"/>
+        <segue reference="nhG-iF-rX5"/>
+        <segue reference="fVl-dP-UNR"/>
+        <segue reference="TWz-sr-RFE"/>
         <segue reference="SCx-Sb-Hqj"/>
         <segue reference="hov-lw-895"/>
-        <segue reference="fVl-dP-UNR"/>
-        <segue reference="igc-EZ-AJt"/>
-        <segue reference="TWz-sr-RFE"/>
+        <segue reference="EHX-o7-fMG"/>
+        <segue reference="j8T-ol-82k"/>
         <segue reference="wDx-9E-5bc"/>
         <segue reference="uPV-8h-mMd"/>
-        <segue reference="8Wy-HH-1TD"/>
-        <segue reference="eed-KH-kNC"/>
+        <segue reference="o6y-Ja-J8L"/>
+        <segue reference="dAq-bU-kqQ"/>
         <segue reference="3R8-3F-ZAO"/>
+        <segue reference="eed-KH-kNC"/>
+        <segue reference="8Wy-HH-1TD"/>
         <segue reference="RMw-ft-yIC"/>
         <segue reference="QNK-oa-iXe"/>
-        <segue reference="dAq-bU-kqQ"/>
-        <segue reference="RTt-sC-pTK"/>
-        <segue reference="yES-d5-VH6"/>
-        <segue reference="EHX-o7-fMG"/>
     </inferredMetricsTieBreakers>
 </document>

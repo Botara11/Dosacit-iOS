@@ -57,18 +57,42 @@ class CaldoAp1: UIViewController, UITextFieldDelegate  {
             print("CaldoAp1 Objetos: \(fetchResults2.count)")
             
             if (fetchResults2[0].anchoCalle != newItemB!.anchoCalle){
-                anchoCalleTextField.text = String(format:"%.2f",fetchResults2[0].anchoCalle)
-                SwitchAS.setOn(true, animated: true)
-                SwitchAC.setOn(false, animated: true)
+                if(fetchResults2[0].anchoCalle != 0){
+                    anchoCalleTextField.text = String(format:"%.2f",fetchResults2[0].anchoCalle)
+                    SwitchAS.setOn(true, animated: true)
+                    SwitchAC.setOn(false, animated: true)
+                }else{
+                    anchoCalleTextField.text = ""
+                    SwitchAS.setOn(false, animated: true)
+                    SwitchAC.setOn(true, animated: true)
+                }
             }
-            boquillasAltaTextField.text = String(fetchResults2[0].numBoqAbiertasAltaHidraulica)
-            boquillasMediaTextField.text = String(fetchResults2[0].numBoqAbiertasMediaHidraulica)
-            boquillasBajaTextField.text = String(fetchResults2[0].numBoqAbiertasBajaHidraulica)
+            if(fetchResults2[0].numBoqAbiertasAltaHidraulica != 0){
+                boquillasAltaTextField.text = String(fetchResults2[0].numBoqAbiertasAltaHidraulica)
+            }else{
+                boquillasAltaTextField.text = ""
+            }
+            if(fetchResults2[0].numBoqAbiertasMediaHidraulica != 0){
+                boquillasMediaTextField.text = String(fetchResults2[0].numBoqAbiertasMediaHidraulica)
+            }else{
+                boquillasMediaTextField.text = ""
+            }
+            if(fetchResults2[0].numBoqAbiertasBajaHidraulica != 0){
+                boquillasBajaTextField.text = String(fetchResults2[0].numBoqAbiertasBajaHidraulica)
+            }else{
+                boquillasBajaTextField.text = ""
+            }
             print ("Load: \(fetchResults2[0].numBoqAbiertasAltaHidraulica) + \(fetchResults2[0].numBoqAbiertasMediaHidraulica) + \(fetchResults2[0].numBoqAbiertasBajaHidraulica)")
             if (fetchResults2[0].velocidadAvance != newItemB!.velocidadAvance){
-                velocidadAvanceTextField.text = String(format:"%.2f",fetchResults2[0].velocidadAvance)
-                SwitchVS.setOn(true, animated: true)
-                SwitchVC.setOn(false, animated: true)
+                if(fetchResults2[0].velocidadAvance != 0){
+                    velocidadAvanceTextField.text = String(format:"%.2f",fetchResults2[0].velocidadAvance)
+                    SwitchVS.setOn(true, animated: true)
+                    SwitchVC.setOn(false, animated: true)
+                }else{
+                    velocidadAvanceTextField.text = ""
+                    SwitchVS.setOn(false, animated: true)
+                    SwitchVC.setOn(true, animated: true)
+                }
             }
             
             

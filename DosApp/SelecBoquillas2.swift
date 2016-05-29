@@ -282,14 +282,6 @@ class SelecBoquillas2: UIViewController, UITextFieldDelegate{
             
             
             
-            //if (fetchResults[0].numeroBoquillasCerradasAlta != 0){
-            NumBoqCerrAlta.text = "\(fetchResults[0].numeroBoquillasCerradasAlta)"
-            //}
-            //if (fetchResults[0].numeroBoquillasCerradasBaja != 0){
-            NumBoqCerrBaja.text = "\(fetchResults[0].numeroBoquillasCerradasBaja)"
-            //}else{
-            //  print("Cerradas zona baja es ")
-            //}
             if (fetchResults[0].numeroBoquillasAbiertasAlta != 0){
                 NumBoqAbAlta.text = "\(fetchResults[0].numeroBoquillasAbiertasAlta)"
             }
@@ -310,6 +302,17 @@ class SelecBoquillas2: UIViewController, UITextFieldDelegate{
             if (fetchResults[0].porcentajeVegetacionMedia != 0){
                 PorcentajeVegMedia.text = "\(fetchResults[0].porcentajeVegetacionMedia)"
             }
+            if (NumBoqAbAlta.text == ""){
+                NumBoqCerrAlta.text = ""
+            }else{
+                NumBoqCerrAlta.text = "\(fetchResults[0].numeroBoquillasCerradasAlta)"
+            }
+            if (NumBoqAbAlta.text == ""){
+                NumBoqCerrBaja.text = ""
+            }else{
+                NumBoqCerrBaja.text = "\(fetchResults[0].numeroBoquillasCerradasBaja)"
+            }
+
             
         }
     }
