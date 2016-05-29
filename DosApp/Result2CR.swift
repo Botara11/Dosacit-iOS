@@ -194,14 +194,16 @@ class Result2CR : UIViewController {
                 let fetchRequest3 = NSFetchRequest(entityName: "B1")
                 if let resultados = (try? managedObjectContext!.executeFetchRequest(fetchRequest3)) as? [B1] {
                     
-
-                volumenAplicacion.text = "\(resultados[0].volumenApp) L/ha"
+                let volapp:String = String(format:"%.0f", resultados[0].volumenApp)
+                volumenAplicacion.text = "\(volapp) L/ha"
                 
                 velocidadAvance.text = "\(resultados[0].velocidadAvance) km/h"
+            
+                let b:String = String(format:"%.0f", resultados[0].anchoCalle)
+                anchoTrabajo.text = "\(b) m"
                 
-                anchoTrabajo.text = "\(resultados[0].anchoCalle) m"
-                
-                caudalLiqTotal.text = "\(resultados[0].caudalLiquidoTotal) L/min"
+                let caudalLiq:String = String(format:"%.01f", resultados[0].caudalLiquidoTotal)
+                caudalLiqTotal.text = "\(caudalLiq) L/min"
                 
                 numBoquillasTotal.text = "\(resultados[0].numeroTotalBoquillas) "
                 numBoquillasPorSector.text = "\(resultados[0].numeroBoquillasSector) "
@@ -213,11 +215,19 @@ class Result2CR : UIViewController {
                 vegetacionZonaAlta.text = "\(resultados[0].porcentajeVegetacionAlta) %"
                 vegetacionZonaMedia.text = "\(resultados[0].porcentajeVegetacionMedia) %"
                 vegetacionZonaBaja.text = "\(resultados[0].porcentajeVegetacionBaja) %"
-                caudalLiquidoSector.text = "\(resultados[0].caudalLiquidoSector) L/min"
-                variacionCaudalAdmisible.text = "\(resultados[0].variacionCaudalAdmisible) %"
-                caudalLiquidoZonaAlta.text = "\(resultados[0].intervaloCaudalAdmisible0) - \(resultados[0].intervaloCaudalAdmisible1) L/min"
-                caudalLiquidoZonaMedia.text = "\(resultados[0].intervaloCaudalAdmisible2) - \(resultados[0].intervaloCaudalAdmisible3) L/min"
-                caudalLiquidoZonaBaja.text = "\(resultados[0].intervaloCaudalAdmisible4) - \(resultados[0].intervaloCaudalAdmisible5) L/min"
+                let caudalLiqSector:String = String(format:"%.02f", resultados[0].caudalLiquidoSector)
+                caudalLiquidoSector.text = "\(caudalLiqSector) L/min"
+                let variacionCaudal:String = String(format:"%.0f", resultados[0].variacionCaudalAdmisible)
+                variacionCaudalAdmisible.text = "\(variacionCaudal) %"
+                let intervalo0:String = String(format:"%.02f", resultados[0].intervaloCaudalAdmisible0)
+                let intervalo1:String = String(format:"%.02f", resultados[0].intervaloCaudalAdmisible1)
+                let intervalo2:String = String(format:"%.02f", resultados[0].intervaloCaudalAdmisible2)
+                let intervalo3:String = String(format:"%.02f", resultados[0].intervaloCaudalAdmisible3)
+                let intervalo4:String = String(format:"%.02f", resultados[0].intervaloCaudalAdmisible4)
+                let intervalo5:String = String(format:"%.02f", resultados[0].intervaloCaudalAdmisible5)
+                caudalLiquidoZonaAlta.text = "\(intervalo0) - \(intervalo1) L/min"
+                caudalLiquidoZonaMedia.text = "\(intervalo2) - \(intervalo3) L/min"
+                caudalLiquidoZonaBaja.text = "\(intervalo4) - \(intervalo5) L/min"
                 
                 }
             }

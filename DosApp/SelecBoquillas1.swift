@@ -409,9 +409,9 @@ class SelecBoquillas1: UIViewController, UITextFieldDelegate {
             
             AnchoSiguienteText.addTarget(self, action: "textFieldDidChangeAncho:", forControlEvents: UIControlEvents.EditingChanged)
             VolumenSiguienteText.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
-            VolumenSiguienteText.keyboardType = UIKeyboardType.NumbersAndPunctuation
+            VolumenSiguienteText.keyboardType = UIKeyboardType.NumberPad
             NumTotalBoquillasText.keyboardType = UIKeyboardType.NumbersAndPunctuation
-            VolumenSiguienteText.keyboardType = UIKeyboardType.NumbersAndPunctuation
+            VelocidadAvanceText.keyboardType = UIKeyboardType.NumberPad
             AnchoSiguienteText.keyboardType = UIKeyboardType.NumbersAndPunctuation
             
             
@@ -440,7 +440,8 @@ class SelecBoquillas1: UIViewController, UITextFieldDelegate {
             
             if(fetchResults[0].velocidadAvance != 0){
                 print("\(fetchResults[0].velocidadAvance)")
-                VelocidadAvanceText.text = "\(fetchResults[0].velocidadAvance)"
+                let b:String = String(format:"%.02f", fetchResults[0].velocidadAvance)
+                VelocidadAvanceText.text = "\(b)"
                 SliderVA.value = (fetchResults[0].velocidadAvance as NSNumber).floatValue
                 
             }

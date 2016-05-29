@@ -126,13 +126,13 @@ class Result1 : UIViewController {
 
             
             //Ancho Calle
-            let b:String = String(format:"%.02f", fetchResults[0].anchoCalle)
+            let b:String = String(format:"%.01f", fetchResults[0].anchoCalle)
             
             anchoCalleText.text = ("\(b) m")
             //anchoCalleText.text = "\(caract2.anchoCalle) m"
             
             //Distancia Árboles
-            let c:String = String(format:"%.02f", fetchResults[0].distanciaArboles)
+            let c:String = String(format:"%.01f", fetchResults[0].distanciaArboles)
             distanciaArbolesText.text = ("\(c) m")
             
             
@@ -140,8 +140,8 @@ class Result1 : UIViewController {
             
             //Volumen Árbol
             caract2.calcularVolumenArbol()
-            let d:String = String(format:"%.02f", fetchResults[0].volumenArbol)
-            volumenArbolText.text = ("\(d) m3")
+            let d:String = String(format:"%.01f", fetchResults[0].volumenArbol)
+            volumenArbolText.text = ("\(d) m3/árbol")
             
             
             //Forma Árbol
@@ -298,8 +298,8 @@ class Result1 : UIViewController {
                 //Volumen de aplicación
                 caract2.volumenDeAplicacion()
                 
-                volumenAplicacionHAText.text = "\(fetchResults[0].volumenAplicacionLHA) L/HA"
-                volumenAplicacionHATextA = "\(fetchResults[0].volumenAplicacionLHA) L/HA"
+                volumenAplicacionHAText.text = "\(fetchResults[0].volumenAplicacionLHA) L/ha"
+                volumenAplicacionHATextA = "\(fetchResults[0].volumenAplicacionLHA) L/ha"
                
                 
 
