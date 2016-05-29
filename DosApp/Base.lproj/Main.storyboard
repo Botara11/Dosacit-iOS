@@ -3665,6 +3665,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Z0U-VR-Yl4">
+                                <rect key="frame" x="74" y="84" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="PDF" backgroundImage="dimensiones">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="pdf_iphone4:" destination="WfG-4Y-Obd" eventType="touchUpInside" id="4yF-hE-MgX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -3679,7 +3690,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C3D-IR-Tvw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1570.5599999999999" y="-547.84000000000003"/>
+            <point key="canvasLocation" x="1570" y="-548"/>
         </scene>
         <!--Indice-->
         <scene sceneID="hV2-fL-RsO">
@@ -4768,29 +4779,30 @@
         <image name="Boquillas" width="531" height="583"/>
         <image name="Calles" width="486" height="301"/>
         <image name="Captura de pantalla 2015-01-19 a las 23.49.41" width="505" height="602"/>
+        <image name="dimensiones" width="355" height="311"/>
         <image name="printer" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="g9K-29-7bY"/>
-        <segue reference="qVZ-71-2xK"/>
-        <segue reference="t4e-Km-6zs"/>
-        <segue reference="ygu-dF-mYa"/>
-        <segue reference="U7m-GX-FEX"/>
-        <segue reference="xCf-AM-tiM"/>
-        <segue reference="aYI-XE-rdh"/>
-        <segue reference="gRF-6l-0aw"/>
-        <segue reference="zWP-KX-UTP"/>
-        <segue reference="xT5-pq-Mg6"/>
+        <segue reference="Rbs-9g-VVo"/>
         <segue reference="oyd-TT-afh"/>
         <segue reference="nnS-aD-7BB"/>
         <segue reference="pkZ-g8-IIm"/>
         <segue reference="1dv-UG-5cq"/>
         <segue reference="vPS-f5-3Oj"/>
-        <segue reference="Rbs-9g-VVo"/>
         <segue reference="g7L-38-bRg"/>
-        <segue reference="ISg-dM-oWA"/>
-        <segue reference="PCd-Nd-h4B"/>
         <segue reference="DTy-wH-VPl"/>
+        <segue reference="PCd-Nd-h4B"/>
+        <segue reference="gRF-6l-0aw"/>
+        <segue reference="zWP-KX-UTP"/>
+        <segue reference="MsY-hP-x30"/>
+        <segue reference="t4e-Km-6zs"/>
+        <segue reference="qVZ-71-2xK"/>
+        <segue reference="g9K-29-7bY"/>
+        <segue reference="ygu-dF-mYa"/>
+        <segue reference="U7m-GX-FEX"/>
+        <segue reference="xCf-AM-tiM"/>
+        <segue reference="aYI-XE-rdh"/>
+        <segue reference="ISg-dM-oWA"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
