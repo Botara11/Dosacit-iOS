@@ -27,22 +27,47 @@ class SelecBoquillas1: UIViewController, UITextFieldDelegate {
     @IBOutlet var VolumenSiguienteText: UITextField!
     @IBOutlet var AnchoSiguienteText: UITextField!
     @IBOutlet var AnchoCalculadoText: UITextView!
-    @IBOutlet var VelocidadAvanceText: UITextView!
+    
+    
+    @IBOutlet var VelocidadAvanceText: UITextField!
+    
     @IBOutlet var CaudalLiquidoTotalText: UITextView!
     @IBOutlet var CaudalLiquidoSectorText: UITextView!
     @IBOutlet var NumTotalBoquillasText: UITextField!
     
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        if(textField.tag == 2){
+        if(textField.tag == 3){
             scrollView.setContentOffset(CGPointMake(0,250), animated: true)
         }
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        if(textField.tag == 2){
+        if(textField.tag == 3){
             scrollView.setContentOffset(CGPointMake(0,0), animated: true)
         }
+    }
+    
+    @IBAction func editingVelocidadAvanceEnd(sender: AnyObject) {
+        
+        SliderVA.value = (VelocidadAvanceText.text! as NSString).floatValue;
+        
+        newItemB!.velocidadAvance = (round(SliderVA.value * 10)/10 as NSNumber).doubleValue
+        do {
+            try managedObjectContext!.save()
+        } catch {
+            fatalError("Failure to save context: \(error)")
+        }
+        caract2.calcularCaudalesB()
+        let fetchRequest = NSFetchRequest(entityName: "B1")
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [B1] {
+            
+            CaudalLiquidoTotalText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal)
+            CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
+            
+        }
+
+        
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -271,11 +296,7 @@ class SelecBoquillas1: UIViewController, UITextFieldDelegate {
                     CaudalLiquidoSectorText.text = String(format:"%.1f",fetchResults[0].caudalLiquidoTotal/2)
                 }
             }
-            
-            
             newItemB!.anchoCalle = (AnchoCalculadoText.text as NSString).doubleValue
-            
-            
         }
     }
     
@@ -307,8 +328,10 @@ class SelecBoquillas1: UIViewController, UITextFieldDelegate {
         
         
         newItemB!.numeroTotalBoquillas = (NumTotalBoquillasText.text! as NSString).integerValue
-        newItemB!.velocidadAvance = (VelocidadAvanceText.text as NSString).doubleValue
+        newItemB!.velocidadAvance = (VelocidadAvanceText.text! as NSString).doubleValue
         
+        newItemB!.anchoCalleNuevo = (AnchoSiguienteText.text! as NSString).doubleValue
+        newItemB!.volumenAppNuevo = (VolumenSiguienteText.text! as NSString).doubleValue
         if SwitchVC.on{
             newItemB!.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
             newItemB!.flagVolumen = 0
@@ -370,10 +393,14 @@ class SelecBoquillas1: UIViewController, UITextFieldDelegate {
         
         VolumenSiguienteText.tag = 0
         AnchoSiguienteText.tag = 1
-        NumTotalBoquillasText.tag = 2
+        VelocidadAvanceText.tag = 2
+        NumTotalBoquillasText.tag = 3
         
         caract2.calcularCaudalesB()
         
+        //VelocidadAvanceText.didChange(<#T##changeKind: NSKeyValueChange##NSKeyValueChange#>, valuesAtIndexes: <#T##NSIndexSet#>, forKey: <#T##String#>)
+        
+        //textFieldDidChangeVelocidadAvance
         
         let fetchRequest = NSFetchRequest(entityName: "B1")
         if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [B1] {
@@ -388,8 +415,8 @@ class SelecBoquillas1: UIViewController, UITextFieldDelegate {
             AnchoSiguienteText.keyboardType = UIKeyboardType.NumbersAndPunctuation
             
             
-            if(fetchResults[0].anchoCalle != 0){
-                AnchoSiguienteText.text = "\(fetchResults[0].anchoCalle)"
+            if(fetchResults[0].anchoCalleNuevo != 0){
+                AnchoSiguienteText.text = "\(fetchResults[0].anchoCalleNuevo)"
             }
             
             if(fetchResults[0].volumenAppNuevo != 0){

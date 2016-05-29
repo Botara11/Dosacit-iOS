@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vZY-JR-egG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vZY-JR-egG">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -1802,14 +1802,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="3" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5S9-Lw-r5r">
-                                        <rect key="frame" x="566" y="418" width="79" height="36"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <color key="tintColor" red="1" green="0.60851760200000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                     <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.99000000953674316" minValue="0.99000000953674316" maxValue="6.0100002288818359" translatesAutoresizingMaskIntoConstraints="NO" id="dBh-Q6-hiy">
                                         <rect key="frame" x="80" y="425" width="325" height="31"/>
                                         <connections>
@@ -1855,6 +1847,15 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XNh-ey-pSQ">
+                                        <rect key="frame" x="565" y="427" width="82" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="editingVelocidadAvanceEnd:" destination="fDU-Js-JWq" eventType="editingDidEnd" id="M6e-DA-nJR"/>
+                                            <outlet property="delegate" destination="fDU-Js-JWq" id="DJC-cU-AeZ"/>
+                                        </connections>
+                                    </textField>
                                 </subviews>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYR-Zn-x0i">
@@ -2003,7 +2004,7 @@
                         <outlet property="SwitchAS" destination="BvE-s6-1WN" id="9Qe-VV-Cg8"/>
                         <outlet property="SwitchV" destination="bj7-Va-lm9" id="Ee3-pB-NwN"/>
                         <outlet property="SwitchVC" destination="2Wb-2A-icB" id="dGP-0s-HU7"/>
-                        <outlet property="VelocidadAvanceText" destination="5S9-Lw-r5r" id="zFR-A9-jlt"/>
+                        <outlet property="VelocidadAvanceText" destination="XNh-ey-pSQ" id="ZXz-cn-OcS"/>
                         <outlet property="VolumenCalculadoText" destination="auZ-Rt-xEk" id="8UP-oK-dfq"/>
                         <outlet property="VolumenSiguienteText" destination="zTT-yY-VaK" id="emj-1k-alV"/>
                         <outlet property="scrollView" destination="xKP-um-F4G" id="KCy-uT-jZv"/>
@@ -7787,30 +7788,30 @@
         <image name="zonas_boquillas" width="369" height="321"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lS0-cK-aJN"/>
-        <segue reference="wCG-tV-5BN"/>
-        <segue reference="q8k-fp-UZo"/>
+        <segue reference="uPV-8h-mMd"/>
+        <segue reference="zoi-C4-jAd"/>
+        <segue reference="o6y-Ja-J8L"/>
+        <segue reference="dAq-bU-kqQ"/>
+        <segue reference="B9A-Ij-QPY"/>
+        <segue reference="oSY-ES-Jrb"/>
+        <segue reference="QNK-oa-iXe"/>
         <segue reference="XCx-Em-AWB"/>
+        <segue reference="FLv-Pi-hiS"/>
         <segue reference="qS8-Xe-qW2"/>
         <segue reference="vMb-Dx-Exr"/>
         <segue reference="LEl-di-c1R"/>
-        <segue reference="FLv-Pi-hiS"/>
-        <segue reference="igc-EZ-AJt"/>
-        <segue reference="nhG-iF-rX5"/>
         <segue reference="fVl-dP-UNR"/>
+        <segue reference="nhG-iF-rX5"/>
+        <segue reference="igc-EZ-AJt"/>
         <segue reference="TWz-sr-RFE"/>
-        <segue reference="SCx-Sb-Hqj"/>
         <segue reference="hov-lw-895"/>
-        <segue reference="EHX-o7-fMG"/>
+        <segue reference="SCx-Sb-Hqj"/>
         <segue reference="j8T-ol-82k"/>
-        <segue reference="wDx-9E-5bc"/>
-        <segue reference="uPV-8h-mMd"/>
-        <segue reference="o6y-Ja-J8L"/>
-        <segue reference="dAq-bU-kqQ"/>
+        <segue reference="EHX-o7-fMG"/>
         <segue reference="3R8-3F-ZAO"/>
         <segue reference="eed-KH-kNC"/>
-        <segue reference="8Wy-HH-1TD"/>
         <segue reference="RMw-ft-yIC"/>
-        <segue reference="QNK-oa-iXe"/>
+        <segue reference="wCG-tV-5BN"/>
+        <segue reference="q8k-fp-UZo"/>
     </inferredMetricsTieBreakers>
 </document>
