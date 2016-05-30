@@ -49,8 +49,8 @@ class ID: ResponsiveTextFieldViewController, UITextFieldDelegate {
         if (segue.identifier == "IDCultivo1"){
             
             
-            if fechaText.text == "" || idParcelaText.text == "" || idTratamientoText.text == "" || referenciaText.text == "" {
-                alert("ERROR",mensaje: "No puede haber campos vacíos y deben ser valores numéricos")
+            if fechaText.text == ""  {
+                alert("ERROR",mensaje: "El campo de 'fecha' no puede estar vacio")
             }
         }
         let fetchRequest = NSFetchRequest(entityName: "Z1")

@@ -18,6 +18,11 @@ class Result1 : UIViewController {
     var formaActuacionIndice = 0;
     var zonaCriticaIndice = 0;
     
+    @IBOutlet weak var fecha: UILabel!
+    @IBOutlet weak var idparcela: UILabel!
+    @IBOutlet weak var idtratamiento: UILabel!
+    @IBOutlet weak var referencia: UILabel!
+    
     @IBOutlet var densidadFoliarText: UILabel!
     @IBOutlet var anchoCalleText: UILabel!
     @IBOutlet var distanciaArbolesText: UILabel!
@@ -87,6 +92,16 @@ class Result1 : UIViewController {
     
     
      override func viewDidLoad() {
+        
+        
+        let fetchRequestID = NSFetchRequest(entityName: "Z1")
+        if let fetchResultsID = (try? managedObjectContext!.executeFetchRequest(fetchRequestID)) as? [Z1] {
+            fecha.text = fetchResultsID[0].fecha
+            idparcela.text = fetchResultsID[0].idParcela
+            idtratamiento.text = fetchResultsID[0].idTratamiento
+            referencia.text = fetchResultsID[0].referencia
+            
+        }
         
         let fetchRequest = NSFetchRequest(entityName: "A1")
         if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [A1] {
