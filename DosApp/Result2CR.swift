@@ -38,7 +38,7 @@ class Result2CR : UIViewController {
     @IBOutlet weak var caudalLiquidoZonaAlta: UILabel!
     @IBOutlet weak var caudalLiquidoZonaMedia: UILabel!
     @IBOutlet weak var caudalLiquidoZonaBaja: UILabel!
-  
+    
     
     
     var LabelText = String ()
@@ -138,23 +138,23 @@ class Result2CR : UIViewController {
                 self.presentViewController(vc, animated: true, completion: nil)
             }
             else{
-                let vc = self.storyboard?.instantiateViewControllerWithIdentifier("sinboquillas") 
+                let vc = self.storyboard?.instantiateViewControllerWithIdentifier("sinboquillas")
                 self.presentViewController(vc!, animated: true, completion: nil)
             }
         }
-
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
         /*
         if (segue.identifier == "SegueResult12"){
-            print(caract2.anchoCalle)
-            let DestViewController : Result12 = segue.destinationViewController as! Result12
-            DestViewController.caract2 =  caract2
+        print(caract2.anchoCalle)
+        let DestViewController : Result12 = segue.destinationViewController as! Result12
+        DestViewController.caract2 =  caract2
         }
         */
-
+        
     }
     
     
@@ -194,41 +194,41 @@ class Result2CR : UIViewController {
                 let fetchRequest3 = NSFetchRequest(entityName: "B1")
                 if let resultados = (try? managedObjectContext!.executeFetchRequest(fetchRequest3)) as? [B1] {
                     
-                let volapp:String = String(format:"%.0f", resultados[0].volumenApp)
-                volumenAplicacion.text = "\(volapp) L/ha"
-                
-                velocidadAvance.text = "\(resultados[0].velocidadAvance) km/h"
-            
-                let b:String = String(format:"%.0f", resultados[0].anchoCalle)
-                anchoTrabajo.text = "\(b) m"
-                
-                let caudalLiq:String = String(format:"%.01f", resultados[0].caudalLiquidoTotal)
-                caudalLiqTotal.text = "\(caudalLiq) L/min"
-                
-                numBoquillasTotal.text = "\(resultados[0].numeroTotalBoquillas) "
-                numBoquillasPorSector.text = "\(resultados[0].numeroBoquillasSector) "
-                boquillasCerrarZonaAlta.text = "\(resultados[0].numeroBoquillasCerradasAlta) "
-                boquillasCerrarZonaBaja.text = "\(resultados[0].numeroBoquillasCerradasBaja) "
-                NumBoquillasZonaAlta.text = "\(resultados[0].numeroBoquillasAbiertasAlta) "
-                NumBoquillasZonaMedia.text = "\(resultados[0].numeroBoquillasAbiertasMedia) "
-                NumBoquillasZonaBaja.text = "\(resultados[0].numeroBoquillasAbiertasBaja) "
-                vegetacionZonaAlta.text = "\(resultados[0].porcentajeVegetacionAlta) %"
-                vegetacionZonaMedia.text = "\(resultados[0].porcentajeVegetacionMedia) %"
-                vegetacionZonaBaja.text = "\(resultados[0].porcentajeVegetacionBaja) %"
-                let caudalLiqSector:String = String(format:"%.02f", resultados[0].caudalLiquidoSector)
-                caudalLiquidoSector.text = "\(caudalLiqSector) L/min"
-                let variacionCaudal:String = String(format:"%.0f", resultados[0].variacionCaudalAdmisible)
-                variacionCaudalAdmisible.text = "\(variacionCaudal) %"
-                let intervalo0:String = String(format:"%.02f", resultados[0].intervaloCaudalAdmisible0)
-                let intervalo1:String = String(format:"%.02f", resultados[0].intervaloCaudalAdmisible1)
-                let intervalo2:String = String(format:"%.02f", resultados[0].intervaloCaudalAdmisible2)
-                let intervalo3:String = String(format:"%.02f", resultados[0].intervaloCaudalAdmisible3)
-                let intervalo4:String = String(format:"%.02f", resultados[0].intervaloCaudalAdmisible4)
-                let intervalo5:String = String(format:"%.02f", resultados[0].intervaloCaudalAdmisible5)
-                caudalLiquidoZonaAlta.text = "\(intervalo0) - \(intervalo1) L/min"
-                caudalLiquidoZonaMedia.text = "\(intervalo2) - \(intervalo3) L/min"
-                caudalLiquidoZonaBaja.text = "\(intervalo4) - \(intervalo5) L/min"
-                
+                    let volapp:String = String(format:"%.0f", resultados[0].volumenApp)
+                    volumenAplicacion.text = "\(volapp) L/ha"
+                    
+                    velocidadAvance.text = "\(resultados[0].velocidadAvance) km/h"
+                    
+                    let b:String = String(format:"%.0f", resultados[0].anchoCalle)
+                    anchoTrabajo.text = "\(b) m"
+                    
+                    let caudalLiq:String = String(format:"%.01f", resultados[0].caudalLiquidoTotal)
+                    caudalLiqTotal.text = "\(caudalLiq) L/min"
+                    
+                    numBoquillasTotal.text = "\(resultados[0].numeroTotalBoquillas) "
+                    numBoquillasPorSector.text = "\(resultados[0].numeroBoquillasSector) "
+                    boquillasCerrarZonaAlta.text = "\(resultados[0].numeroBoquillasCerradasAlta) "
+                    boquillasCerrarZonaBaja.text = "\(resultados[0].numeroBoquillasCerradasBaja) "
+                    NumBoquillasZonaAlta.text = "\(resultados[0].numeroBoquillasAbiertasAlta) "
+                    NumBoquillasZonaMedia.text = "\(resultados[0].numeroBoquillasAbiertasMedia) "
+                    NumBoquillasZonaBaja.text = "\(resultados[0].numeroBoquillasAbiertasBaja) "
+                    vegetacionZonaAlta.text = "\(resultados[0].porcentajeVegetacionAlta) %"
+                    vegetacionZonaMedia.text = "\(resultados[0].porcentajeVegetacionMedia) %"
+                    vegetacionZonaBaja.text = "\(resultados[0].porcentajeVegetacionBaja) %"
+                    let caudalLiqSector:String = String(format:"%.02f", resultados[0].caudalLiquidoSector)
+                    caudalLiquidoSector.text = "\(caudalLiqSector) L/min"
+                    let variacionCaudal:String = String(format:"%.0f", resultados[0].variacionCaudalAdmisible)
+                    variacionCaudalAdmisible.text = "\(variacionCaudal) %"
+                    let intervalo0:String = String(format:"%.02f", resultados[0].intervaloCaudalAdmisible0)
+                    let intervalo1:String = String(format:"%.02f", resultados[0].intervaloCaudalAdmisible1)
+                    let intervalo2:String = String(format:"%.02f", resultados[0].intervaloCaudalAdmisible2)
+                    let intervalo3:String = String(format:"%.02f", resultados[0].intervaloCaudalAdmisible3)
+                    let intervalo4:String = String(format:"%.02f", resultados[0].intervaloCaudalAdmisible4)
+                    let intervalo5:String = String(format:"%.02f", resultados[0].intervaloCaudalAdmisible5)
+                    caudalLiquidoZonaAlta.text = "\(intervalo0) - \(intervalo1) L/min"
+                    caudalLiquidoZonaMedia.text = "\(intervalo2) - \(intervalo3) L/min"
+                    caudalLiquidoZonaBaja.text = "\(intervalo4) - \(intervalo5) L/min"
+                    
                 }
             }
             
@@ -250,7 +250,7 @@ class Result2CR : UIViewController {
             //  animated: true,
             //completion: nil)
             
-           
+            
             
             let fetchRequest2 = NSFetchRequest(entityName: "FiltroBoquillas")
             if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest2)) as? [FiltroBoquillas]{
@@ -264,7 +264,7 @@ class Result2CR : UIViewController {
                 }
             }
             
-   
+            
             
             
             
@@ -433,7 +433,7 @@ class Result2CR : UIViewController {
         tituloArray7.drawInRect(textRect, withAttributes: attrsTitulo7)
         
         y = y + 30;
-       
+        
         font = UIFont (name: "Times New Roman", size: 18)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
         let attrsTitulo8 =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
@@ -448,7 +448,7 @@ class Result2CR : UIViewController {
             let auxiliar = PDFarray[i] as NSString
             auxiliar.drawInRect(textRect, withAttributes: attrsTitulo8)
         }
-
+        
         
         y = 25;
         font = UIFont (name: "Times New Roman", size: 15)!
@@ -467,7 +467,7 @@ class Result2CR : UIViewController {
         }
         
         
-
+        
         
         
         
@@ -523,10 +523,10 @@ class Result2CR : UIViewController {
         
         
         
-
         
         
-
+        
+        
         
         y=120;
         
@@ -585,55 +585,58 @@ class Result2CR : UIViewController {
             }
             y=y+60;
             
+            presiones.removeAll()
             
-                let str = ("marca == %@") as String
-                let predicate1 = NSPredicate(format: str , cadena[i])
-                let fetchRequest = NSFetchRequest(entityName: "FiltroBoquillas")
-                fetchRequest.predicate = predicate1
-                if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [FiltroBoquillas]{
-                    for fe in fetchResults{
-                        if !estaEnCadenaPres(fe.presion) {
-                            presiones.append(fe.presion)
-                        }
+            let str = ("marca == %@") as String
+            let predicate1 = NSPredicate(format: str , cadena[i])
+            let fetchRequest = NSFetchRequest(entityName: "FiltroBoquillas")
+            fetchRequest.predicate = predicate1
+            if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [FiltroBoquillas]{
+                for fe in fetchResults{
+                    if !estaEnCadenaPres(fe.presion) {
+                        presiones.append(fe.presion)
                     }
                 }
+            }
+            /*
+            for x in 0...100{
+                presOrden.append(0);
+            }
+            */
             
-                for x in 0...100{
-                    presOrden.append(0);
+            for u in 0...presiones.count-1{
+                if(presiones[u]=="p6"){
+                    presOrden.append(6);
+                }else if(presiones[u]=="p7"){
+                    presOrden.append(7);
+                }else if(presiones[u]=="p8"){
+                    presOrden.append(8);
+                }else if(presiones[u]=="p9"){
+                    presOrden.append(9);
+                }else if(presiones[u]=="p10"){
+                    presOrden.append(10);
+                }else if(presiones[u]=="p11"){
+                    presOrden.append(11);
+                }else if(presiones[u]=="p12"){
+                    presOrden.append(12);
+                }else if(presiones[u]=="p13"){
+                    presOrden.append(13);
+                }else if(presiones[u]=="p14"){
+                    presOrden.append(14);
+                }else if(presiones[u]=="p15"){
+                    presOrden.append(15);
+                }else if(presiones[u]=="p16"){
+                    presOrden.append(16);
                 }
+                
+                
+            }
             
+            print("Marca: \(cadena[i])")
             
-                for u in 0...presiones.count-1{
-                    if(presiones[u]=="p6"){
-                        presOrden[u]=6;
-                    }else if(presiones[u]=="p7"){
-                        presOrden[u]=7;
-                    }else if(presiones[u]=="p8"){
-                        presOrden[u]=8;
-                    }else if(presiones[u]=="p9"){
-                        presOrden[u]=9;
-                    }else if(presiones[u]=="p10"){
-                        presOrden[u]=10;
-                    }else if(presiones[u]=="p11"){
-                        presOrden[u]=11;
-                    }else if(presiones[u]=="p12"){
-                        presOrden[u]=12;
-                    }else if(presiones[u]=="p13"){
-                        presOrden[u]=13;
-                    }else if(presiones[u]=="p14"){
-                        presOrden[u]=14;
-                    }else if(presiones[u]=="p15"){
-                        presOrden[u]=15;
-                    }else if(presiones[u]=="p16"){
-                       presOrden[u]=16;
-                    }
-
-                    print(cadena[i], presiones[u], presOrden[u])
-                    
-                }
-            
-                for a in 0...presiones.count-2{
-                    for b in a+1...presiones.count-1{
+            if (presOrden.count > 1){
+                for a in 0...presOrden.count-2{
+                    for b in a+1...presOrden.count-1{
                         if(presOrden[a]>presOrden[b]){
                             varaux=presOrden[a];
                             presOrden[a]=presOrden[b];
@@ -641,11 +644,17 @@ class Result2CR : UIViewController {
                         }
                     }
                 }
+            }
             
             
+            print("Presiones rellenas")
+            for tup in presOrden{
+                print(tup, terminator: "")
+            }
             
-            
-            for o in 0...presiones.count-1{
+            for o in 0...presOrden.count-1{
+                print("---Presion: \(presOrden[o])")
+                
                 //print(cadena[i], presOrden[o])
                 font = UIFont (name: "Times New Roman", size: 21)!
                 CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
@@ -689,16 +698,14 @@ class Result2CR : UIViewController {
                     
                 }
                 y=y+10;
-                
+                /*
                 for x in 0...100{
                     zonaA.append("");
                     zonaM.append("");
                     zonaB.append("");
                 }
+                */
                 
-                var countA:Int=0;
-                var countM:Int=0;
-                var countB:Int=0;
                 let str = ("marca == %@ AND presion == %@") as String
                 let predicate1 = NSPredicate(format: str , cadena[i], "p\(presOrden[o])")
                 let fetchRequest = NSFetchRequest(entityName: "FiltroBoquillas")
@@ -708,31 +715,22 @@ class Result2CR : UIViewController {
                         //Aqui habria que diferenciar entre zona1 zona2 y zona3
                         //cadena.append(fe.modelo)
                         //self.tableData.append(fe.modelo)
-
+                        
                         if fe.zona == "alta" {
-                            //self.sections[0].addBoq(fe.modelo)
-                            print("alta \(fe.modelo)")
-                            zonaA[countA]=fe.modelo;
-                            countA++;
+                            //print("alta \(fe.modelo)")
+                            zonaA.append(fe.modelo);
                         }
                         if fe.zona == "media" {
-                            //self.sections[1].addBoq(fe.modelo)
-                            print("media \(fe.modelo)")
-                            zonaM[countM]=fe.modelo;
-                            countM++;
+                            //print("media \(fe.modelo)")
+                            zonaM.append(fe.modelo);
                         }
                         if fe.zona == "baja" {
-                            //self.sections[2].addBoq(fe.modelo)
-                            print("baja \(fe.modelo)")
-                            zonaB[countB]=fe.modelo;
-                            countB++;
+                            //print("baja \(fe.modelo)")
+                            zonaB.append(fe.modelo);
                         }
                     }
                 }
                 
-                countA=0;
-                countB=0;
-                countM=0;
                 
                 font = UIFont (name: "Times New Roman", size: 18)!
                 CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
@@ -741,9 +739,12 @@ class Result2CR : UIViewController {
                 let PDFarray2 = "Zona Alta: ";
                 PDFarray2.drawInRect(textRect, withAttributes: attrsTitulopresiones2)
                 var x=160;
-                
+
                 for ab in 0...zonaA.count-1{
-                    
+                    if(ab != 0 && ab%3 == 0){
+                        x=160;
+                        y=y+20
+                    }
                     
                     font = UIFont (name: "Times New Roman", size: 18)!
                     CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
@@ -751,11 +752,10 @@ class Result2CR : UIViewController {
                     textRect = CGRectMake(CGFloat(x), CGFloat(y), CGFloat(400), CGFloat(25))
                     let PDFarray1 = "\(zonaA[ab])";
                     PDFarray1.drawInRect(textRect, withAttributes: attrsTitulopresiones1)
-                    print(zonaA[ab])
-                    x=x+160;
+                    //print(zonaA[ab])
+                    x=x+200;
                     
                     
-                
                 }
                 //zonaA.removeAll()
                 
@@ -785,7 +785,7 @@ class Result2CR : UIViewController {
                     }
                     
                     y=100;
-
+                    
                 }
                 y=y+25;
                 x=160;
@@ -796,10 +796,13 @@ class Result2CR : UIViewController {
                 textRect = CGRectMake(CGFloat(50), CGFloat(y), CGFloat(400), CGFloat(25))
                 let PDFarray3 = "Zona Media: ";
                 PDFarray3.drawInRect(textRect, withAttributes: attrsTitulopresiones3)
-              
+                
                 
                 for ab in 0...zonaM.count-1{
-                    
+                    if(ab != 0 && ab%3 == 0){
+                        x=160;
+                        y=y+20
+                    }
                     
                     font = UIFont (name: "Times New Roman", size: 18)!
                     CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
@@ -808,7 +811,7 @@ class Result2CR : UIViewController {
                     let PDFarray1 = "\(zonaM[ab])";
                     PDFarray1.drawInRect(textRect, withAttributes: attrsTitulopresiones1)
                     
-                    x=x+160;
+                    x=x+200;
                     
                     
                     
@@ -855,7 +858,10 @@ class Result2CR : UIViewController {
                 
                 
                 for ab in 0...zonaB.count-1{
-                    
+                    if(ab != 0 && ab%3 == 0){
+                        x=160;
+                        y=y+20
+                    }
                     
                     font = UIFont (name: "Times New Roman", size: 18)!
                     CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
@@ -864,12 +870,12 @@ class Result2CR : UIViewController {
                     let PDFarray1 = "\(zonaB[ab])";
                     PDFarray1.drawInRect(textRect, withAttributes: attrsTitulopresiones1)
                     
-                    x=x+160;
+                    x=x+200;
                     
                     
                     
                 }
-
+                
                 
                 //zonaB.removeAll()
                 
@@ -900,17 +906,25 @@ class Result2CR : UIViewController {
                         auxiliar.drawInRect(textRect, withAttributes: attrsDictio)
                     }
                     
+                    
                     y=100;
                     
                 }
                 y=y+50;
+                zonaA.removeAll()
+                zonaB.removeAll()
+                zonaM.removeAll()
             }
-
             
+            presOrden.removeAll()
+            print("Presiones vacias")
+            for tup in presOrden{
+                print(tup)
+            }
         }
         
         
-
+        
         
         
     }
