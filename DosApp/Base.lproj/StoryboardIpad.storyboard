@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vZY-JR-egG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vZY-JR-egG">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -367,8 +367,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mu3-MU-HcP">
-                                <rect key="frame" x="61" y="131" width="645" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mu3-MU-HcP">
+                                <rect key="frame" x="61" y="133" width="650" height="29"/>
                                 <segments>
                                     <segment title="Alta"/>
                                     <segment title="Media"/>
@@ -1384,11 +1384,11 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="B.3. CONDICIONES METEOROLÓGICAS" translatesAutoresizingMaskIntoConstraints="NO" id="kqA-f4-PZy">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text=" B.3. CONDICIONES METEOROLÓGICAS" translatesAutoresizingMaskIntoConstraints="NO" id="kqA-f4-PZy">
                                         <rect key="frame" x="-1" y="1227" width="768" height="40"/>
                                         <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Temperatura:" translatesAutoresizingMaskIntoConstraints="NO" id="Ln0-to-97F">
@@ -1510,6 +1510,8 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
                                         <size key="value" width="768" height="1980"/>
@@ -1630,6 +1632,7 @@
                                 <rect key="frame" x="213" y="22" width="35" height="36"/>
                             </imageView>
                         </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ZJq-at-hSm" firstAttribute="height" secondItem="Ibp-EC-lYW" secondAttribute="height" id="4c0-gE-xg7"/>
                             <constraint firstItem="ZJq-at-hSm" firstAttribute="width" secondItem="Ibp-EC-lYW" secondAttribute="width" id="muq-We-6U4"/>
@@ -3779,7 +3782,7 @@
                                 <rect key="frame" x="16" y="80" width="385" height="33"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="MÉTODO EMPLEADO" translatesAutoresizingMaskIntoConstraints="NO" id="Ob8-3r-Jre">
@@ -3945,14 +3948,14 @@
                                     <fragment content="El objetivo de ">
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="19" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="22" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="DOSACÍTRIC">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="19" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="22" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -3960,7 +3963,7 @@
                                         <string key="content"> es implementar un sistema de decisión que permita establecer al técnico de la explotación, responsable de hacer los tratamientos, el volumen de caldo a aplicar en los tratamientos fitosanitarios en cítricos, a partir de las características específicas del cultivo, del producto fitosanitario y de la plaga o enfermedad a tratar.</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="19" name="HelveticaNeue"/>
+                                            <font key="NSFont" size="22" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -5481,6 +5484,7 @@
                                 <rect key="frame" x="213" y="23" width="35" height="36"/>
                             </imageView>
                         </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Gx4-AZ-peV" firstAttribute="width" secondItem="ThT-PM-IeY" secondAttribute="width" id="Jf6-ko-9bd"/>
                             <constraint firstItem="Gx4-AZ-peV" firstAttribute="height" secondItem="ThT-PM-IeY" secondAttribute="height" id="KzF-Eq-3SG"/>
@@ -7873,31 +7877,31 @@
         <image name="zonas_boquillas" width="369" height="321"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nhG-iF-rX5"/>
-        <segue reference="XCx-Em-AWB"/>
-        <segue reference="9t3-FY-5SK"/>
-        <segue reference="zoi-C4-jAd"/>
-        <segue reference="o6y-Ja-J8L"/>
         <segue reference="dAq-bU-kqQ"/>
-        <segue reference="B9A-Ij-QPY"/>
-        <segue reference="SON-24-RY8"/>
-        <segue reference="QNK-oa-iXe"/>
-        <segue reference="RMw-ft-yIC"/>
-        <segue reference="j8T-ol-82k"/>
+        <segue reference="o6y-Ja-J8L"/>
+        <segue reference="zoi-C4-jAd"/>
         <segue reference="uPV-8h-mMd"/>
-        <segue reference="EHX-o7-fMG"/>
-        <segue reference="LEl-di-c1R"/>
-        <segue reference="vMb-Dx-Exr"/>
-        <segue reference="fVl-dP-UNR"/>
-        <segue reference="igc-EZ-AJt"/>
-        <segue reference="TWz-sr-RFE"/>
-        <segue reference="5rC-S0-jhU"/>
-        <segue reference="ePU-vi-k5t"/>
-        <segue reference="SCx-Sb-Hqj"/>
-        <segue reference="hov-lw-895"/>
         <segue reference="3R8-3F-ZAO"/>
-        <segue reference="XwM-2G-OjI"/>
+        <segue reference="TWz-sr-RFE"/>
+        <segue reference="fVl-dP-UNR"/>
+        <segue reference="XCx-Em-AWB"/>
+        <segue reference="sWa-n3-rFf"/>
+        <segue reference="WgH-bw-2WC"/>
+        <segue reference="hov-lw-895"/>
+        <segue reference="vMb-Dx-Exr"/>
+        <segue reference="nhG-iF-rX5"/>
+        <segue reference="igc-EZ-AJt"/>
+        <segue reference="Mru-6h-tYQ"/>
+        <segue reference="RMw-ft-yIC"/>
+        <segue reference="8Wy-HH-1TD"/>
+        <segue reference="QNK-oa-iXe"/>
+        <segue reference="yES-d5-VH6"/>
+        <segue reference="EHX-o7-fMG"/>
+        <segue reference="1C2-kE-pgL"/>
         <segue reference="q8k-fp-UZo"/>
+        <segue reference="XwM-2G-OjI"/>
         <segue reference="wCG-tV-5BN"/>
+        <segue reference="SCx-Sb-Hqj"/>
+        <segue reference="Mbg-jp-gPS"/>
     </inferredMetricsTieBreakers>
 </document>

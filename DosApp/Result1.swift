@@ -60,7 +60,7 @@ class Result1 : UIViewController {
     
     
     @IBAction func PDFgeneratoraction(sender: AnyObject) {
-        let pageSize:CGSize = CGSizeMake (850, 1100)
+        //let pageSize:CGSize = CGSizeMake (850, 1100)
         let fileName: NSString = "DosacítricB.pdf"
         let path:NSArray = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         let documentDirectory: AnyObject = path.objectAtIndex(0)
@@ -351,8 +351,8 @@ class Result1 : UIViewController {
     
     func generatePDFs(filePath: String) {
         UIGraphicsBeginPDFContextToFile(filePath, CGRectZero, nil)
-        //UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 850, 1200), nil)
-        UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 595,842), nil)
+        UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 850, 1200), nil)
+        //UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 595,842), nil)
         drawBackground()
         drawText()
         print("PDF creado!")
@@ -366,8 +366,8 @@ class Result1 : UIViewController {
         
         print("back creado!")
         let context:CGContextRef = UIGraphicsGetCurrentContext()!
-        //let rect:CGRect = CGRectMake(0, 0, 850, 1100)
-        let rect:CGRect = CGRectMake(0, 0, 595, 842)
+        let rect:CGRect = CGRectMake(0, 0, 850, 1100)
+        //let rect:CGRect = CGRectMake(0, 0, 595, 842)
         CGContextSetFillColorWithColor(context, UIColor.whiteColor().CGColor)
         CGContextFillRect(context, rect)
         
