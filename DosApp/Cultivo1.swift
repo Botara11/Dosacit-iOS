@@ -202,6 +202,12 @@ class Cultivo1: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let attr = NSDictionary(object: UIFont.systemFontOfSize(22), forKey: NSFontAttributeName)
+        //let attr = NSDictionary(object: UIFont(name: "systemFont", size: 22.0)!, forKey: NSFontAttributeName)
+        //UIFont(systemFontOfSize:36)
+        UISegmentedControl.appearance().setTitleTextAttributes(attr as [NSObject : AnyObject] , forState: .Normal)
+
+
         
         let fetchRequest2 = NSFetchRequest(entityName: "A1")
         if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest2)) as? [A1] {

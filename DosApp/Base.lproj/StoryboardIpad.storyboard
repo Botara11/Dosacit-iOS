@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vZY-JR-egG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vZY-JR-egG">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -367,8 +367,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mu3-MU-HcP">
-                                <rect key="frame" x="61" y="133" width="650" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mu3-MU-HcP">
+                                <rect key="frame" x="74" y="133" width="637" height="29"/>
                                 <segments>
                                     <segment title="Alta"/>
                                     <segment title="Media"/>
@@ -709,8 +709,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="HUMEDAD REALTIVA (%)" translatesAutoresizingMaskIntoConstraints="NO" id="NGj-AB-c0F">
-                                        <rect key="frame" x="35" y="741" width="752" height="44"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="HUMEDAD RELATIVA (%)" translatesAutoresizingMaskIntoConstraints="NO" id="NGj-AB-c0F">
+                                        <rect key="frame" x="35" y="741" width="752" height="48"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
@@ -760,11 +760,11 @@
                                         <rect key="frame" x="67" y="84" width="660" height="29"/>
                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.59999999999999964" height="0.69999999999999973"/>
                                         <segments>
-                                            <segment title="I. Acaricidas"/>
-                                            <segment title="II. Fungicidas"/>
-                                            <segment title="III. Insecticidas"/>
-                                            <segment title="IV. Abonos foliares"/>
-                                            <segment title="V. Fitorreguladores"/>
+                                            <segment title="1. Acaricidas"/>
+                                            <segment title="2. Fungicidas"/>
+                                            <segment title="3. Insecticidas"/>
+                                            <segment title="4. Abonos foliares"/>
+                                            <segment title="5. Fitorreguladores"/>
                                         </segments>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
@@ -788,12 +788,12 @@
                                         <rect key="frame" x="67" y="200" width="660" height="29"/>
                                         <rect key="contentStretch" x="0.0" y="0.0" width="0.59999999999999964" height="0.69999999999999973"/>
                                         <segments>
-                                            <segment title="I. Asfixia"/>
-                                            <segment title="II. Contacto"/>
-                                            <segment title="III. Ingestión"/>
-                                            <segment title="IV. Inhalación"/>
-                                            <segment title="V. Traslaminar"/>
-                                            <segment title="VI. Sistémicos"/>
+                                            <segment title="1. Asfixia"/>
+                                            <segment title="2. Contacto"/>
+                                            <segment title="3. Ingestión"/>
+                                            <segment title="4. Inhalación"/>
+                                            <segment title="5. Traslaminar"/>
+                                            <segment title="6. Sistémicos"/>
                                         </segments>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
@@ -4042,7 +4042,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">Se elegirá el producto que se vaya a aplicar entre: acaricidas (I), fungicidas (II), insecticidas(III), abonos floriales (IV) y fitorreguladores (V). Si se va a aplicar dos o más productos en el mismo tratamiento, se elegirá aquella opción que tenga menor número entre paréntesis. </string>
+                                        <string key="content">Se elegirá el producto que se vaya a aplicar entre: acaricidas (1), fungicidas (2), insecticidas(3), abonos floriales (4) y fitorreguladores (5). Si se va a aplicar dos o más productos en el mismo tratamiento, se elegirá aquella opción que tenga menor número entre paréntesis. </string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="20" name="HelveticaNeue"/>
@@ -4053,7 +4053,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lYQ-uu-PsK">
-                                <rect key="frame" x="46" y="280" width="694" height="214"/>
+                                <rect key="frame" x="46" y="280" width="694" height="231"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment content="-">
@@ -4071,7 +4071,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> Se seleccionará la forma de actuación de un producto entre: por asfixia - aceites (I), por contacto, por ingestión, por inhalación, producto con acción traslaminar y producto sistémico. Si se va a aplicar dos o más productos en el mismo tratamiento, se elegirá aquella opción que tenga menor número entre paréntesis. La forma de actuación de un producto se puede obtener directamente leyendo la etiqueta del envase o de las páginas del Instituto Valenciano de Investigaciones Agrarias (IVIA) o del Ministerio de Agricultura, Alimentación y Medio Ambiente.</string>
+                                        <string key="content"> Se seleccionará la forma de actuación de un producto entre: por asfixia - aceites (1), por contacto (2), por ingestión (3), por inhalación (4), producto con acción traslaminar (5) y producto sistémico (6). Si se va a aplicar dos o más productos en el mismo tratamiento, se elegirá aquella opción que tenga menor número entre paréntesis. La forma de actuación de un producto se puede obtener directamente leyendo la etiqueta del envase o de las páginas del Instituto Valenciano de Investigaciones Agrarias (IVIA) o del Ministerio de Agricultura, Alimentación y Medio Ambiente.</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="20" name="HelveticaNeue"/>
@@ -4082,7 +4082,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sv5-SU-7qb">
-                                <rect key="frame" x="46" y="502" width="702" height="130"/>
+                                <rect key="frame" x="46" y="502" width="702" height="136"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment content="-">
@@ -4100,7 +4100,7 @@
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content"> En este punto hay que especificar la zona objetivo del tratamiento, es decir, la zona del árbol donde se ubica la plaga o enfermedad a tratar. Las opciones son: zona interior (I), zona interior y exterior (II) y zona exterior (III). Si se va a tratar dos o más plagas o enfermedades, se elegirá aquella opción que tenga menor número entre paréntesis.</string>
+                                        <string key="content"> En este punto hay que especificar la zona objetivo del tratamiento, es decir, la zona del árbol donde se ubica la plaga o enfermedad a tratar. Las opciones son: zona interior (1), zona interior y exterior (2) y zona exterior (3). Si se va a tratar dos o más plagas o enfermedades, se elegirá aquella opción que tenga menor número entre paréntesis.</string>
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="20" name="HelveticaNeue"/>
@@ -7852,6 +7852,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logodosactitric" translatesAutoresizingMaskIntoConstraints="NO" id="IAK-IH-DBt">
                                 <rect key="frame" x="367" y="24" width="35" height="36"/>
                             </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Aumente si es posible la &quot;Variación de caudal admisible&quot;" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JXW-hZ-bsr">
+                                <rect key="frame" x="122" y="573" width="524" height="130"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -7877,31 +7884,31 @@
         <image name="zonas_boquillas" width="369" height="321"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dAq-bU-kqQ"/>
-        <segue reference="o6y-Ja-J8L"/>
-        <segue reference="zoi-C4-jAd"/>
-        <segue reference="uPV-8h-mMd"/>
-        <segue reference="3R8-3F-ZAO"/>
-        <segue reference="TWz-sr-RFE"/>
-        <segue reference="fVl-dP-UNR"/>
-        <segue reference="XCx-Em-AWB"/>
-        <segue reference="sWa-n3-rFf"/>
-        <segue reference="WgH-bw-2WC"/>
-        <segue reference="hov-lw-895"/>
-        <segue reference="vMb-Dx-Exr"/>
-        <segue reference="nhG-iF-rX5"/>
-        <segue reference="igc-EZ-AJt"/>
-        <segue reference="Mru-6h-tYQ"/>
-        <segue reference="RMw-ft-yIC"/>
-        <segue reference="8Wy-HH-1TD"/>
-        <segue reference="QNK-oa-iXe"/>
+        <segue reference="SJP-pi-G55"/>
         <segue reference="yES-d5-VH6"/>
         <segue reference="EHX-o7-fMG"/>
-        <segue reference="1C2-kE-pgL"/>
-        <segue reference="q8k-fp-UZo"/>
-        <segue reference="XwM-2G-OjI"/>
-        <segue reference="wCG-tV-5BN"/>
+        <segue reference="YQL-Eh-eZ1"/>
+        <segue reference="a4i-25-2MO"/>
+        <segue reference="ePU-vi-k5t"/>
+        <segue reference="hov-lw-895"/>
         <segue reference="SCx-Sb-Hqj"/>
-        <segue reference="Mbg-jp-gPS"/>
+        <segue reference="vMb-Dx-Exr"/>
+        <segue reference="XCx-Em-AWB"/>
+        <segue reference="nhG-iF-rX5"/>
+        <segue reference="fVl-dP-UNR"/>
+        <segue reference="igc-EZ-AJt"/>
+        <segue reference="uPV-8h-mMd"/>
+        <segue reference="o6y-Ja-J8L"/>
+        <segue reference="B9A-Ij-QPY"/>
+        <segue reference="dAq-bU-kqQ"/>
+        <segue reference="QNK-oa-iXe"/>
+        <segue reference="q8k-fp-UZo"/>
+        <segue reference="tLL-w8-2G0"/>
+        <segue reference="wCG-tV-5BN"/>
+        <segue reference="MBR-fs-nD0"/>
+        <segue reference="RMw-ft-yIC"/>
+        <segue reference="Mru-6h-tYQ"/>
+        <segue reference="1C2-kE-pgL"/>
+        <segue reference="3R8-3F-ZAO"/>
     </inferredMetricsTieBreakers>
 </document>

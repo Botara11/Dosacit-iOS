@@ -128,7 +128,10 @@ class SelecBoquillas2: UIViewController, UITextFieldDelegate{
         }
         print("Antes:  \(NumBoqAbAlta.text! as NSString).integerValue) + \(NumBoqAbMedia.text! as NSString).integerValue) + \(NumBoqAbBaja.text! as NSString).integerValue) != \(newItemB!.numeroTotalBoquillas)")
         
+        
         if(segue.identifier == "B23"){
+            caract2.calcularParteB()
+            
             var intervaloCaudalAdmisible = [0.3,1.2,0.3,1.2,0.3,1.2] as [Double]
             intervaloCaudalAdmisible[0] = newItemB!.intervaloCaudalAdmisible0
             intervaloCaudalAdmisible[1] = newItemB!.intervaloCaudalAdmisible1
@@ -151,6 +154,7 @@ class SelecBoquillas2: UIViewController, UITextFieldDelegate{
                 alert("ERROR",mensaje: "La suma entre las boquillas abiertas y cerradas debe ser igual al número total de boquillas")
                 
             }
+            
             
             
             let marcasList: [String] = ["Teejet","Hardi","Albuz","Lechler","Discos","Otros"]

@@ -64,11 +64,6 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
         }
         
         
-        /*
-        selSeccion0=0
-        selSeccion1=0
-        selSeccion2=0
-        */
         var path = NSIndexPath(forItem: 2, inSection: 0)
         var se = Section()
         sections.append(Section())
@@ -102,10 +97,13 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
         
         //tableView.removeFromSuperview()
         
-        
-        modeloZonaAlta = sections[0].boquis[0]
-        modeloZonaMedia = sections[1].boquis[0]
-        modeloZonaBaja = sections[2].boquis[0]
+
+                selSeccion0=999
+                selSeccion1=999
+                selSeccion2=999
+                modeloZonaAlta = sections[0].boquis[0]
+                modeloZonaMedia = sections[1].boquis[0]
+                modeloZonaBaja = sections[2].boquis[0]
         
         
     }
@@ -130,7 +128,8 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
         var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier)! as UITableViewCell
         cell.backgroundColor = UIColor.blackColor()
         cell.textLabel?.textColor = UIColor.whiteColor()
-        
+        var naranja = UIColor.init(red: 1, green: 0.4, blue: 0,
+            alpha: 1)
         //cell.textLabel?.text = self.tableData[indexPath.row]
         cell.textLabel?.text = self.sections[indexPath.section].boquis[indexPath.row]
         //print("secc=\(indexPath.section) item=\(indexPath.item) seleccionado=\(selSeccion0) \(self.sections[indexPath.section].boquis[indexPath.item])")
@@ -138,22 +137,34 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
         case 0:
             if (indexPath.item == selSeccion0){
                 cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+                cell.backgroundColor = naranja
+                cell.textLabel?.textColor = UIColor.blackColor()
             }else{
                 cell.accessoryType = UITableViewCellAccessoryType.None
+                cell.backgroundColor = UIColor.blackColor()
+                cell.textLabel?.textColor = UIColor.whiteColor()
             }
             break
         case 1:
             if (indexPath.item == selSeccion1){
                 cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+                cell.backgroundColor = naranja
+                cell.textLabel?.textColor = UIColor.blackColor()
             }else{
                 cell.accessoryType = UITableViewCellAccessoryType.None
+                cell.backgroundColor = UIColor.blackColor()
+                cell.textLabel?.textColor = UIColor.whiteColor()
             }
             break
         case 2:
             if (indexPath.item == selSeccion2){
                 cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+                cell.backgroundColor = naranja
+                cell.textLabel?.textColor = UIColor.blackColor()
             }else{
                 cell.accessoryType = UITableViewCellAccessoryType.None
+                cell.backgroundColor = UIColor.blackColor()
+                cell.textLabel?.textColor = UIColor.whiteColor()
             }
             break
         default:
@@ -165,10 +176,6 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        
-    }
     
     // UITableViewDelegate methods
     
@@ -177,6 +184,7 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
         //tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text="XXXXXXX"
         //tableView.cellForRowAtIndexPath(indexPath)?.selected = false
         print("Ha sido sele: \(indexPath.section) \(indexPath.item)")
+        tableView2.cellForRowAtIndexPath(indexPath)?.backgroundColor
         switch(indexPath.section){
         case 0:
             modeloZonaAlta = self.sections[indexPath.section].boquis[indexPath.item]
@@ -296,29 +304,73 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
         if(segue.identifier == "C33"){
             let fetchRequest2 = NSFetchRequest(entityName: "C1")
             if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest2)) as? [C1] {
-                
-                fetchResults[0].caudalZonaAlta = saveCaudalXZona(selSeccion0)
-                fetchResults[0].caudalZonaMedia = saveCaudalXZona(selSeccion1)
-                fetchResults[0].caudalZonaBaja = saveCaudalXZona(selSeccion2)
-                
-                fetchResults[0].nombreZonaAlta = modeloZonaAlta
-                fetchResults[0].nombreZonaMedia = modeloZonaMedia
-                fetchResults[0].nombreZonaBaja = modeloZonaBaja
-                
-                print(fetchResults[0].caudalZonaAlta)
-                
-                do {
-                    try managedObjectContext!.save()
-                } catch {
-                    fatalError("Failure to save context: \(error)")
+                if (selSeccion0==999 || selSeccion1==999 || selSeccion2==999){
+                    
+                    if (selSeccion0==999){
+                        if (selSeccion1==999){
+                            if(selSeccion2==999){
+                                alert("ERROR",mensaje: "Seleccione al menos una boquilla de cada zona\nCompruebe las zonas Alta, Media y Baja")
+                            }else{
+                                alert("ERROR",mensaje: "Seleccione al menos una boquilla de cada zona\nCompruebe las zonas Alta y Media")
+                            }
+                        }else
+                            if(selSeccion2==999){
+                                alert("ERROR",mensaje: "Seleccione al menos una boquilla de cada zona\nCompruebe las zonas Alta y Baja")
+                            }else{
+                                alert("ERROR",mensaje: "Seleccione al menos una boquilla de cada zona\nCompruebe la zona Alta")
+                        }
+                        
+                    }else{
+                        if (selSeccion1==999){
+                            if(selSeccion2==999){
+                                alert("ERROR",mensaje: "Seleccione al menos una boquilla de cada zona\nCompruebe las zonas Media y Baja")
+                            }else{
+                                alert("ERROR",mensaje: "Seleccione al menos una boquilla de cada zona\nCompruebe la zona Media")
+                            }
+                        }else
+                            if(selSeccion2==999){
+                                alert("ERROR",mensaje: "Seleccione al menos una boquilla de cada zona\nCompruebe la zona Baja")
+                            }else{
+                                alert("ERROR",mensaje: "Seleccione al menos una boquilla de cada zona\nCompruebe la zona")
+                        }
+                    }
+                    
+                    
+                    
+                }else{
+                    
+                    fetchResults[0].caudalZonaAlta = saveCaudalXZona(selSeccion0)
+                    fetchResults[0].caudalZonaMedia = saveCaudalXZona(selSeccion1)
+                    fetchResults[0].caudalZonaBaja = saveCaudalXZona(selSeccion2)
+                    
+                    fetchResults[0].nombreZonaAlta = modeloZonaAlta
+                    fetchResults[0].nombreZonaMedia = modeloZonaMedia
+                    fetchResults[0].nombreZonaBaja = modeloZonaBaja
+                    
+                    print(fetchResults[0].caudalZonaAlta)
+                    
+                    do {
+                        try managedObjectContext!.save()
+                    } catch {
+                        fatalError("Failure to save context: \(error)")
+                    }
                 }
             }
         }
+     
         
     }
     
     
     
+    func alert(title :String,mensaje: String){
+        let alertController = UIAlertController(title: title, message:
+            mensaje, preferredStyle: UIAlertControllerStyle.Alert)
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+        
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+
     
     
     
