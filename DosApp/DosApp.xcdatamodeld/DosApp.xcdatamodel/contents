@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15F34" minimumToolsVersion="Automatic">
     <entity name="A1" representedClassName="DosApp.A1" syncable="YES">
         <attribute name="alturaArboles" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="alturaMeseta" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -113,6 +113,11 @@
         <attribute name="presion" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="zona" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="MisBoquillas" representedClassName=".MisBoquillas" syncable="YES">
+        <attribute name="caudalmio" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="marcamia" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="presionmia" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+    </entity>
     <entity name="Z1" representedClassName="DosApp.Z1" syncable="YES">
         <attribute name="fecha" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="idParcela" optional="YES" attributeType="String" syncable="YES"/>
@@ -126,5 +131,6 @@
         <element name="EntityBoquillas" positionX="-63" positionY="0" width="128" height="285"/>
         <element name="FiltroBoquillas" positionX="-63" positionY="135" width="128" height="105"/>
         <element name="Z1" positionX="-63" positionY="135" width="128" height="105"/>
+        <element name="MisBoquillas" positionX="-63" positionY="135" width="128" height="90"/>
     </elements>
 </model>

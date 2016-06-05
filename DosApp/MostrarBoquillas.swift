@@ -1,32 +1,30 @@
 //
-//  Result32.swift
+//  Result21.swift
 //  DosApp
 //
-//  Created by Alvaro Serneguet on 08/05/15.
+//  Created by Alvaro Serneguet on 30/03/15.
 //  Copyright (c) 2015 UPV. All rights reserved.
 //
 
+
+
 import UIKit
-import Foundation
 import CoreData
 
 
-
-
-class Result32: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class MostrarBoquillas: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
-    var presion = String()
-    var marcaPressed = String()
     let cellIdentifier = "cellIdentifier"
-    var tableData = ["Teejet","Hardi","Albuz","Lechler","Discos","Mis boquillas"]
-    var tableDataAux = [Int]()
+    var tableData = [String]()
     
     
     @IBOutlet var tableView: UITableView!
     
     
-    var cadena = [String]()
+    var marcaPressed = String()
     
+    var cadena = [String]()
+    var seleccionada = 9999
     func estaEnCadena(item:String)->Bool{
         for aux in cadena{
             if aux==item{
@@ -38,21 +36,29 @@ class Result32: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let fetchRequest = NSFetchRequest(entityName: "C1")
-        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [C1] {
-                print("Result32 Objetos: \(fetchResults.count)")
-                presion = fetchResults[0].presion
-                print(fetchResults[0].presion)
-            
+        
+        let fetchRequest = NSFetchRequest(entityName: "MisBoquillas")
+        if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [MisBoquillas]{
+            for fe in fetchResults{
+                cadena.append("\(fe.marcamia) (\(fe.caudalmio) L/min a \(fe.presionmia) bar)")
+                self.tableData.append("\(fe.marcamia) (\(fe.caudalmio) L/min a \(fe.presionmia) bar)")
+            }
         }
         
+        // Setup table data
+        //for index in 0...100 {
+        //   self.tableData.append("Item \(index)")
+        //}
         
         tableView?.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
         tableView.reloadData()
         tableView.backgroundColor = UIColor.blackColor()
         //tableView.removeFromSuperview()
-
+        
+        
     }
+    
+        
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -71,39 +77,35 @@ class Result32: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier)! as UITableViewCell
-        
-        cell.textLabel?.text = self.tableData[indexPath.row]
         cell.backgroundColor = UIColor.blackColor()
         cell.textLabel?.textColor = UIColor.whiteColor()
-        
+        cell.textLabel?.text = self.tableData[indexPath.row]
+        if (indexPath.item == seleccionada){
+            var naranja = UIColor.init(red: 1, green: 0.4, blue: 0,
+                alpha: 1)
+            cell.backgroundColor = naranja
+            cell.textLabel?.textColor = UIColor.blackColor()
+        }
         return cell
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if(segue.identifier == "Result33"){
-            let fetchRequest = NSFetchRequest(entityName: "C1")
-            if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [C1] {
-                fetchResults[0].marca = marcaPressed
-                print("presion=\(presion) marca=\(marcaPressed)")
-                
-                do {
-                    try managedObjectContext!.save()
-                } catch {
-                    fatalError("Failure to save context: \(error)")
-                }
-            }
-        }
-    }
     
+    // UITableViewDelegate methods
     
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         
-        let vc : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("res33")
+        
+        seleccionada = indexPath.item
+        tableView.reloadData()
+        //NO HACER NADA SI SE PRESIONA ALGUNA CELL
+        /*
+        let vc : AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("res2")
         marcaPressed = tableData[indexPath.row]
-        performSegueWithIdentifier("Result33", sender: self)
+        performSegueWithIdentifier("Result22", sender: self)
         
         self.showViewController(vc as! UIViewController, sender: vc)
+        
+        
         
         let alert = UIAlertController(title: "Item selected", message: "You selected item \(indexPath.row)", preferredStyle: UIAlertControllerStyle.Alert)
         
@@ -114,6 +116,9 @@ class Result32: UIViewController, UITableViewDataSource, UITableViewDelegate{
         }))
         
         self.presentViewController(alert, animated: true, completion: nil)
-        
+        */
     }
+
 }
+
+

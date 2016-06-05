@@ -70,13 +70,13 @@ class updateBoquillas: UIViewController {
                         dbBoquillas.p14 = k * pow(14,0.5)
                         dbBoquillas.p15 = k * pow(15,0.5)
                         dbBoquillas.p16 = k * pow(16,0.5)
-                        
+                        /*
                         if(dbBoquillas.modelo=="ATR/blanca"){
                             print(" TESTE\n")
                             print("k=\(k) str=0-\(boq[0]) 1-\(boq[1]) 2-\(boq[2]) 3-\(boq[3]) 4-\(boq[4]) ")
                             print(" p6=\(dbBoquillas.p6) p7=\(dbBoquillas.p7) p8=\(dbBoquillas.p8)")
                         }
-                        
+                        */
                         
                     }
                     

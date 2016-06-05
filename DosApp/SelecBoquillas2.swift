@@ -157,7 +157,7 @@ class SelecBoquillas2: UIViewController, UITextFieldDelegate{
             
             
             
-            let marcasList: [String] = ["Teejet","Hardi","Albuz","Lechler","Discos","Otros"]
+            let marcasList: [String] = ["Teejet","Hardi","Albuz","Lechler","Discos","Mis boquillas"]
             
             let presionList: [String] = ["p6","p7","p8","p9","p10","p11","p12","p13","p14","p15","p16"]
             
@@ -269,7 +269,7 @@ class SelecBoquillas2: UIViewController, UITextFieldDelegate{
             IntervaloCaudalAdmisibleAlta.text = String(format:"%.2f",fetchResults[0].intervaloCaudalAdmisible0)+" - "+String(format:"%.2f",fetchResults[0].intervaloCaudalAdmisible1)
             IntervaloCaudalAdmisibleMedia.text = String(format:"%.2f",fetchResults[0].intervaloCaudalAdmisible2)+" - "+String(format:"%.2f",fetchResults[0].intervaloCaudalAdmisible3)
             IntervaloCaudalAdmisibleBaja.text = String(format:"%.2f",fetchResults[0].intervaloCaudalAdmisible4)+" - "+String(format:"%.2f",fetchResults[0].intervaloCaudalAdmisible5)
-            VariacionText.text = String(format:"%.0f",round(fetchResults[0].variacionCaudalAdmisible))
+            VariacionText.text = String(format:"%.0f",round(fetchResults[0].variacionCaudalAdmisible*100))
             VariacionCaudal.value = (fetchResults[0].variacionCaudalAdmisible as NSNumber).floatValue * 100
             print("\(fetchResults[0].variacionCaudalAdmisible)")
             
