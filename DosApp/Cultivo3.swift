@@ -23,7 +23,9 @@ class Cultivo3: UIViewController {
     var c = 0
     
     @IBOutlet var productosAplicar: UISegmentedControl!
+    @IBOutlet weak var productosAplicar2: UISegmentedControl!
     @IBOutlet var formaActuacion: UISegmentedControl!
+    @IBOutlet weak var formaActuacion2: UISegmentedControl!
     @IBOutlet var utilizaCoadyuvantes: UISegmentedControl!
     @IBOutlet var copaArbol: UISegmentedControl!
     
@@ -138,16 +140,27 @@ class Cultivo3: UIViewController {
             caract2.productosAplicar = 1;
             newItemA!.productosAplicar = 1
         }
-        else if (productosAplicar.selectedSegmentIndex == 3){
-            caract2.productosAplicar = 0.95;
-            newItemA!.productosAplicar = 0.95
-        }
-        else if (productosAplicar.selectedSegmentIndex == 4){
-            caract2.productosAplicar = 0.95;
-            newItemA!.productosAplicar = 0.95
-        }
+        
+        productosAplicar2.selectedSegmentIndex = -1
+        productosAplicar2.momentary = false
     }
     
+    
+    @IBAction func productosAplicarSelector2(sender: AnyObject) {
+        
+        if (productosAplicar.selectedSegmentIndex == 0){
+            caract2.productosAplicar = 0.95;
+            newItemA!.productosAplicar = 0.95
+        }
+        else if (productosAplicar.selectedSegmentIndex == 1){
+            caract2.productosAplicar = 0.95;
+            newItemA!.productosAplicar = 0.95
+        }
+        
+        productosAplicar.selectedSegmentIndex = -1
+        productosAplicar.momentary = false
+        
+    }
    
     @IBAction func formaActuacionSelector(sender: AnyObject) {
         if (formaActuacion.selectedSegmentIndex == 0){
@@ -162,20 +175,30 @@ class Cultivo3: UIViewController {
             caract2.formaActuacion = 1;
             newItemA!.formaActuacion = 1
         }
-        else if (formaActuacion.selectedSegmentIndex == 3){
+
+        formaActuacion2.selectedSegmentIndex = -1
+        formaActuacion2.momentary = false
+        
+        
+    }
+    
+    @IBAction func formaActuacionSelector2(sender: AnyObject) {
+        if (formaActuacion2.selectedSegmentIndex == 0){
             caract2.formaActuacion = 1;
             newItemA!.formaActuacion = 1
-        }
-        else if (formaActuacion.selectedSegmentIndex == 4){
+        }else if (formaActuacion2.selectedSegmentIndex == 1){
             caract2.formaActuacion = 0.95;
             newItemA!.formaActuacion = 0.95
         }
-        else if (formaActuacion.selectedSegmentIndex == 5){
+        else if (formaActuacion2.selectedSegmentIndex == 2){
             caract2.formaActuacion = 0.85;
             newItemA!.formaActuacion = 0.85
         }
+        
+        formaActuacion.selectedSegmentIndex = -1
+        formaActuacion.momentary = false
+        
     }
-    
     
     @IBAction func utilizaCoadyuvantesSelector(sender: AnyObject) {
         if (utilizaCoadyuvantes.selectedSegmentIndex == 0){
@@ -203,15 +226,21 @@ class Cultivo3: UIViewController {
             newItemA!.zonaCritica = 1
         }
     }
-    
+
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        
+        if(productosAplicar.selectedSegmentIndex == -1){
+            newItemA!.productosAplicarIndice = productosAplicar2.selectedSegmentIndex+10
+        }else{
         newItemA!.productosAplicarIndice = productosAplicar.selectedSegmentIndex
+        }
+        if(formaActuacion.selectedSegmentIndex == -1){
+            newItemA!.formaActuacionIndice = formaActuacion2.selectedSegmentIndex+10
+        }else{
         newItemA!.formaActuacionIndice = formaActuacion.selectedSegmentIndex
+        }
         newItemA!.zonaCriticaIndice = copaArbol.selectedSegmentIndex
-        newItemA!.productosAplicarIndice = productosAplicar.selectedSegmentIndex
-        newItemA!.formaActuacionIndice = formaActuacion.selectedSegmentIndex
+        
         newItemA!.zonaCriticaIndice = copaArbol.selectedSegmentIndex
         
         do {
@@ -232,22 +261,40 @@ class Cultivo3: UIViewController {
             newItemA! = fetchResults[0]
         }
         
-        print(anotherString3)
+        print("\(newItemA!.productosAplicarIndice) y \(newItemA!.formaActuacionIndice)")
         
-        if (newItemA!.productosAplicar == 0){
-            productosAplicar.selectedSegmentIndex = 0
-            newItemA!.productosAplicar = 1.05
-        }else {
-            productosAplicar.selectedSegmentIndex = newItemA!.productosAplicarIndice
+        if (newItemA!.productosAplicar % 10 == 0){
+            
+            if (newItemA!.productosAplicar == 0){
+                productosAplicar.selectedSegmentIndex = 0
+                newItemA!.productosAplicar = 1.05
+            }else {
+                productosAplicar.selectedSegmentIndex = newItemA!.productosAplicarIndice
+            }
+            productosAplicar2.selectedSegmentIndex = -1
+            productosAplicar2.momentary = false
+        }else{
+            productosAplicar2.selectedSegmentIndex = newItemA!.productosAplicarIndice-10
+            print("seleccionar: \(newItemA!.productosAplicarIndice-10)")
+            productosAplicar.selectedSegmentIndex = -1
+            productosAplicar.momentary = false
         }
         
-        if (newItemA!.formaActuacion == 0){
-            formaActuacion.selectedSegmentIndex = 0
-            newItemA!.formaActuacion = 1.15
-        }else {
-            formaActuacion.selectedSegmentIndex = newItemA!.formaActuacionIndice
+        if (newItemA!.formaActuacion % 10 == 0){
+            if (newItemA!.formaActuacion == 0){
+                formaActuacion.selectedSegmentIndex = 0
+                newItemA!.formaActuacion = 1.15
+            }else {
+                formaActuacion.selectedSegmentIndex = newItemA!.formaActuacionIndice
+            }
+            formaActuacion2.selectedSegmentIndex = -1
+            formaActuacion2.momentary = false
+        }else{
+            formaActuacion2.selectedSegmentIndex = newItemA!.formaActuacionIndice - 10
+            print("seleccionarforma: \(newItemA!.formaActuacionIndice-10)")
+            formaActuacion.selectedSegmentIndex = -1
+            formaActuacion.momentary = false
         }
-        
         if (newItemA!.zonaCritica == 0){
             newItemA!.zonaCriticaIndice = 0
             newItemA!.zonaCritica = 3
