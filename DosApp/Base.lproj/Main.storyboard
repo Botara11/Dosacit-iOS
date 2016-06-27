@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="soH-Zw-udU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="soH-Zw-udU">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="ghW-LL-AZj">
             <objects>
-                <viewController wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="soH-Zw-udU" customClass="ViewController" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="soH-Zw-udU" customClass="ViewController" customModule="Dosacitric" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A4v-JJ-C74">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -46,7 +46,7 @@
         <!--Indice-->
         <scene sceneID="Khp-lf-brI">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="K34-3y-P8g" customClass="Indice" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="K34-3y-P8g" customClass="Indice" customModule="Dosacitric" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pza-1S-dkh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -154,7 +154,7 @@
         <!--Cultivo1-->
         <scene sceneID="nGl-5h-I8d">
             <objects>
-                <viewController id="7qp-2U-E7z" customClass="Cultivo1" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7qp-2U-E7z" customClass="Cultivo1" customModule="Dosacitric" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W1q-fw-DrO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -434,7 +434,7 @@
         <!--Cultivo2-->
         <scene sceneID="1mZ-BK-Tnn">
             <objects>
-                <viewController storyboardIdentifier="Cultivo2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EE1-VW-Gf0" customClass="Cultivo2" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Cultivo2" useStoryboardIdentifierAsRestorationIdentifier="YES" id="EE1-VW-Gf0" customClass="Cultivo2" customModule="Dosacitric" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ilM-uM-xeg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -588,7 +588,7 @@
         <!--Cultivo3-->
         <scene sceneID="dRe-64-uIp">
             <objects>
-                <viewController id="YxF-R9-rco" customClass="Cultivo3" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YxF-R9-rco" customClass="Cultivo3" customModule="Dosacitric" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sWC-Kf-pg0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -852,7 +852,7 @@
         <!--Cultivo4-->
         <scene sceneID="y5r-1w-4ZJ">
             <objects>
-                <viewController id="yVO-TH-V6a" customClass="Cultivo4" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yVO-TH-V6a" customClass="Cultivo4" customModule="Dosacitric" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pbz-EC-qak">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1805,7 +1805,7 @@
         <!--Selec Boquillas2-->
         <scene sceneID="b1C-Sq-ndA">
             <objects>
-                <viewController id="1GO-3R-ypa" customClass="SelecBoquillas2" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1GO-3R-ypa" customClass="SelecBoquillas2" customModule="Dosacitric" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dja-84-Ji8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2493,7 +2493,7 @@
         <!--Result23-->
         <scene sceneID="Nwk-bS-Qph">
             <objects>
-                <viewController storyboardIdentifier="res3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xe0-RN-ORD" customClass="Result23" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="res3" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xe0-RN-ORD" customClass="Result23" customModule="Dosacitric" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eYT-Tm-d7W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2619,7 +2619,7 @@
         <!--Result31-->
         <scene sceneID="sVz-aa-Qbg">
             <objects>
-                <viewController storyboardIdentifier="res31" id="gjh-My-eMD" customClass="Result31" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="res31" id="gjh-My-eMD" customClass="Result31" customModule="Dosacitric" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s25-eB-F9w">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2716,7 +2716,7 @@
         <!--Result32-->
         <scene sceneID="SVz-4w-UB7">
             <objects>
-                <viewController storyboardIdentifier="res32" id="k70-QJ-d5d" customClass="Result32" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="res32" id="k70-QJ-d5d" customClass="Result32" customModule="Dosacitric" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zBy-xa-gY4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2821,7 +2821,7 @@
         <!--Result33-->
         <scene sceneID="Lhk-i9-b2L">
             <objects>
-                <viewController storyboardIdentifier="res33" id="gND-wc-YMc" customClass="Result33" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="res33" id="gND-wc-YMc" customClass="Result33" customModule="Dosacitric" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gjN-oV-YIm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3562,7 +3562,7 @@
         <!--ID-->
         <scene sceneID="jiw-cu-1US">
             <objects>
-                <viewController id="WfG-4Y-Obd" customClass="ID" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WfG-4Y-Obd" customClass="ID" customModule="Dosacitric" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eoW-Ci-ajz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3695,7 +3695,7 @@
         <!--Indice-->
         <scene sceneID="hV2-fL-RsO">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ihg-MB-No7" customClass="Indice" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ihg-MB-No7" customClass="Indice" customModule="Dosacitric" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ImD-Lg-ReO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4136,7 +4136,7 @@
         <!--Result35-->
         <scene sceneID="chI-RZ-VxC">
             <objects>
-                <viewController storyboardIdentifier="res35" id="GVW-Ei-Npv" customClass="Result35" customModule="DosApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="res35" id="GVW-Ei-Npv" customClass="Result35" customModule="Dosacitric" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B0M-5Y-C7F">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4692,7 +4692,7 @@
                                 <rect key="frame" x="10" y="51" width="294" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">DOSACÍTRIC se ha elaborado a partir de los resultados obtenidos en elos proyectos de investigación PULVERXACT* y OPTIDOSA**. Llevados a cabo por el grupo de investigación de la Unidad de Mecanización y Tecnología Agraria de la Universidad Politècnica de València.</string>
+                                <string key="text">DOSACÍTRIC se ha elaborado a partir de los resultados obtenidos en elos proyectos de investigación PULVERXACT* y OPTIDOSA**. Llevados a cabo por el grupo de investigación de la Unidad de Mecanización y Tecnología Agraria de la Universitat Politècnica de València.</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

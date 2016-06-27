@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B2557D921AAF821E008A24D9"
-               BuildableName = "DosApp.app"
-               BlueprintName = "DosApp"
-               ReferencedContainer = "container:DosApp.xcodeproj">
+               BuildableName = "Dosacitric.app"
+               BlueprintName = "Dosacitric"
+               ReferencedContainer = "container:Dosacitric.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B2557DAA1AAF821E008A24D9"
-               BuildableName = "DosAppTests.xctest"
-               BlueprintName = "DosAppTests"
-               ReferencedContainer = "container:DosApp.xcodeproj">
+               BuildableName = "Dosacitric.xctest"
+               BlueprintName = "DosacitricTests"
+               ReferencedContainer = "container:Dosacitric.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B2557DAA1AAF821E008A24D9"
-               BuildableName = "DosAppTests.xctest"
-               BlueprintName = "DosAppTests"
-               ReferencedContainer = "container:DosApp.xcodeproj">
+               BuildableName = "Dosacitric.xctest"
+               BlueprintName = "DosacitricTests"
+               ReferencedContainer = "container:Dosacitric.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B2557D921AAF821E008A24D9"
-            BuildableName = "DosApp.app"
-            BlueprintName = "DosApp"
-            ReferencedContainer = "container:DosApp.xcodeproj">
+            BuildableName = "Dosacitric.app"
+            BlueprintName = "Dosacitric"
+            ReferencedContainer = "container:Dosacitric.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B2557D921AAF821E008A24D9"
-            BuildableName = "DosApp.app"
-            BlueprintName = "DosApp"
-            ReferencedContainer = "container:DosApp.xcodeproj">
+            BuildableName = "Dosacitric.app"
+            BlueprintName = "Dosacitric"
+            ReferencedContainer = "container:Dosacitric.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -99,9 +99,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B2557D921AAF821E008A24D9"
-            BuildableName = "DosApp.app"
-            BlueprintName = "DosApp"
-            ReferencedContainer = "container:DosApp.xcodeproj">
+            BuildableName = "Dosacitric.app"
+            BlueprintName = "Dosacitric"
+            ReferencedContainer = "container:Dosacitric.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

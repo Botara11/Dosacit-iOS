@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EA27D01D-69D0-4F4E-8222-61C6BABE1E35</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DosApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F84705C14AFE9A71413AEC78F16F32D82FE7DE32</key>
+		<string>https://gitlab.com/serne01/dosacit-iphone.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DosApp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F84705C14AFE9A71413AEC78F16F32D82FE7DE32</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://gitlab.com/serne01/dosacit-iphone.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F84705C14AFE9A71413AEC78F16F32D82FE7DE32</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F84705C14AFE9A71413AEC78F16F32D82FE7DE32</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DosApp</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -80,8 +80,8 @@
 		21F4C8861AFE773000401952 /* CaldoAp1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaldoAp1.swift; sourceTree = "<group>"; };
 		B21DCF2E1CFA2BF200E408FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = StoryboardIpad.storyboard; sourceTree = "<group>"; };
 		B23F0E741CF7268E002D5594 /* ResultadosD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultadosD.swift; sourceTree = "<group>"; };
-		B2557D931AAF821E008A24D9 /* DosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2557DAB1AAF821E008A24D9 /* DosAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DosAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2557D931AAF821E008A24D9 /* Dosacitric.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dosacitric.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2557DAB1AAF821E008A24D9 /* Dosacitric.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dosacitric.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2557DB01AAF821E008A24D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2557DB11AAF821E008A24D9 /* DosAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DosAppTests.swift; sourceTree = "<group>"; };
 		B2557DDB1AAF83FD008A24D9 /* A1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = A1.swift; sourceTree = "<group>"; };
@@ -148,8 +148,8 @@
 		B2557D941AAF821E008A24D9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B2557D931AAF821E008A24D9 /* DosApp.app */,
-				B2557DAB1AAF821E008A24D9 /* DosAppTests.xctest */,
+				B2557D931AAF821E008A24D9 /* Dosacitric.app */,
+				B2557DAB1AAF821E008A24D9 /* Dosacitric.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -234,9 +234,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B2557D921AAF821E008A24D9 /* DosApp */ = {
+		B2557D921AAF821E008A24D9 /* Dosacitric */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B2557DB51AAF821E008A24D9 /* Build configuration list for PBXNativeTarget "DosApp" */;
+			buildConfigurationList = B2557DB51AAF821E008A24D9 /* Build configuration list for PBXNativeTarget "Dosacitric" */;
 			buildPhases = (
 				B2557D8F1AAF821E008A24D9 /* Sources */,
 				B2557D901AAF821E008A24D9 /* Frameworks */,
@@ -246,14 +246,14 @@
 			);
 			dependencies = (
 			);
-			name = DosApp;
+			name = Dosacitric;
 			productName = DosApp;
-			productReference = B2557D931AAF821E008A24D9 /* DosApp.app */;
+			productReference = B2557D931AAF821E008A24D9 /* Dosacitric.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B2557DAA1AAF821E008A24D9 /* DosAppTests */ = {
+		B2557DAA1AAF821E008A24D9 /* DosacitricTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B2557DB81AAF821E008A24D9 /* Build configuration list for PBXNativeTarget "DosAppTests" */;
+			buildConfigurationList = B2557DB81AAF821E008A24D9 /* Build configuration list for PBXNativeTarget "DosacitricTests" */;
 			buildPhases = (
 				B2557DA71AAF821E008A24D9 /* Sources */,
 				B2557DA81AAF821E008A24D9 /* Frameworks */,
@@ -264,9 +264,9 @@
 			dependencies = (
 				B2557DAD1AAF821E008A24D9 /* PBXTargetDependency */,
 			);
-			name = DosAppTests;
+			name = DosacitricTests;
 			productName = DosAppTests;
-			productReference = B2557DAB1AAF821E008A24D9 /* DosAppTests.xctest */;
+			productReference = B2557DAB1AAF821E008A24D9 /* Dosacitric.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -295,7 +295,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B2557D8E1AAF821E008A24D9 /* Build configuration list for PBXProject "DosApp" */;
+			buildConfigurationList = B2557D8E1AAF821E008A24D9 /* Build configuration list for PBXProject "Dosacitric" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -308,8 +308,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B2557D921AAF821E008A24D9 /* DosApp */,
-				B2557DAA1AAF821E008A24D9 /* DosAppTests */,
+				B2557D921AAF821E008A24D9 /* Dosacitric */,
+				B2557DAA1AAF821E008A24D9 /* DosacitricTests */,
 			);
 		};
 /* End PBXProject section */
@@ -394,7 +394,7 @@
 /* Begin PBXTargetDependency section */
 		B2557DAD1AAF821E008A24D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B2557D921AAF821E008A24D9 /* DosApp */;
+			target = B2557D921AAF821E008A24D9 /* Dosacitric */;
 			targetProxy = B2557DAC1AAF821E008A24D9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -516,7 +516,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DosApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Dosacitric;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "DosApp/DosApp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -533,7 +533,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DosApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Dosacitric;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "DosApp/DosApp-Bridging-Header.h";
 			};
@@ -553,8 +553,8 @@
 				);
 				INFOPLIST_FILE = DosAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DosApp.app/DosApp";
+				PRODUCT_NAME = Dosacitric;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dosacitric.app/Dosacitric";
 			};
 			name = Debug;
 		};
@@ -568,15 +568,15 @@
 				);
 				INFOPLIST_FILE = DosAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DosApp.app/DosApp";
+				PRODUCT_NAME = Dosacitric;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dosacitric.app/Dosacitric";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B2557D8E1AAF821E008A24D9 /* Build configuration list for PBXProject "DosApp" */ = {
+		B2557D8E1AAF821E008A24D9 /* Build configuration list for PBXProject "Dosacitric" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B2557DB31AAF821E008A24D9 /* Debug */,
@@ -585,7 +585,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B2557DB51AAF821E008A24D9 /* Build configuration list for PBXNativeTarget "DosApp" */ = {
+		B2557DB51AAF821E008A24D9 /* Build configuration list for PBXNativeTarget "Dosacitric" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B2557DB61AAF821E008A24D9 /* Debug */,
@@ -594,7 +594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B2557DB81AAF821E008A24D9 /* Build configuration list for PBXNativeTarget "DosAppTests" */ = {
+		B2557DB81AAF821E008A24D9 /* Build configuration list for PBXNativeTarget "DosacitricTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B2557DB91AAF821E008A24D9 /* Debug */,

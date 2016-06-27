@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15F34" minimumToolsVersion="Automatic">
-    <entity name="A1" representedClassName="DosApp.A1" syncable="YES">
+    <entity name="A1" representedClassName="Dosacitric.A1" syncable="YES">
         <attribute name="alturaArboles" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="alturaMeseta" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="anchoCalle" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -29,7 +29,7 @@
         <attribute name="zonaCritica" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="zonaCriticaIndice" optional="YES" attributeType="Integer 32" defaultValueString="0.0" syncable="YES"/>
     </entity>
-    <entity name="B1" representedClassName="DosApp.B1" syncable="YES">
+    <entity name="B1" representedClassName="Dosacitric.B1" syncable="YES">
         <attribute name="anchoCalle" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="anchoCalleNuevo" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="anchoCalleViejo" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -69,7 +69,7 @@
         <attribute name="volumenAppNuevo" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="volumenAppViejo" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
     </entity>
-    <entity name="C1" representedClassName="DosApp.C1" syncable="YES">
+    <entity name="C1" representedClassName="Dosacitric.C1" syncable="YES">
         <attribute name="anchoCalle" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="caudalTotal" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
         <attribute name="caudalZonaAlta" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -89,7 +89,7 @@
         <attribute name="velocidadAvance" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="volumenCaldoAplicado" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
     </entity>
-    <entity name="EntityBoquillas" representedClassName="DosApp.EntityBoquillas" syncable="YES">
+    <entity name="EntityBoquillas" representedClassName="Dosacitric.EntityBoquillas" syncable="YES">
         <attribute name="activo" optional="YES" attributeType="Integer 16" syncable="YES"/>
         <attribute name="caudal" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="diametro" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
@@ -107,18 +107,18 @@
         <attribute name="p15" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="p16" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
     </entity>
-    <entity name="FiltroBoquillas" representedClassName="DosApp.FiltroBoquillas" syncable="YES">
+    <entity name="FiltroBoquillas" representedClassName="Dosacitric.FiltroBoquillas" syncable="YES">
         <attribute name="marca" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="modelo" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="presion" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="zona" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="MisBoquillas" representedClassName=".MisBoquillas" syncable="YES">
+    <entity name="MisBoquillas" representedClassName="Dosacitric.MisBoquillas" syncable="YES">
         <attribute name="caudalmio" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="marcamia" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="presionmia" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
     </entity>
-    <entity name="Z1" representedClassName="DosApp.Z1" syncable="YES">
+    <entity name="Z1" representedClassName="Dosacitric.Z1" syncable="YES">
         <attribute name="fecha" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="idParcela" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="idTratamiento" optional="YES" attributeType="String" syncable="YES"/>
@@ -130,7 +130,7 @@
         <element name="C1" positionX="-63" positionY="135" width="128" height="315"/>
         <element name="EntityBoquillas" positionX="-63" positionY="0" width="128" height="285"/>
         <element name="FiltroBoquillas" positionX="-63" positionY="135" width="128" height="105"/>
-        <element name="Z1" positionX="-63" positionY="135" width="128" height="105"/>
         <element name="MisBoquillas" positionX="-63" positionY="135" width="128" height="90"/>
+        <element name="Z1" positionX="-63" positionY="135" width="128" height="105"/>
     </elements>
 </model>

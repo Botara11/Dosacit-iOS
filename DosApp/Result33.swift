@@ -128,7 +128,7 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
         var cell = tableView.dequeueReusableCellWithIdentifier(self.cellIdentifier)! as UITableViewCell
         cell.backgroundColor = UIColor.blackColor()
         cell.textLabel?.textColor = UIColor.whiteColor()
-        var naranja = UIColor.init(red: 1, green: 0.4, blue: 0,
+        var naranja = UIColor.init(red: 1, green: 1, blue: 1,
             alpha: 1)
         //cell.textLabel?.text = self.tableData[indexPath.row]
         cell.textLabel?.text = self.sections[indexPath.section].boquis[indexPath.row]

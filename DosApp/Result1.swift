@@ -24,7 +24,8 @@ class Result1 : UIViewController {
     @IBOutlet weak var referencia: UILabel!
     
     @IBOutlet var densidadFoliarText: UILabel!
-    @IBOutlet var anchoCalleText: UILabel!
+    @IBOutlet weak var anchoCalleText: UILabel!
+    
     @IBOutlet var distanciaArbolesText: UILabel!
     @IBOutlet var volumenArbolText: UILabel!
     @IBOutlet var formaArbolText: UILabel!
@@ -473,7 +474,7 @@ class Result1 : UIViewController {
         
         for i in 0...2{
             textRect = CGRectMake(CGFloat(450), CGFloat(y), CGFloat(400), CGFloat(20))
-            var PDFarray = ["dosacitric@upv.es", "Unidad de Mecanización y Tecnología Agraria", "UNIVERSIDAD POLITÉCNICA DE VALENCIA"];
+            var PDFarray = ["dosacitric@upv.es", "Unidad de Mecanización y Tecnología Agraria", "UNIVERSITAT POLITÈCNICA DE VALÈNCIA"];
             // var PDFarray = [densidadFoliarText, anchoCalleText, volumenArbolText, formaArbolText, fechaUltimaPodaText, gradoPodaText, productosAplicarText, formaActuacionText, mojantesText, zonaCriticaText, temperaturaText.text, humedadRelativaText.text, velocidadVientoText.text, tipoPulverizadorText.text, volumenAplicacionHAText.text];
             y=y+25;
             // let myString:NSString = "Azúcar Álvaro"
