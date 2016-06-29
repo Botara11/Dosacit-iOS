@@ -142,7 +142,7 @@ class EliminarBoquillas: UIViewController, UITableViewDataSource, UITableViewDel
         cell.textLabel?.textColor = UIColor.whiteColor()
         cell.textLabel?.text = self.tableData[indexPath.row]
         if (indexPath.item == seleccionada){
-            var naranja = UIColor.init(red: 1, green: 0.4, blue: 0,
+            var naranja = UIColor.init(red: 1, green: 1, blue: 1,
                 alpha: 1)
             cell.backgroundColor = naranja
             cell.textLabel?.textColor = UIColor.blackColor()

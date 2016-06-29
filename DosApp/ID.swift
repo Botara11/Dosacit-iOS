@@ -30,6 +30,23 @@ class ID: ResponsiveTextFieldViewController, UITextFieldDelegate {
     return true;
     }*/
     
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        guard let text = textField.text else { return true }
+        if (textField.tag == 0){
+        let newLength = text.characters.count + string.characters.count - range.length
+        return newLength <= 22 // Bool
+        } else if (textField.tag == 1){
+            let newLength = text.characters.count + string.characters.count - range.length
+            return newLength <= 17 // Bool
+        } else if (textField.tag == 2){
+            let newLength = text.characters.count + string.characters.count - range.length
+            return newLength <= 17 // Bool
+        } else {
+            let newLength = text.characters.count + string.characters.count - range.length
+            return newLength <= 20 // Bool
+        }
+    }
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         let nextTag: NSInteger = textField.tag + 1;
         // Try to find next responder
