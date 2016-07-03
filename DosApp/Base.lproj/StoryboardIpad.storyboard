@@ -1295,8 +1295,8 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Poda" translatesAutoresizingMaskIntoConstraints="NO" id="DvS-89-zA9">
-                                        <rect key="frame" x="15" y="565" width="182" height="34"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Poda:" translatesAutoresizingMaskIntoConstraints="NO" id="DvS-89-zA9">
+                                        <rect key="frame" x="15" y="565" width="182" height="45"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -1323,13 +1323,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxJ-Bt-Mhy">
-                                        <rect key="frame" x="622" y="397" width="97" height="34"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t2T-hk-ujf">
                                         <rect key="frame" x="409" y="341" width="312" height="34"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1380,7 +1373,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkS-dg-iup">
-                                        <rect key="frame" x="407" y="397" width="187" height="34"/>
+                                        <rect key="frame" x="407" y="397" width="312" height="34"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1472,12 +1465,6 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uU7-0G-FTd">
                                         <rect key="frame" x="409" y="1285" width="318" height="34"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCa-pc-urU">
-                                        <rect key="frame" x="602" y="404" width="23" height="22"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -1664,7 +1651,6 @@
                     <connections>
                         <outlet property="anchoCalleText" destination="dkS-dg-iup" id="c8W-IE-NxM"/>
                         <outlet property="densidadFoliarText" destination="t2T-hk-ujf" id="jbr-E6-9Uw"/>
-                        <outlet property="distanciaArbolesText" destination="RxJ-Bt-Mhy" id="jKW-Tp-cUO"/>
                         <outlet property="fecha" destination="d2l-bS-aRk" id="hKW-jc-wTB"/>
                         <outlet property="fechaUltimaPodaText" destination="VKn-Nh-sNP" id="td8-gT-7jc"/>
                         <outlet property="formaActuacionText" destination="aHC-Rb-pwn" id="fT3-lw-9ty"/>
@@ -4027,14 +4013,14 @@
                         <viewControllerLayoutGuide type="bottom" id="nPC-xg-Mu8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cS4-JR-OQx">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1170"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1220"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q3i-k7-1A8">
-                                <rect key="frame" x="0.0" y="64" width="772" height="1106"/>
+                                <rect key="frame" x="0.0" y="64" width="772" height="1156"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="Tipo de tratamiento" translatesAutoresizingMaskIntoConstraints="NO" id="yAA-9v-Bze">
-                                        <rect key="frame" x="16" y="30" width="356" height="44"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="TIPO DE TRATAMIENTO" translatesAutoresizingMaskIntoConstraints="NO" id="yAA-9v-Bze">
+                                        <rect key="frame" x="16" y="30" width="356" height="48"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
@@ -4044,14 +4030,7 @@
                                         <rect key="frame" x="46" y="82" width="694" height="153"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="- ">
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="22" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content="Productos a aplicar: ">
+                                            <fragment content="PRODUCTOS A APLICAR: ">
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="22" name="HelveticaNeue"/>
@@ -4059,7 +4038,7 @@
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <string key="content">Se elegirá el producto que se vaya a aplicar entre: acaricidas (1), fungicidas (2), insecticidas(3), abonos floriales (4) y fitorreguladores (5). Si se va a aplicar dos o más productos en el mismo tratamiento, se elegirá aquella opción que tenga menor número entre paréntesis. </string>
+                                                <string key="content">Se elegirá el producto que se vaya a aplicar entre: acaricidas (1), fungicidas (2), insecticidas(3), abonos foliares (4) y fitorreguladores (5). Si se va a aplicar dos o más productos en el mismo tratamiento, se elegirá aquella opción que tenga menor número entre paréntesis. </string>
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="22" name="HelveticaNeue"/>
@@ -4070,17 +4049,10 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lYQ-uu-PsK">
-                                        <rect key="frame" x="46" y="232" width="694" height="255"/>
+                                        <rect key="frame" x="46" y="232" width="667" height="288"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="-">
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="22" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content=" Forma de actuación:">
+                                            <fragment content="FORMA DE ACTUACIÓN:">
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="22" name="HelveticaNeue"/>
@@ -4088,7 +4060,7 @@
                                                 </attributes>
                                             </fragment>
                                             <fragment>
-                                                <string key="content"> Se seleccionará la forma de actuación de un producto entre: por asfixia - aceites (1), por contacto (2), por ingestión (3), por inhalación (4), producto con acción traslaminar (5) y producto sistémico (6). Si se va a aplicar dos o más productos en el mismo tratamiento, se elegirá aquella opción que tenga menor número entre paréntesis. La forma de actuación de un producto se puede obtener directamente leyendo la etiqueta del envase o de las páginas del Instituto Valenciano de Investigaciones Agrarias (IVIA) o del Ministerio de Agricultura, Alimentación y Medio Ambiente.</string>
+                                                <string key="content"> Se seleccionará la forma de actuación de un producto entre: por asfixia - aceites (1), por contacto (2), por ingestión (3), por inhalación (4), producto con acción traslaminar (5) y producto sistémico (6). Si se va a aplicar dos o más productos en el mismo tratamiento, se elegirá aquella opción que tenga menor número entre paréntesis. La forma de actuación de un producto se puede obtener directamente leyendo la etiqueta del envase o de las páginas web del Instituto Valenciano de Investigaciones Agrarias (IVIA) o del Ministerio de Agricultura, Alimentación y Medio Ambiente.</string>
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="22" name="HelveticaNeue"/>
@@ -4099,17 +4071,10 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sv5-SU-7qb">
-                                        <rect key="frame" x="46" y="489" width="702" height="182"/>
+                                        <rect key="frame" x="46" y="514" width="662" height="182"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="-">
-                                                <attributes>
-                                                    <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="22" name="HelveticaNeue"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                            <fragment content=" Zona crítica a tratar:">
+                                            <fragment content="ZONA CRÍTICA A TRATAR:">
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="22" name="HelveticaNeue"/>
@@ -4127,22 +4092,15 @@
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="Condiciones meteorológicas" translatesAutoresizingMaskIntoConstraints="NO" id="cg5-RS-0tV">
-                                        <rect key="frame" x="16" y="679" width="752" height="50"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="Equipo empleado" translatesAutoresizingMaskIntoConstraints="NO" id="d4T-cW-kAk">
-                                        <rect key="frame" x="16" y="926" width="752" height="50"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="CONDICIONES METEOROLÓGICAS:" translatesAutoresizingMaskIntoConstraints="NO" id="cg5-RS-0tV">
+                                        <rect key="frame" x="16" y="704" width="752" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3b7-ze-uQp">
-                                        <rect key="frame" x="46" y="737" width="702" height="181"/>
+                                        <rect key="frame" x="46" y="762" width="662" height="200"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Se indicará la ">
@@ -4152,7 +4110,21 @@
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment content="temperatura ambiente, humedad relativa y velocidad del viento">
+                                            <fragment content="TEMPERATURA (ºC) ">
+                                                <attributes>
+                                                    <color key="NSColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <font key="NSFont" size="22" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="ambiente, ">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="22" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" HUMEDAD RELATIVA (%) y VELOCIDAD DEL VIENTO (m/s)">
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="22" name="HelveticaNeue"/>
@@ -4170,8 +4142,15 @@
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="Equipo empleado" translatesAutoresizingMaskIntoConstraints="NO" id="d4T-cW-kAk">
+                                        <rect key="frame" x="16" y="970" width="752" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fQq-1Q-K0Q">
-                                        <rect key="frame" x="46" y="984" width="702" height="92"/>
+                                        <rect key="frame" x="46" y="1028" width="673" height="92"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText">
                                             <fragment content="En este apartado se deberá elegir entre pulverizador hidroneumático (turbo) o aplicador de alto caudal (pistola).">
@@ -4187,7 +4166,7 @@
                                 </subviews>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
-                                        <size key="value" width="768" height="1136"/>
+                                        <size key="value" width="768" height="1200"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="rect" keyPath="frame">
                                         <rect key="value" x="0.0" y="0.0" width="768" height="1024"/>
@@ -4227,7 +4206,7 @@
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="768" height="1170"/>
+                    <size key="freeformSize" width="768" height="1220"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xAK-U9-vxc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4523,7 +4502,7 @@
                                 <rect key="frame" x="20" y="92" width="768" height="51"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4rh-57-SMH">
@@ -4537,7 +4516,7 @@
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="Fecha:">
+                                    <fragment content="FECHA:">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="22" name="HelveticaNeue"/>
@@ -4555,7 +4534,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="byZ-1y-fMP">
-                                <rect key="frame" x="40" y="300" width="747" height="45"/>
+                                <rect key="frame" x="40" y="300" width="693" height="69"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment content="- ">
@@ -4565,7 +4544,7 @@
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="Identificación del tratamiento:">
+                                    <fragment content="IDENTIFICACIÓN DEL TRATAMIENTO:">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="22" name="HelveticaNeue"/>
@@ -4582,36 +4561,8 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w3D-FX-xtu">
-                                <rect key="frame" x="40" y="353" width="747" height="45"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="- ">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="22" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="Referencia:">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="22" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content=" Código de identificación del tratamiento en formato libre.">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="22" name="HelveticaNeue"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H9U-n0-S38">
-                                <rect key="frame" x="40" y="213" width="747" height="79"/>
+                                <rect key="frame" x="40" y="213" width="672" height="79"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
                                     <fragment content="-">
@@ -4621,14 +4572,42 @@
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=" Identificación de la parcela:">
+                                    <fragment content=" IDENTIFICACIÓN DE LA PARCELA:">
                                         <attributes>
                                             <color key="NSColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="22" name="HelveticaNeue"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content=" Término municipal, polígono y parcela o cualquier otro sistema de identificación de la parcela">
+                                    <fragment content=" Término municipal, polígono y parcela o cualquier otro sistema de identificación de la parcela.">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="22" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w3D-FX-xtu">
+                                <rect key="frame" x="40" y="377" width="680" height="92"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="- ">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="22" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="REFERENCIA:">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="22" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" Código de identificación del tratamiento en formato libre.">
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="22" name="HelveticaNeue"/>
@@ -4646,7 +4625,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sn7-OL-Sxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-675" y="1683.8028169014083"/>
+            <point key="canvasLocation" x="-675" y="1683"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="JsE-c0-AZy">
@@ -4657,38 +4636,31 @@
                         <viewControllerLayoutGuide type="bottom" id="L86-7G-cz1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vNl-cw-Org">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="2048"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="2120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hyZ-jX-Mnb">
-                                <rect key="frame" x="0.0" y="64" width="768" height="1984"/>
+                                <rect key="frame" x="0.0" y="64" width="768" height="2084"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Características del cultivo" translatesAutoresizingMaskIntoConstraints="NO" id="yiA-KE-jIC">
-                                        <rect key="frame" x="20" y="24" width="768" height="51"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="En este punto se deben introducir los siguientes datos:" translatesAutoresizingMaskIntoConstraints="NO" id="e5v-2x-Snc">
-                                        <rect key="frame" x="40" y="83" width="748" height="42"/>
+                                        <rect key="frame" x="30" y="35" width="748" height="42"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Marco de plantación:" translatesAutoresizingMaskIntoConstraints="NO" id="0kj-zh-TZB">
-                                        <rect key="frame" x="39" y="416" width="748" height="45"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="MARCO DE PLANTACIÓN:" translatesAutoresizingMaskIntoConstraints="NO" id="0kj-zh-TZB">
+                                        <rect key="frame" x="57" y="461" width="748" height="45"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S6K-yE-dgJ">
-                                        <rect key="frame" x="39" y="564" width="748" height="45"/>
+                                        <rect key="frame" x="58" y="633" width="657" height="75"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Dimensiones de los árboles.">
+                                            <fragment content="DIMENSIONES DE LOS ÁRBOLES:">
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="22" name="HelveticaNeue"/>
@@ -4706,10 +4678,10 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ed9-MM-De8">
-                                        <rect key="frame" x="40" y="670" width="748" height="45"/>
+                                        <rect key="frame" x="59" y="755" width="666" height="72"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Forma del árbol:">
+                                            <fragment content="FORMA DEL ÁRBOL:">
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="22" name="HelveticaNeue"/>
@@ -4727,10 +4699,10 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v9d-xr-3zd">
-                                        <rect key="frame" x="40" y="723" width="748" height="45"/>
+                                        <rect key="frame" x="59" y="821" width="748" height="45"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Poda:">
+                                            <fragment content="PODA:">
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="22" name="HelveticaNeue"/>
@@ -4741,7 +4713,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z4l-YP-cpf">
-                                        <rect key="frame" x="69" y="464" width="719" height="45"/>
+                                        <rect key="frame" x="87" y="509" width="719" height="45"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText">
                                             <fragment content="x:">
@@ -4762,7 +4734,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yy5-Wx-kxD">
-                                        <rect key="frame" x="67" y="617" width="138" height="45"/>
+                                        <rect key="frame" x="86" y="702" width="138" height="45"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText">
                                             <fragment content="I: ">
@@ -4783,7 +4755,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JU0-37-TH6">
-                                        <rect key="frame" x="335" y="617" width="138" height="45"/>
+                                        <rect key="frame" x="354" y="702" width="138" height="45"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText">
                                             <fragment content="II:">
@@ -4804,7 +4776,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tnb-8t-CAl">
-                                        <rect key="frame" x="616" y="617" width="138" height="45"/>
+                                        <rect key="frame" x="635" y="702" width="138" height="45"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText">
                                             <fragment content="III:">
@@ -4825,7 +4797,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dzW-dU-4Hj">
-                                        <rect key="frame" x="69" y="511" width="719" height="45"/>
+                                        <rect key="frame" x="87" y="556" width="618" height="69"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText">
                                             <fragment content="y: ">
@@ -4846,10 +4818,10 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kHB-Nt-fwH">
-                                        <rect key="frame" x="40" y="133" width="714" height="123"/>
+                                        <rect key="frame" x="58" y="102" width="666" height="123"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Densidad foliar: ">
+                                            <fragment content="DENSIDAD FOLIAR: ">
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="22" name="HelveticaNeue"/>
@@ -4868,10 +4840,10 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n26-my-g75">
-                                        <rect key="frame" x="69" y="859" width="718" height="64"/>
+                                        <rect key="frame" x="88" y="957" width="618" height="78"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Grado de la poda. ">
+                                            <fragment content="GRADO DE LA PODA: ">
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="22" name="HelveticaNeue"/>
@@ -4889,16 +4861,13 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dimensiones" translatesAutoresizingMaskIntoConstraints="NO" id="2SD-DC-Stb">
-                                        <rect key="frame" x="0.0" y="946" width="768" height="569"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dimensiones2" translatesAutoresizingMaskIntoConstraints="NO" id="teT-FD-c9i">
-                                        <rect key="frame" x="0.0" y="1536" width="768" height="389"/>
+                                        <rect key="frame" x="1" y="1043" width="768" height="569"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nvj-Xe-G3M">
-                                        <rect key="frame" x="70" y="770" width="684" height="97"/>
+                                        <rect key="frame" x="89" y="868" width="636" height="97"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Fecha de la última poda.">
+                                            <fragment content="FECHA DE LA ÚLTIMA PODA:">
                                                 <attributes>
                                                     <color key="NSColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <font key="NSFont" size="22" name="HelveticaNeue"/>
@@ -4915,31 +4884,97 @@
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="- Densidad foliar alta: valor superior a 4,5 m²/m³." translatesAutoresizingMaskIntoConstraints="NO" id="M3N-hN-WOG">
-                                        <rect key="frame" x="70" y="264" width="717" height="45"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M3N-hN-WOG">
+                                        <rect key="frame" x="87" y="233" width="637" height="74"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="- ">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="22" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="Densidad foliar alta:">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" valor superior a 4,5 m²/m³. Por ejemplo, variedad Fortuna.">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="22" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="- Densidad foliar media: entre a 3,5 y a 4,5 m²/m³." translatesAutoresizingMaskIntoConstraints="NO" id="DBv-cT-kId">
-                                        <rect key="frame" x="70" y="310" width="718" height="45"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DBv-cT-kId">
+                                        <rect key="frame" x="88" y="310" width="636" height="73"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="- ">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="22" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content="Densidad foliar media:">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" entre a 3,5 y a 4,5 m²/m³. Por ejemplo, variedades Clemenules y Navel Late.">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="22" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="- Densidad foliar baja: valor inferior a 3,5 m²/m³." translatesAutoresizingMaskIntoConstraints="NO" id="0zN-4o-se2">
-                                        <rect key="frame" x="70" y="358" width="718" height="45"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0zN-4o-se2">
+                                        <rect key="frame" x="88" y="379" width="636" height="74"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="-">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="22" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" Densidad foliar baja:">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                            <fragment content=" valor inferior a 3,5 m²/m³. Por ejemplo, variedad Marisol.">
+                                                <attributes>
+                                                    <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <font key="NSFont" size="22" name="HelveticaNeue"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dimensiones2" translatesAutoresizingMaskIntoConstraints="NO" id="teT-FD-c9i">
+                                        <rect key="frame" x="0.0" y="1640" width="768" height="389"/>
+                                    </imageView>
                                 </subviews>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
-                                        <size key="value" width="768" height="2030"/>
+                                        <size key="value" width="768" height="2120"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="rect" keyPath="frame">
                                         <rect key="value" x="0.0" y="0.0" width="768" height="1024"/>
@@ -4980,7 +5015,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="cvG-sh-Wvb"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="768" height="2048"/>
+                    <size key="freeformSize" width="768" height="2120"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyj-Nz-Bge" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -5830,19 +5865,12 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZW-cS-tXH">
-                                <rect key="frame" x="40" y="262" width="699" height="98"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Al presionar sobre este icono                 se guardan los datos de "RESUMEN Y RESULTADOS I" en formato PDF y podrá visualizarlo y guardarlo con la aplicacion que desee.</string>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2EX-GO-JkO">
-                                <rect key="frame" x="41" y="154" width="676" height="100"/>
+                                <rect key="frame" x="41" y="154" width="658" height="121"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Se muestra un resumen de la información introducida en los puntos 0,1, 2 y 3, y se indicará el ">
+                                    <fragment>
+                                        <string key="content">En el apartado "BR. RESUMEN Y RESULTADOS I" se muestra un resumen de la información introducida en los puntos A y B de la aplicación, y se indicará el </string>
                                         <attributes>
                                             <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <font key="NSFont" size="22" name="HelveticaNeue"/>
@@ -5866,8 +5894,16 @@
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZW-cS-tXH">
+                                <rect key="frame" x="41" y="295" width="699" height="98"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Al presionar sobre este icono                 se guardarán en un fichero PDF en su dispositivo todos los datos recogidos en el apartado “BR. RESUMEN Y RESULTADOS I”.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="printer" translatesAutoresizingMaskIntoConstraints="NO" id="MFS-9l-gRd">
-                                <rect key="frame" x="349" y="250" width="71" height="43"/>
+                                <rect key="frame" x="350" y="283" width="71" height="43"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -8324,31 +8360,31 @@
         <image name="zonas_boquillas" width="369" height="321"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="A7M-Zb-97F"/>
+        <segue reference="Mbg-jp-gPS"/>
+        <segue reference="SCx-Sb-Hqj"/>
+        <segue reference="hov-lw-895"/>
+        <segue reference="WgH-bw-2WC"/>
+        <segue reference="9t3-FY-5SK"/>
+        <segue reference="wDx-9E-5bc"/>
+        <segue reference="uPV-8h-mMd"/>
+        <segue reference="j8T-ol-82k"/>
+        <segue reference="o6y-Ja-J8L"/>
+        <segue reference="EHX-o7-fMG"/>
+        <segue reference="dAq-bU-kqQ"/>
+        <segue reference="B9A-Ij-QPY"/>
+        <segue reference="QNK-oa-iXe"/>
+        <segue reference="XCx-Em-AWB"/>
+        <segue reference="vMb-Dx-Exr"/>
+        <segue reference="nhG-iF-rX5"/>
+        <segue reference="fVl-dP-UNR"/>
+        <segue reference="MBR-fs-nD0"/>
         <segue reference="wCG-tV-5BN"/>
         <segue reference="tLL-w8-2G0"/>
         <segue reference="q8k-fp-UZo"/>
-        <segue reference="MBR-fs-nD0"/>
-        <segue reference="b8R-Bk-rvF"/>
-        <segue reference="B9A-Ij-QPY"/>
-        <segue reference="QNK-oa-iXe"/>
-        <segue reference="dAq-bU-kqQ"/>
-        <segue reference="fVl-dP-UNR"/>
-        <segue reference="XCx-Em-AWB"/>
-        <segue reference="ZD1-MQ-OYr"/>
-        <segue reference="A7M-Zb-97F"/>
-        <segue reference="vMb-Dx-Exr"/>
-        <segue reference="nhG-iF-rX5"/>
         <segue reference="eed-KH-kNC"/>
         <segue reference="3R8-3F-ZAO"/>
         <segue reference="Ikd-u9-4tA"/>
         <segue reference="RMw-ft-yIC"/>
-        <segue reference="SCx-Sb-Hqj"/>
-        <segue reference="ePU-vi-k5t"/>
-        <segue reference="YQL-Eh-eZ1"/>
-        <segue reference="j8T-ol-82k"/>
-        <segue reference="SJP-pi-G55"/>
-        <segue reference="uPV-8h-mMd"/>
-        <segue reference="EHX-o7-fMG"/>
-        <segue reference="hov-lw-895"/>
     </inferredMetricsTieBreakers>
 </document>
