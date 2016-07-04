@@ -29,6 +29,14 @@ class IngresarBoquillas: UIViewController{
             // Not found, so remove keyboard.
             textField.resignFirstResponder()
         }
+        
+        /*if (textField.tag == 1 || textField.tag == 2){
+            if (Double(textField.text!) == nil){
+                if(textField.tag == 1){ alert("ERROR",mensaje: "El campo \"Caudal\" tiene que ser un número")}else{ alert("ERROR",mensaje: "El campo \"Presion\" tiene que ser un número")}
+            }else{
+                textField.text = String(format:"%.2f", textField.text!)
+            }
+        }*/
         return false // We do not want UITextField to insert line-breaks.
     }
     
@@ -46,6 +54,7 @@ class IngresarBoquillas: UIViewController{
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "ingresar"){
+            //print (String(format:"%.2f", Double(caudal.text!)!))
             
             if (marca.text == "" || caudal.text == "" || presion.text == ""){
                 alert("ERROR",mensaje: "No puede haber campos vacíos")
@@ -59,8 +68,8 @@ class IngresarBoquillas: UIViewController{
                     }else{
                         var newItemIngresar = NSEntityDescription.insertNewObjectForEntityForName("MisBoquillas", inManagedObjectContext: managedObjectContext!) as! MisBoquillas
                         newItemIngresar.marcamia = marca.text!
-                        newItemIngresar.presionmia = (presion.text! as NSString).doubleValue
-                        newItemIngresar.caudalmio = (caudal.text! as NSString).doubleValue
+                        newItemIngresar.presionmia = Double(String(format:"%.2f", (presion.text! as NSString).doubleValue))!
+                        newItemIngresar.caudalmio = Double(String(format:"%.2f",(caudal.text! as NSString).doubleValue))!
                         
                         let dbBoquillas = NSEntityDescription.insertNewObjectForEntityForName("EntityBoquillas", inManagedObjectContext: managedObjectContext!) as! EntityBoquillas
                         

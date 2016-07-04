@@ -1541,7 +1541,7 @@
                                     <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="B.R. Resumen y Resultado " id="KIZ-ej-RDs">
+                                    <navigationItem title="B.R. RESUMEN Y RESULTADOS I " id="KIZ-ej-RDs">
                                         <barButtonItem key="leftBarButtonItem" systemItem="reply" id="q32-WP-7yK">
                                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
@@ -1551,9 +1551,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logodosactitric" translatesAutoresizingMaskIntoConstraints="NO" id="2x7-Ma-Bix">
-                                <rect key="frame" x="213" y="22" width="35" height="36"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVy-fn-HM1">
                                 <rect key="frame" x="0.0" y="957" width="768" height="67"/>
                                 <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1639,6 +1636,9 @@
                                     <segue destination="Zh0-vt-KLJ" kind="presentation" id="QcP-dD-pFk"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logodosactitric" translatesAutoresizingMaskIntoConstraints="NO" id="2x7-Ma-Bix">
+                                <rect key="frame" x="182" y="23" width="35" height="36"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -3921,17 +3921,9 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NoZ-L0-6Yo">
-                                        <rect key="frame" x="21" y="969" width="711" height="118"/>
+                                        <rect key="frame" x="21" y="969" width="703" height="118"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <string key="text">(*)Proyecto PULVERXACT. Implementación de un sistema de decisión de la dosis de producto fitosanitario en tratamientos de plantaciones (frutales, viñedo y cítricos). Contrato AGL 2002-04260-C04. Organismo financiador: Ministerio de Educación y Ciencia.</string>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKw-UE-LrE">
-                                        <rect key="frame" x="21" y="1045" width="719" height="82"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <string key="text">(**)Proyecto OPTIDOSA. Reducción del uso de producto fitosanitario en cultivos arbóreos. Optimización de la dosis de aplicación en cítricos, frutales y vid. Contrato AGL 2007-66093-C04. Organismo financiador: Ministerio de Educación y Ciencia.</string>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -3965,13 +3957,6 @@
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" text="Aplicación desarrollada por Álvaro Serneguet Sorlí, Idir Ferrah Muñoz. y Borja Tarazona Raga." translatesAutoresizingMaskIntoConstraints="NO" id="1oH-7Q-02L">
-                                        <rect key="frame" x="21" y="1140" width="714" height="69"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qtd-e3-dGu">
                                         <rect key="frame" x="58" y="552" width="666" height="99"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -3980,10 +3965,18 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKw-UE-LrE">
+                                        <rect key="frame" x="21" y="1067" width="687" height="82"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <string key="text">(**)Proyecto OPTIDOSA. Reducción del uso de producto fitosanitario en cultivos arbóreos. Optimización de la dosis de aplicación en cítricos, frutales y vid. Contrato AGL 2007-66093-C04. Organismo financiador: Ministerio de Educación y Ciencia.</string>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
-                                        <size key="value" width="768" height="1200"/>
+                                        <size key="value" width="768" height="1230"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="rect" keyPath="frame">
                                         <rect key="value" x="0.0" y="0.0" width="768" height="1024"/>
@@ -4221,7 +4214,7 @@
                         <viewControllerLayoutGuide type="bottom" id="zKH-91-fFK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kr9-oM-1fO">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1180"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zqb-0K-enY">
@@ -4256,17 +4249,17 @@
                                 <rect key="frame" x="311" y="24" width="35" height="36"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CT2-LP-asc">
-                                <rect key="frame" x="0.0" y="64" width="769" height="1116"/>
+                                <rect key="frame" x="0.0" y="64" width="769" height="1186"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="A: IDENTIFICACIÓN DEL TRATAMIENTO" translatesAutoresizingMaskIntoConstraints="NO" id="pGI-Gl-CUZ">
-                                        <rect key="frame" x="21" y="0.0" width="768" height="51"/>
+                                        <rect key="frame" x="32" y="22" width="768" height="51"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5md-92-O2D">
-                                        <rect key="frame" x="41" y="59" width="711" height="217"/>
+                                        <rect key="frame" x="52" y="81" width="659" height="227"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Al presionar sobre el título IDENTIFICACIÓN DEL TRATAMIENTO se accederá al módulo ">
@@ -4309,7 +4302,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IC1-Hc-tHb">
-                                        <rect key="frame" x="41" y="343" width="728" height="148"/>
+                                        <rect key="frame" x="52" y="375" width="678" height="148"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Al presionar sobre el título VOLUMEN DE APLICACIÓN (L/ha) se accederá al módulo ">
@@ -4338,7 +4331,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h5C-g3-0oA">
-                                        <rect key="frame" x="41" y="773" width="711" height="148"/>
+                                        <rect key="frame" x="53" y="833" width="670" height="148"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Al presionar sobre el título VOLUMEN DE CALDO APLICADO (L/ha) se accederá al módulo ">
@@ -4374,7 +4367,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fz3-6c-iTV">
-                                        <rect key="frame" x="21" y="969" width="711" height="106"/>
+                                        <rect key="frame" x="32" y="1020" width="690" height="106"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <string key="text">Presionando sobre el icono              se accederá a una pantalla donde se podrán dar de alta, eliminar y visualizar las boquillas propias del usuario.</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -4382,28 +4375,28 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="B: VOLUMEN DE APLICACIÓN (L/ha)" translatesAutoresizingMaskIntoConstraints="NO" id="USw-Rl-umk">
-                                        <rect key="frame" x="21" y="284" width="768" height="51"/>
+                                        <rect key="frame" x="32" y="316" width="768" height="51"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="C: SELECCIÓN DE BOQUILLAS" translatesAutoresizingMaskIntoConstraints="NO" id="JRc-HO-zF1">
-                                        <rect key="frame" x="21" y="499" width="768" height="51"/>
+                                        <rect key="frame" x="32" y="531" width="768" height="51"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="D: VOLUMEN DE CALDO APLICADO (L/ha)" translatesAutoresizingMaskIntoConstraints="NO" id="gZQ-RB-obu">
-                                        <rect key="frame" x="20" y="714" width="768" height="51"/>
+                                        <rect key="frame" x="32" y="774" width="768" height="51"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4j4-L4-zja">
-                                        <rect key="frame" x="41" y="558" width="711" height="148"/>
+                                        <rect key="frame" x="52" y="590" width="659" height="176"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <attributedString key="attributedText">
                                             <fragment content="Al presionar sobre el título SELECCIÓN DE BOQUILLAS se accederá al módulo ">
@@ -4432,12 +4425,12 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ajustes" translatesAutoresizingMaskIntoConstraints="NO" id="12e-x7-bIz">
-                                        <rect key="frame" x="315" y="960" width="45" height="40"/>
+                                        <rect key="frame" x="326" y="1011" width="45" height="40"/>
                                     </imageView>
                                 </subviews>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
-                                        <size key="value" width="768" height="1180"/>
+                                        <size key="value" width="768" height="1280"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="rect" keyPath="frame">
                                         <rect key="value" x="0.0" y="0.0" width="768" height="1024"/>
@@ -4449,7 +4442,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="SFf-Lu-xiz"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="768" height="1180"/>
+                    <size key="freeformSize" width="768" height="1250"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L86-qu-ifi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4861,7 +4854,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dimensiones" translatesAutoresizingMaskIntoConstraints="NO" id="2SD-DC-Stb">
-                                        <rect key="frame" x="1" y="1043" width="768" height="569"/>
+                                        <rect key="frame" x="1" y="1043" width="768" height="964"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nvj-Xe-G3M">
                                         <rect key="frame" x="89" y="868" width="636" height="97"/>
@@ -4968,9 +4961,6 @@
                                         </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dimensiones2" translatesAutoresizingMaskIntoConstraints="NO" id="teT-FD-c9i">
-                                        <rect key="frame" x="0.0" y="1640" width="768" height="389"/>
-                                    </imageView>
                                 </subviews>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
@@ -5184,7 +5174,7 @@
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logodosactitric" translatesAutoresizingMaskIntoConstraints="NO" id="Yop-L1-tEV">
-                                <rect key="frame" x="304" y="24" width="35" height="36"/>
+                                <rect key="frame" x="288" y="24" width="35" height="36"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -5897,7 +5887,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZW-cS-tXH">
                                 <rect key="frame" x="41" y="295" width="699" height="98"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Al presionar sobre este icono                 se guardarán en un fichero PDF en su dispositivo todos los datos recogidos en el apartado “BR. RESUMEN Y RESULTADOS I”.</string>
+                                <string key="text">Al presionar sobre este icono                 se guardarán en un fichero PDF en su dispositivo todos los datos recogidos en el apartado “B.R. RESUMEN Y RESULTADOS I”.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -8349,8 +8339,7 @@
     <resources>
         <image name="ajustes" width="192" height="192"/>
         <image name="arboles" width="998" height="580"/>
-        <image name="dimensiones" width="355" height="311"/>
-        <image name="dimensiones2" width="132" height="127"/>
+        <image name="dimensiones" width="722" height="906"/>
         <image name="inter3" width="640" height="640"/>
         <image name="logodosactitric" width="256" height="256"/>
         <image name="logoesp" width="1606" height="300"/>
@@ -8360,31 +8349,31 @@
         <image name="zonas_boquillas" width="369" height="321"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="A7M-Zb-97F"/>
-        <segue reference="Mbg-jp-gPS"/>
-        <segue reference="SCx-Sb-Hqj"/>
-        <segue reference="hov-lw-895"/>
-        <segue reference="WgH-bw-2WC"/>
-        <segue reference="9t3-FY-5SK"/>
-        <segue reference="wDx-9E-5bc"/>
-        <segue reference="uPV-8h-mMd"/>
-        <segue reference="j8T-ol-82k"/>
-        <segue reference="o6y-Ja-J8L"/>
-        <segue reference="EHX-o7-fMG"/>
-        <segue reference="dAq-bU-kqQ"/>
-        <segue reference="B9A-Ij-QPY"/>
-        <segue reference="QNK-oa-iXe"/>
-        <segue reference="XCx-Em-AWB"/>
+        <segue reference="udj-6v-nsw"/>
         <segue reference="vMb-Dx-Exr"/>
+        <segue reference="XCx-Em-AWB"/>
         <segue reference="nhG-iF-rX5"/>
         <segue reference="fVl-dP-UNR"/>
-        <segue reference="MBR-fs-nD0"/>
-        <segue reference="wCG-tV-5BN"/>
-        <segue reference="tLL-w8-2G0"/>
+        <segue reference="j8T-ol-82k"/>
+        <segue reference="wDx-9E-5bc"/>
+        <segue reference="uPV-8h-mMd"/>
+        <segue reference="o6y-Ja-J8L"/>
+        <segue reference="B9A-Ij-QPY"/>
+        <segue reference="dAq-bU-kqQ"/>
+        <segue reference="QNK-oa-iXe"/>
+        <segue reference="EHX-o7-fMG"/>
         <segue reference="q8k-fp-UZo"/>
+        <segue reference="tLL-w8-2G0"/>
+        <segue reference="wCG-tV-5BN"/>
+        <segue reference="MBR-fs-nD0"/>
         <segue reference="eed-KH-kNC"/>
         <segue reference="3R8-3F-ZAO"/>
         <segue reference="Ikd-u9-4tA"/>
         <segue reference="RMw-ft-yIC"/>
+        <segue reference="WgH-bw-2WC"/>
+        <segue reference="hov-lw-895"/>
+        <segue reference="SCx-Sb-Hqj"/>
+        <segue reference="Mbg-jp-gPS"/>
+        <segue reference="1C2-kE-pgL"/>
     </inferredMetricsTieBreakers>
 </document>
