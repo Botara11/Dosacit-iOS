@@ -199,7 +199,7 @@ class Result2CR : UIViewController {
                     
                     velocidadAvance.text = "\(resultados[0].velocidadAvance) km/h"
                     
-                    let b:String = String(format:"%.0f", resultados[0].anchoCalle)
+                    let b:String = String(format:"%.1f", resultados[0].anchoCalle)
                     anchoTrabajo.text = "\(b) m"
                     
                     let caudalLiq:String = String(format:"%.01f", resultados[0].caudalLiquidoTotal)

@@ -329,15 +329,16 @@ class SelecBoquillas1: UIViewController, UITextFieldDelegate {
         
         newItemB!.numeroTotalBoquillas = (NumTotalBoquillasText.text! as NSString).integerValue
         newItemB!.velocidadAvance = (VelocidadAvanceText.text! as NSString).doubleValue
+        let aux11 = String(format:"%.01f", (AnchoSiguienteText.text! as NSString).doubleValue)
+        newItemB!.anchoCalleNuevo = (aux11 as NSString).doubleValue
         
-        newItemB!.anchoCalleNuevo = (AnchoSiguienteText.text! as NSString).doubleValue
-        newItemB!.volumenAppNuevo = (VolumenSiguienteText.text! as NSString).doubleValue
+        newItemB!.volumenAppNuevo = Double((VolumenSiguienteText.text! as NSString).integerValue)
         if SwitchVC.on{
             newItemB!.volumenApp = (VolumenCalculadoText.text as NSString).doubleValue
             newItemB!.flagVolumen = 0
         }
         else {
-            newItemB!.volumenApp = (VolumenSiguienteText.text! as NSString).doubleValue
+            newItemB!.volumenApp = Double((VolumenSiguienteText.text! as NSString).integerValue)
             newItemB!.flagVolumen = 1
         }
         
@@ -346,7 +347,7 @@ class SelecBoquillas1: UIViewController, UITextFieldDelegate {
             newItemB!.flagAncho = 0
         }
         else {
-            newItemB!.anchoCalle = (AnchoSiguienteText.text! as NSString).doubleValue
+            newItemB!.anchoCalle = (aux11 as NSString).doubleValue
             newItemB!.flagAncho = 1
             print("Entra en flagAncho = 1")
         }
