@@ -421,7 +421,7 @@ class SelecBoquillas1: UIViewController, UITextFieldDelegate {
             }
             
             if(fetchResults[0].volumenAppNuevo != 0){
-                VolumenSiguienteText.text = "\(fetchResults[0].volumenAppNuevo)"
+                VolumenSiguienteText.text = String(format:"%.00f", fetchResults[0].volumenAppNuevo)
             }
             
             if(fetchResults[0].flagAncho==1){

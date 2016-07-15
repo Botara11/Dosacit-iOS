@@ -48,7 +48,7 @@ class CaldoAp1: UIViewController, UITextFieldDelegate  {
         if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [B1]{
             newItemB = fetchResults[0]
             
-            anchoCalleText.text = String(format:"%.2f",fetchResults[0].anchoCalle)
+            anchoCalleText.text = String(format:"%.1f",fetchResults[0].anchoCalle)
             velocidadAvance.text = String(format:"%.1f",fetchResults[0].velocidadAvance)
         }
         
@@ -58,7 +58,7 @@ class CaldoAp1: UIViewController, UITextFieldDelegate  {
             
             if (fetchResults2[0].anchoCalle != newItemB!.anchoCalle){
                 if(fetchResults2[0].anchoCalle != 0){
-                    anchoCalleTextField.text = String(format:"%.2f",fetchResults2[0].anchoCalle)
+                    anchoCalleTextField.text = String(format:"%.1f",fetchResults2[0].anchoCalle)
                     SwitchAS.setOn(true, animated: true)
                     SwitchAC.setOn(false, animated: true)
                 }else{
@@ -85,7 +85,7 @@ class CaldoAp1: UIViewController, UITextFieldDelegate  {
             print ("Load: \(fetchResults2[0].numBoqAbiertasAltaHidraulica) + \(fetchResults2[0].numBoqAbiertasMediaHidraulica) + \(fetchResults2[0].numBoqAbiertasBajaHidraulica)")
             if (fetchResults2[0].velocidadAvance != newItemB!.velocidadAvance){
                 if(fetchResults2[0].velocidadAvance != 0){
-                    velocidadAvanceTextField.text = String(format:"%.2f",fetchResults2[0].velocidadAvance)
+                    velocidadAvanceTextField.text = String(format:"%.1f",fetchResults2[0].velocidadAvance)
                     SwitchVS.setOn(true, animated: true)
                     SwitchVC.setOn(false, animated: true)
                 }else{
