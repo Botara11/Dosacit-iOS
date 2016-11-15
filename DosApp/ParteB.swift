@@ -73,13 +73,13 @@ public class ParteB {
     newItemB!.caudalLiquidoBoquillaAlta  = (fetchResults[0].caudalLiquidoZonaAlta)  / Double(fetchResults[0].numeroBoquillasAbiertasAlta)
     newItemB!.caudalLiquidoBoquillaMedia = (fetchResults[0].caudalLiquidoZonaMedia) / Double(fetchResults[0].numeroBoquillasAbiertasMedia)
     newItemB!.caudalLiquidoBoquillaBaja  = (fetchResults[0].caudalLiquidoZonaBaja)  / Double(fetchResults[0].numeroBoquillasAbiertasBaja)
-    newItemB!.variacionCaudalAdmisible  =  fetchResults[0].variacionCaudalAdmisible / 100;
-    newItemB!.intervaloCaudalAdmisible0 = (fetchResults[0].caudalLiquidoBoquillaAlta) * (1-fetchResults[0].variacionCaudalAdmisible);
-    newItemB!.intervaloCaudalAdmisible1 = (fetchResults[0].caudalLiquidoBoquillaAlta) * (1+fetchResults[0].variacionCaudalAdmisible);
-    newItemB!.intervaloCaudalAdmisible2 = (fetchResults[0].caudalLiquidoBoquillaMedia) * (1-fetchResults[0].variacionCaudalAdmisible);
-    newItemB!.intervaloCaudalAdmisible3 = (fetchResults[0].caudalLiquidoBoquillaMedia) * (1+fetchResults[0].variacionCaudalAdmisible);
-    newItemB!.intervaloCaudalAdmisible4 = (fetchResults[0].caudalLiquidoBoquillaBaja) * (1-fetchResults[0].variacionCaudalAdmisible);
-    newItemB!.intervaloCaudalAdmisible5 = (fetchResults[0].caudalLiquidoBoquillaBaja) * (1+fetchResults[0].variacionCaudalAdmisible);
+        var variac = fetchResults[0].variacionCaudalAdmisible / 100;
+    newItemB!.intervaloCaudalAdmisible0 = (fetchResults[0].caudalLiquidoBoquillaAlta) * (1-variac);
+    newItemB!.intervaloCaudalAdmisible1 = (fetchResults[0].caudalLiquidoBoquillaAlta) * (1+variac);
+    newItemB!.intervaloCaudalAdmisible2 = (fetchResults[0].caudalLiquidoBoquillaMedia) * (1-variac);
+    newItemB!.intervaloCaudalAdmisible3 = (fetchResults[0].caudalLiquidoBoquillaMedia) * (1+variac);
+    newItemB!.intervaloCaudalAdmisible4 = (fetchResults[0].caudalLiquidoBoquillaBaja) * (1-variac);
+    newItemB!.intervaloCaudalAdmisible5 = (fetchResults[0].caudalLiquidoBoquillaBaja) * (1+variac);
         
     print("caudalLiquidoBoquillaAlta \(fetchResults[0].caudalLiquidoBoquillaMedia)")
     print("CaudalLiquido total \(fetchResults[0].caudalLiquidoTotal)")

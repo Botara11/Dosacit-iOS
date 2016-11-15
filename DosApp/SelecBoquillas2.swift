@@ -61,6 +61,7 @@ class SelecBoquillas2: UIViewController, UITextFieldDelegate{
             let CurrentValue = Int(VariacionCaudal.value)
             VariacionText.text = "\(CurrentValue)"
             newItemB!.variacionCaudalAdmisible = Double(CurrentValue)
+            print("Guardando VCA: \(newItemB!.variacionCaudalAdmisible)")
             if NumBoqCerrAlta.text == "" || NumBoqCerrBaja.text == "" || NumBoqAbAlta.text == "" || NumBoqAbBaja.text == "" || NumBoqAbMedia.text == "" || PorcentajeVegAlta.text == "" || PorcentajeVegBaja == "" || PorcentajeVegMedia.text == "" {
                 
                 alert("ERROR",mensaje: "No puede haber campos vacíos y deben ser valores numéricos")
@@ -112,6 +113,7 @@ class SelecBoquillas2: UIViewController, UITextFieldDelegate{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
         newItemB!.variacionCaudalAdmisible = Double(VariacionCaudal.value)
+        print("Segundo guardado: \(Double(VariacionCaudal.value))")
         newItemB!.numeroBoquillasCerradasAlta = (NumBoqCerrAlta.text! as NSString).integerValue
         newItemB!.numeroBoquillasCerradasBaja = (NumBoqCerrBaja.text! as NSString).integerValue
         newItemB!.numeroBoquillasAbiertasAlta = (NumBoqAbAlta.text! as NSString).integerValue
@@ -269,9 +271,11 @@ class SelecBoquillas2: UIViewController, UITextFieldDelegate{
             IntervaloCaudalAdmisibleAlta.text = String(format:"%.2f",fetchResults[0].intervaloCaudalAdmisible0)+" - "+String(format:"%.2f",fetchResults[0].intervaloCaudalAdmisible1)
             IntervaloCaudalAdmisibleMedia.text = String(format:"%.2f",fetchResults[0].intervaloCaudalAdmisible2)+" - "+String(format:"%.2f",fetchResults[0].intervaloCaudalAdmisible3)
             IntervaloCaudalAdmisibleBaja.text = String(format:"%.2f",fetchResults[0].intervaloCaudalAdmisible4)+" - "+String(format:"%.2f",fetchResults[0].intervaloCaudalAdmisible5)
-            VariacionText.text = String(format:"%.0f",round(fetchResults[0].variacionCaudalAdmisible*100))
-            VariacionCaudal.value = (fetchResults[0].variacionCaudalAdmisible as NSNumber).floatValue * 100
-            print("\(fetchResults[0].variacionCaudalAdmisible)")
+           
+            VariacionText.text = String(format:"%.0f",round(fetchResults[0].variacionCaudalAdmisible))
+            VariacionCaudal.value = (fetchResults[0].variacionCaudalAdmisible as NSNumber).floatValue
+            
+            print("VariacionCaudal admisible:\(fetchResults[0].variacionCaudalAdmisible)")
             
             
             NumBoqCerrAlta.keyboardType = UIKeyboardType.NumbersAndPunctuation

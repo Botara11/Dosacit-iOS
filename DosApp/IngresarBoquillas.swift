@@ -68,8 +68,8 @@ class IngresarBoquillas: UIViewController{
                     }else{
                         var newItemIngresar = NSEntityDescription.insertNewObjectForEntityForName("MisBoquillas", inManagedObjectContext: managedObjectContext!) as! MisBoquillas
                         newItemIngresar.marcamia = marca.text!
-                        newItemIngresar.presionmia = Double(String(format:"%.2f", (presion.text! as NSString).doubleValue))!
-                        newItemIngresar.caudalmio = Double(String(format:"%.2f",(caudal.text! as NSString).doubleValue))!
+                        newItemIngresar.presionmia = Double(String(format:"%.1f", (presion.text! as NSString).doubleValue))!
+                        newItemIngresar.caudalmio = Double(String(format:"%.1f",(caudal.text! as NSString).doubleValue))!
                         
                         let dbBoquillas = NSEntityDescription.insertNewObjectForEntityForName("EntityBoquillas", inManagedObjectContext: managedObjectContext!) as! EntityBoquillas
                         

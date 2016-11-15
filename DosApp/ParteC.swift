@@ -23,7 +23,7 @@ public class ParteC {
         if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [C1] {
             
             
-            fetchResults[0].caudalTotal = ((Double(fetchResults[0].numBoqAbiertasAltaHidraulica) * fetchResults[0].caudalZonaAlta)+(Double(fetchResults[0].numBoqAbiertasMediaHidraulica) * fetchResults[0].caudalZonaMedia)+(Double(fetchResults[0].numBoqAbiertasBajaHidraulica) * fetchResults[0].caudalZonaBaja))*2;
+            fetchResults[0].caudalTotal = (Double(fetchResults[0].numBoqAbiertasAltaHidraulica) * fetchResults[0].caudalZonaAlta)+(Double(fetchResults[0].numBoqAbiertasMediaHidraulica) * fetchResults[0].caudalZonaMedia)+(Double(fetchResults[0].numBoqAbiertasBajaHidraulica) * fetchResults[0].caudalZonaBaja);
             fetchResults[0].volumenCaldoAplicado = (fetchResults[0].caudalTotal * 600/(fetchResults[0].anchoCalle * fetchResults[0].velocidadAvance));
             
             do {

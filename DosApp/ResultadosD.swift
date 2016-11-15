@@ -82,7 +82,7 @@ class ResultadosD: UIViewController{
             
             nBTextfield.text = ("\(e)")
             
-            let f:String = String(format:"%.01f", fetchResults[0].caudalTotal)
+            let f:String = String(format:"%.00f", fetchResults[0].caudalTotal)
             
             caudalTextfield.text = ("\(f)")
             
