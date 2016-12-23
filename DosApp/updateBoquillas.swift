@@ -31,7 +31,7 @@ class updateBoquillas: UIViewController {
     func updateBoquillas() {
         
         
-        let url = NSURL(string: "http://dosacitric.webs.upv.es/BBDD.txt")
+        let url = NSURL(string: "http://dosacitric.webs.upv.es/BBDD.csv")
         
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
             if (data != nil){

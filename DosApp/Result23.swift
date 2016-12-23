@@ -57,7 +57,9 @@ class Result23: UIViewController, UITableViewDataSource, UITableViewDelegate{
             let str = ("marca == %@ AND presion == %@") as String
             let predicate1 = NSPredicate(format: str , marca, presion)
             let fetchRequest = NSFetchRequest(entityName: "FiltroBoquillas")
+            let yearSort = NSSortDescriptor(key: "modelo", ascending: true)
             fetchRequest.predicate = predicate1
+            fetchRequest.sortDescriptors = [yearSort]
             if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [FiltroBoquillas]{
                 for fe in fetchResults{
                     //Aqui habria que diferenciar entre zona1 zona2 y zona3

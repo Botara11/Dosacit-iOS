@@ -111,7 +111,7 @@ class ParteA {
             let temp = TRV * IndiceDosificacion * FactorEficiencia;
             print("\(temp) temp")
             
-            if (temp % 100 > 50){
+            if (temp % 100 > 0){
                 let a = (( (temp) / 100));
                 let IntTemp:Int = Int(a)
                 litroHectarea = (IntTemp + 1) * 100;

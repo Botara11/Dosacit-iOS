@@ -6491,7 +6491,7 @@
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment content=" = Porcentaje de vegetación a tratar por las boquillas abiertas situadas en la zona Media del equipo (nA).">
+                                            <fragment content=" = Porcentaje de vegetación a tratar por las boquillas abiertas situadas en la zona Media del equipo (nM).">
                                                 <attributes>
                                                     <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <font key="NSFont" size="22" name="HelveticaNeue"/>
@@ -6512,7 +6512,7 @@
                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
-                                            <fragment content=" = Porcentaje de vegetación a tratar por las boquillas abiertas situadas en la zona Baja del equipo (nA).">
+                                            <fragment content=" = Porcentaje de vegetación a tratar por las boquillas abiertas situadas en la zona Baja del equipo (nB).">
                                                 <attributes>
                                                     <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <font key="NSFont" size="22" name="HelveticaNeue"/>
@@ -6925,11 +6925,11 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Número de boquillas por zona:" translatesAutoresizingMaskIntoConstraints="NO" id="O0d-31-mhO">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="- Número de boquillas por zona:" translatesAutoresizingMaskIntoConstraints="NO" id="O0d-31-mhO">
                                         <rect key="frame" x="50" y="972" width="768" height="44"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9id-ka-0eG">
@@ -6940,11 +6940,11 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Porcentaje de vegetación a pulverizar por zona:" translatesAutoresizingMaskIntoConstraints="NO" id="cwN-uL-cGt">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="- Porcentaje de vegetación a pulverizar por zona:" translatesAutoresizingMaskIntoConstraints="NO" id="cwN-uL-cGt">
                                         <rect key="frame" x="49" y="1274" width="768" height="44"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Y9-CF-nHa">
@@ -6958,11 +6958,11 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="printer" translatesAutoresizingMaskIntoConstraints="NO" id="sqe-ix-MvB">
                                         <rect key="frame" x="321" y="3070" width="57" height="42"/>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Boquillas a cerrar por zona:" translatesAutoresizingMaskIntoConstraints="NO" id="7gI-UT-Oda">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="- Boquillas a cerrar por zona:" translatesAutoresizingMaskIntoConstraints="NO" id="7gI-UT-Oda">
                                         <rect key="frame" x="47" y="744" width="713" height="41"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" text="Zona Alta: Representa el número de boquillas que se van a cerrar en la zona alta del equipo." translatesAutoresizingMaskIntoConstraints="NO" id="gNt-0v-odI">
@@ -8570,31 +8570,31 @@
         <image name="zonas_boquillas" width="369" height="321"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="B9A-Ij-QPY"/>
+        <segue reference="1C2-kE-pgL"/>
+        <segue reference="fVl-dP-UNR"/>
+        <segue reference="dQv-Rt-hDP"/>
+        <segue reference="igc-EZ-AJt"/>
+        <segue reference="xl3-iK-NDb"/>
+        <segue reference="nhG-iF-rX5"/>
+        <segue reference="QNK-oa-iXe"/>
+        <segue reference="HKK-A7-UYv"/>
         <segue reference="b8R-Bk-rvF"/>
         <segue reference="zoi-C4-jAd"/>
+        <segue reference="oSY-ES-Jrb"/>
         <segue reference="dAq-bU-kqQ"/>
         <segue reference="uPV-8h-mMd"/>
-        <segue reference="z7u-7Q-WFX"/>
-        <segue reference="QNK-oa-iXe"/>
         <segue reference="vMb-Dx-Exr"/>
-        <segue reference="wCG-tV-5BN"/>
-        <segue reference="XwM-2G-OjI"/>
-        <segue reference="q8k-fp-UZo"/>
-        <segue reference="MBR-fs-nD0"/>
-        <segue reference="1C2-kE-pgL"/>
-        <segue reference="HhQ-U0-ByC"/>
         <segue reference="RMw-ft-yIC"/>
-        <segue reference="764-us-RKb"/>
-        <segue reference="nhG-iF-rX5"/>
-        <segue reference="igc-EZ-AJt"/>
-        <segue reference="fVl-dP-UNR"/>
-        <segue reference="SCx-Sb-Hqj"/>
-        <segue reference="Mbg-jp-gPS"/>
-        <segue reference="YQL-Eh-eZ1"/>
-        <segue reference="yES-d5-VH6"/>
+        <segue reference="HhQ-U0-ByC"/>
+        <segue reference="pua-j2-Qrb"/>
+        <segue reference="XwM-2G-OjI"/>
+        <segue reference="wCG-tV-5BN"/>
+        <segue reference="MBR-fs-nD0"/>
         <segue reference="EHX-o7-fMG"/>
+        <segue reference="yES-d5-VH6"/>
+        <segue reference="YQL-Eh-eZ1"/>
         <segue reference="hov-lw-895"/>
-        <segue reference="3R8-3F-ZAO"/>
+        <segue reference="Mbg-jp-gPS"/>
+        <segue reference="SCx-Sb-Hqj"/>
     </inferredMetricsTieBreakers>
 </document>

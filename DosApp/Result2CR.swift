@@ -115,7 +115,7 @@ class Result2CR : UIViewController {
     
     @IBAction func PDFgeneratoraction(sender: AnyObject) {
         //let pageSize:CGSize = CGSizeMake (850, 1100)
-        let fileName: NSString = "DosacítricC.pdf"
+        let fileName: NSString = "DosacitricC.pdf"
         let path:NSArray = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         let documentDirectory: AnyObject = path.objectAtIndex(0)
         let pdfPathWithFileName = documentDirectory.stringByAppendingPathComponent(fileName as String)
@@ -338,7 +338,7 @@ class Result2CR : UIViewController {
         font = UIFont (name: "Times New Roman", size: 60)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
         let attrsTitulo =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
-        let tituloArray = "DOSACÍTRIC"
+        let tituloArray = "DOSACITRIC"
         textRect = CGRectMake(CGFloat(60), CGFloat(30), CGFloat(800), CGFloat(60))
         tituloArray.drawInRect(textRect, withAttributes: attrsTitulo)
         
@@ -523,7 +523,7 @@ class Result2CR : UIViewController {
         font = UIFont (name: "Times New Roman", size: 60)!
         CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
         let attrsTitul =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
-        let tituloArra = "DOSACÍTRIC"
+        let tituloArra = "DOSACITRIC"
         textRect = CGRectMake(CGFloat(margenIzq), CGFloat(25), CGFloat(800), CGFloat(60))
         tituloArra.drawInRect(textRect, withAttributes: attrsTitul)
         
@@ -582,7 +582,7 @@ class Result2CR : UIViewController {
                 font = UIFont (name: "Times New Roman", size: 60)!
                 CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
                 let attrsTitul =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
-                let tituloArra = "DOSACÍTRIC"
+                let tituloArra = "DOSACITRIC"
                 textRect = CGRectMake(CGFloat(margenIzq), CGFloat(25), CGFloat(800), CGFloat(60))
                 tituloArra.drawInRect(textRect, withAttributes: attrsTitul)
                 
@@ -680,7 +680,7 @@ class Result2CR : UIViewController {
                     font = UIFont (name: "Times New Roman", size: 60)!
                     CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
                     let attrsTitul =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
-                    let tituloArra = "DOSACÍTRIC"
+                    let tituloArra = "DOSACITRIC"
                     textRect = CGRectMake(CGFloat(margenIzq), CGFloat(25), CGFloat(800), CGFloat(60))
                     tituloArra.drawInRect(textRect, withAttributes: attrsTitul)
                     
@@ -788,7 +788,7 @@ class Result2CR : UIViewController {
                     font = UIFont (name: "Times New Roman", size: 60)!
                     CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
                     let attrsTitul =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
-                    let tituloArra = "DOSACÍTRIC"
+                    let tituloArra = "DOSACITRIC"
                     textRect = CGRectMake(CGFloat(margenIzq), CGFloat(25), CGFloat(800), CGFloat(60))
                     tituloArra.drawInRect(textRect, withAttributes: attrsTitul)
                     
@@ -847,7 +847,7 @@ class Result2CR : UIViewController {
                     font = UIFont (name: "Times New Roman", size: 60)!
                     CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
                     let attrsTitul =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
-                    let tituloArra = "DOSACÍTRIC"
+                    let tituloArra = "DOSACITRIC"
                     textRect = CGRectMake(CGFloat(margenIzq), CGFloat(25), CGFloat(800), CGFloat(60))
                     tituloArra.drawInRect(textRect, withAttributes: attrsTitul)
                     
@@ -910,7 +910,7 @@ class Result2CR : UIViewController {
                     font = UIFont (name: "Times New Roman", size: 60)!
                     CGContextSetFillColorWithColor(context, UIColor.redColor().CGColor)
                     let attrsTitul =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
-                    let tituloArra = "DOSACÍTRIC"
+                    let tituloArra = "DOSACITRIC"
                     textRect = CGRectMake(CGFloat(margenIzq), CGFloat(25), CGFloat(800), CGFloat(60))
                     tituloArra.drawInRect(textRect, withAttributes: attrsTitul)
                     

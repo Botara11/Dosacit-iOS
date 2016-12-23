@@ -55,11 +55,20 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
         super.viewDidLoad()
         tableView.allowsMultipleSelection = true
         let fetchRequest2 = NSFetchRequest(entityName: "C1")
+        selSeccion0=999
+        selSeccion1=999
+        selSeccion2=999
         if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest2)) as? [C1] {
             print("Result33 Objetos: \(fetchResults.count)")
             newItemC = fetchResults[0]
             presion=fetchResults[0].presion
             marca=fetchResults[0].marca
+            var un = fetchResults[0].marca + "\(fetchResults[0].presion)"
+            if (un == fetchResults[0].selectedMarcaPresion){
+                selSeccion0 = fetchResults[0].selectedModelAlta
+                selSeccion1 = fetchResults[0].selectedModelMedia
+                selSeccion2 = fetchResults[0].selectedModelBaja
+            }
             
         }
         
@@ -72,7 +81,9 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
         let str = ("marca == %@") as String
         let predicate1 = NSPredicate(format: str , marca)
         let fetchRequest = NSFetchRequest(entityName: "EntityBoquillas")
+        let modeloSort = NSSortDescriptor(key: "modelo", ascending: true)
         fetchRequest.predicate = predicate1
+        fetchRequest.sortDescriptors = [modeloSort]
         if let fetchResults = (try? managedObjectContext!.executeFetchRequest(fetchRequest)) as? [EntityBoquillas]{
             for fe in fetchResults{
                 //Aqui habria que diferenciar entre zona1 zona2 y zona3
@@ -90,20 +101,18 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
             }
         }
         
-        
+
         tableView?.registerClass(UITableViewCell.self, forCellReuseIdentifier: self.cellIdentifier)
         tableView.reloadData()
         tableView.backgroundColor = UIColor.blackColor()
         
         //tableView.removeFromSuperview()
         
-
-                selSeccion0=999
-                selSeccion1=999
-                selSeccion2=999
+        if (sections[0].boquis.count > 0){
                 modeloZonaAlta = sections[0].boquis[0]
                 modeloZonaMedia = sections[1].boquis[0]
                 modeloZonaBaja = sections[2].boquis[0]
+        }
         
         
     }
@@ -346,6 +355,11 @@ class Result33: UIViewController, UITableViewDataSource, UITableViewDelegate{
                     fetchResults[0].nombreZonaAlta = modeloZonaAlta
                     fetchResults[0].nombreZonaMedia = modeloZonaMedia
                     fetchResults[0].nombreZonaBaja = modeloZonaBaja
+                    
+                    fetchResults[0].selectedMarcaPresion = fetchResults[0].marca + "\(fetchResults[0].presion)"
+                    fetchResults[0].selectedModelAlta = selSeccion0
+                    fetchResults[0].selectedModelMedia = selSeccion1
+                    fetchResults[0].selectedModelBaja = selSeccion2
                     
                     print(fetchResults[0].caudalZonaAlta)
                     

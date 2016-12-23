@@ -32,5 +32,10 @@ class C1: NSManagedObject {
     @NSManaged var nombreZonaAlta: String
     @NSManaged var nombreZonaMedia: String
     @NSManaged var nombreZonaBaja: String
+    @NSManaged var selectedModelAlta: Int
+    @NSManaged var selectedModelMedia: Int
+    @NSManaged var selectedModelBaja: Int
+    @NSManaged var selectedMarcaPresion: String
+    
     
 }

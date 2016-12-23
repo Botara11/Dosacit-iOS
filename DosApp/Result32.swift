@@ -18,7 +18,7 @@ class Result32: UIViewController, UITableViewDataSource, UITableViewDelegate{
     var presion = String()
     var marcaPressed = String()
     let cellIdentifier = "cellIdentifier"
-    var tableData = ["Teejet","Hardi","Albuz","Lechler","Discos","Mis boquillas"]
+    var tableData = ["Teejet","Hardi","Albuz","Lechler","Discos","Otros","Mis boquillas"]
     var tableDataAux = [Int]()
     
     

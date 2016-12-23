@@ -53,6 +53,7 @@ class SelecBoquillas1: UIViewController, UITextFieldDelegate {
         SliderVA.value = (VelocidadAvanceText.text! as NSString).floatValue;
         
         newItemB!.velocidadAvance = (round(SliderVA.value * 10)/10 as NSNumber).doubleValue
+        
         do {
             try managedObjectContext!.save()
         } catch {
@@ -307,7 +308,9 @@ class SelecBoquillas1: UIViewController, UITextFieldDelegate {
         
         let CurrentValue:float_t = SliderVA.value;
         VelocidadAvanceText.text = String(format:"%.2f",CurrentValue)
-        newItemB!.velocidadAvance = (round(SliderVA.value * 10)/10 as NSNumber).doubleValue
+        //newItemB!.velocidadAvance = (round(SliderVA.value * 10)/10 as NSNumber).doubleValue
+        newItemB!.velocidadAvance = Double(String(format:"%.2f",CurrentValue))!;
+        print("Velocidad: \(newItemB!.velocidadAvance)");
         do {
             try managedObjectContext!.save()
         } catch {

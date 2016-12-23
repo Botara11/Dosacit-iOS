@@ -159,7 +159,7 @@ class SelecBoquillas2: UIViewController, UITextFieldDelegate{
             
             
             
-            let marcasList: [String] = ["Teejet","Hardi","Albuz","Lechler","Discos","Mis boquillas"]
+            let marcasList: [String] = ["Teejet","Hardi","Albuz","Lechler","Discos","Otros","Mis boquillas"]
             
             let presionList: [String] = ["p6","p7","p8","p9","p10","p11","p12","p13","p14","p15","p16"]
             

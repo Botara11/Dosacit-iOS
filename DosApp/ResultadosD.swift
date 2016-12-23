@@ -32,7 +32,7 @@ class ResultadosD: UIViewController{
     
     @IBAction func PDGgeneratoraction(sender: AnyObject) {
         //let pageSize:CGSize = CGSizeMake (850, 1100)
-        let fileName: NSString = "DosacítricD.pdf"
+        let fileName: NSString = "DosacitricD.pdf"
         let path:NSArray = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         let documentDirectory: AnyObject = path.objectAtIndex(0)
         let pdfPathWithFileName = documentDirectory.stringByAppendingPathComponent(fileName as String)
@@ -346,7 +346,7 @@ class ResultadosD: UIViewController{
         font = UIFont (name: "Times New Roman", size: 60)!
         CGContextSetFillColorWithColor(context, UIColor.orangeColor().CGColor)
         let attrsTitulo =  [NSFontAttributeName:font, NSBaselineOffsetAttributeName:baselineAdjust]
-        let tituloArray = "DOSACÍTRIC"
+        let tituloArray = "DOSACITRIC"
         textRect = CGRectMake(CGFloat(70), CGFloat(y), CGFloat(800), CGFloat(60))
         tituloArray.drawInRect(textRect, withAttributes: attrsTitulo)
         
